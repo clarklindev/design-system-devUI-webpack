@@ -1,3 +1,3 @@
-import {Accordion} from './components/accordion';
+import {Accordion, AccordionItem, AccordionExample} from './components/accordion';
 
-export {Accordion}
+export {Accordion, AccordionItem, AccordionExample}
