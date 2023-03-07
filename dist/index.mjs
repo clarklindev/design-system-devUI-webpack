@@ -356,7 +356,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Accordion": () => (/* reexport */ Accordion)
+  "Accordion": () => (/* reexport */ Accordion),
+  "AccordionExample": () => (/* reexport */ AccordionExample),
+  "AccordionItem": () => (/* reexport */ AccordionItem)
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -1241,10 +1243,13 @@ const AccordionExample = () => {
 ;// CONCATENATED MODULE: ./src/components/accordion/index.js
 
 
+
 ;// CONCATENATED MODULE: ./src/index.production.js
 
 
 })();
 
 var __webpack_exports__Accordion = __webpack_exports__.Accordion;
-export { __webpack_exports__Accordion as Accordion };
+var __webpack_exports__AccordionExample = __webpack_exports__.AccordionExample;
+var __webpack_exports__AccordionItem = __webpack_exports__.AccordionItem;
+export { __webpack_exports__Accordion as Accordion, __webpack_exports__AccordionExample as AccordionExample, __webpack_exports__AccordionItem as AccordionItem };
