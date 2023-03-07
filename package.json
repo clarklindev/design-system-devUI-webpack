@@ -10,12 +10,15 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peer-dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.8"
   },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.8",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",

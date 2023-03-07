@@ -6,15 +6,7 @@ module.exports = (env, argv) => {
   console.log('isProduction: ', isProduction);
 
   return {
-    optimization: {
-      minimize: false,
-      usedExports: false,
-      sideEffects: false,
-      moduleIds: 'named',
-      mangleExports: false,
-      removeEmptyChunks: false,
-    },
-    
+
     devServer: {
       static: path.resolve(__dirname, 'dist'),
       compress: false,
