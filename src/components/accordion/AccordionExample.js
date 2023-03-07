@@ -31,7 +31,7 @@ export const AccordionExample = () => {
       // multiOpen={true}
       // startActiveItems={[0, 1]}
       render={({ activeItems, handleClick }) => {
-        return data.map((item, index) => {
+        return data?.map((item, index) => {
           return (
             <AccordionItem
               key={`AccordionItem_${index}`}

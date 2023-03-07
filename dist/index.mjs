@@ -1229,7 +1229,7 @@ const AccordionExample = () => {
       activeItems,
       handleClick
     }) => {
-      return data.map((item, index) => {
+      return data == null ? void 0 : data.map((item, index) => {
         return /*#__PURE__*/react.createElement(AccordionItem, {
           key: `AccordionItem_${index}`,
           onClick: () => {

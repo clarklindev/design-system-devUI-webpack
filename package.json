@@ -1,20 +1,20 @@
 {
   "name": "@swagfinger/swagfinger-ui",
-  "version": "0.0.4",
-  "description": "Initialize a new Node.js project:",
+  "version": "0.0.5",
+  "description": "",
   "module": "dist/index.mjs",
   "type": "module",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.8"
-  },
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.config.cjs",
     "build": "webpack --mode production --config webpack.config.cjs"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
