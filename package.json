@@ -1,6 +1,6 @@
 {
   "name": "@swagfinger/swagfinger-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Initialize a new Node.js project:",
   "module": "dist/index.mjs",
   "type": "module",

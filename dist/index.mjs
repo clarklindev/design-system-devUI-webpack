@@ -358,7 +358,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "Accordion": () => (/* reexport */ Accordion),
   "AccordionExample": () => (/* reexport */ AccordionExample),
-  "AccordionItem": () => (/* reexport */ AccordionItem)
+  "AccordionItem": () => (/* reexport */ AccordionItem),
+  "Icon": () => (/* reexport */ Icon),
+  "IconExample": () => (/* reexport */ IconExample)
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -1244,7 +1246,26 @@ const AccordionExample = () => {
 
 
 
+;// CONCATENATED MODULE: ./src/components/icon/Icon.js
+
+const Icon = ({
+  children
+}) => {
+  return /*#__PURE__*/react.createElement("div", null, children);
+};
+;// CONCATENATED MODULE: ./src/components/icon/IconExample.js
+
+
+const IconExample = () => {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(Icon, {
+    color: "red"
+  }, "red"));
+};
+;// CONCATENATED MODULE: ./src/components/icon/index.js
+
+
 ;// CONCATENATED MODULE: ./src/index.production.js
+
 
 
 })();
@@ -1252,4 +1273,6 @@ const AccordionExample = () => {
 var __webpack_exports__Accordion = __webpack_exports__.Accordion;
 var __webpack_exports__AccordionExample = __webpack_exports__.AccordionExample;
 var __webpack_exports__AccordionItem = __webpack_exports__.AccordionItem;
-export { __webpack_exports__Accordion as Accordion, __webpack_exports__AccordionExample as AccordionExample, __webpack_exports__AccordionItem as AccordionItem };
+var __webpack_exports__Icon = __webpack_exports__.Icon;
+var __webpack_exports__IconExample = __webpack_exports__.IconExample;
+export { __webpack_exports__Accordion as Accordion, __webpack_exports__AccordionExample as AccordionExample, __webpack_exports__AccordionItem as AccordionItem, __webpack_exports__Icon as Icon, __webpack_exports__IconExample as IconExample };
