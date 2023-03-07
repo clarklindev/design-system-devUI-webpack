@@ -1,8 +1,9 @@
 {
   "name": "@swagfinger/swagfinger-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Initialize a new Node.js project:",
-  "main": "index.js",
+  "module": "dist/index.mjs",
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
