@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ChevronUp } from '../../icons/ChevronUp';
 import { ChevronDown } from '../../icons/ChevronDown';
-import {Icon} from '../icon';
+import {Icon} from '../Icon';
 
 const AccordionItemContainer = styled.div`
   display: block;

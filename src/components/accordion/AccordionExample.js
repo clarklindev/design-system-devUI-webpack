@@ -32,9 +32,8 @@ export const AccordionExample = () => {
 
   return (
     <Accordion
-      multiOpen={false}
-      // multiOpen={true}
-      // startActiveItems={[0, 1]
+      multiOpen={true}
+      startActiveItems={[0, 1]}//indexes
       data={data}
       childClass={AccordionItem}
     />

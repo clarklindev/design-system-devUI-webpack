@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AccordionExample } from './components/accordion';
+import { AccordionExample } from './components/Accordion';
 import './App.css';
 
 export default function (){

@@ -1,6 +1,6 @@
 {
   "name": "@swagfinger/swagfinger-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "module": "dist/index.mjs",
   "type": "module",
@@ -30,6 +30,7 @@
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.8",
+    "styled-components-modifiers": "^1.2.5",
     "tailwindcss": "^3.2.7",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
