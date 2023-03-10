@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { ChevronUpIcon } from '@heroicons/react/24/outline';
-// import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ChevronUp } from '../../icons/ChevronUp';
+import { ChevronDown } from '../../icons/ChevronDown';
+import {Icon} from '../icon';
 
 const AccordionItemContainer = styled.div`
   display: block;
@@ -56,7 +57,7 @@ export const AccordionItem = ({ data, isOpen, onClick }) => {
         onClick={(index) => onClick(index)}
         className={isOpen ? 'show' : 'hide'}
       >
-        {data.title}
+        {data.title} {isOpen? <Icon>{ ChevronUp}</Icon>  : <Icon>{ChevronDown}</Icon> }
       </AccordionItemTitle>
       <AccordionItemContent className={isOpen ? 'show' : 'hide'}>
         {data.body}

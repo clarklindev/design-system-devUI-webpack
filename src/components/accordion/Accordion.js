@@ -6,12 +6,15 @@ const AccordionContainer = styled.div`
 `;
 
 export const Accordion = ({
-  render,
   multiOpen = true,
   startActiveItems = [],
+  childClass,
+  data
 }) => {
   const [activeItems, setActiveItems] = useState(startActiveItems); //set initial active items // activeItems holds item indexs to show
   const [allowMultiOpen, setAllowMultiOpen] = useState(multiOpen);
+
+  const ChildClass = childClass;
 
   useEffect(() => {
     console.log('Accordion is rendered');
@@ -59,7 +62,17 @@ export const Accordion = ({
 
   return (
     <AccordionContainer className={'Accordion'}>
-      {render({ activeItems, handleClick })}
+      {data.map((each, index)=> {
+        return <ChildClass 
+          key={`AccordionItem_${index}`}
+          onClick={() => {
+            handleClick(index);
+          }}
+          data={each}
+          isOpen={activeItems.some((each) => each === index)}
+        />
+      })}
     </AccordionContainer>
   );
 };
+

@@ -34,24 +34,9 @@ export const AccordionExample = () => {
     <Accordion
       multiOpen={false}
       // multiOpen={true}
-      // startActiveItems={[0, 1]}
-      render={({ activeItems, handleClick }) => {
-        if(data.length){
-          return data.map((item, index) => {
-            return (
-              <AccordionItem
-                key={`AccordionItem_${index}`}
-                onClick={() => {
-                  handleClick(index);
-                }}
-                data={item}
-                isOpen={activeItems.some((item) => item === index)}
-              />
-            );
-          });
-        }
-        
-      }}
+      // startActiveItems={[0, 1]
+      data={data}
+      childClass={AccordionItem}
     />
   );
 };
