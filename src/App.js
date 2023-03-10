@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { AccordionExample } from './components/accordion';
+import './App.css';
 
 export default function (){
-  return <AccordionExample/>
+  return <div>
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  </div>
 }
