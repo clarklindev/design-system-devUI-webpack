@@ -17,8 +17,9 @@ export const Accordion = ({
   const ChildClass = childClass;
 
   useEffect(() => {
-    console.log('Accordion is rendered');
-  });
+    setActiveItems(startActiveItems);
+    setAllowMultiOpen(multiOpen);
+  },[]);
 
   useEffect(() => {
     startActiveItems.forEach((item) => {
@@ -32,7 +33,7 @@ export const Accordion = ({
 
   const activeItemsCheck = useCallback(
     (index) => {
-      const found = activeItems.some((item) => item === index);
+      const found = activeItems?.some((item) => item === index);
 
       if (allowMultiOpen) {
         if (found) {
@@ -62,14 +63,14 @@ export const Accordion = ({
 
   return (
     <AccordionContainer className={'Accordion'}>
-      {data.map((each, index)=> {
+      {data?.map((each, index)=> {
         return <ChildClass 
           key={`AccordionItem_${index}`}
           onClick={() => {
             handleClick(index);
           }}
           data={each}
-          isOpen={activeItems.some((each) => each === index)}
+          isOpen={activeItems?.some((each) => each === index)}
         />
       })}
     </AccordionContainer>
