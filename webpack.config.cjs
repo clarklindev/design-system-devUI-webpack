@@ -26,7 +26,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       scriptType: 'text/javascript',
-      filename: 'index.mjs',
+      filename: 'index.js',
       library: {
         type: 'module',
       },
@@ -48,14 +48,7 @@ module.exports = (env, argv) => {
             loader: 'babel-loader',
             options: {
               presets: [
-                ['@babel/preset-env', {
-                  modules: false,
-                  bugfixes: true,
-                  loose: true,
-                  targets: {
-                    esmodules: true,
-                  },
-                }],
+                '@babel/preset-env', 
                 '@babel/preset-react',
               ],
             },

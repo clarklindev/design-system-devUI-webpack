@@ -8,7 +8,7 @@ export const AccordionExample = () => {
   
   const [data, setData] = useState(); //savedData is when we are saving data, 'data' is presented data that is not updated, we 'setData' on init with useEffect()
   
-  useEffect(() => {
+  useEffect(()=>{
     setData([
       {
         title: 'helloworld',
@@ -19,15 +19,7 @@ export const AccordionExample = () => {
         body: 'rainbows are amazing',
       },
     ]);
-
-    // async method:
-    // const getAccordionData = async ()=>{
-    //   let data = await fetch('https://jsonplaceholder.typicode.com/users/1/posts?_limit=10');
-    //   const json = await data.json();
-    //   setData(json);
-    // }
-    // getAccordionData();
-  }, []);
+  }, [])
 
   return (
     <Accordion
