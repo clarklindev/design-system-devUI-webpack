@@ -10,6 +10,7 @@ module.exports = (env, argv) => {
     devServer: {
       static: path.resolve(__dirname, 'dist'),
       compress: false,
+
       port: 9000,
     },
     
@@ -18,11 +19,9 @@ module.exports = (env, argv) => {
         ? path.resolve(__dirname, 'src', 'index.production.js')
         : path.resolve(__dirname, 'src', 'index.development.js'),
     },
-
-    experiments: {
-      outputModule: true,
+    experiments:{
+      outputModule: true
     },
-
     output: {
       path: path.resolve(__dirname, 'dist'),
       scriptType: 'text/javascript',

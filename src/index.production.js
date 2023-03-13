@@ -1,4 +1,3 @@
-import {Accordion, AccordionItem, AccordionExample} from './components/Accordion';
-import {Icon, IconExample} from './components/Icon';
+import {Accordion, AccordionItem} from './components/Accordion';
 
-export {Accordion, AccordionItem, AccordionExample, Icon, IconExample}
+export {Accordion, AccordionItem}
