@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { AccordionExample } from './components/Accordion';
-import './App.css';
+import {AccordionExample} from './components/Accordion';
 
-export default function (){
-  return <div>
-    <h1 className="text-3xl font-bold underline">
-      <AccordionExample/>
-    </h1>
+export default function(){
+  console.log('hi');
+  return (
+  <div>
+    <AccordionExample/>
   </div>
+  );
 }

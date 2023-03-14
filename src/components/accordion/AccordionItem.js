@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ChevronUp } from '../../icons/ChevronUp';
-import { ChevronDown } from '../../icons/ChevronDown';
-import {Icon} from '../Icon';
+// import { ChevronUp } from '../../icons/ChevronUp';
+// import { ChevronDown } from '../../icons/ChevronDown';
 
 const AccordionItemContainer = styled.div`
   display: block;
@@ -50,14 +49,15 @@ const AccordionItemContent = styled.div`
 `;
 
 //AccordionItem doesnt know about anything happening on the outside (self contained)
-export const AccordionItem = ({ data, isOpen, onClick }) => {
+const AccordionItem = ({ data, isOpen, onClick }) => {
   return (
     <AccordionItemContainer>
       <AccordionItemTitle
         onClick={(index) => onClick(index)}
         className={isOpen ? 'show' : 'hide'}
       >
-        {data.title} {isOpen? <Icon>{ ChevronUp}</Icon>  : <Icon>{ChevronDown}</Icon> }
+        {/* {data.title} {isOpen? <Icon>{ ChevronUp}</Icon>  : <Icon>{ChevronDown}</Icon> } */}
+        {data.title} {isOpen? "^"  : "V" }
       </AccordionItemTitle>
       <AccordionItemContent className={isOpen ? 'show' : 'hide'}>
         {data.body}
@@ -65,3 +65,5 @@ export const AccordionItem = ({ data, isOpen, onClick }) => {
     </AccordionItemContainer>
   );
 };
+
+export default AccordionItem;
