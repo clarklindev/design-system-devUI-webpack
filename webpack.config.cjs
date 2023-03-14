@@ -5,7 +5,7 @@ module.exports  = (env, argv) => {
   const isProduction = argv.mode === 'production';
   return {
     entry: path.resolve(__dirname, 'src', `index.${argv.mode}.js`),
-    mode: "none", //development / production / none
+    mode: argv.mode, //development / production / none
     module: {
       rules: [
         {
@@ -21,9 +21,9 @@ module.exports  = (env, argv) => {
       ]
     },
     resolve: { extensions: [ ".js", ".jsx"] },
+
     output: {
       path: path.resolve(__dirname, "dist"),
-  
       filename: "index.js"
     },
     devServer: {

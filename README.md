@@ -10,9 +10,9 @@ npm init -y
 ```
 
 ```shell
-npm install react react-dom
-npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react 
+npm i react react-dom
+npm i --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
+npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react 
 npm i --save-dev html-webpack-plugin
 ```
 

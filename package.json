@@ -1,11 +1,11 @@
 {
-  "name": "swagfinger-ui",
-  "version": "1.0.0",
-  "description": "- no create-react-app",
+  "name": "@swagfinger/swagfinger-ui/",
+  "version": "0.0.1",
+  "description": "component library",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --config webpack.config.cjs",
+    "build": "webpack --mode production --config webpack.config.cjs"
   },
   "keywords": [],
   "author": "",
