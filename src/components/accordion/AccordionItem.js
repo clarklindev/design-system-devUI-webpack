@@ -49,7 +49,7 @@ const AccordionItemContent = styled.div`
 `;
 
 //AccordionItem doesnt know about anything happening on the outside (self contained)
-const AccordionItem = ({ data, isOpen, onClick }) => {
+export const AccordionItem = ({ data, isOpen, onClick }) => {
   return (
     <AccordionItemContainer>
       <AccordionItemTitle
@@ -66,4 +66,3 @@ const AccordionItem = ({ data, isOpen, onClick }) => {
   );
 };
 
-export default AccordionItem;

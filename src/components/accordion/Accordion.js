@@ -5,7 +5,7 @@ const AccordionContainer = styled.div`
   display: block;
 `;
 
-const Accordion = ({
+export const Accordion = ({
   multiOpen = true,
   startActiveItems = [],
   childClass,
@@ -76,5 +76,3 @@ const Accordion = ({
     </AccordionContainer>
   );
 };
-
-export default Accordion;
