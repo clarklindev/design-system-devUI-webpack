@@ -1,0 +1,192 @@
+.Datepicker {
+  /* input */
+  box-sizing: border-box;
+  border-radius: var(--borderradius);
+  .Dateinput {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+    box-sizing: border-box;
+    border: 1px solid var(--colorborder);
+    border-radius: var(--borderradius);
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: var(--borderradius);
+      border-bottom-right-radius: var(--borderradius);
+      border: none;
+      background-color: white;
+    }
+    input {
+      border: none;
+      border-radius: var(--borderradius);
+      height: var(--inputheight);
+      width: 100%;
+      display: flex;
+      font: inherit;
+      font-size: var(--fontsizedefault);
+      padding: var(--paddinginput);
+      box-sizing: border-box;
+      color: var(--colordefault);
+      flex-grow: 1;
+      flex-basis: 1;
+      flex-shrink: 1;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &.Collapsible {
+        cursor: pointer;
+      }
+    }
+    &.Invalid {
+      border: 1px solid red;
+      background-color: white;
+    }
+  }
+
+  .Calendar {
+    color: var(--colordefault);
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+    box-sizing: border-box;
+    background-color: white;
+
+    .CalendarContent {
+      z-index: 50;
+
+      &[class~='relative'] {
+        position: relative;
+      }
+
+      //note: without the card padding, use 2x and 1x paddingdefault instead of 3x
+      width: calc(
+        min(
+          calc(100% - 4 * var(--paddingdefault) - 2 * var(--borderwidth)),
+          calc(
+            var(--maxwidth) - 4 * var(--paddingdefault) - 2 * var(--borderwidth)
+          )
+        )
+      );
+      position: absolute;
+      margin-top: 5px;
+      background-color: white;
+      display: flex;
+      flex-flow: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 1;
+      border: 1px solid var(--colorborder);
+      border-radius: var(--borderradius);
+      padding: 30px;
+      padding: var(--default-padding);
+      box-sizing: border-box;
+
+      .CalendarHeader {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        align-items: center;
+        height: 70px;
+        padding: 0;
+        @media (min-width: 420px) {
+          padding-top: 20px;
+        }
+        button {
+          color: var(--colorheader);
+          border: none;
+          padding: var(--paddingdefault);
+        }
+        .StateButtons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding: 0 15px;
+          button {
+            padding: 10px;
+          }
+          .Label {
+            padding: 10px;
+          }
+          .Year {
+            font-size: 1em;
+            align-self: center;
+          }
+          .Month {
+            font-size: 1em;
+            align-self: center;
+          }
+        }
+      }
+
+      .CalendarBody {
+        display: flex;
+        flex-basis: 1;
+        padding: 0px;
+        box-sizing: border-box;
+        @media (min-width: 420px) {
+          padding: 30px;
+          min-width: 370px;
+        }
+        .CalendarTable {
+          width: 100%;
+          height: 100%;
+          display: table;
+          position: relative;
+          text-align: center;
+
+          .DaysOfWeekLabel {
+            font-size: 0.7em;
+            font-weight: 600;
+            color: var(--colordefault);
+            text-transform: uppercase;
+          }
+          /* //days of month */
+          .Day {
+            text-align: center;
+            cursor: pointer;
+            padding: 10px 5px;
+            width: 100%;
+            @media (min-width: 420px) {
+              padding: 10px;
+              width: auto;
+            }
+            height: 100%;
+            box-sizing: border-box;
+          }
+          .Day:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+          }
+          [class*='Day'][class~='active'] {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+          }
+
+          //year
+          .Year {
+            background-color: white;
+            padding: 15px;
+
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.2);
+              color: white;
+            }
+          }
+          .Month {
+            background-color: white;
+            padding: 15px;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.2);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
