@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Checkbox } from './Checkbox';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 
 export const CheckboxAndLabelSomethingExample = () => {

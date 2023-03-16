@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from './Input';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 
 //normal input
 export const InputExample = () => {

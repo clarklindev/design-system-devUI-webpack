@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';

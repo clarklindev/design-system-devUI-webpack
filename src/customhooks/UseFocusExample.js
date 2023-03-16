@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useFocus } from './useFocus';
 
 export const UseFocusExample = () => {

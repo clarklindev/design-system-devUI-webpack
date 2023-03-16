@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const BookmarkIcon = (
   <svg
     viewBox='0 0 24 24'

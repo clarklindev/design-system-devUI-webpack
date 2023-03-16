@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from './Input';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 
 export const InputReadOnlyExample = () => {
   const [savedData, setSavedData] = useState('this is readonly');

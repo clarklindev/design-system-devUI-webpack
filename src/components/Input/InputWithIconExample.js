@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input, InputWrapper } from './Input';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { SpeechIcon } from '../../icons/SpeechIcon';
 import { Button } from '../Button';
 import { Icon } from '../Icon';

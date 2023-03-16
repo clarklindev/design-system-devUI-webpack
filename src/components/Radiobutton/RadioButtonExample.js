@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RadioButton } from './RadioButton';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 export const RadioButtonExample = () => {
   const [savedData, setSavedData] = useState(false);
 

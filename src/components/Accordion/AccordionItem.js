@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { ChevronUp } from '../../icons/ChevronUp';
-// import { ChevronDown } from '../../icons/ChevronDown';
+import { ChevronUp } from '../../icons/ChevronUp';
+import { ChevronDown } from '../../icons/ChevronDown';
+import { Icon } from '../Icon';
 
 const AccordionItemContainer = styled.div`
   display: block;
@@ -11,9 +12,9 @@ const AccordionItemContainer = styled.div`
 const AccordionItemTitle = styled.div`
   box-sizing: border-box;
   max-height: 50px;
-  background-color: 'red';
-  padding: '15px';
-  border-radius: '10px';
+  background-color: ${(props) => props.theme.backgroundColor};
+  padding: ${(props) => props.theme.global.padding};
+  border-radius: ${(props) => props.theme.global.borderRadius};
   cursor: pointer;
   display: flex;
   flex-grow: 1;
@@ -21,24 +22,24 @@ const AccordionItemTitle = styled.div`
   align-items: center;
 
   &.show {
-    border-top: 1px solid red;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    border-top: 1px solid ${(props) => props.theme.global.borderColor};
+    border-left: 1px solid ${(props) => props.theme.global.borderColor};
+    border-right: 1px solid ${(props) => props.theme.global.borderColor};
     border-bottom: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
 
   &.hide {
-    border: 1px solid red;
+    border: 1px solid ${(props) => props.theme.global.borderColor};
   }
 `;
 
 const AccordionItemContent = styled.div`
-  padding: 15px;
+  padding: ${(props) => props.theme.global.padding};
   &.show {
     display: block;
-    border: 1px solid red;
+    border: 1px solid ${(props) => props.theme.global.borderColor};
     border-top: 0px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -56,8 +57,13 @@ export const AccordionItem = ({ data, isOpen, onClick }) => {
         onClick={(index) => onClick(index)}
         className={isOpen ? 'show' : 'hide'}
       >
-        {/* {data.title} {isOpen? <Icon>{ ChevronUp}</Icon>  : <Icon>{ChevronDown}</Icon> } */}
-        {data.title} {isOpen? "^"  : "V" }
+
+        {data.title} 
+      
+        <Icon iconSize='30px' color='white'>
+          {isOpen ? ChevronUp : ChevronDown}
+        </Icon>
+    
       </AccordionItemTitle>
       <AccordionItemContent className={isOpen ? 'show' : 'hide'}>
         {data.body}

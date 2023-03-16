@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RadioButtonGroup } from './RadioButtonGroup';
 import { RadioButton } from './RadioButton';
 
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 
 export const RadioButtonGroupAndLabelSomethingExample = () => {

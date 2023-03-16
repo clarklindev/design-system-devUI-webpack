@@ -1,3 +1,5 @@
+https://github.com/swagfinger/swagfinger-ui.git
+
 ## build
 - no create-react-app  
 

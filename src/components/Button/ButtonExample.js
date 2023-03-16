@@ -1,5 +1,7 @@
+import React from 'react';
+
 import { Button } from './Button';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 
 export const ButtonExample = () => {
   return (

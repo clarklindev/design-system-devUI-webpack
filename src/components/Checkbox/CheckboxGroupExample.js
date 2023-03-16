@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CheckboxGroup } from './CheckboxGroup';
 import { Checkbox } from './Checkbox';
 
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 
 export const CheckboxGroupExample = () => {

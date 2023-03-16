@@ -1,3 +1,4 @@
+import React from 'react';
 import { LabelSomething } from './LabelSomething';
 import { Icon } from '../Icon';
 import { SmileyIcon } from '../../icons/SmileyIcon';

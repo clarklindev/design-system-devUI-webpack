@@ -1,5 +1,7 @@
+import React from 'react';
+
 import { Button } from './Button';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 import { Icon } from '../Icon';
 import { ThumbsUpIcon } from '../../icons/ThumbsUpIcon';

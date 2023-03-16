@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { Icon } from '../Icon';
 import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
 

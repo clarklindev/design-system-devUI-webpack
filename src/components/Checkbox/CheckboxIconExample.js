@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CheckboxIcon } from './CheckboxIcon';
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 import { BookmarkIcon } from '../../icons/BookmarkIcon';
 import { HeartIcon } from '../../icons/HeartIcon';
 import { Icon } from '../Icon';
