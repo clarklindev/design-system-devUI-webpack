@@ -1,6 +1,6 @@
-import { Heading } from './Typography';
+import { Heading } from './Heading';
 
-export const TypographyExample = () => {
+export const HeadingExample = () => {
   return (
     <div className='flex flex-col'>
       <div className='flex flex-row gap-x-8 items-end'>

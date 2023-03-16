@@ -2,10 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports  = (env, argv) => {
-  const isProduction = argv.mode === 'production';
   return {
-    entry: path.resolve(__dirname, 'src', `index.${argv.mode}.js`),
-    mode: argv.mode, //development / production / none
+    entry: path.resolve(__dirname, 'src', 'index.development.js'),
+    mode: "development", //development / production / none
     module: {
       rules: [
         {
