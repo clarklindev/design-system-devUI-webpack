@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 //theme
 import './App.css';
+
 import { GlobalStyle, darkTheme, lightTheme } from './utils';
 
 import { ThemeProvider } from 'styled-components';
@@ -52,6 +53,7 @@ const App = () => {
   useEffect(() => {
     setTheme(darkTheme);
   }, []);
+
 
   return (
     theme && (
