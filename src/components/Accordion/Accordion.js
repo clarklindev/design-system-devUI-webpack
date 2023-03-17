@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 
 const AccordionContainer = styled.div`
-  display: block;
+  display:block;
 `;
 
 export const Accordion = ({

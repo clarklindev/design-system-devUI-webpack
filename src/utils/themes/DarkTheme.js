@@ -6,7 +6,7 @@ import {
   neutral,
   status,
   transparency,
-} from '../colors';
+} from './colors';
 
 export const darkTheme = {
   name: 'darkTheme',

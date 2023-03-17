@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+
+/* 
+.btn {
+  @apply inline-bloc px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold;
+} 
+.btn:focus{
+  @apply outline-none shadow-outline;
+}
+.btn-indigo{
+  @apply bg-indigo-500 text-white;
+}
+.btn-indigo:hover{
+  @apply bg-indigo-400;
+}
+.btn-indigo:active{
+  @apply bg-indigo-600;
+}
+.btn.grey{
+  @apply bg-gray-400 text-gray-800
+*/
+
+@tailwind utilities;
+
+
+/*=============================================
+=            CSS Variables                    =
+=============================================*/
+
+
+
+/* create css variables */
+@layer base{
+  :root{
+    --color-text-status-warning: #ed6c02;
+    --color-text-status-success: #2e7d32;
+    --color-text-status-info: #0288d1;
+    --color-text-status-error: #d32f2f;
+
+    --color-text-white: #FFFFFF;
+    --color-text-black: #000000;
+    --color-text-placeholder: #737581;
+
+    --color-text-base: hotpink;
+    --color-text-muted: #C7d2fe;
+    --color-text-inverted: #4f46e5;
+     
+    --color-border: #d0d0d0;
+    --color-background: #212121; /*main bg*/
+    
+    --color-form-text: #f4f5f7;
+    --color-form-text-disabled: #737581;
+    --color-form-text-background: #dddddd;
+    --color-form-text-background-disabled: #d0d0d0;
+    
+    --input-height: '50px';
+    --padding: '1rem';
+    --margin: '1rem';
+    --border-width: '1px';
+    --border-radius: '5px';
+    
+    --h1: '4.209rem';
+    --h2: '3.157rem';
+    --h3: '2.369rem';
+    --h4: '1.777rem';
+    --h5: '1.333rem';
+    --h6: '1.2rem';
+
+    --header-margin: '0 0 1rem';
+    --line-height: "1.3";
+    --font-weight: '400';
+    --font-family: "Roboto, sans-serif";
+
+    --input-color:#d0d0d0;
+    --input-background: #1d1d1d;
+    --input-border: rgba(115, 117, 129, 0.1);
+
+    --select-color: #d0d0d0;
+    --select-background: #1d1d1d;
+    --select-border: rgba(115, 117, 129, 0.1);
+
+    --icon-background: rgba(244, 245, 247, 0.5);
+    --icon-fill: #3d3d3d;
+    --icon-stroke: #3d3d3d;
+
+    --checkbox-border: #f4f5f7; 
+    --checkbox-background: #FFFFFF;
+
+    --counter-border:  'hotpink';
+    --counter-background: '#1d1d1d';
+
+    --button-base-color: #737581;
+    --button-base-background: #3d3d3d;
+    --button-base-border: #737581;
+ 
+    --button-contained-color: #FFF;
+    --button-contained-background: #737581;
+    --button-contained-border: #FFF;
+
+    --button-outlined-color: #FFF;
+    --button-outlined-background: #737581;
+    --button-outlined-border: #FFF;
+  }
+
+  .dark-theme{
+
+  }
+
+  .light-theme{
+
+  }
+}
+
+/*=====  End of CSS Variables  ======*/
+
+
+

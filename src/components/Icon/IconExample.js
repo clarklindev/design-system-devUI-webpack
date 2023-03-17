@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 
 import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
 
-import { Heading } from '../Typography';
+import { Heading } from '../Heading';
 
 export const IconExample = () => {
   const [savedData, setSavedData] = useState('0');

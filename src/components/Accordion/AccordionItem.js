@@ -6,7 +6,7 @@ import { Icon } from '../Icon';
 
 const AccordionItemContainer = styled.div`
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 `;
 
 const AccordionItemTitle = styled.div`

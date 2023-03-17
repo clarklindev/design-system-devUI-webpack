@@ -4,12 +4,15 @@
   "description": "component library",
   "main": "src/index.js",
   "scripts": {
+    "build:css": "postcss src/tailwind.css -o public/build/tailwind.css",
+    "watch:css": "postcss src/tailwind.css -o public/build/tailwind.css --watch",
     "start": "webpack-dev-server --config webpack.config.cjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@heroicons/react": "^2.0.16",
     "polished": "^4.2.2",
     "react": "^18.2.0",

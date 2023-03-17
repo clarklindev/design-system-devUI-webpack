@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-//theme
-import './App.css';
+import './tailwindcss.css';
 
-import { GlobalStyle, darkTheme, lightTheme } from './utils';
-
+//theming
+import { darkTheme, lightTheme } from './utils';
 import { ThemeProvider } from 'styled-components';
 
 import { Heading, HeadingExample } from './components/Heading';
@@ -73,7 +72,7 @@ const App = () => {
             </div>
           </Block>
 
-          <Block>
+          {/* <Block>
             <Heading variation='h4'>02. Heading</Heading>
             <HeadingExample />
           </Block>
@@ -210,7 +209,7 @@ const App = () => {
           <Block>
             <Heading variation='h4'>19. Table</Heading>
             <TableExample />
-          </Block>
+          </Block> */}
 
           {/* <Block>
             <Heading variation='h4'>20. Navbar</Heading>
@@ -257,7 +256,6 @@ const App = () => {
             <Heading variation='h4'>32. DateRangePicker</Heading>
           </Block> */}
         </div>
-        <GlobalStyle />
       </ThemeProvider>
     )
   );
