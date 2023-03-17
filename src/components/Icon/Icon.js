@@ -6,24 +6,16 @@ export const IconContainer = styled.div`
   width: ${(props) => props.iconSize};
   height: ${(props) => props.iconSize};
   display: flex;
-
-  //color affects the svg if svg has currentColor set somewhere
-  color: ${(props) =>
-    props.theme.color[props.color]
-      ? props.theme.color[props.color]
-      : props.color};
-  // whatever is passed through as children
+  color: var(--icon-background);
   > * {
     width: 100%;
     height: 100%;
-    fill-opacity: ${(props) => props.fill && '100%'};
-    fill: ${(props) => props.fill};
-    stroke: ${(props) => props.stroke};
+    stroke: var(--icon-stroke);
   }
 `;
 
 export const Icon = ({
-  iconSize = '',
+  iconSize = '25px',
   color = '',
   className,
   children,

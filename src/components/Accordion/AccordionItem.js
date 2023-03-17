@@ -12,9 +12,10 @@ const AccordionItemContainer = styled.div`
 const AccordionItemTitle = styled.div`
   box-sizing: border-box;
   max-height: 50px;
-  background-color: ${(props) => props.theme.backgroundColor};
-  padding: ${(props) => props.theme.global.padding};
-  border-radius: ${(props) => props.theme.global.borderRadius};
+  background-color: ${({theme}) => theme?.background?.backgroundColor || 'var(--color-background)'};
+  
+  padding: ${({theme})=>theme?.global?.padding || 'var(--padding)'};
+  border-radius: ${({theme})=>theme?.global?.borderRadius || 'var(--border-radius)'};
   cursor: pointer;
   display: flex;
   flex-grow: 1;
@@ -22,24 +23,24 @@ const AccordionItemTitle = styled.div`
   align-items: center;
 
   &.show {
-    border-top: 1px solid ${(props) => props.theme.global.borderColor};
-    border-left: 1px solid ${(props) => props.theme.global.borderColor};
-    border-right: 1px solid ${(props) => props.theme.global.borderColor};
+    border-top: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)' };
+    border-left: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)' };
+    border-right: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)' };
     border-bottom: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
 
   &.hide {
-    border: 1px solid ${(props) => props.theme.global.borderColor};
+    border: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)'};
   }
 `;
 
 const AccordionItemContent = styled.div`
-  padding: ${(props) => props.theme.global.padding};
+  padding: ${({theme})=>theme?.global?.padding || 'var(--padding)' };
   &.show {
     display: block;
-    border: 1px solid ${(props) => props.theme.global.borderColor};
+    border: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)'};
     border-top: 0px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;

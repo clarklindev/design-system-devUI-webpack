@@ -59,9 +59,9 @@ export const lightTheme = {
     h6: {
       fontSize: '1.2rem',
     },
-    fontFamily: "'Roboto', 'sans-serif'",
     header: {
       margin: '0 0 1rem',
+      fontFamily: "'Roboto', 'sans-serif'",
       lineHeight: '1.3',
       fontWeight: '400',
     },

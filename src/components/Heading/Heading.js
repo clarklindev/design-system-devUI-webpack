@@ -3,29 +3,29 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeadingBase = styled.div`
-  margin: ${(props) => props.theme.typography.header.margin};
-  line-height: ${(props) => props.theme.typography.header.lineHeight};
-  font-weight: ${(props) => props.theme.typography.header.fontWeight};
-  font-family: ${(props) => props.theme.typography.header.fontFamily};
+  margin: var(--header-margin);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
 `;
 
 const Heading1 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h1.fontSize};
+  font-size: var(--h1);
 `;
 const Heading2 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h2.fontSize};
+  font-size: var(--h2);
 `;
 const Heading3 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h3.fontSize};
+  font-size: var(--h3);
 `;
 const Heading4 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h4.fontSize};
+  font-size: var(--h4);
 `;
 const Heading5 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h5.fontSize};
+  font-size: var(--h5);
 `;
 const Heading6 = styled(HeadingBase)`
-  font-size: ${(props) => props.theme.typography.h6.fontSize};
+  font-size: var(--h6);
 `;
 
 export const Heading = ({ variation, children, ...rest }) => {

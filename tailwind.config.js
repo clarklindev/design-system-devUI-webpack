@@ -19,14 +19,14 @@ module.exports = {
       backgroundColor:{
         //css: "bg-swag"
         swag:{
-          DEFAULT: 'var(--color-global-background)',
+          DEFAULT: 'var(--color-background)',
         }
       },
 
       borderColor:{
         //css: "border-swag"
         swag:{
-          DEFAULT: 'var(--color-fill)'
+          DEFAULT: 'var(--color-border)'
         }
       }
 

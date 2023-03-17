@@ -12,7 +12,7 @@ export const darkTheme = {
   name: 'darkTheme',
   //actual page background
   background: {
-    backgroundColor: neutral[800],
+    backgroundColor: red[300],
   },
   color: {
     DEFAULT: 'hotpink',
@@ -59,9 +59,9 @@ export const darkTheme = {
     h6: {
       fontSize: '1.2rem',
     },
-    fontFamily: "'Roboto', 'sans-serif'",
     header: {
       margin: '0 0 1rem',
+      fontFamily: "'Roboto', 'sans-serif'",
       lineHeight: '1.3',
       fontWeight: '400',
     },
