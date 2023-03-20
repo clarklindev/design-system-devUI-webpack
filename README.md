@@ -401,3 +401,10 @@ module.exports = {
   ]
 }
 ```
+
+## css variables
+- in the example, it tries to use the theme and uses the css variables as a fallback
+
+```css
+border-top: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)' };
+```

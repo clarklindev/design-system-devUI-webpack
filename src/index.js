@@ -9,7 +9,10 @@ if (process.env.NODE_ENV === 'development') {
   root.render(<App/>);
 }
 
-export {Accordion, AccordionItem, AccordionExample} from './components/Accordion';
+export {Accordion} from './components/Accordion';
+export {AccordionItem} from './components/Accordion/AccordionItem';
+export {AccordionExample} from './components/Accordion/AccordionExample';
+
 export {Button, ButtonExample, ButtonModifiersExample, ButtonVariationExample, ButtonWithLabelSomethingExample} from './components/Button';
 export {Card, CardExample} from './components/Card';
 export {Checkbox, CheckboxExample, CheckboxAndLabelSomethingExample, CheckboxGroup, CheckboxGroupExample, CheckboxGroupAndLabelSomethingExample, CheckboxIcon, CheckboxIconExample} from './components/Checkbox';

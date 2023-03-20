@@ -1,17 +1,26 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports  = (env, argv) => {
   return {
     entry: path.resolve(__dirname, 'src', 'index.js'),
-    mode: "development", //development / production / none
+    mode: argv.mode, 
     module: {
       rules: [
         {
+          test: /\.svg$/,
+          exclude: /node_modules/,
+          use: 'svg-inline-loader'
+        },
+        {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
+          resolve: {
+            fullySpecified: false,
+          },
           loader: "babel-loader",
-          options: { presets: ["@babel/env",  '@babel/preset-react'] }
+          options: { presets: ['@babel/preset-env', '@babel/preset-react'] }
         },
         {
           test: /\.css$/,
@@ -20,16 +29,16 @@ module.exports  = (env, argv) => {
       ]
     },
     resolve: { extensions: [ ".js", ".jsx"] },
-
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "index.js"
+      filename: "index.js",
     },
     devServer: {
       static: path.resolve(__dirname, "dist"),
       port: 3000,
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         filename: path.resolve(__dirname, 'dist', 'index.html'),
         template: path.resolve(__dirname, 'src', 'template.html'),

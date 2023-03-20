@@ -35,7 +35,8 @@ import {
   CheckboxIconExample,
 } from './components/Checkbox';
 import { CounterExample } from './components/Counter';
-import { AccordionExample } from './components/Accordion';
+import { AccordionExample } from './components/Accordion/AccordionExample';
+
 import { SelectExample } from './components/Select';
 import { Block } from './components/Layout';
 import { ToggleSwitchExample } from './components/Switch';
