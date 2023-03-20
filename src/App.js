@@ -4,14 +4,16 @@ import React, { useEffect, useState } from 'react';
 import { darkTheme, lightTheme } from './utils';
 import { ThemeProvider } from 'styled-components';
 
+import { AccordionExample } from './components/Accordion/AccordionExample';
+
+import {ButtonExample } from './components/Button/ButtonExample';
+import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
+import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
+import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
+
 import { Heading, HeadingExample } from './components/Heading';
 import { LabelSomethingExample } from './components/LabelSomething';
-import {
-  ButtonExample,
-  ButtonVariationExample,
-  ButtonModifiersExample,
-  ButtonWithLabelSomethingExample,
-} from './components/Button';
+
 import { SnackbarExample } from './components/Snackbar';
 import {
   InputExample,
@@ -35,7 +37,6 @@ import {
   CheckboxIconExample,
 } from './components/Checkbox';
 import { CounterExample } from './components/Counter';
-import { AccordionExample } from './components/Accordion/AccordionExample';
 
 import { SelectExample } from './components/Select';
 import { Block } from './components/Layout';

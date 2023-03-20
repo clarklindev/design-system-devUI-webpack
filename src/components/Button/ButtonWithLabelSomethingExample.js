@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from './Button';
+import { Button } from './index';
 import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 import { Icon } from '../Icon';
