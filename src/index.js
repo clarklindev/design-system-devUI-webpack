@@ -8,14 +8,32 @@ if (process.env.NODE_ENV === 'development') {
   const root = createRoot(container); 
   root.render(<App/>);
 }
-
+//Accordion
 export {Accordion} from './components/Accordion';
 export {AccordionItem} from './components/Accordion/AccordionItem';
 export {AccordionExample} from './components/Accordion/AccordionExample';
+//Button
+export {Button} from './components/Button';
+export {ButtonExample} from './components/Button/ButtonExample'
+export {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
+export {ButtonVariationExample} from './components/Button/ButtonVariationExample';
+export {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
+//Card
+export {Card} from './components/Card';
+export {CardExample} from './components/Card/CardExample';
+//Checkbox
+export {Checkbox} from './components/Checkbox';
+export {CheckboxExample} from './components/Checkbox/CheckboxExample';
+export {CheckboxAndLabelSomethingExample} from './components/Checkbox/CheckboxAndLabelSomethingExample';
+//CheckboxGroup
+export {CheckboxGroup} from './components/CheckboxGroup';
+export {CheckboxGroupExample} from './components/CheckboxGroup/CheckboxGroupExample';
+export {CheckboxGroupAndLabelSomethingExample} from './components/CheckboxGroup/CheckboxGroupAndLabelSomethingExample';
+//CheckboxIcon
+export {CheckboxIcon} from './components/CheckboxIcon';
+export {CheckboxIconExample} from './components/CheckboxIcon/CheckboxIconExample';
 
-export {Button, ButtonExample, ButtonModifiersExample, ButtonVariationExample, ButtonWithLabelSomethingExample} from './components/Button';
-export {Card, CardExample} from './components/Card';
-export {Checkbox, CheckboxExample, CheckboxAndLabelSomethingExample, CheckboxGroup, CheckboxGroupExample, CheckboxGroupAndLabelSomethingExample, CheckboxIcon, CheckboxIconExample} from './components/Checkbox';
+
 export {Counter, CounterExample} from './components/Counter';
 export {Datepicker} from './components/Datepicker';//add example
 export {Heading, HeadingExample} from './components/Heading';

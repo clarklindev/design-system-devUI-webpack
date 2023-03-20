@@ -12,8 +12,8 @@ const AccordionItemContainer = styled.div`
 const AccordionItemTitle = styled.div`
   box-sizing: border-box;
   max-height: 50px;
-  background-color: ${({theme}) => theme?.background?.backgroundColor || 'var(--color-background)'};
-  
+  background-color: ${({theme}) => theme?.accordion?.backgroundColor || 'red'};
+  color:${({theme})=> theme?.accordion?.color || 'red'};
   padding: ${({theme})=>theme?.global?.padding || 'var(--padding)'};
   border-radius: ${({theme})=>theme?.global?.borderRadius || 'var(--border-radius)'};
   cursor: pointer;

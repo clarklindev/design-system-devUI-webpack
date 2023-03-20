@@ -178,7 +178,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon iconSize='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -195,7 +195,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon iconSize='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -212,7 +212,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon iconSize='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -229,7 +229,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon iconSize='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }

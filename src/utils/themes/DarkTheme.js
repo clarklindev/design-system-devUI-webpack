@@ -1,27 +1,21 @@
 import {
-  blue,
-  yellow,
-  green,
-  red,
-  neutral,
-  status,
-  transparency,
-} from './colors';
+  colors, transparency
+} from '../colors';
 
 export const darkTheme = {
   name: 'darkTheme',
   //actual page background
   background: {
-    backgroundColor: red[300],
+    backgroundColor: colors.red[300],
   },
   color: {
     DEFAULT: 'hotpink',
-    warning: status.warning,
-    success: status.success,
-    info: status.info,
-    error: status.error,
-    white: neutral[100],
-    black: neutral[1000],
+    warning: colors.status.warning,
+    success: colors.status.success,
+    info: colors.status.info,
+    error: colors.status.error,
+    white: colors.neutral[100],
+    black: colors.neutral[1000],
   },
 
   global: {
@@ -30,14 +24,14 @@ export const darkTheme = {
     margin: '1rem',
     borderWidth: '1px',
     borderRadius: '5px',
-    borderColor: neutral[300],
-    placeholder: neutral[400],
+    borderColor: colors.neutral[300],
+    placeholder: colors.neutral[400],
 
-    formElementColor: neutral[200],
-    formElementBackground: blue[100],
+    formElementColor: colors.neutral[200],
+    formElementBackground: colors.blue[100],
 
-    disabledColor: neutral[400],
-    disabledBackgroundColor: neutral[300],
+    disabledColor: colors.neutral[400],
+    disabledBackgroundColor: colors.neutral[300],
   },
 
   typography: {
@@ -67,53 +61,58 @@ export const darkTheme = {
     },
   },
 
+  accordion: {
+    color: colors.neutral[100],
+    backgroundColor: colors.neutral[400]
+  },
+
   input: {
-    color: neutral[300],
-    backgroundColor: neutral[900],
-    borderColor: neutral[400] + transparency[10],
+    color: colors.neutral[300],
+    backgroundColor: colors.neutral[900],
+    borderColor: colors.neutral[400] + transparency[10],
   },
 
   select: {
-    color: neutral[300],
-    backgroundColor: neutral[900],
-    borderColor: neutral[400] + transparency[10],
+    color: colors.neutral[300],
+    backgroundColor: colors.neutral[900],
+    borderColor: colors.neutral[400] + transparency[10],
   },
 
   icon: {
-    backgroundColor: neutral[200] + transparency[50],
-    fill: neutral[600],
-    stroke: neutral[600],
+    backgroundColor: colors.neutral[200] + transparency[50],
+    fill: colors.neutral[600],
+    stroke: colors.neutral[600],
   },
 
   checkbox: {
-    borderColor: neutral[200],
-    backgroundColor: neutral[100],
+    borderColor: colors.neutral[200],
+    backgroundColor: colors.neutral[100],
   },
 
   counter: {
     borderColor: 'hotpink',
-    backgroundColor: neutral[900],
+    backgroundColor: colors.neutral[900],
   },
 
   button: {
     //neutral component color
     base: {
-      color: neutral[400],
-      backgroundColor: neutral[600],
-      borderColor: neutral[400],
+      color: colors.neutral[400],
+      backgroundColor: colors.neutral[600],
+      borderColor: colors.neutral[400],
     },
     contained: {
-      color: neutral[100],
-      backgroundColor: neutral[400],
-      borderColor: neutral[100],
+      color: colors.neutral[100],
+      backgroundColor: colors.neutral[400],
+      borderColor: colors.neutral[100],
     },
     outlined: {
-      color: neutral[100],
-      backgroundColor: neutral[400],
-      borderColor: neutral[100],
+      color: colors.neutral[100],
+      backgroundColor: colors.neutral[400],
+      borderColor: colors.neutral[100],
     },
     text: {
-      color: neutral[100],
+      color: colors.neutral[100],
     },
   },
 };

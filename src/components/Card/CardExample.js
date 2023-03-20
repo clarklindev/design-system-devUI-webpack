@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Heading } from '../Heading';
-import { Card } from './Card';
+import { Card } from './index';
 
 export const CardExample = () => {
   return (

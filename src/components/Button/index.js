@@ -2,58 +2,39 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
+import '../../tailwindcss.css';
+
 import { MODIFIERS } from './modifiers';
 
 const BaseButton = styled.button`
   box-sizing: border-box;
-  border: 1px solid ${(props) => props.theme.button.base.borderColor};
-  background-color: ${(props) => props.theme.button.base.backgroundColor};
-  color: ${(props) => props.theme.button.base.color};
   outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: auto;
   cursor: pointer;
-  padding: 10px ${(props) => props.theme.global.padding};
-  border-radius: ${(props) => props.theme.global.borderRadius};
+  border: 1px solid ${({theme}) => theme?.button?.base?.borderColor || 'var(--button-base-border)'};
+  background-color: ${({theme}) => theme?.button?.base?.backgroundColor || 'var(--button-base-background)'}; 
+  color: ${({theme}) => theme?.button?.base?.color || 'var(--button-base-color)'};
+  padding: 10px ${({theme}) => theme?.global?.padding || 'var(--padding)'};
+  border-radius: ${({theme}) => theme?.global?.borderRadius || 'var(--border-radius)'};
+  
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const ContainedButton = styled(BaseButton)`
   border: none;
-  background-color: ${(props) =>
-    props.theme.color[props.backgroundColor]
-      ? props.theme.color[props.backgroundColor]
-      : props.backgroundColor
-      ? props.backgroundColor
-      : props.theme.button.contained.backgroundColor};
+  background-color: ${({theme, backgroundColor}) => backgroundColor ? backgroundColor : theme?.button?.contained?.backgroundColor || 'var(--button-contained-background)'};
+  color: ${({theme, color}) => color ? color : theme?.button?.contained?.color || 'var(--button-contained-color)'};
 
-  color: ${(props) =>
-    props.theme.color[props.color]
-      ? props.theme.color[props.color]
-      : props.color
-      ? props.color
-      : props.theme.button.contained.color};
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const OutlinedButton = styled(BaseButton)`
-  border: 1px solid
-    ${(props) =>
-      props.theme.color[props.borderColor]
-        ? props.theme.color[props.borderColor]
-        : props.borderColor
-        ? props.borderColor
-        : props.theme.button.outlined.borderColor};
   background-color: transparent;
-
-  color: ${(props) =>
-    props.theme.color[props.color]
-      ? props.theme.color[props.color]
-      : props.color
-      ? props.color
-      : props.theme.button.outlined.color};
+  border: 1px solid ${({theme, borderColor}) => borderColor ? borderColor : theme?.button?.outlined?.borderColor || 'var(--button-outlined-border)'};
+  color: ${({theme, color}) => color ? color : theme?.button?.outlined?.color || 'var(--button-outlined-color)'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
@@ -61,13 +42,8 @@ const OutlinedButton = styled(BaseButton)`
 const TextButton = styled(BaseButton)`
   border: none;
   background: none;
-  color: ${(props) =>
-    props.theme.color[props.color]
-      ? props.theme.color[props.color]
-      : props.color
-      ? props.color
-      : props.theme.button.text.color};
   padding: 0px;
+  color: ${({theme, color}) => color ? color : theme?.button?.text?.color || 'var(--button-text-color)'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
@@ -165,3 +141,4 @@ export const Button = ({
       );
   }
 };
+

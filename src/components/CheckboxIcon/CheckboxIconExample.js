@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckboxIcon } from './CheckboxIcon';
+import { CheckboxIcon } from './index';
 import { Heading } from '../Heading';
 import { BookmarkIcon } from '../../icons/BookmarkIcon';
 import { HeartIcon } from '../../icons/HeartIcon';

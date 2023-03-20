@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Checkbox } from './Checkbox';
+import { Checkbox } from './index';
 import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 

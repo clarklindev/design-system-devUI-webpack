@@ -6,11 +6,11 @@ export const IconContainer = styled.div`
   width: ${(props) => props.iconSize};
   height: ${(props) => props.iconSize};
   display: flex;
-  color: var(--icon-background);
+
   > * {
     width: 100%;
     height: 100%;
-    stroke: var(--icon-stroke);
+    stroke: ${({theme,color})=> color ? color : theme?.icon?.stroke || 'var(--icon-stroke)'};
   }
 `;
 

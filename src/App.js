@@ -57,11 +57,26 @@ const App = () => {
 
   return (
       // theme && (
-        // <ThemeProvider theme={theme}>
+      //    <ThemeProvider theme={theme}>
         <div
           className='App'
         >
-
+          
+          <Block>
+          <Heading variation='h4'>15. Accordion</Heading> 
+          <AccordionExample />
+          </Block>
+        
+          <Block>
+            <Heading variation='h4'>05. Buttons</Heading>
+            <div className='flex flex-col'>
+              <ButtonExample />
+              <ButtonVariationExample />
+              <ButtonModifiersExample />
+              <ButtonWithLabelSomethingExample /> 
+          
+            </div>
+          </Block>
     {/* //   <Block>
         //     <Heading variation='h4'>01. Dark/Light mode</Heading> 
         //     <div className='flex flex-col items-start gap-2'>
@@ -85,17 +100,6 @@ const App = () => {
         //     <Heading variation='h4'>04. LabelSomething</Heading>
         //     <LabelSomethingExample />
         //   </Block>
-
-        //   <Block>
-        //     <Heading variation='h4'>05. Buttons</Heading>
-        //     <div className='flex flex-col'>
-        //       <ButtonExample />
-        //       <ButtonVariationExample />
-        //       <ButtonModifiersExample />
-        //       <ButtonWithLabelSomethingExample />
-        //     </div>
-        //   </Block>
-
         //   <Block>
         //     <Heading variation='h4'>06. Snackbar</Heading>
         //     <div className='flex flex-col'>
@@ -164,10 +168,7 @@ const App = () => {
         //     <MultiRangeSliderExample />
         //   </Block>
         */
-          <Block>
-          <Heading variation='h4'>15. Accordion</Heading> 
-          <AccordionExample />
-          </Block>
+          
         /*
         //   <Block>
         //     <Heading variation='h4'>16. List</Heading>
@@ -256,8 +257,8 @@ const App = () => {
         */}
         </div>
        
-      //  </ThemeProvider>
-    //  )
+      //    </ThemeProvider>
+      //  )
   );
 };
 

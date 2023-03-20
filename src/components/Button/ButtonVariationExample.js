@@ -4,6 +4,8 @@ import { Heading } from '../Heading';
 import { Icon } from '../Icon';
 import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
 
+import { colors } from '../../utils/colors';
+
 export const ButtonVariationExample = () => {
   const icon = ShoppingCartIcon;
 
@@ -16,72 +18,72 @@ export const ButtonVariationExample = () => {
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
           label='Contained'
-          color='white'
-          backgroundColor='success'
+          color={colors.neutral[100]}
+          backgroundColor={colors.status.success}
           variation='contained'
         />
         <Button
           label='Contained'
-          color='white'
-          backgroundColor='warning'
+          color={colors.white}
+          backgroundColor={colors.status.warning}
           variation='contained'
         />
         <Button
           label='Contained'
-          color='white'
-          backgroundColor='error'
+          color={colors.white}
+          backgroundColor={colors.status.error}
           variation='contained'
         />
         <Button
           label='Contained'
-          color='white'
-          backgroundColor='info'
+          color={colors.white}
+          backgroundColor={colors.status.info}
           variation='contained'
         />
         <Button
           label='Contained'
-          color='white'
+          color={colors.white}
           backgroundColor='#9d4edd'
           variation='contained'
         />
         <Button
           label='Contained'
-          color='black'
-          backgroundColor='white'
+          color={colors.black}
+          backgroundColor={colors.white}
           variation='contained'
         />
         <Button
           label='Contained'
-          color='white'
-          backgroundColor='black'
+          color={colors.white}
+          backgroundColor={colors.black}
           variation='contained'
         />
       </div>
       {/*------------------------------------------------------------------------------------------------------- */}
-
+ 
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
           label='Outlined'
-          borderColor='success'
-          color='success'
+          borderColor={colors.status.success}
+          color={colors.status.success}
           variation='outlined'
         />
         <Button
           label='Outlined'
-          borderColor='warning'
-          color='warning'
+          borderColor={colors.status.warning}
+          color={colors.status.warning}
           variation='outlined'
         />
         <Button
           label='Outlined'
-          borderColor='error'
-          color='error'
+          borderColor={colors.status.error}
+          color={colors.status.error}
           variation='outlined'
         />
         <Button
           label='Outlined'
-          borderColor='info'
-          color='info'
+          borderColor={colors.status.info}
+          color={colors.status.info}
           variation='outlined'
         />
         <Button
@@ -92,36 +94,36 @@ export const ButtonVariationExample = () => {
         />
         <Button
           label='Outlined'
-          borderColor='white'
-          color='white'
+          borderColor="light-gray"
+          color="light-gray"
           variation='outlined'
         />
         <Button
           label='Outlined'
-          borderColor='black'
-          color='black'
+          borderColor={colors.black}
+          color={colors.black}
           variation='outlined'
         />
       </div>
 
       {/*------------------------------------------------------------------------------------------------------- */}
 
-      <div className='flex flex-row mb-10 gap-x-5'>
-        <Button label='Text' color='success' variation='text' />
-        <Button label='Text' color='warning' variation='text' />
-        <Button label='Text' color='error' variation='text' />
-        <Button label='Text' color='info' variation='text' />
+       <div className='flex flex-row mb-10 gap-x-5'>
+        <Button label='Text' color={colors.status.success} variation='text' />
+        <Button label='Text' color={colors.status.warning} variation='text' />
+        <Button label='Text' color={colors.status.error} variation='text' />
+        <Button label='Text' color={colors.status.info} variation='text' />
         <Button label='Text' color='#9d4edd' variation='text' />
-        <Button label='Text' color='white' variation='text' />
-        <Button label='Text' color='black' variation='text' />
-      </div>
+        <Button label='Text' color='light-gray' variation='text' />
+        <Button label='Text' color={colors.black} variation='text' />
+      </div> 
       {/*------------------------------------------------------------------------------------------------------- */}
-
+ 
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='success'>
+            <Icon iconSize='30px' color={colors.status.success}>
               {icon}
             </Icon>
           }
@@ -129,7 +131,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='warning'>
+            <Icon iconSize='30px' color={colors.status.warning}>
               {icon}
             </Icon>
           }
@@ -137,7 +139,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='error'>
+            <Icon iconSize='30px' color={colors.status.error}>
               {icon}
             </Icon>
           }
@@ -145,7 +147,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='info'>
+            <Icon iconSize='30px' color={colors.status.error}>
               {icon}
             </Icon>
           }
@@ -153,7 +155,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='white'>
+            <Icon iconSize='30px' color='light-gray'>
               {icon}
             </Icon>
           }
@@ -161,12 +163,12 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='black'>
+            <Icon iconSize='30px' color={colors.black}>
               {icon}
             </Icon>
           }
         />
       </div>
-    </div>
+    </div> 
   );
 };

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { CheckboxGroup } from './CheckboxGroup';
-import { Checkbox } from './Checkbox';
+import { CheckboxGroup } from './index';
+import { Checkbox } from '../Checkbox';
 
 import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 
-export const CheckboxGroupAndLabelSomethingExample = () => {
+export const CheckboxGroupExample = () => {
   const [savedData, updateSavedData] = useState([false, false, false]);
 
   const options = [
@@ -22,7 +22,7 @@ export const CheckboxGroupAndLabelSomethingExample = () => {
 
   return (
     <div className='flex flex-col mb-10'>
-      <Heading variation='h6'>Checkbox Group + LabelSomething</Heading>
+      <Heading variation='h6'>Checkbox Group</Heading>
 
       <LabelSomething
         label='label'
@@ -32,29 +32,23 @@ export const CheckboxGroupAndLabelSomethingExample = () => {
         something={
           <CheckboxGroup
             configure={{
-              direction: 'row',
-              spacing: '15px',
+              direction: 'column',
+              spacing: '1rem',
             }}
           >
             {options.map((each, index) => {
               return (
-                <LabelSomething
+                <Checkbox
                   key={'CheckboxGroup_Checkbox_ABC' + index}
-                  label={each.label}
-                  labelPosition='bottom'
-                  spacing='2'
-                  align='center'
-                  something={
-                    <Checkbox
-                      savedData={savedData[index]}
-                      configure={{
-                        name: 'Checkbox_ABC',
-                        iconSize: '30px',
-                        color: 'darkgrey',
-                        onChange: () => onChange(index, !savedData[index]),
-                      }}
-                    />
-                  }
+                  savedData={savedData[index]}
+                  configure={{
+                    label: each.label,
+                    name: 'Checkbox_ABC',
+                    iconSize: '30px',
+                    color: 'darkgrey',
+
+                    onChange: () => onChange(index, !savedData[index]),
+                  }}
                 />
               );
             })}

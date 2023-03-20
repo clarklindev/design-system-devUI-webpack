@@ -101,15 +101,10 @@
     --button-outlined-color: #FFF;
     --button-outlined-background: #737581;
     --button-outlined-border: #FFF;
+
+    --button-text-color: #FFF;
   }
 
-  .dark-theme{
-
-  }
-
-  .light-theme{
-
-  }
 }
 
 /*=====  End of CSS Variables  ======*/
