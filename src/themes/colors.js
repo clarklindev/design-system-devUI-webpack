@@ -1,7 +1,9 @@
 export const colors = {
   transparent: 'transparent',
+  
   white: '#FFF',
   black: '#000',
+
   blue:{
     100: '#99d6ff',
     200: '#5cbeff',
@@ -32,9 +34,9 @@ export const colors = {
 
   neutral:{
     100: '#FFFFFF',
-    200: '#f4f5f7',
+    200: '#e4e4e4',
     300: '#d0d0d0',
-    400: '#737581',
+    400: '#939393',
     500: '#4a4b53',
     600: '#3d3d3d',
     700: '#2d2d2d',
@@ -55,7 +57,7 @@ export const colors = {
     info: '#0288d1',
   }
 }
-
+  
 export const transparency = {
   100: 'FF',
   90: 'E6',
@@ -68,4 +70,4 @@ export const transparency = {
   20: '33',
   10: '1A',
   0: '00',
-};
+}

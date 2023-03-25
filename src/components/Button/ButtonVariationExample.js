@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from './index';
 import { Heading } from '../Heading';
 import { Icon } from '../Icon';
-import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
+import { ShoppingCartIcon } from '../../svg/ShoppingCartIcon';
 
-import { colors } from '../../utils/colors';
+import { colors } from '../../themes/colors';
 
 export const ButtonVariationExample = () => {
   const icon = ShoppingCartIcon;
@@ -12,7 +12,7 @@ export const ButtonVariationExample = () => {
   return (
     <div className='flex flex-col'>
       {/* using status colors */}
-      <Heading variation='h6'>Variation</Heading>
+      <Heading variation='h6'>Contained Buttons</Heading>
       {/*------------------------------------------------------------------------------------------------------- */}
 
       <div className='flex flex-row mb-10 gap-x-5'>
@@ -60,7 +60,8 @@ export const ButtonVariationExample = () => {
         />
       </div>
       {/*------------------------------------------------------------------------------------------------------- */}
- 
+      <Heading variation='h6'>Outlined Buttons</Heading>
+
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
           label='Outlined'
@@ -107,7 +108,7 @@ export const ButtonVariationExample = () => {
       </div>
 
       {/*------------------------------------------------------------------------------------------------------- */}
-
+      <Heading variation='h6'>Text Buttons</Heading>
        <div className='flex flex-row mb-10 gap-x-5'>
         <Button label='Text' color={colors.status.success} variation='text' />
         <Button label='Text' color={colors.status.warning} variation='text' />
@@ -119,11 +120,12 @@ export const ButtonVariationExample = () => {
       </div> 
       {/*------------------------------------------------------------------------------------------------------- */}
  
+      <Heading variation='h6'>Icon Buttons</Heading>
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color={colors.status.success}>
+            <Icon size='30px' color={colors.status.success}>
               {icon}
             </Icon>
           }
@@ -131,7 +133,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color={colors.status.warning}>
+            <Icon size='30px' color={colors.status.warning}>
               {icon}
             </Icon>
           }
@@ -139,7 +141,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color={colors.status.error}>
+            <Icon size='30px' color={colors.status.error}>
               {icon}
             </Icon>
           }
@@ -147,7 +149,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color={colors.status.error}>
+            <Icon size='30px' color={colors.status.info}>
               {icon}
             </Icon>
           }
@@ -155,7 +157,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color='light-gray'>
+            <Icon size='30px' color='#9d4edd'>
               {icon}
             </Icon>
           }
@@ -163,7 +165,15 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon iconSize='30px' color={colors.black}>
+            <Icon size='30px' color='light-gray'>
+              {icon}
+            </Icon>
+          }
+        />
+        <Button
+          variation='icon'
+          label={
+            <Icon size='30px' color={colors.black}>
               {icon}
             </Icon>
           }

@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import {Accordion} from './index';
-import {AccordionItem} from './AccordionItem';
+import React from 'react';
+import { Accordion} from './index';
 
 export const AccordionExample = () => {
   
-  const [data, setData] = useState(); //savedData is when we are saving data, 'data' is presented data that is not updated, we 'setData' on init with useEffect()
-  
-  useEffect(()=>{
-    setData([
-      {
-        title: 'helloworld',
-        body: 'this is my first post',
-      },
-      {
-        title: 'rainbow',
-        body: 'rainbows are amazing',
-      },
-    ]);
-  }, [])
+  const data = [
+    {
+      title: 'helloworld',
+      body: 'this is my first answer',
+    },
+    {
+      title: 'rainbow',
+      body: 'rainbows are amazing',
+    },
+    {
+      title: 'sun',
+      body: 'the sun is amazing',
+    },
+  ]; 
 
   return (
     <Accordion
       multiOpen={true}
-      startActiveItems={[0, 1]}//indexes
-      data={data}
-      childClass={AccordionItem}
+
+      // renderprop
+      renderItem={({handleClick, indexes, AccordionItem, Separator})=>{
+        return data.map((each, index)=>{
+          return <React.Fragment key={index}>
+            <AccordionItem data={each} key={`item${index}`} onClick={ ()=>handleClick(index)} isOpen={indexes.includes(index)}/>
+            { (index < data.length-1) && <Separator/>}
+          </React.Fragment>
+        });
+      }}
     />
   );
 };

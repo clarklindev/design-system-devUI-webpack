@@ -4,14 +4,14 @@ import { Button } from './index';
 import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 import { Icon } from '../Icon';
-import { ThumbsUpIcon } from '../../icons/ThumbsUpIcon';
+import { ThumbsUpIcon } from '../../svg/ThumbsUpIcon';
 
 export const ButtonWithLabelSomethingExample = () => {
   const icon = ThumbsUpIcon;
 
   return (
     <div className='flex flex-col'>
-      <Heading variation='h6'>Button + LabelSomething</Heading>
+      <Heading variation='h6'>Contained Button + LabelSomething</Heading>
 
       {/* aligned with tailwindcss - flex-row items are height auto-stretch so for them to be variable height, need to use items-end or items-start */}
       {/*------------------------------------------------------------------------------------------------------- */}
@@ -27,7 +27,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon size='30px' color='white'>
                   {icon}
                 </Icon>
               }
@@ -45,7 +45,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon size='30px' color='white'>
                   {icon}
                 </Icon>
               }
@@ -63,7 +63,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon size='30px' color='white'>
                   {icon}
                 </Icon>
               }
@@ -81,7 +81,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon iconSize='30px' color='white'>
+                <Icon size='30px' color='white'>
                   {icon}
                 </Icon>
               }
@@ -92,6 +92,8 @@ export const ButtonWithLabelSomethingExample = () => {
       {/*------------------------------------------------------------------------------------------------------- */}
 
       {/* outlined */}
+      <Heading variation='h6'>Outlined Button + LabelSomething</Heading>
+
       <div className='flex flex-row mb-10 gap-x-5 items-end'>
         <Button
           variation='outlined'
@@ -103,7 +105,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon iconSize='30px' color='red'>
+                <Icon size='30px' color='red'>
                   {icon}
                 </Icon>
               }
@@ -121,7 +123,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon iconSize='30px' color='red'>
+                <Icon size='30px' color='red'>
                   {icon}
                 </Icon>
               }
@@ -139,7 +141,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon iconSize='30px' color='red'>
+                <Icon size='30px' color='red'>
                   {icon}
                 </Icon>
               }
@@ -157,7 +159,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon iconSize='30px' color='red'>
+                <Icon size='30px' color='red'>
                   {icon}
                 </Icon>
               }
@@ -168,6 +170,7 @@ export const ButtonWithLabelSomethingExample = () => {
       {/*------------------------------------------------------------------------------------------------------- */}
 
       {/* text */}
+      <Heading variation='h6'>Icon Button + LabelSomething</Heading>
       <div className='flex flex-row gap-x-5 items-end'>
         <Button
           variation='text'
@@ -178,7 +181,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon iconSize='30px' color='light-gray'>
+                <Icon size='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -195,7 +198,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon iconSize='30px' color='light-gray'>
+                <Icon size='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -212,7 +215,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon iconSize='30px' color='light-gray'>
+                <Icon size='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }
@@ -229,7 +232,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon iconSize='30px' color='light-gray'>
+                <Icon size='30px' color='light-gray'>
                   {icon}
                 </Icon>
               }

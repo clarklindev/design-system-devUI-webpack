@@ -10,8 +10,7 @@ module.exports  = (env, argv) => {
       rules: [
         {
           test: /\.svg$/,
-          exclude: /node_modules/,
-          use: 'svg-inline-loader'
+          use: ['@svgr/webpack'],
         },
         {
           test: /\.(js|jsx)$/,
@@ -25,7 +24,8 @@ module.exports  = (env, argv) => {
         {
           test: /\.css$/,
           use: ["style-loader", "css-loader", 'postcss-loader']
-        }
+        },
+        
       ]
     },
     resolve: { extensions: [ ".js", ".jsx"] },

@@ -1,79 +1,55 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import '../../tailwindcss.css';
+import { Separator } from '../Separator';
+import { AccordionItem} from './AccordionItem';
+
+import "../../css/default.css";
 
 const AccordionContainer = styled.div`
   display:block;
 `;
 
 export const Accordion = ({
-  multiOpen = true,
-  startActiveItems = [],
-  childClass,
-  data
+  multiOpen,
+  renderItem,
 }) => {
-  const [activeItems, setActiveItems] = useState(startActiveItems); //set initial active items // activeItems holds item indexs to show
-  const [allowMultiOpen, setAllowMultiOpen] = useState(multiOpen);
 
-  const ChildClass = childClass;
+  const [indexes, setIndexes] = useState([]);
 
-  useEffect(() => {
-    setActiveItems(startActiveItems);
-    setAllowMultiOpen(multiOpen);
-  },[]);
+  //@index - filter-out/add or toggle
+  const activeIndexesCheck = (index)=>{
+    const found = indexes.includes(index);
 
-  useEffect(() => {
-    startActiveItems.forEach((item) => {
-      activeItemsCheck(item);
-    });
-  }, [startActiveItems]);
-
-  useEffect(() => {
-    setAllowMultiOpen(multiOpen);
-  }, [multiOpen]);
-
-  const activeItemsCheck = useCallback(
-    (index) => {
-      const found = activeItems?.some((item) => item === index);
-
-      if (allowMultiOpen) {
-        if (found) {
-          //if index is in the activeItems array... remove it
-          setActiveItems(activeItems.filter((item) => item !== index));
-        } else {
-          //add to activeItems
-          setActiveItems([...activeItems, index]);
-        }
+    if (multiOpen) {
+      if (found) {
+        // filter-out
+        //if index is in the activeIndexes array... remove it
+        setIndexes(indexes.filter((item) => item !== index));
       } else {
-        //only allowed one open at a time
-        if (found) {
-          //remove it
-          setActiveItems([]);
-        } else {
-          //add it
-          setActiveItems([index]);
-        }
+        //or add
+        //add to activeIndexes
+        setIndexes([...indexes, index]);
       }
-    },
-    [allowMultiOpen, activeItems]
-  );
+    } else {
+      //toggle
+      //only allowed one open at a time
+      if (found) {
+        //remove it
+        setIndexes([]);
+      } else {
+        //add it
+        setIndexes([index]);
+      }
+    }
+  }
 
   const handleClick = (index) => {
-    activeItemsCheck(index);
+    activeIndexesCheck(index);
   };
-
+  
   return (
-    <AccordionContainer className={'Accordion'}>
-      {data?.map((each, index)=> {
-        return <ChildClass 
-          key={`AccordionItem_${index}`}
-          onClick={() => {
-            handleClick(index);
-          }}
-          data={each}
-          isOpen={activeItems?.some((each) => each === index)}
-        />
-      })}
+    <AccordionContainer className='Accordion'>
+      {renderItem({handleClick, indexes, AccordionItem, Separator})}
     </AccordionContainer>
-  );
+  )
 };

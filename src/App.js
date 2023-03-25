@@ -1,51 +1,58 @@
 import React, { useEffect, useState } from 'react';
 
+//styling
+import "./css/default.css";
+
 //theming
-import { darkTheme, lightTheme } from './utils';
+import { darkTheme } from './themes/DarkTheme';
+
 import { ThemeProvider } from 'styled-components';
+
+//layout
+import { Block } from './components/Layout';
+import { Heading, HeadingExample } from './components/Heading';
+//-----------------------------------------------------------------------------------
 
 import { AccordionExample } from './components/Accordion/AccordionExample';
 
-import {ButtonExample } from './components/Button/ButtonExample';
-import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
-import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
-import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
+// import {ButtonExample } from './components/Button/ButtonExample';
+// import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
+// import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
+// import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
 
-import { Heading, HeadingExample } from './components/Heading';
-import { LabelSomethingExample } from './components/LabelSomething';
+// import { LabelSomethingExample } from './components/LabelSomething';
 
-import { SnackbarExample } from './components/Snackbar';
-import {
-  InputExample,
-  InputNoBorderExample,
-  InputPasswordExample,
-  InputReadOnlyExample,
-  InputSearchExample,
-  InputWithIconExample,
-} from './components/Input';
-import {
-  RadioButtonExample,
-  RadioButtonGroupExample,
-  RadioButtonGroupAndLabelSomethingExample,
-  RadioButtonAndLabelSomethingExample,
-} from './components/RadioButton';
-import {
-  CheckboxExample,
-  CheckboxGroupExample,
-  CheckboxAndLabelSomethingExample,
-  CheckboxGroupAndLabelSomethingExample,
-  CheckboxIconExample,
-} from './components/Checkbox';
-import { CounterExample } from './components/Counter';
+// import { SnackbarExample } from './components/Snackbar';
+// import {
+//   InputExample,
+//   InputNoBorderExample,
+//   InputPasswordExample,
+//   InputReadOnlyExample,
+//   InputSearchExample,
+//   InputWithIconExample,
+// } from './components/Input';
+// import {
+//   RadioButtonExample,
+//   RadioButtonGroupExample,
+//   RadioButtonGroupAndLabelSomethingExample,
+//   RadioButtonAndLabelSomethingExample,
+// } from './components/RadioButton';
+// import {
+//   CheckboxExample,
+//   CheckboxGroupExample,
+//   CheckboxAndLabelSomethingExample,
+//   CheckboxGroupAndLabelSomethingExample,
+//   CheckboxIconExample,
+// } from './components/Checkbox';
+// import { CounterExample } from './components/Counter';
 
-import { SelectExample } from './components/Select';
-import { Block } from './components/Layout';
-import { ToggleSwitchExample } from './components/Switch';
-import { ListExample } from './components/List';
-import { CardExample, CardWithDropshadowExample } from './components/Card';
-import { TableExample } from './components/Table';
-import { SliderExample, MultiRangeSliderExample } from './components/Slider';
-import { UseHoverExample, UseFocusExample } from './customhooks';
+// import { SelectExample } from './components/Select';
+// import { ToggleSwitchExample } from './components/Switch';
+// import { ListExample } from './components/List';
+// import { CardExample, CardWithDropshadowExample } from './components/Card';
+// import { TableExample } from './components/Table';
+// import { SliderExample, MultiRangeSliderExample } from './components/Slider';
+// import { UseHoverExample, UseFocusExample } from './customhooks';
 
 const App = () => {
   const [theme, setTheme] = useState();
@@ -56,8 +63,8 @@ const App = () => {
 
 
   return (
-      // theme && (
-      //    <ThemeProvider theme={theme}>
+      theme && (
+         <ThemeProvider theme={theme}>
         <div
           className='App'
         >
@@ -67,7 +74,7 @@ const App = () => {
           <AccordionExample />
           </Block>
         
-          <Block>
+          {/* <Block>
             <Heading variation='h4'>05. Buttons</Heading>
             <div className='flex flex-col'>
               <ButtonExample />
@@ -76,7 +83,7 @@ const App = () => {
               <ButtonWithLabelSomethingExample /> 
           
             </div>
-          </Block>
+          </Block> */}
     {/* //   <Block>
         //     <Heading variation='h4'>01. Dark/Light mode</Heading> 
         //     <div className='flex flex-col items-start gap-2'>
@@ -257,8 +264,8 @@ const App = () => {
         */}
         </div>
        
-      //    </ThemeProvider>
-      //  )
+         </ThemeProvider>
+        )
   );
 };
 
