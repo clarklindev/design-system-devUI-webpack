@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Separator } from '../Separator';
 import { AccordionItem} from './AccordionItem';
 
-import "../../css/default.css";
-
 export const Accordion = ({
   multiOpen,
   renderItem,

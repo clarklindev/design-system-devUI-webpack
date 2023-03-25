@@ -9,45 +9,21 @@ const IconContainer = styled.div`
   > svg{
     width: 100%;
     height: 100%;
-  }
-`;
-
-const StrokeIcon = styled(IconContainer)`
-  > svg{
-    stroke: ${({theme, stroke})=> stroke? stroke : theme?.icon?.stroke || 'var()'};
-  }
-`;
-const FillIcon = styled(IconContainer)`
-  > svg{
-    fill: ${({theme, fill})=> fill? fill : theme?.icon?.fill || 'var()'};
-  }
-`;
-const StrokeAndFillIcon = styled(IconContainer)`
-  > svg{
-    stroke: ${({theme, stroke})=> stroke? stroke : theme?.icon?.stroke || 'var()'};
+    stroke: ${({theme, stroke})=> stroke ? stroke : theme?.icon?.stroke || 'var()'};
     fill: ${({theme, fill})=> fill? fill : theme?.icon?.fill || 'var()'};
   }
 `;
 
 export const Icon = ({
   size = '25px',
-  variation = "stroke",
+  stroke=null,
+  fill=null,
   children,
 }) => {
 
-  const iconMap = {
-    stroke: StrokeIcon,
-    fill: FillIcon,
-    strokefill: StrokeAndFillIcon,
-  };
-
-  const Component = iconMap[variation];
-  if (Component) {
-    return (
-      <Component className="Icon" size={size}>
-        {children}
-      </Component>
-    );
-  }
-  return children;
+  return (
+    <IconContainer className="Icon" size={size} stroke={stroke} fill={fill}>
+      {children}
+    </IconContainer>
+  );
 };

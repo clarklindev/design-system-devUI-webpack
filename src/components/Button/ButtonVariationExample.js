@@ -2,12 +2,12 @@ import React from 'react';
 import { Button } from './index';
 import { Heading } from '../Heading';
 import { Icon } from '../Icon';
-import { ShoppingCartIcon } from '../../svg/ShoppingCartIcon';
+import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
 
 import { colors } from '../../themes/colors';
 
 export const ButtonVariationExample = () => {
-  const icon = ShoppingCartIcon;
+  const icon = <ShoppingCartIcon/>;
 
   return (
     <div className='flex flex-col'>
@@ -48,19 +48,13 @@ export const ButtonVariationExample = () => {
         />
         <Button
           label='Contained'
-          color={colors.black}
-          backgroundColor={colors.white}
-          variation='contained'
-        />
-        <Button
-          label='Contained'
           color={colors.white}
           backgroundColor={colors.black}
           variation='contained'
         />
       </div>
       {/*------------------------------------------------------------------------------------------------------- */}
-      <Heading variation='h6'>Outlined Buttons</Heading>
+       <Heading variation='h6'>Outlined Buttons</Heading>
 
       <div className='flex flex-row mb-10 gap-x-5'>
         <Button
@@ -108,7 +102,7 @@ export const ButtonVariationExample = () => {
       </div>
 
       {/*------------------------------------------------------------------------------------------------------- */}
-      <Heading variation='h6'>Text Buttons</Heading>
+       <Heading variation='h6'>Text Buttons</Heading>
        <div className='flex flex-row mb-10 gap-x-5'>
         <Button label='Text' color={colors.status.success} variation='text' />
         <Button label='Text' color={colors.status.warning} variation='text' />
@@ -117,7 +111,7 @@ export const ButtonVariationExample = () => {
         <Button label='Text' color='#9d4edd' variation='text' />
         <Button label='Text' color='light-gray' variation='text' />
         <Button label='Text' color={colors.black} variation='text' />
-      </div> 
+      </div>  
       {/*------------------------------------------------------------------------------------------------------- */}
  
       <Heading variation='h6'>Icon Buttons</Heading>
@@ -125,7 +119,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color={colors.status.success}>
+            <Icon size='30px' stroke={colors.status.success}>
               {icon}
             </Icon>
           }
@@ -133,7 +127,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color={colors.status.warning}>
+            <Icon size='30px' stroke={colors.status.warning}>
               {icon}
             </Icon>
           }
@@ -141,7 +135,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color={colors.status.error}>
+            <Icon size='30px' stroke={colors.status.error}>
               {icon}
             </Icon>
           }
@@ -149,7 +143,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color={colors.status.info}>
+            <Icon size='30px' stroke={colors.status.info}>
               {icon}
             </Icon>
           }
@@ -157,7 +151,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color='#9d4edd'>
+            <Icon size='30px' stroke='#9d4edd'>
               {icon}
             </Icon>
           }
@@ -165,7 +159,7 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color='light-gray'>
+            <Icon size='30px' stroke='light-gray'>
               {icon}
             </Icon>
           }
@@ -173,12 +167,13 @@ export const ButtonVariationExample = () => {
         <Button
           variation='icon'
           label={
-            <Icon size='30px' color={colors.black}>
+            <Icon size='30px' stroke={colors.black}>
               {icon}
             </Icon>
           }
         />
       </div>
+
     </div> 
   );
 };

@@ -4,10 +4,10 @@ import { Button } from './index';
 import { Heading } from '../Heading';
 import { LabelSomething } from '../LabelSomething';
 import { Icon } from '../Icon';
-import { ThumbsUpIcon } from '../../svg/ThumbsUpIcon';
+import { ThumbsUpIcon } from '../../icons/ThumbsUpIcon';
 
 export const ButtonWithLabelSomethingExample = () => {
-  const icon = ThumbsUpIcon;
+  const icon = <ThumbsUpIcon/>;
 
   return (
     <div className='flex flex-col'>
@@ -27,7 +27,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon size='30px' color='white'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -45,7 +45,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon size='30px' color='white'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -63,7 +63,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon size='30px' color='white'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -81,7 +81,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon size='30px' color='white'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -105,7 +105,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon size='30px' color='red'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -123,7 +123,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon size='30px' color='red'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -141,7 +141,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon size='30px' color='red'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -159,7 +159,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='right'
               labelPosition='right'
               something={
-                <Icon size='30px' color='red'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -181,7 +181,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='left'
               labelPosition='left'
               something={
-                <Icon size='30px' color='light-gray'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -198,7 +198,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='top'
               labelPosition='top'
               something={
-                <Icon size='30px' color='light-gray'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -215,7 +215,7 @@ export const ButtonWithLabelSomethingExample = () => {
               label='bottom'
               labelPosition='bottom'
               something={
-                <Icon size='30px' color='light-gray'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }
@@ -228,11 +228,11 @@ export const ButtonWithLabelSomethingExample = () => {
           color='grey'
           label={
             <LabelSomething
-              spacing='2'
+              spacing='13'
               label='right'
               labelPosition='right'
               something={
-                <Icon size='30px' color='light-gray'>
+                <Icon size='30px' stroke="black">
                   {icon}
                 </Icon>
               }

@@ -2,7 +2,6 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
-import '../../css/default.css';
 
 import { MODIFIERS } from './modifiers';
 
@@ -56,15 +55,15 @@ const IconButton = styled(BaseButton)`
 `;
 
 export const Button = ({
-  variation = '',
-  label = '',
+  variation,
+  label,
   labelDirection = 'right',
-  color = '',
+  color,
+  backgroundColor,
+  borderColor,
   modifiers = [],
-  size = '',
-  children = '',
-  className = '',
-  ...rest
+  size,
+  children,
 }) => {
   let labelClasses = '';
   switch (labelDirection) {
@@ -83,62 +82,21 @@ export const Button = ({
       break;
   }
 
-  switch (variation) {
-    case 'contained':
-      return (
-        <ContainedButton
-          color={color}
-          modifiers={[...modifiers, size]}
-          className={[labelClasses, className].join(' ')}
-          {...rest}
-        >
-          {label ? label : children}
-        </ContainedButton>
-      );
-    case 'outlined':
-      return (
-        <OutlinedButton
-          color={color}
-          modifiers={[...modifiers, size]}
-          className={[labelClasses, className].join(' ')}
-          {...rest}
-        >
-          {label ? label : children}
-        </OutlinedButton>
-      );
-    case 'text':
-      return (
-        <TextButton
-          color={color}
-          modifiers={[...modifiers, size]}
-          className={[labelClasses, className].join(' ')}
-          {...rest}
-        >
-          {label ? label : children}
-        </TextButton>
-      );
-    case 'icon':
-      return (
-        <IconButton
-          color={color}
-          modifiers={[...modifiers, size]}
-          className={[labelClasses, className].join(' ')}
-          {...rest}
-        >
-          {label ? label : children}
-        </IconButton>
-      );
+  const buttonMap = {
+    contained: ContainedButton,
+    outlined: OutlinedButton,
+    text: TextButton,
+    icon: IconButton
+  };
 
-    default:
-      return (
-        <BaseButton
-          modifiers={[...modifiers, size]}
-          className={[labelClasses, className].join(' ')}
-          {...rest}
-        >
-          {label ? label : children}
-        </BaseButton>
-      );
+  const Component = buttonMap[variation];
+  if (Component) {
+    return (
+      <Component className={["Button", labelClasses].join(' ')} color={color} backgroundColor={backgroundColor} borderColor={borderColor} modifiers={[...modifiers, size]}>
+        {label ? label : children}
+      </Component>
+    );
   }
+  return <BaseButton className="Button">{label ? label : children}</BaseButton>;
 };
 

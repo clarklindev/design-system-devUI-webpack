@@ -31,6 +31,10 @@ export const darkTheme = {
     }
   },
 
+  LabelSomething: {
+    gap: '5px'
+  },
+
   separator:{
     borderColor: shared.separator
   },
@@ -48,8 +52,8 @@ export const darkTheme = {
   },
 
   icon: {
-    fill: "red",
-    stroke: "blue",
+    fill: "",
+    stroke: colors.neutral[200],
   },
 
   checkbox: {

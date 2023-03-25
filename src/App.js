@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from 'react';
 
 //styling
-import "./css/default.css";
+import "./default.css";
 
 //theming
 import { darkTheme } from './themes/DarkTheme';
-
 import { ThemeProvider } from 'styled-components';
 
 //layout
 import { Layout } from './components/Layout';
-import { Heading, HeadingExample } from './components/Heading';
+
+//Heading
+import { Heading } from './components/Heading';
+import { HeadingExample} from './components/Heading/HeadingExample';
+
 //-----------------------------------------------------------------------------------
 
 import { AccordionExample } from './components/Accordion/AccordionExample';
 
-// import {ButtonExample } from './components/Button/ButtonExample';
-// import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
-// import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
-// import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
+import {ButtonExample } from './components/Button/ButtonExample';
+import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
+import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
+import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
 
-// import { LabelSomethingExample } from './components/LabelSomething';
+import { LabelSomethingExample } from './components/LabelSomething/LabelSomethingExample';
 
 // import { SnackbarExample } from './components/Snackbar';
 // import {
@@ -61,52 +64,60 @@ const App = () => {
     setTheme(darkTheme);
   }, []);
 
-
   return (
-      theme && (
-         <ThemeProvider theme={theme}>
-        <div
-          className='App'
-        >
-          
-          <Layout variation="section">
-            <Heading variation='h4'>15. Accordion</Heading> 
-            <AccordionExample />
-          </Layout>
+    <ThemeProvider theme={theme ? theme : {}}>
+      <div className='App'>
         
-          {/* <Block>
-            <Heading variation='h4'>05. Buttons</Heading>
-            <div className='flex flex-col'>
-              <ButtonExample />
-              <ButtonVariationExample />
-              <ButtonModifiersExample />
-              <ButtonWithLabelSomethingExample /> 
-          
-            </div>
-          </Block> */}
-    {/* //   <Block>
-        //     <Heading variation='h4'>01. Dark/Light mode</Heading> 
-        //     <div className='flex flex-col items-start gap-2'>
-        //       <button onClick={() => setTheme(lightTheme)}>light</button>
-        //       <button onClick={() => setTheme(darkTheme)}>dark</button>
-        //     </div>
-        //   </Block>
+        {/* theme */}
+        <Layout variation="section">
+          <Heading variation='h4'>01. Theme</Heading> 
+          <div className='flex flex-col items-start gap-2'>
+          <button onClick={() => setTheme(lightTheme)}>light theme</button>
+          <button onClick={() => setTheme(darkTheme)}>dark theme</button>
+          </div>
+        </Layout>
 
-        //   <Block>
-        //     <Heading variation='h4'>02. Heading</Heading>
-        //     <HeadingExample />
-        //   </Block>
+        {/* typography */}
+        <Layout variation="section">
+          <Heading variation='h4'>02. Typography</Heading>
+          <HeadingExample />
+        </Layout>
 
+        {/* labelsomething */}
+        <Layout variation="section">
+          <Heading variation='h4'>04. LabelSomething</Heading>
+          <LabelSomethingExample />
+        </Layout>
+      
+        {/* buttons */}
+        <Layout variation="section">
+          <Heading variation='h4'>05. Buttons</Heading>
+          <ButtonExample />
+          <ButtonVariationExample />
+          <ButtonModifiersExample />
+          <ButtonWithLabelSomethingExample /> 
+        </Layout>
+
+        {/* accordion */}
+        <Layout variation="section">
+          <Heading variation='h4'>15. Accordion</Heading> 
+          <AccordionExample />
+        </Layout>
+
+      </div>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+  
         //   <Block>
         //     <Heading variation='h4'>03. Helper hooks</Heading>
         //     <UseHoverExample />
         //     <UseFocusExample />
         //   </Block>
 
-        //   <Block>
-        //     <Heading variation='h4'>04. LabelSomething</Heading>
-        //     <LabelSomethingExample />
-        //   </Block>
+       
         //   <Block>
         //     <Heading variation='h4'>06. Snackbar</Heading>
         //     <div className='flex flex-col'>
@@ -174,9 +185,7 @@ const App = () => {
         //     <Heading variation='h4'>14. Multi-range slider</Heading>
         //     <MultiRangeSliderExample />
         //   </Block>
-        */
           
-        /*
         //   <Block>
         //     <Heading variation='h4'>16. List</Heading>
         //     <ListExample />
@@ -261,12 +270,3 @@ const App = () => {
         //   <Block>
         //     <Heading variation='h4'>32. DateRangePicker</Heading>
         //   </Block> 
-        */}
-        </div>
-       
-         </ThemeProvider>
-        )
-  );
-};
-
-export default App;
