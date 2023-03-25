@@ -14,7 +14,7 @@ export const Layout = ({children, variation})=>{
 
   const Component = layoutMap[variation];
   if (Component) {
-    return <Component as={variation} className="Layout">
+    return <Component className="Layout">
       {children}
     </Component>
   }
