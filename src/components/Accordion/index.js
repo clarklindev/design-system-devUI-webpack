@@ -5,10 +5,6 @@ import { AccordionItem} from './AccordionItem';
 
 import "../../css/default.css";
 
-const AccordionContainer = styled.div`
-  display:block;
-`;
-
 export const Accordion = ({
   multiOpen,
   renderItem,
@@ -48,8 +44,8 @@ export const Accordion = ({
   };
   
   return (
-    <AccordionContainer className='Accordion'>
+    <div className='Accordion'>
       {renderItem({handleClick, indexes, AccordionItem, Separator})}
-    </AccordionContainer>
+    </div>
   )
 };

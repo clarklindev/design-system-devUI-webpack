@@ -9,7 +9,7 @@ import { darkTheme } from './themes/DarkTheme';
 import { ThemeProvider } from 'styled-components';
 
 //layout
-import { Block } from './components/Layout';
+import { Block } from './components/Layout/Block';
 import { Heading, HeadingExample } from './components/Heading';
 //-----------------------------------------------------------------------------------
 

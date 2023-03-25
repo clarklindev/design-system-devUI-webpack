@@ -26,7 +26,7 @@ export const AccordionExample = () => {
       renderItem={({handleClick, indexes, AccordionItem, Separator})=>{
         return data.map((each, index)=>{
           return <React.Fragment key={index}>
-            <AccordionItem data={each} key={`item${index}`} onClick={ ()=>handleClick(index)} isOpen={indexes.includes(index)}/>
+            <AccordionItem data={each} onClick={ ()=>handleClick(index)} isOpen={indexes.includes(index)}/>
             { (index < data.length-1) && <Separator/>}
           </React.Fragment>
         });

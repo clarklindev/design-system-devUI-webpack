@@ -53,10 +53,10 @@ export const AccordionItem = (props) => {
   const { data, isOpen, onClick} = props;
 
   return (
-    <AccordionItemContainer>
+    <AccordionItemContainer className="AccordionItem">
       <AccordionItemTitle
         onClick={(index) => onClick(index)}
-        className={isOpen ? 'show' : 'hide'}
+        className="AccordionItemTitle"
       >
         {data.title}
 
@@ -64,7 +64,7 @@ export const AccordionItem = (props) => {
 
       </AccordionItemTitle>
 
-      <AccordionItemContent className={isOpen ? 'show' : 'hide'}>
+      <AccordionItemContent className={["AccordionItemContent", isOpen ? "show":"hide"].join(' ')}>
         {data.body}
       </AccordionItemContent>
     </AccordionItemContainer>

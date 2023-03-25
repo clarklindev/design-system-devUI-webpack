@@ -9,6 +9,6 @@ const SeparatorContainer = styled.div`
 
 export const Separator = () =>{
   return (
-    <SeparatorContainer/>
+    <SeparatorContainer className="Separator"/>
   );
 }
