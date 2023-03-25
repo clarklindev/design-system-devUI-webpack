@@ -29,6 +29,7 @@ const Heading6 = styled(HeadingBase)`
 `;
 
 export const Heading = ({ variation, children, ...rest }) => {
+  
   const headingMap = {
     h1: Heading1,
     h2: Heading2,

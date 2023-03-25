@@ -34,21 +34,20 @@ export const Icon = ({
   variation = "stroke",
   children,
 }) => {
-  switch(variation){
-    case "stroke":
-      return <StrokeIcon className="Icon" size={size}>
-        {children}
-      </StrokeIcon>
 
-    case "fill":
-      return <FillIcon className="Icon" size={size}>
+  const iconMap = {
+    stroke: StrokeIcon,
+    fill: FillIcon,
+    strokefill: StrokeAndFillIcon,
+  };
+
+  const Component = iconMap[variation];
+  if (Component) {
+    return (
+      <Component className="Icon" size={size}>
         {children}
-      </FillIcon>
-    
-    case "strokefill":
-      return <StrokeAndFillIcon className="Icon" size={size}>
-        {children}
-      </StrokeAndFillIcon>
+      </Component>
+    );
   }
-
+  return children;
 };
