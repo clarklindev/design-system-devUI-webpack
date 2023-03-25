@@ -23,7 +23,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='white'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='left'
               labelPosition='left'
               something={
@@ -41,7 +41,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='white'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='top'
               labelPosition='top'
               something={
@@ -59,7 +59,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='white'
           label={
             <LabelSomething
-              spacing='2'
+              gap='10px'
               label='bottom'
               labelPosition='bottom'
               something={
@@ -77,7 +77,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='white'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='right'
               labelPosition='right'
               something={
@@ -101,7 +101,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='red'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='left'
               labelPosition='left'
               something={
@@ -119,7 +119,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='red'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='top'
               labelPosition='top'
               something={
@@ -137,7 +137,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='red'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='bottom'
               labelPosition='bottom'
               something={
@@ -155,7 +155,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='red'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='right'
               labelPosition='right'
               something={
@@ -177,7 +177,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='grey'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='left'
               labelPosition='left'
               something={
@@ -194,7 +194,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='grey'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='top'
               labelPosition='top'
               something={
@@ -211,7 +211,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='grey'
           label={
             <LabelSomething
-              spacing='2'
+              gap="10px"
               label='bottom'
               labelPosition='bottom'
               something={
@@ -228,7 +228,7 @@ export const ButtonWithLabelSomethingExample = () => {
           color='grey'
           label={
             <LabelSomething
-              spacing='13'
+              gap="10px"
               label='right'
               labelPosition='right'
               something={
