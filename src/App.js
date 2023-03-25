@@ -9,7 +9,7 @@ import { darkTheme } from './themes/DarkTheme';
 import { ThemeProvider } from 'styled-components';
 
 //layout
-import { Block } from './components/Layout/Block';
+import { Layout } from './components/Layout';
 import { Heading, HeadingExample } from './components/Heading';
 //-----------------------------------------------------------------------------------
 
@@ -69,10 +69,10 @@ const App = () => {
           className='App'
         >
           
-          <Block>
-          <Heading variation='h4'>15. Accordion</Heading> 
-          <AccordionExample />
-          </Block>
+          <Layout variation="section">
+            <Heading variation='h4'>15. Accordion</Heading> 
+            <AccordionExample />
+          </Layout>
         
           {/* <Block>
             <Heading variation='h4'>05. Buttons</Heading>
