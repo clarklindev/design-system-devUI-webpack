@@ -48,7 +48,6 @@ export const darkTheme = {
   },
 
   icon: {
-    backgroundColor: colors.neutral[200] + transparency[50],
     fill: "red",
     stroke: "blue",
   },

@@ -30,6 +30,7 @@ const AccordionItemTitle = styled.div`
     height: 30px;
 
     > svg {
+      stroke: red;
       stroke: ${({theme})=> theme?.accordion?.componentIcons?.stroke};
       fill: ${({theme})=> theme?.accordion?.componentIcons?.fill};
     }
@@ -60,7 +61,7 @@ export const AccordionItem = (props) => {
       >
         {data.title}
 
-        <Icon className="Icon">{isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}</Icon>
+        <Icon>{isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}</Icon>
 
       </AccordionItemTitle>
 
