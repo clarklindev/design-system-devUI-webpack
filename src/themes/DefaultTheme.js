@@ -78,20 +78,22 @@ export const typography = {
 
 // components dont point to globals directly - only from theme
 export const global = {
-  color: colors.neutral[400],
   fontFamily: "'Roboto', 'sans-serif'",
+  color: colors.neutral[400],
+  backgroundColor: 'transparent',
+  padding: '10px',
+  margin: '1rem',
+  gap: '5px', 
 
   headingColor: colors.neutral[500],
   headingFontFamily: "Arial, Helvetica, sans-serif",
 
   border: `1px solid ${colors.neutral[500]}`,
   borderRadius: '5px',
+
   inputHeight: '40px',
-
-  padding: '20px',
-  margin: '1rem',
-  gap: '5px', 
-
+  inputPadding: '0 10px',
+  
   separator: colors.neutral[200],
   componentIcons: colors.neutral[400],
 };
@@ -164,9 +166,13 @@ export const defaultTheme = {
   },
 
   Select: {
-    color: colors.neutral[300],
-    backgroundColor: colors.neutral[900],
-    borderColor: colors.neutral[400] + transparency[10],
+    padding: global.padding,
+    inputHeight: global.inputHeight,
+    inputPadding: global.inputPadding,
+    color: global.color,
+    backgroundColor: global.backgroundColor,
+    border: global.border,
+    borderRadius: global.borderRadius,
   },
 
   Icon: {

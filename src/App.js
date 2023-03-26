@@ -42,6 +42,10 @@ import { InputWithIconExample } from './components/Input/InputWithIconExample';
 import { InputNoBorderExample } from './components/Input/InputNoBorderExample';
 import { InputPasswordExample } from './components/Input/InputPasswordExample';
 import { InputSearchExample } from './components/Input/InputSearchExample';
+
+//Select
+import { SelectExample } from './components/Select/SelectExample';
+
 //-----------------------------------------------------------------------------------
 
 
@@ -63,8 +67,6 @@ import { InputSearchExample } from './components/Input/InputSearchExample';
 //   CheckboxIconExample,
 // } from './components/Checkbox';
 // import { CounterExample } from './components/Counter';
-
-// import { SelectExample } from './components/Select';
 // import { ToggleSwitchExample } from './components/Switch';
 // import { ListExample } from './components/List';
 // import { CardExample, CardWithDropshadowExample } from './components/Card';
@@ -212,6 +214,14 @@ const App = () => {
 
         </Layout>
 
+        {/* Select */}
+        <Layout variation="section">
+          <Heading variation='h4'>Select</Heading>
+          <Layout variation="block">
+            <SelectExample />
+          </Layout>
+        </Layout>
+
       </div>
     </ThemeProvider>
   );
@@ -226,14 +236,7 @@ export default App;
         //   </Block>
 
        
-       
 
-        
-
-        //   <Block>
-        //     <Heading variation='h4'>08. Select</Heading>
-        //     <SelectExample />
-        //   </Block>
 
         //   <Block>
         //     <Heading variation='h4'>09. Counter</Heading>
