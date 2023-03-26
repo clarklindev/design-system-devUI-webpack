@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import "./default.css";
 
 //theming
-import { darkTheme } from './themes/DarkTheme';
+import { defaultTheme } from './themes/DefaultTheme';
 
 //Layout
 import { Layout } from './components/Layout';
@@ -35,20 +35,20 @@ import { AccordionExample } from './components/Accordion/AccordionExample';
 //Snackbar
 import { SnackbarExample } from './components/Snackbar/SnackbarExample';
 
+//Input
+import { InputExample } from './components/Input/InputExample';
+import { InputReadOnlyExample } from './components/Input/InputReadOnlyExample';
+import { InputWithIconExample } from './components/Input/InputWithIconExample';
+import { InputNoBorderExample } from './components/Input/InputNoBorderExample';
+import { InputPasswordExample } from './components/Input/InputPasswordExample';
+import { InputSearchExample } from './components/Input/InputSearchExample';
 //-----------------------------------------------------------------------------------
 
 
 
 
 
-// import {
-//   InputExample,
-//   InputNoBorderExample,
-//   InputPasswordExample,
-//   InputReadOnlyExample,
-//   InputSearchExample,
-//   InputWithIconExample,
-// } from './components/Input';
+
 // import {
 //   RadioButtonExample,
 //   RadioButtonGroupExample,
@@ -76,7 +76,7 @@ const App = () => {
   const [theme, setTheme] = useState({});
 
   useEffect(() => {
-    setTheme(darkTheme);
+    setTheme(defaultTheme);
   }, []);
 
   return (
@@ -176,6 +176,42 @@ const App = () => {
           </Layout>
         </Layout>
 
+        {/* Input */}
+        <Layout variation="section">
+          <Heading variation='h4'>Input</Heading>
+
+          <Layout variation="block">
+            <Heading variation="h5">Input (no-border)</Heading>
+            <InputNoBorderExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Basic input</Heading>
+            <InputExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Input (readonly)</Heading>
+            <InputReadOnlyExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Input + Icon</Heading>
+            <InputWithIconExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Input Password</Heading>
+            <InputPasswordExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Input Search</Heading>
+            <InputSearchExample />          
+          </Layout> 
+
+        </Layout>
+
       </div>
     </ThemeProvider>
   );
@@ -192,17 +228,7 @@ export default App;
        
        
 
-        //   <Block>
-        //     <Heading variation='h4'>07. Input</Heading>
-        //     <div className='flex flex-col'>
-        //       <InputExample />
-        //       <InputReadOnlyExample />
-        //       <InputNoBorderExample />
-        //       <InputWithIconExample />
-        //       <InputPasswordExample />
-        //       <InputSearchExample />
-        //     </div>
-        //   </Block>
+        
 
         //   <Block>
         //     <Heading variation='h4'>08. Select</Heading>

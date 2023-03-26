@@ -9,8 +9,8 @@ const IconContainer = styled.div`
   > svg{
     width: 100%;
     height: 100%;
-    stroke: ${({theme, stroke})=> stroke ? stroke : theme?.icon?.stroke || 'var()'};
-    fill: ${({theme, fill})=> fill? fill : theme?.icon?.fill || 'var()'};
+    stroke: ${({theme, stroke})=> stroke ? stroke : theme?.Icon?.stroke || 'var()'};
+    fill: ${({theme, fill})=> fill? fill : theme?.Icon?.fill || 'var()'};
   }
 `;
 

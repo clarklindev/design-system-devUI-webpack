@@ -84,20 +84,21 @@ export const global = {
   headingColor: colors.neutral[500],
   headingFontFamily: "Arial, Helvetica, sans-serif",
 
-  inputHeight: '50px',
-  padding: '1rem',
+  border: `1px solid ${colors.neutral[500]}`,
+  borderRadius: '5px',
+  inputHeight: '40px',
+
+  padding: '20px',
   margin: '1rem',
-  borderWidth: '1px',
-  borderRadius: '5px', 
   gap: '5px', 
-  borderColor: colors.neutral[500],
+
   separator: colors.neutral[200],
   componentIcons: colors.neutral[400],
 };
 
 // theme - styling for components 
-export const darkTheme = {
-  name: 'darkTheme',
+export const defaultTheme = {
+  name: 'defaultTheme',
 
   Heading:{
     fontFamily: global.headingFontFamily,
@@ -155,9 +156,11 @@ export const darkTheme = {
   },
 
   Input: {
-    color: colors.neutral[300],
-    backgroundColor: colors.neutral[900],
-    borderColor: colors.neutral[400] + transparency[10],
+    color: global.color,
+    inputHeight: global.inputHeight,
+    backgroundColor: colors.neutral[100],
+    border: global.border,
+    borderRadius: global.borderRadius,
   },
 
   Select: {
@@ -168,7 +171,7 @@ export const darkTheme = {
 
   Icon: {
     fill: "",
-    stroke: colors.neutral[200],
+    stroke: colors.neutral[500],
   },
 
   Checkbox: {
