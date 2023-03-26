@@ -13,8 +13,6 @@ const Generic = styled.div`
     justify-items: center;
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
 
-    border: 1px solid red;
-
     > *:first-child {
       grid-row: 1 / span 2; /* Takes up full height of grid */
       grid-column: 1 / span 1; /* Takes up left half of grid */
@@ -31,8 +29,6 @@ const Generic = styled.div`
     align-self: center;
     justify-items: center;
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-
-    border: 1px solid red;
 
     > *:first-child {
       grid-row: 1 / span 2; /* Takes up full height of grid */
@@ -52,8 +48,6 @@ const Generic = styled.div`
     justify-items: center;
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
 
-    border: 1px solid red;
-
     > *:first-child {
       grid-row: 2 / span 1; /* Takes up bottom half of grid */
       grid-column: 1 / span 2; /* Takes up full width of grid */
@@ -71,8 +65,6 @@ const Generic = styled.div`
     align-self: center;
     justify-items: center;
 
-    border: 1px solid red;
-    
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
 
     > *:first-child {

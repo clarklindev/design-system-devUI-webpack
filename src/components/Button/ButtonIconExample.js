@@ -8,7 +8,7 @@ export const ButtonIconExample = () =>{
   <Button
     variation='icon'
     label={
-      <Icon size='30px' stroke="red">
+      <Icon size='30px'>
         <ShoppingCartIcon/>
       </Icon>
     }

@@ -8,8 +8,6 @@ const HeadingBase = styled.div`
   line-height: ${({theme})=> theme?.Heading?.lineHeight || 'var()'};
   font-weight: ${({theme})=> theme?.Heading?.fontWeight || 'var()'};
   font-family: ${({theme})=> theme?.Heading?.fontFamily || 'var()'};
-
-  border: 1px solid red;
 `;
 
 const Heading1 = styled(HeadingBase)`

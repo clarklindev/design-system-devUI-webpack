@@ -124,8 +124,12 @@ export const darkTheme = {
   },
 
   Accordion: {
-    headingColor: global.headingColor,
-    color: global.color,
+    title:{
+      color: global.headingColor,
+    },
+    content:{
+      color: global.color,
+    },
     componentIcons: {
       stroke: global.componentIcons,
       fill: 'none'
@@ -137,10 +141,9 @@ export const darkTheme = {
       padding: '50px'
     },
     block:{
-      padding: '25px'
+      padding: '25px 0'
     }
   },
-
   
   LabelSomething: {
     gap: global.gap

@@ -4,9 +4,8 @@ import styled from 'styled-components';
 const SeparatorContainer = styled.div`
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid ${({theme})=> theme?.separator?.borderColor || 'var()'};
+  border-bottom: 1px solid ${({theme})=> theme?.Separator?.borderColor || 'var()'};
 
-  border: 1px solid red;
 `;
 
 export const Separator = () =>{

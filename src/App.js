@@ -28,9 +28,12 @@ import { ButtonTextExample } from './components/Button/ButtonTextExample';
 import { ButtonIconExample } from './components/Button/ButtonIconExample';
 import { ButtonWithLabelSomethingExample } from './components/Button/ButtonWithLabelSomethingExample';
 import { ButtonModifiersExample } from './components/Button/ButtonModifiersExample';
+
+//Accordion
+import { AccordionExample } from './components/Accordion/AccordionExample';
+
 //-----------------------------------------------------------------------------------
 
-// import { AccordionExample } from './components/Accordion/AccordionExample';
 
 
 
@@ -89,7 +92,7 @@ const App = () => {
 
         {/* typography */}
         <Layout variation="section">
-          <Heading variation='h4'>02. Headings</Heading>
+          <Heading variation='h4'>Headings</Heading>
           
           <Layout variation="block">
             <HeadingExample />
@@ -97,7 +100,7 @@ const App = () => {
         </Layout>
 
         <Layout variation="section">
-          <Heading variation='h4'>03. Text</Heading>
+          <Heading variation='h4'>Text</Heading>
           <Layout variation="block">
             <TextExample/>
           </Layout>
@@ -105,7 +108,7 @@ const App = () => {
 
         {/* labelsomething */}
         <Layout variation="section">
-          <Heading variation='h4'>04. LabelSomething</Heading>
+          <Heading variation='h4'>LabelSomething</Heading>
 
           <Layout variation="block">
             <LabelSomethingExample />
@@ -114,7 +117,7 @@ const App = () => {
       
         {/* buttons */}
         <Layout variation="section">
-          <Heading variation='h4'>05. Buttons</Heading>
+          <Heading variation='h4'>Buttons</Heading>
 
           <Layout variation="block">
             <Heading variation="h5">Basic button</Heading>
@@ -154,10 +157,13 @@ const App = () => {
         </Layout>
 
         {/* accordion */}
-        {/* <Layout variation="section">
-          <Heading variation='h4'>15. Accordion</Heading> 
-          <AccordionExample />
-        </Layout> */}
+        <Layout variation="section">
+          <Heading variation='h4'>Accordion</Heading> 
+
+          <Layout variation="block">            
+            <AccordionExample />
+          </Layout>
+        </Layout>
 
       </div>
     </ThemeProvider>
