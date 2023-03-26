@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const LayoutSection = styled.section`
   padding: ${({theme}) => theme?.Layout?.section?.padding || 'var()'};
   box-sizing: border-box;
+  border-bottom: 1px solid ${({theme})=> theme?.Layout?.section?.borderColor};
 `;
 
 const LayoutBlock = styled.div`

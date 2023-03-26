@@ -68,10 +68,10 @@ export const transparency = {
 };
 
 export const typography = {
-  h1: '4.209rem',
-  h2: '3.157rem',
-  h3: '2.369rem',
-  h4: '1.777rem',
+  h1: '3.209rem',
+  h2: '2.757rem',
+  h3: '2.069rem',
+  h4: '1.677rem',
   h5: '1.333rem',
   h6: '1.1rem',
 };
@@ -138,7 +138,8 @@ export const darkTheme = {
 
   Layout:{
     section:{
-      padding: '50px'
+      padding: '50px',
+      borderColor: global.separator
     },
     block:{
       padding: '25px 0'

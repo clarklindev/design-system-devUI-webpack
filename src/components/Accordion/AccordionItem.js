@@ -46,7 +46,7 @@ const AccordionItemContent = styled.div`
 
 //AccordionItem doesnt know about anything happening on the outside (self contained)
 export const AccordionItem = (props) => {
-  const { data, isOpen, onClick} = props;
+  const { data, isOpen, onClick, showIcon=true} = props;
 
   return (
     <div className="AccordionItem">
@@ -56,7 +56,7 @@ export const AccordionItem = (props) => {
       >
         {data.title}
 
-        <Icon>{isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}</Icon>
+        {showIcon && <Icon>{isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}</Icon>}
 
       </AccordionItemTitle>
 
