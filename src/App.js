@@ -1,29 +1,39 @@
 import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
 //styling
 import "./default.css";
 
 //theming
 import { darkTheme } from './themes/DarkTheme';
-import { ThemeProvider } from 'styled-components';
 
-//layout
+//Layout
 import { Layout } from './components/Layout';
 
 //Heading
 import { Heading } from './components/Heading';
 import { HeadingExample} from './components/Heading/HeadingExample';
 
+//Text
+import { TextExample} from './components/Text/TextExample';
+
+//LabelSomething
+import { LabelSomethingExample } from './components/LabelSomething/LabelSomethingExample';
+
+//Buttons
+import { ButtonExample } from './components/Button/ButtonExample';
+import { ButtonContainedExample } from './components/Button/ButtonContainedExample';
+import { ButtonOutlinedExample } from './components/Button/ButtonOutlinedExample';
+import { ButtonTextExample } from './components/Button/ButtonTextExample';
+import { ButtonIconExample } from './components/Button/ButtonIconExample';
+import { ButtonWithLabelSomethingExample } from './components/Button/ButtonWithLabelSomethingExample';
+import { ButtonModifiersExample } from './components/Button/ButtonModifiersExample';
 //-----------------------------------------------------------------------------------
 
-import { AccordionExample } from './components/Accordion/AccordionExample';
+// import { AccordionExample } from './components/Accordion/AccordionExample';
 
-import {ButtonExample } from './components/Button/ButtonExample';
-import {ButtonVariationExample} from './components/Button/ButtonVariationExample';
-import {ButtonModifiersExample} from './components/Button/ButtonModifiersExample';
-import {ButtonWithLabelSomethingExample} from './components/Button/ButtonWithLabelSomethingExample';
 
-import { LabelSomethingExample } from './components/LabelSomething/LabelSomethingExample';
+
 
 // import { SnackbarExample } from './components/Snackbar';
 // import {
@@ -58,51 +68,96 @@ import { LabelSomethingExample } from './components/LabelSomething/LabelSomethin
 // import { UseHoverExample, UseFocusExample } from './customhooks';
 
 const App = () => {
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState({});
 
   useEffect(() => {
     setTheme(darkTheme);
   }, []);
 
   return (
-    <ThemeProvider theme={theme ? theme : {}}>
+    <ThemeProvider theme={theme}>
       <div className='App'>
         
         {/* theme */}
-        <Layout variation="section">
+        {/* <Layout variation="section">
           <Heading variation='h4'>01. Theme</Heading> 
           <div className='flex flex-col items-start gap-2'>
           <button onClick={() => setTheme(lightTheme)}>light theme</button>
           <button onClick={() => setTheme(darkTheme)}>dark theme</button>
           </div>
-        </Layout>
+        </Layout> */}
 
         {/* typography */}
         <Layout variation="section">
-          <Heading variation='h4'>02. Typography</Heading>
-          <HeadingExample />
+          <Heading variation='h4'>02. Headings</Heading>
+          
+          <Layout variation="block">
+            <HeadingExample />
+          </Layout>
+        </Layout>
+
+        <Layout variation="section">
+          <Heading variation='h4'>03. Text</Heading>
+          <Layout variation="block">
+            <TextExample/>
+          </Layout>
         </Layout>
 
         {/* labelsomething */}
         <Layout variation="section">
           <Heading variation='h4'>04. LabelSomething</Heading>
-          <LabelSomethingExample />
+
+          <Layout variation="block">
+            <LabelSomethingExample />
+          </Layout>
         </Layout>
       
         {/* buttons */}
         <Layout variation="section">
           <Heading variation='h4'>05. Buttons</Heading>
-          <ButtonExample />
-          <ButtonVariationExample />
-          <ButtonModifiersExample />
-          <ButtonWithLabelSomethingExample /> 
+
+          <Layout variation="block">
+            <Heading variation="h5">Basic button</Heading>
+            <ButtonExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Contained button</Heading>
+            <ButtonContainedExample/>
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Outlined button</Heading>
+            <ButtonOutlinedExample/>
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Text button</Heading>
+            <ButtonTextExample/>
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Icon button</Heading>
+            <ButtonIconExample/>
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Button+LabelSomething button</Heading>
+            <ButtonWithLabelSomethingExample/>
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Button modifiers</Heading>
+            <ButtonModifiersExample/>
+          </Layout>
+          
         </Layout>
 
         {/* accordion */}
-        <Layout variation="section">
+        {/* <Layout variation="section">
           <Heading variation='h4'>15. Accordion</Heading> 
           <AccordionExample />
-        </Layout>
+        </Layout> */}
 
       </div>
     </ThemeProvider>

@@ -7,33 +7,32 @@ import { MODIFIERS } from './modifiers';
 
 const BaseButton = styled.button`
   box-sizing: border-box;
-  outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: auto;
   cursor: pointer;
-  border: 1px solid ${({theme}) => theme?.button?.base?.borderColor || 'var(--button-base-border)'};
-  background-color: ${({theme}) => theme?.button?.base?.backgroundColor || 'var(--button-base-background)'}; 
-  color: ${({theme}) => theme?.button?.base?.color || 'var(--button-base-color)'};
-  padding: 10px ${({theme}) => theme?.global?.padding || 'var(--padding)'};
-  border-radius: ${({theme}) => theme?.global?.borderRadius || 'var(--border-radius)'};
-  
+  border: ${({theme}) => theme?.Button?.base?.border || 'var()'};
+  background-color: ${({theme}) => theme?.Button?.base?.backgroundColor || 'var()'}; 
+  color: ${({theme}) => theme?.Button?.base?.color || 'var()'};
+  padding: ${({theme}) => theme?.Button?.base?.padding || 'var()'};
+  border-radius: ${({theme}) => theme?.Button?.base?.borderRadius || 'var()'};
+
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const ContainedButton = styled(BaseButton)`
   border: none;
-  background-color: ${({theme, backgroundColor}) => backgroundColor ? backgroundColor : theme?.button?.contained?.backgroundColor || 'var(--button-contained-background)'};
-  color: ${({theme, color}) => color ? color : theme?.button?.contained?.color || 'var(--button-contained-color)'};
+  background-color: ${({theme, backgroundColor}) => backgroundColor ? backgroundColor : theme?.Button?.contained?.backgroundColor || 'var()'};
+  color: ${({theme, color}) => color ? color : theme?.Button?.contained?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const OutlinedButton = styled(BaseButton)`
-  background-color: transparent;
-  border: 1px solid ${({theme, borderColor}) => borderColor ? borderColor : theme?.button?.outlined?.borderColor || 'var(--button-outlined-border)'};
-  color: ${({theme, color}) => color ? color : theme?.button?.outlined?.color || 'var(--button-outlined-color)'};
+  background-color: ${({theme, borderColor}) => borderColor ? borderColor : theme?.Button?.outlined?.backgroundColor || 'var()'};
+  border: ${({theme, borderColor}) => borderColor ? borderColor : theme?.Button?.outlined?.borderColor || 'var()'};
+  color: ${({theme, color}) => color ? color : theme?.Button?.outlined?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
@@ -42,7 +41,7 @@ const TextButton = styled(BaseButton)`
   border: none;
   background: none;
   padding: 0px;
-  color: ${({theme, color}) => color ? color : theme?.button?.text?.color || 'var(--button-text-color)'};
+  color: ${({theme, color}) => color ? color : theme?.Button?.text?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;

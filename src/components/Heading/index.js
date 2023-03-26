@@ -3,29 +3,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeadingBase = styled.div`
-  margin: var(--header-margin);
-  line-height: var(--line-height);
-  font-weight: var(--font-weight);
-  font-family: var(--font-family);
+  color: ${({theme})=> theme?.Heading?.color || 'var()'};
+  margin: ${({theme})=> theme?.Heading?.margin || 'var()'};
+  line-height: ${({theme})=> theme?.Heading?.lineHeight || 'var()'};
+  font-weight: ${({theme})=> theme?.Heading?.fontWeight || 'var()'};
+  font-family: ${({theme})=> theme?.Heading?.fontFamily || 'var()'};
+
+  border: 1px solid red;
 `;
 
 const Heading1 = styled(HeadingBase)`
-  font-size: var(--h1);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h1 || 'var()'};
 `;
 const Heading2 = styled(HeadingBase)`
-  font-size: var(--h2);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h2 || 'var()'};
 `;
 const Heading3 = styled(HeadingBase)`
-  font-size: var(--h3);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h3 || 'var()'};
 `;
 const Heading4 = styled(HeadingBase)`
-  font-size: var(--h4);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h4 || 'var()'};
 `;
 const Heading5 = styled(HeadingBase)`
-  font-size: var(--h5);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h5 || 'var()'};
 `;
 const Heading6 = styled(HeadingBase)`
-  font-size: var(--h6);
+  font-size: ${({theme})=> theme?.Heading?.fontSize?.h6 || 'var()'};
 `;
 
 export const Heading = ({ variation, children, ...rest }) => {

@@ -5,15 +5,15 @@ import styled from 'styled-components';
 
 const Generic = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-items: center;
-  width: auto;
 
   &.right {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-self: center;
+    justify-items: center;
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-    justify-self: center;
+
+    border: 1px solid red;
 
     > *:first-child {
       grid-row: 1 / span 2; /* Takes up full height of grid */
@@ -26,8 +26,13 @@ const Generic = styled.div`
   }
   
   &.left{
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-self: center;
+    justify-items: center;
     grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-    justify-self: center;
+
+    border: 1px solid red;
 
     > *:first-child {
       grid-row: 1 / span 2; /* Takes up full height of grid */
@@ -41,8 +46,13 @@ const Generic = styled.div`
 
   /* 'top' position */
   &.top {
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     align-self: center;
+    justify-items: center;
+    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
+
+    border: 1px solid red;
 
     > *:first-child {
       grid-row: 2 / span 1; /* Takes up bottom half of grid */
@@ -56,8 +66,14 @@ const Generic = styled.div`
 
   /* 'bottom' position */
   &.bottom {
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     align-self: center;
+    justify-items: center;
+
+    border: 1px solid red;
+    
+    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
 
     > *:first-child {
       grid-row: 1 / span 1; /* Takes up top half of grid */
@@ -74,8 +90,8 @@ const Generic = styled.div`
 
 export const LabelSomething = ({
   label,
-  labelPosition = 'right',
   something,
+  labelPosition = 'right',
   labelClickable = false,
   gap
 }) => {
