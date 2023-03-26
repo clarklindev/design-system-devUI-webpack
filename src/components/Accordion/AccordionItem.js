@@ -19,7 +19,7 @@ const AccordionItemTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 500;
 
-  color:${({theme, titleColor})=> titleColor? titleColor : theme?.Accordion?.tile?.color || 'var()'};
+  color:${({theme, titleColor})=> titleColor? titleColor : theme?.Accordion?.title?.color || 'var()'};
   
   .Icon {
     width: 30px;

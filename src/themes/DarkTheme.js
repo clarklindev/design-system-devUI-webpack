@@ -78,10 +78,8 @@ export const typography = {
 
 // components dont point to globals directly - only from theme
 export const global = {
-  headingColor: colors.neutral[600],
-  headingFontFamily: "Arial, Helvetica, sans-serif",
-
   color: colors.neutral[400],
+  headingColor: colors.neutral[500],
   fontFamily: "'Roboto', 'sans-serif'",
 
   inputHeight: '50px',
@@ -100,7 +98,7 @@ export const darkTheme = {
   name: 'darkTheme',
 
   Heading:{
-    fontFamily: global.headingFontFamily,
+    fontFamily: "Arial, Helvetica, sans-serif",
     color: global.headingColor,
 
     fontSize: {
