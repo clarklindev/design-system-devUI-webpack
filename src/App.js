@@ -32,13 +32,15 @@ import { ButtonModifiersExample } from './components/Button/ButtonModifiersExamp
 //Accordion
 import { AccordionExample } from './components/Accordion/AccordionExample';
 
+//Snackbar
+import { SnackbarExample } from './components/Snackbar/SnackbarExample';
+
 //-----------------------------------------------------------------------------------
 
 
 
 
 
-// import { SnackbarExample } from './components/Snackbar';
 // import {
 //   InputExample,
 //   InputNoBorderExample,
@@ -90,7 +92,7 @@ const App = () => {
           </div>
         </Layout> */}
 
-        {/* typography */}
+        {/* Typography */}
         <Layout variation="section">
           <Heading variation='h4'>Headings</Heading>
           
@@ -106,7 +108,7 @@ const App = () => {
           </Layout>
         </Layout>
 
-        {/* labelsomething */}
+        {/* Labelsomething */}
         <Layout variation="section">
           <Heading variation='h4'>LabelSomething</Heading>
 
@@ -115,7 +117,7 @@ const App = () => {
           </Layout>
         </Layout>
       
-        {/* buttons */}
+        {/* Buttons */}
         <Layout variation="section">
           <Heading variation='h4'>Buttons</Heading>
 
@@ -156,12 +158,21 @@ const App = () => {
           
         </Layout>
 
-        {/* accordion */}
+        {/* Accordion */}
         <Layout variation="section">
           <Heading variation='h4'>Accordion</Heading> 
 
           <Layout variation="block">            
             <AccordionExample />
+          </Layout>
+        </Layout>
+
+        {/* Snackbar */}
+        <Layout variation="section">
+          <Heading variation='h4'>Snackbar</Heading>
+
+          <Layout variation="block">
+            <SnackbarExample />
           </Layout>
         </Layout>
 
@@ -179,12 +190,7 @@ export default App;
         //   </Block>
 
        
-        //   <Block>
-        //     <Heading variation='h4'>06. Snackbar</Heading>
-        //     <div className='flex flex-col'>
-        //       <SnackbarExample />
-        //     </div>
-        //   </Block>
+       
 
         //   <Block>
         //     <Heading variation='h4'>07. Input</Heading>

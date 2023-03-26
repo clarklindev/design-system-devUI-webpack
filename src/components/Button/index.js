@@ -63,6 +63,7 @@ export const Button = ({
   modifiers = [],
   size,
   children,
+  ...rest
 }) => {
   let labelClasses = '';
   switch (labelDirection) {
@@ -91,7 +92,7 @@ export const Button = ({
   const Component = buttonMap[variation];
   if (Component) {
     return (
-      <Component className={["Button", labelClasses].join(' ')} color={color} backgroundColor={backgroundColor} borderColor={borderColor} modifiers={[...modifiers, size]}>
+      <Component className={["Button", labelClasses].join(' ')} color={color} backgroundColor={backgroundColor} borderColor={borderColor} modifiers={[...modifiers, size]} {...rest}>
         {label ? label : children}
       </Component>
     );
