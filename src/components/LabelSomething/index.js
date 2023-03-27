@@ -4,81 +4,11 @@ import styled from 'styled-components';
 
 
 const Generic = styled.div`
-
-  display: grid;
-
-  &.right {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    align-self: center;
-    justify-items: center;
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-
-    > *:first-child {
-      grid-row: 1 / span 2; /* Takes up full height of grid */
-      grid-column: 1 / span 1; /* Takes up left half of grid */
-    }
-    > *:last-child {
-      grid-row: 1 / span 2; /* Takes up top half of grid */
-      grid-column: 2 / span 1; /* Takes up right half of grid */
-    }
-  }
-  
-  &.left{
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    align-self: center;
-    justify-items: center;
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-
-    > *:first-child {
-      grid-row: 1 / span 2; /* Takes up full height of grid */
-      grid-column: 2 / span 1; /* Takes up right half of grid */
-    }
-    > *:last-child {
-      grid-row: 1 / span 2; /* Takes up full height of grid */
-      grid-column: 1 / span 1; /* Takes up left half of grid */
-    }
-  } 
-
-  /* 'top' position */
-  &.top {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    align-self: center;
-    justify-items: center;
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-
-    > *:first-child {
-      grid-row: 2 / span 1; /* Takes up bottom half of grid */
-      grid-column: 1 / span 2; /* Takes up full width of grid */
-    }
-    > *:last-child {
-      grid-row: 1 / span 1; /* Takes up top half of grid */
-      grid-column: 1 / span 2; /* Takes up full width of grid */
-    }
-  }
-
-  /* 'bottom' position */
-  &.bottom {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    align-self: center;
-    justify-items: center;
-
-    grid-gap: ${({theme, gap})=> gap ? gap : theme?.LabelSomething?.gap || 'var()'};
-
-    > *:first-child {
-      grid-row: 1 / span 1; /* Takes up top half of grid */
-      grid-column: 1 / span 2; /* Takes up full width of grid */
-    }
-    > *:last-child {
-      grid-row: 2 / span 1; /* Takes up bottom half of grid */
-      grid-column: 1 / span 2; /* Takes up full width of grid */
-    }
-  }
-
-  
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: ${(props)=> props.labelPosition};
+  gap: ${(props)=> props.gap};
 `;
 
 export const LabelSomething = ({
@@ -89,8 +19,15 @@ export const LabelSomething = ({
   gap
 }) => {
 
+  const positionMap = {
+    "left":"row-reverse",
+    "right":"row",
+    "top":"column-reverse",
+    "bottom":"column"
+  }
+
   return (
-    <Generic as={labelClickable ? 'label' : 'div'} className={["LabelSomething", labelPosition].join(' ')} gap={gap}>
+    <Generic as={labelClickable ? 'label' : 'div'} labelPosition={positionMap[labelPosition]} className={["LabelSomething", labelPosition].join(' ')} gap={gap}>
       {something}
       <div>{label}</div>
     </Generic>

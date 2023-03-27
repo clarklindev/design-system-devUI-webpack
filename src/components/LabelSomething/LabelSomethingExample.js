@@ -7,7 +7,7 @@ export const LabelSomethingExample = () => {
   const icon = <SmileyIcon/>;
 
   return (
-    <>
+    <div className="flex justify-items-start items-start space-x-10">
       <LabelSomething
         gap='5px'
         label='left'
@@ -49,6 +49,6 @@ export const LabelSomethingExample = () => {
           </Icon>
         }
       />
-    </>
+    </div>
   );
 };
