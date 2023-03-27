@@ -187,8 +187,10 @@ export const defaultTheme = {
   },
 
   Counter: {
-    borderColor: 'hotpink',
-    backgroundColor: colors.neutral[900],
+    height: global.inputHeight,
+    border: global.border,
+    borderRadius: global.borderRadius,
+    backgroundColor: global.backgroundColor,
   },
 
   Button: {
