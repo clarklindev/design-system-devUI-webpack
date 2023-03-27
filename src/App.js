@@ -52,6 +52,18 @@ import {RadioButtonExample} from './components/RadioButton/RadioButtonExample';
 //RadioButtonGroup
 import {RadioButtonGroupVerticalExample} from './components/RadioButtonGroup/RadioButtonGroupVerticalExample';
 import {RadioButtonGroupHorizontalExample} from './components/RadioButtonGroup/RadioButtonGroupHorizontalExample';
+
+//Checkbox
+import { CheckboxExample } from './components/Checkbox/CheckboxExample';
+
+// //CheckboxGroup
+import {CheckboxGroupHorizontalExample} from './components/CheckboxGroup/CheckboxGroupHorizontalExample';
+import {CheckboxGroupVerticalExample} from './components/CheckboxGroup/CheckboxGroupVerticalExample';
+import {CheckboxGroupIndeterminateExample} from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
+
+// //CheckboxIcon 
+// import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
+
 //-----------------------------------------------------------------------------------
 
 
@@ -60,13 +72,6 @@ import {RadioButtonGroupHorizontalExample} from './components/RadioButtonGroup/R
 
 
 
-// import {
-//   CheckboxExample,
-//   CheckboxGroupExample,
-//   CheckboxAndLabelSomethingExample,
-//   CheckboxGroupAndLabelSomethingExample,
-//   CheckboxIconExample,
-// } from './components/Checkbox';
 // import { CounterExample } from './components/Counter';
 // import { ToggleSwitchExample } from './components/Switch';
 // import { ListExample } from './components/List';
@@ -231,19 +236,53 @@ const App = () => {
           </Layout>
         </Layout>
 
+        {/* RadioButtonGroup */}
         <Layout variation="section">
           <Heading variation='h4'>RadioButton Group</Heading>
           <Layout variation="block">
-            <Heading variation="h5">RadioButtonGroup (Horizontal)</Heading>
+            <Heading variation="h5">RadioButton Group (horizontal)</Heading>
             <RadioButtonGroupHorizontalExample />
           </Layout>
           <Layout variation="block">
-            <Heading variation="h5">RadioButtonGroup (Vertical)</Heading>
+            <Heading variation="h5">RadioButton Group (vertical)</Heading>
             <RadioButtonGroupVerticalExample />
           </Layout>
         </Layout>
 
-        
+        {/* Checkbox */}
+        <Layout variation="section">
+          <Heading variation='h4'>Checkbox</Heading>
+          <Layout variation="block">
+            <CheckboxExample />
+          </Layout>
+        </Layout>
+
+        {/* CheckboxGroup */}
+        <Layout variation="section">
+          <Heading variation='h4'>Checkbox Group</Heading>
+          <Layout variation="block">
+            <Heading variation="h5">Checkbox Group (horizontal)</Heading>
+            <CheckboxGroupHorizontalExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Checkbox Group (vertical)</Heading>
+            <CheckboxGroupVerticalExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">Checkbox Group (indeterminate)</Heading>
+            <CheckboxGroupIndeterminateExample />
+          </Layout>
+        </Layout>
+
+        {/* CheckboxIcon */}
+        {/* <Layout variation="section">
+          <Heading variation='h4'>Checkbox Icon</Heading>
+          <Layout variation="block">
+            <CheckboxIconExample />
+          </Layout>
+        </Layout> */}
 
       </div>
     </ThemeProvider>
@@ -268,17 +307,7 @@ export default App;
 
         
 
-        //   <Block>
-        //     <Heading variation='h4'>11. Checkbox</Heading>
-        //     <div className='flex flex-col'>
-        //       <CheckboxExample />
-        //       <CheckboxGroupExample />
-        //       <CheckboxAndLabelSomethingExample />
-        //       <CheckboxGroupAndLabelSomethingExample />
-
-        //       <CheckboxIconExample />
-        //     </div>
-        //   </Block>
+        
 
         //   <Block>
         //     <Heading variation='h4'>12. ToggleSwitch </Heading>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 
 const Generic = styled.div`
+
   display: grid;
 
   &.right {

@@ -1,20 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 const CheckboxGroupContainer = styled.div`
-  display: flex;
-  flex-direction: ${(props) => {
-    switch (props.direction) {
-      case 'column':
-        return 'column';
-      case 'column-reverse':
-        return 'column-reverse';
-      case 'row-reverse':
-        return 'row-reverse';
-      default:
-      case 'row':
-        return 'row';
-    }
-  }};
+  display: inline-flex;
+  flex-direction: ${({direction})=> direction};
 
   > *:not(:last-child) {
     margin-bottom: ${(props) =>
@@ -26,8 +14,7 @@ const CheckboxGroupContainer = styled.div`
   }
 `;
 
-export const CheckboxGroup = ({ configure, children }) => {
-  const { direction = 'column', spacing = '0px' } = configure;
+export const CheckboxGroup = ({ direction = 'column', spacing = '0px', children }) => {
 
   return (
     <CheckboxGroupContainer

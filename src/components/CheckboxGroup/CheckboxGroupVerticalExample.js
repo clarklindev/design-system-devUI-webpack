@@ -1,37 +1,38 @@
 import React, { useState } from 'react';
-import { RadioButtonGroup } from './index';
-import { RadioButton } from '../RadioButton';
+import { CheckboxGroup } from './index';
+import { Checkbox } from '../Checkbox';
+
 import { LabelSomething } from '../LabelSomething';
 
-export const RadioButtonGroupVerticalExample = () => {
+export const CheckboxGroupVerticalExample = () => {
+
   const options = [
     { label: 'a', value: 'A' },
     { label: 'b', value: 'B' },
     { label: 'c', value: 'C' },
-    { label: 'd', value: 'D' },
   ];
 
   const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
 
   const onChange = (index, newValue) => {
-    let newValues = [...savedData].fill(false);
+    const newValues = [...savedData];
     newValues[index] = newValue;
     updateSavedData(newValues);
   };
 
   return (
-    <RadioButtonGroup direction='column' spacing='20px'>
+    <CheckboxGroup direction='column' spacing='20px'>
       {options.map((each, index) => {
         return (
           <LabelSomething
-            key={'RadioButtonGroup_Radio' + index}
+            key={'CheckboxGroup_Checkbox' + index}
             label={each.label}
             labelPosition='right'
             gap='10px'
             something={
-              <RadioButton
+              <Checkbox
                 checked={savedData[index]}
-                name='Radio_ABC'
+                name='Checkbox_ABC'
                 iconSize='30px'
                 onChange={() => onChange(index, !savedData[index])}
               />
@@ -39,6 +40,6 @@ export const RadioButtonGroupVerticalExample = () => {
           />
         );
       })}
-    </RadioButtonGroup>
+    </CheckboxGroup>
   );
 };

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import styled from 'styled-components';
-import { Icon } from '../Icon';
 import { CheckIcon } from '../../icons/CheckIcon';
 import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
+import { Icon } from '../Icon';
+
 
 const CheckboxContainer = styled.label`
   display: flex;
@@ -13,52 +14,42 @@ const CheckboxContainer = styled.label`
   gap: 1rem;
 `;
 
-// Hide checkbox visually but remain accessible to screen readers.
-// Source: https://polished.js.org/docs/#hidevisually
 const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   border: 0;
   clip: rect(0 0 0 0);
   clippath: inset(50%);
   height: 1px;
+  width: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 `;
 
 const StyledCheckbox = styled.div`
   position: relative;
   box-sizing: border-box;
-  border-radius: ${(props) => props.theme.global.borderRadius};
-  border: 1px solid ${(props) => props.theme.checkbox.borderColor};
-  width: auto;
-  height: auto;
-  background-color: ${(props) => props.theme.checkbox.backgroundColor};
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: ${({theme}) => theme?.Checkbox?.borderRadius};
+  border: ${({theme}) => theme?.Checkbox?.border};
+  background-color: ${({theme}) => theme?.Checkbox?.backgroundColor};
 `;
 
-export const Checkbox = ({ savedData, configure }) => {
-  const checked = savedData;
-  const {
-    indeterminate = false,
-    onChange,
-    iconSize = '30px',
-    color = 'darkgrey',
-    name = '',
-    label = '',
-  } = configure;
+export const Checkbox = ({ checked, name, label, onChange, iconSize, indeterminate = false }) => {
+  
+  const inputRef = useRef(null);
+
+  useEffect(()=>{
+    inputRef.current.indeterminate = indeterminate;
+  }, [indeterminate])
+
   return (
     <CheckboxContainer className='Checkbox'>
-      <HiddenCheckbox checked={checked} onChange={onChange} name={name} />
-
+      <HiddenCheckbox checked={checked} ref={inputRef} onChange={onChange} name={name} />
       <StyledCheckbox checked={checked}>
-        <Icon iconSize={iconSize} color={color}>
-          {indeterminate === true ? MinusSmallIcon : checked && CheckIcon}
+        <Icon iconSize={iconSize}>
+          {indeterminate ? <MinusSmallIcon/> : checked ? <CheckIcon/>: null}
         </Icon>
       </StyledCheckbox>
       {label}

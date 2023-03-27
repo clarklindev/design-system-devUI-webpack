@@ -8,7 +8,6 @@ export const InputNoBorderExample = () => {
     modifiers: ['noborder'],
     placeholder: 'placeholder',
     onChange: (event) => {
-      console.log('noborder');
       setSavedData(event.target.value);
     },
   };

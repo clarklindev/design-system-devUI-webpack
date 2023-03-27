@@ -29,7 +29,6 @@ export const InputSearchExample = () => {
           ],
           placeholder: 'placeholder',
           onChange: (event) => {
-            console.log('noborder');
             setSavedData(event.target.value);
           },
         }}

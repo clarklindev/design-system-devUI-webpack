@@ -7,7 +7,6 @@ export const InputReadOnlyExample = () => {
   const configure = {
     modifiers: ['readonly'],
     onChange: (event) => {
-      console.log('readonly');
       setSavedData(event.target.value);
     },
   };

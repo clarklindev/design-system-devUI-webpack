@@ -17,7 +17,6 @@ export const InputWithIconExample = () => {
           modifiers: ['noborder', 'noborderleftradius'],
           placeholder: 'placeholder',
           onChange: (event) => {
-            console.log('noborder');
             setSavedData(event.target.value);
           },
         }}

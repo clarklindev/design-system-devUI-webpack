@@ -6,13 +6,11 @@ export const RadioButtonExample = () => {
 
   return (
     <RadioButton
-      savedData={savedData}
-      configure={{
-        name: 'radio',
-        label: 'label',
-        onChange: (event) => {
-          setSavedData(event.target.checked);
-        },
+      checked={savedData}
+      name='radio'
+      label='label'
+      onChange={(event) => {
+        setSavedData(event.target.checked);
       }}
     />
   );

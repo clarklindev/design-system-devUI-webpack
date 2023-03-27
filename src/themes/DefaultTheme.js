@@ -181,8 +181,9 @@ export const defaultTheme = {
   },
 
   Checkbox: {
-    borderColor: colors.neutral[200],
-    backgroundColor: colors.neutral[100],
+    borderRadius: global.borderRadius,
+    border: global.border,
+    backgroundColor: global.backgroundColor,
   },
 
   Counter: {

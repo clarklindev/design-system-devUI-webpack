@@ -7,7 +7,6 @@ export const InputExample = () => {
 
   const configure = {
     onChange: (event) => {
-      console.log('normal');
       setSavedData(event.target.value);
     },
   };

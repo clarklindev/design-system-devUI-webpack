@@ -3,9 +3,7 @@ import { RadioButtonGroup } from './index';
 import { RadioButton } from '../RadioButton';
 import { LabelSomething } from '../LabelSomething';
 
-
 export const RadioButtonGroupHorizontalExample = () => {
-  // radioOptions: moved outside of configure object - possibility that savedData is pulled, eg. questions from backend async call
   const options = [
     { label: 'a', value: 'A' },
     { label: 'b', value: 'B' },
@@ -13,40 +11,29 @@ export const RadioButtonGroupHorizontalExample = () => {
     { label: 'd', value: 'D' },
   ];
 
-  const [savedData, updateSavedData] = useState(
-    Array(options.length).fill(false)
-  );
+  const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
 
   const onChange = (index, newValue) => {
-    let tempArr = [...savedData].fill(false);
-    tempArr[index] = newValue;
-    updateSavedData(tempArr);
+    let newValues = [...savedData].fill(false);
+    newValues[index] = newValue;
+    updateSavedData(newValues);
   };
 
   return (
-    <RadioButtonGroup
-      configure={{
-        direction: 'row',
-        spacing: '16px', //space between radios
-      }}
-    >
+    <RadioButtonGroup direction='row' spacing='20px'>
       {options.map((each, index) => {
         return (
           <LabelSomething
-            key={`RadioButtonGroup_Radio_ABC` + index}
+            key={'RadioButtonGroup_Radio' + index}
             label={each.label}
             labelPosition='bottom'
             gap='10px'
-            align='center'
             something={
               <RadioButton
-                savedData={savedData[index]}
-                configure={{
-                  name: 'Radio_ABC',
-                  iconSize: '30px',
-                  color: 'darkgrey',
-                  onChange: () => onChange(index, !savedData[index]),
-                }}
+                checked={savedData[index]}
+                name='Radio_ABC'
+                iconSize='30px'
+                onChange={() => onChange(index, !savedData[index])}
               />
             }
           />

@@ -20,7 +20,6 @@ export const InputPasswordExample = () => {
           placeholder: 'placeholder',
           type: passwordVisible ? 'text' : 'password',
           onChange: (event) => {
-            console.log('noborder');
             setSavedData(event.target.value);
           },
         }}
