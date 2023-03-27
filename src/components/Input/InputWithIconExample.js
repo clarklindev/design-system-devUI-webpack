@@ -13,12 +13,10 @@ export const InputWithIconExample = () => {
       </Icon>
       <Input
         savedData={savedData}
-        configure={{
-          modifiers: ['noborder', 'noborderleftradius'],
-          placeholder: 'placeholder',
-          onChange: (event) => {
-            setSavedData(event.target.value);
-          },
+        modifiers={ ['noborder', 'noborderleftradius']}
+        placeholder='placeholder'
+        onChange={(event) => {
+          setSavedData(event.target.value);
         }}
       />
     </InputWrapper>

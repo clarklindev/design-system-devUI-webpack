@@ -14,15 +14,9 @@ export const SelectExample = () => {
     ]);
   }, []);
 
-  const configure = {
-    onChange: (event) => {
-      setSavedData(event.target.value);
-    },
-  };
-
   return (
     <div>
-      <Select savedData={savedData} configure={configure}>
+      <Select savedData={savedData} onChange={(event) => setSavedData(event.target.value)}>
         {data.map((each, index) => (
           <option key={index} value={each.value}>
             {each.text}

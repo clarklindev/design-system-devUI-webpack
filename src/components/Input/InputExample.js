@@ -5,12 +5,7 @@ import { Input } from './index';
 export const InputExample = () => {
   const [savedData, setSavedData] = useState('');
 
-  const configure = {
-    onChange: (event) => {
-      setSavedData(event.target.value);
-    },
-  };
   return (
-    <Input savedData={savedData} configure={configure} />
+    <Input savedData={savedData} onChange={ (event) => { setSavedData(event.target.value)}} />
   );
 };

@@ -61,8 +61,11 @@ import {CheckboxGroupHorizontalExample} from './components/CheckboxGroup/Checkbo
 import {CheckboxGroupVerticalExample} from './components/CheckboxGroup/CheckboxGroupVerticalExample';
 import {CheckboxGroupIndeterminateExample} from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
 
-// //CheckboxIcon 
+//CheckboxIcon 
 import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
+
+//Counter
+import { CounterExample } from './components/Counter/CounterExample';
 
 //-----------------------------------------------------------------------------------
 
@@ -72,7 +75,6 @@ import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExamp
 
 
 
-// import { CounterExample } from './components/Counter';
 // import { ToggleSwitchExample } from './components/Switch';
 // import { ListExample } from './components/List';
 // import { CardExample, CardWithDropshadowExample } from './components/Card';
@@ -284,6 +286,14 @@ const App = () => {
           </Layout>
         </Layout>
 
+        {/* Counter */}
+        <Layout variation="section">
+          <Heading variation='h4'>Counter</Heading>
+          <CounterExample />
+        </Layout>
+
+        
+
       </div>
     </ThemeProvider>
   );
@@ -291,55 +301,50 @@ const App = () => {
 
 export default App;
   
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>03. Helper hooks</Heading>
         //     <UseHoverExample />
         //     <UseFocusExample />
-        //   </Block>
+        //   </Layout>
 
        
 
 
-        //   <Block>
-        //     <Heading variation='h4'>09. Counter</Heading>
-        //     <CounterExample />
-        //   </Block>
+   
 
         
 
-        
-
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>12. ToggleSwitch </Heading>
         //     <div className='flex flex-col'>
         //       <ToggleSwitchExample />
         //     </div>
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>13. Slider</Heading>
         //     <SliderExample />
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>14. Multi-range slider</Heading>
         //     <MultiRangeSliderExample />
-        //   </Block>
+        //   </Layout>
           
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>16. List</Heading>
         //     <ListExample />
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>17. Card</Heading>
         //     <div className='flex flex-col'>
         //       <CardExample />
         //       <CardWithDropshadowExample />
         //     </div>
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>18. Layout</Heading>
         //     <div className='flex items-start flex-col'> 
         //       <a
@@ -359,54 +364,54 @@ export default App;
         //         https://github.com/swagfinger/swagfinger-component-scss-flexbox-grid
         //       </a>
         //     </div>
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>19. Table</Heading>
         //     <TableExample />
-        //   </Block> 
+        //   </Layout> 
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>20. Navbar</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>21. Link</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>22. Breadcrumbs</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>23. Dialog (aka Modal)</Heading>
-        //   </Block>
-        //  <Block>
+        //   </Layout>
+        //  <Layout>
         //     <Heading variation='h4'>24. Progress</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>25. Loading Button</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>26. Timeline</Heading>
-        //   </Block>
+        //   </Layout>
 
-        //   <Block>
+        //   <Layout>
         //     <Heading variation='h4'>27. Multi-input</Heading>
         //     <div className='flex flex-col'></div>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>28. Multi-input Objects</Heading>
         //     <div className='flex flex-col'></div>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>29. Multi-select with input</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>30. Upload</Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>
         //      31. DatePicker, TimePicker, DateTimePicker
         //     </Heading>
-        //   </Block>
-        //   <Block>
+        //   </Layout>
+        //   <Layout>
         //     <Heading variation='h4'>32. DateRangePicker</Heading>
-        //   </Block> 
+        //   </Layout> 

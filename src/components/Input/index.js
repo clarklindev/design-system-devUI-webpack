@@ -41,23 +41,16 @@ const InputElement = styled.input`
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
-export const InputWrapper = ({ configure = undefined, children }) => {
+export const InputWrapper = ({ modifiers, children }) => {
   return (
-    <WrapperContainer modifiers={configure?.modifiers}>
+    <WrapperContainer modifiers={modifiers}>
       {children}
     </WrapperContainer>
   );
 };
 
-export const Input = ({ configure, savedData }) => {
-  const {
-    type = 'text',
-    onChange,
-    modifiers = [],
-    placeholder,
-    className,
-  } = configure;
-
+export const Input = ({ type = 'text', onChange, modifiers = [], placeholder, className, savedData }) => {
+  
   return (
     <InputElement
       onChange={onChange}

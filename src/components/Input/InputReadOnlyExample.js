@@ -4,14 +4,7 @@ import { Input } from './index';
 export const InputReadOnlyExample = () => {
   const [savedData, setSavedData] = useState('this is readonly');
 
-  const configure = {
-    modifiers: ['readonly'],
-    onChange: (event) => {
-      setSavedData(event.target.value);
-    },
-  };
-
   return (
-    <Input savedData={savedData} configure={configure} />
+    <Input savedData={savedData} modifiers={['readonly']} onChange={ (event) => { setSavedData(event.target.value) }}/>
   );
 };

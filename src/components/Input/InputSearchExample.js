@@ -21,20 +21,18 @@ export const InputSearchExample = () => {
       <Input
         className='px-25'
         savedData={savedData}
-        configure={{
-          modifiers: [
-            'noborder',
-            'noborderleftradius',
-            savedData.length && 'noborderrightradius',
-          ],
-          placeholder: 'placeholder',
-          onChange: (event) => {
-            setSavedData(event.target.value);
-          },
+        modifiers={[
+          'noborder',
+          'noborderleftradius',
+          savedData.length && 'noborderrightradius',
+        ]}
+        placeholder='placeholder'
+        onChange={(event) => {
+          setSavedData(event.target.value);
         }}
       />
 
-      {/* WRONG - {savedData.length && rightIcon} - 0 is a falsy value, so when it is evaluated by &&, it returns 0 */}
+      {/* WRONG WAY {savedData.length && rightIcon} - 0 is a falsy value, so when it is evaluated by &&, it returns 0 */}
       { savedData.length > 0 && 
         <Button
           variation='icon'

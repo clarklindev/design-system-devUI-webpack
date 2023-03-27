@@ -34,8 +34,7 @@ const SelectContainer = styled.select`
   
 }`;
 
-export const Select = ({ savedData, configure, children }) => {
-  const { onChange } = configure;
+export const Select = ({ savedData, onChange, children }) => {
 
   const onChangeHandler = (event) => {
     onChange(event);

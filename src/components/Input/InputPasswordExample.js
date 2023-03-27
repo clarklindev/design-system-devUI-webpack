@@ -15,13 +15,11 @@ export const InputPasswordExample = () => {
     <InputWrapper>
       <Input
         savedData={savedData}
-        configure={{
-          modifiers: ['noborder', 'noborderrightradius', 'noleftpadding'],
-          placeholder: 'placeholder',
-          type: passwordVisible ? 'text' : 'password',
-          onChange: (event) => {
-            setSavedData(event.target.value);
-          },
+        modifiers={['noborder', 'noborderrightradius', 'noleftpadding']}
+        placeholder={'placeholder'}
+        type={ passwordVisible ? 'text' : 'password'}
+        onChange={ (event) => {
+          setSavedData(event.target.value);
         }}
       />
       <Button
