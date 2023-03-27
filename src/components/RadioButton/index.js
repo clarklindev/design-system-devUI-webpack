@@ -40,7 +40,7 @@ export const RadioButton = ({ checked, name, label, onChange, iconSize}) => {
       <StyledRadioButton checked={checked}>
         <Icon 
           iconSize={iconSize} 
-          fill={checked ? 'black': 'lightGray'}
+          fill={checked ? '#8e8e8e': 'lightGray'}
           fillOpacity={checked ? '.9': '1'}
           stroke={checked ? 'transparent' : 'lightGray'}>
           {checked === true
