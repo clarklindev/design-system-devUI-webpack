@@ -67,6 +67,8 @@ import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExamp
 //Counter
 import { CounterExample } from './components/Counter/CounterExample';
 
+//ToggleSwitch
+import { ToggleSwitchExample } from './components/ToggleSwitch/ToggleSwitchExample';
 //-----------------------------------------------------------------------------------
 
 
@@ -75,7 +77,7 @@ import { CounterExample } from './components/Counter/CounterExample';
 
 
 
-// import { ToggleSwitchExample } from './components/Switch';
+// 
 // import { ListExample } from './components/List';
 // import { CardExample, CardWithDropshadowExample } from './components/Card';
 // import { TableExample } from './components/Table';
@@ -105,26 +107,18 @@ const App = () => {
         {/* Typography */}
         <Layout variation="section">
           <Heading variation='h4'>Headings</Heading>
-          
-          <Layout variation="block">
-            <HeadingExample />
-          </Layout>
+          <HeadingExample />
         </Layout>
 
         <Layout variation="section">
           <Heading variation='h4'>Text</Heading>
-          <Layout variation="block">
-            <TextExample/>
-          </Layout>
+          <TextExample/>
         </Layout>
 
         {/* Labelsomething */}
         <Layout variation="section">
           <Heading variation='h4'>LabelSomething</Heading>
-
-          <Layout variation="block">
-            <LabelSomethingExample />
-          </Layout>
+          <LabelSomethingExample />
         </Layout>
       
         {/* Buttons */}
@@ -171,19 +165,13 @@ const App = () => {
         {/* Accordion */}
         <Layout variation="section">
           <Heading variation='h4'>Accordion</Heading> 
-
-          <Layout variation="block">            
-            <AccordionExample />
-          </Layout>
+          <AccordionExample />
         </Layout>
 
         {/* Snackbar */}
         <Layout variation="section">
           <Heading variation='h4'>Snackbar</Heading>
-
-          <Layout variation="block">
-            <SnackbarExample />
-          </Layout>
+          <SnackbarExample />
         </Layout>
 
         {/* Input */}
@@ -225,17 +213,13 @@ const App = () => {
         {/* Select */}
         <Layout variation="section">
           <Heading variation='h4'>Select</Heading>
-          <Layout variation="block">
-            <SelectExample />
-          </Layout>
+          <SelectExample />
         </Layout>
 
         {/* RadioButton */}
         <Layout variation="section">
           <Heading variation='h4'>RadioButton</Heading>
-          <Layout variation="block">
-            <RadioButtonExample />
-          </Layout>
+          <RadioButtonExample />
         </Layout>
 
         {/* RadioButtonGroup */}
@@ -254,9 +238,7 @@ const App = () => {
         {/* Checkbox */}
         <Layout variation="section">
           <Heading variation='h4'>Checkbox</Heading>
-          <Layout variation="block">
-            <CheckboxExample />
-          </Layout>
+          <CheckboxExample />
         </Layout>
 
         {/* CheckboxGroup */}
@@ -281,9 +263,7 @@ const App = () => {
         {/* CheckboxIcon */}
         <Layout variation="section">
           <Heading variation='h4'>Checkbox Icon</Heading>
-          <Layout variation="block">
-            <CheckboxIconExample />
-          </Layout>
+          <CheckboxIconExample />
         </Layout>
 
         {/* Counter */}
@@ -292,7 +272,11 @@ const App = () => {
           <CounterExample />
         </Layout>
 
-        
+        {/* ToggleSwitch */}
+        <Layout variation="section">
+          <Heading variation='h4'>ToggleSwitch</Heading>
+          <ToggleSwitchExample />
+        </Layout>
 
       </div>
     </ThemeProvider>
@@ -314,12 +298,7 @@ export default App;
 
         
 
-        //   <Layout>
-        //     <Heading variation='h4'>12. ToggleSwitch </Heading>
-        //     <div className='flex flex-col'>
-        //       <ToggleSwitchExample />
-        //     </div>
-        //   </Layout>
+        
 
         //   <Layout>
         //     <Heading variation='h4'>13. Slider</Heading>
