@@ -38,7 +38,11 @@ export const RadioButton = ({ checked, name, label, onChange, iconSize}) => {
     <RadioButtonContainer className="RadioButton">
       <HiddenRadioButton checked={checked} onChange={onChange} name={name} />
       <StyledRadioButton checked={checked}>
-        <Icon iconSize={iconSize}>
+        <Icon 
+          iconSize={iconSize} 
+          fill={checked ? 'black': 'lightGray'}
+          fillOpacity={checked ? '.9': '1'}
+          stroke={checked ? 'transparent' : 'lightGray'}>
           {checked === true
             ? <RadioButtonSelectedIcon/>
             : <RadioButtonUnselectedIcon/>}

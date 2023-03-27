@@ -6,20 +6,13 @@ import { Icon } from '../Icon';
 export const CheckboxIconExample = () => {
   const [savedData, setSavedData] = useState(false);
 
-  const configure = {
-    onChange: (event) => {
-      console.log('checked', event.target.checked);
-      setSavedData(event.target.checked);
-    },
-  };
-
   return (
-    <CheckboxIcon savedData={savedData} configure={configure}>
+    <CheckboxIcon checked={savedData} onChange={(event) => { setSavedData(event.target.checked)}}>
       <Icon
         iconSize='30px'
-        color='white'
-        fill={savedData ? 'red' : undefined}
-        stroke={savedData ? 'red' : undefined}
+        fill={savedData ? 'red': 'black'}
+        fillOpacity={savedData ? '1': '0'}
+        stroke={savedData ? 'transparent' : 'black'}
       >
         <HeartIcon/>
       </Icon>

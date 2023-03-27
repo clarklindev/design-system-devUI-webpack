@@ -62,7 +62,7 @@ import {CheckboxGroupVerticalExample} from './components/CheckboxGroup/CheckboxG
 import {CheckboxGroupIndeterminateExample} from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
 
 // //CheckboxIcon 
-// import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
+import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
 
 //-----------------------------------------------------------------------------------
 
@@ -277,12 +277,12 @@ const App = () => {
         </Layout>
 
         {/* CheckboxIcon */}
-        {/* <Layout variation="section">
+        <Layout variation="section">
           <Heading variation='h4'>Checkbox Icon</Heading>
           <Layout variation="block">
             <CheckboxIconExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
       </div>
     </ThemeProvider>

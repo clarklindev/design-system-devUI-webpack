@@ -3,14 +3,13 @@ import { Icon } from './index';
 import { Heading } from '../Heading';
 
 import { ShoppingCartIcon } from "../../icons/ShoppingCartIcon";
-import { colors } from '../../themes/colors';
 
 export const IconExample = () => {
 
   return (
     <>
       <Heading variation='h6'>Icon Example</Heading>
-      <Icon size='30px' stroke={colors.status.error} fill={colors.status.error}>
+      <Icon size='30px' stroke="red" fill="red">
         <ShoppingCartIcon/>
       </Icon>
     </>

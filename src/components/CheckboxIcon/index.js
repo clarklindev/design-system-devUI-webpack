@@ -6,6 +6,7 @@ const CheckboxIconContainer = styled.div`
     display: inline-flex;
     cursor: pointer;
   }
+
 `;
 
 // Hide checkbox visually but remain accessible to screen readers.
@@ -23,9 +24,7 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   width: 1px;
 `;
 
-export const CheckboxIcon = ({ savedData, configure, children }) => {
-  const checked = savedData;
-  const { onChange, icon = undefined } = configure;
+export const CheckboxIcon = ({ checked, onChange, icon, children }) => {
 
   return (
     <CheckboxIconContainer className='CheckboxIcon'>
