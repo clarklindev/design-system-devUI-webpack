@@ -76,6 +76,15 @@ import { SliderExample } from './components/Slider/SliderExample';
 //SliderMultiRange
 import { SliderMultiRangeExample } from './components/SliderMultiRange/SliderMultiRangeExample';
 
+//List
+import { ListExample } from './components/List/ListExample';
+
+//Table
+import { TableExample } from './components/Table/TableExample';
+
+//Card
+import { CardExample } from './components/Card/CardExample';
+
 //-----------------------------------------------------------------------------------
 
 
@@ -85,9 +94,6 @@ import { SliderMultiRangeExample } from './components/SliderMultiRange/SliderMul
 
 
 // 
-// import { ListExample } from './components/List';
-// import { CardExample, CardWithDropshadowExample } from './components/Card';
-// import { TableExample } from './components/Table';
 // 
 // import { UseHoverExample, UseFocusExample } from './customhooks';
 
@@ -299,7 +305,24 @@ const App = () => {
             <SliderMultiRangeExample />
           </Layout>
         </Layout>
-      
+
+        {/* List */}
+        <Layout variation="section">
+          <Heading variation='h4'>List</Heading>
+          <ListExample />
+        </Layout>
+
+        {/* Table */}
+        <Layout variation="section">
+          <Heading variation='h4'>Table</Heading>
+          <TableExample />
+        </Layout> 
+
+        {/* Card */}
+        <Layout variation="section">
+          <Heading variation='h4'>Card</Heading>
+          <CardExample />
+        </Layout>
       </div>
     </ThemeProvider>
   );
@@ -318,46 +341,11 @@ export default App;
 
         
 
-        //   <Layout>
-        //     <Heading variation='h4'>16. List</Heading>
-        //     <ListExample />
-        //   </Layout>
+        
 
-        //   <Layout>
-        //     <Heading variation='h4'>17. Card</Heading>
-        //     <div className='flex flex-col'>
-        //       <CardExample />
-        //       <CardWithDropshadowExample />
-        //     </div>
-        //   </Layout>
+       
 
-        //   <Layout>
-        //     <Heading variation='h4'>18. Layout</Heading>
-        //     <div className='flex items-start flex-col'> 
-        //       <a
-        //         href='https://swagfinger-component-scss-flexbox-grid.vercel.app/'
-        //         target='_blank'
-        //         rel='noreferrer'
-        //       >
-        //         sass flexbox-grid -
-        //         https://swagfinger-component-scss-flexbox-grid.vercel.app/
-        //       </a>
-        //       <a
-        //         href='https://github.com/swagfinger/swagfinger-component-scss-flexbox-grid'
-        //         target='_blank'
-        //         rel='noreferrer'
-        //       >
-        //         github -
-        //         https://github.com/swagfinger/swagfinger-component-scss-flexbox-grid
-        //       </a>
-        //     </div>
-        //   </Layout>
-
-        //   <Layout>
-        //     <Heading variation='h4'>19. Table</Heading>
-        //     <TableExample />
-        //   </Layout> 
-
+        //  
         //   <Layout>
         //     <Heading variation='h4'>20. Navbar</Heading>
         //   </Layout>

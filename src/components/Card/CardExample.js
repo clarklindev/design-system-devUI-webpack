@@ -1,0 +1,16 @@
+import React from 'react';
+
+import { Card } from './index';
+
+export const CardExample = () => {
+  return (
+    <Card
+      color='white'
+      borderColor='#DDD'
+      borderRadius='10px'
+      width='550px'
+      height='300px'
+      modifiers='shadow'
+    ></Card>
+  );
+};
