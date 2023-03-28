@@ -5,10 +5,10 @@ import { LabelSomething } from '../LabelSomething';
 
 export const RadioButtonGroupVerticalExample = () => {
   const options = [
-    { label: 'a', value: 'A' },
-    { label: 'b', value: 'B' },
-    { label: 'c', value: 'C' },
-    { label: 'd', value: 'D' },
+    { label: 'A', value: 'a', },
+    { label: 'B', value: 'b', },
+    { label: 'C', value: 'c', },
+    { label: 'D', value: 'd', },
   ];
 
   const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
@@ -24,14 +24,14 @@ export const RadioButtonGroupVerticalExample = () => {
       {options.map((each, index) => {
         return (
           <LabelSomething
-            key={'RadioButtonGroup_Radio' + index}
+            key={'RadioButtonGroup' + index}
             label={each.label}
             labelPosition='right'
             gap='10px'
             something={
               <RadioButton
                 checked={savedData[index]}
-                name='Radio_ABC'
+                name='Radio'
                 iconSize='30px'
                 onChange={() => onChange(index, !savedData[index])}
               />

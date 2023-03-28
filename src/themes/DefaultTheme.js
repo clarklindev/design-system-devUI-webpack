@@ -175,6 +175,10 @@ export const defaultTheme = {
     borderRadius: global.borderRadius,
   },
 
+  Slider:{
+    formElementBackground: "lightGray",
+  },
+
   Icon: {
     fill: "",
     stroke: colors.neutral[500],

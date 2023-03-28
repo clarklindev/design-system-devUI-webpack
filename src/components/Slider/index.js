@@ -1,0 +1,106 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const SliderContainer = styled.div`
+  box-sizing: border-box;
+  width: calc(${({width}) => width});
+`;
+
+const SliderWrapper = styled.div`
+  width: 100%;
+  background: red;
+  position: relative;
+`;
+
+//you want to show teh SliderTrack if there is only one slider
+const SliderTrack = styled.div`
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+  top: 6px;
+  position: absolute;
+  display: ${({hideTrack})=> hideTrack ? 'none' : 'block'};
+  background-color: ${ ({theme, backgroundColor})=> backgroundColor? backgroundColor : theme?.Slider?.formElementBackground || 'var()'};
+`;
+
+const SliderInput = styled.input.attrs(({index}) => ({
+  index: index,
+  type: 'range',
+}))`
+  /* Add styles for the input element */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  pointer-events: ${({trackClickable}) => (trackClickable ? 'auto' : 'none')};
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 2px;
+  outline: none;
+  background: transparent; //the actual clickable part of scrolltrack
+  display: flex;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: ${({thumbSize}) => thumbSize};
+    height: ${({thumbSize}) => thumbSize};
+    background: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: ${({thumbSize}) => thumbSize};
+    height: ${({thumbSize}) => thumbSize};
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #3264fe;
+    pointer-events: auto;
+  }
+  &::-ms-thumb {
+    appearance: none;
+    width: ${({thumbSize}) => thumbSize};
+    height: ${({thumbSize}) => thumbSize};
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #3264fe;
+    pointer-events: auto;
+  }
+`;
+
+export const Slider = ({ 
+    width = "100%", 
+    hideTrack = false, 
+    trackClickable = true, 
+    min = 0, 
+    max = 100, 
+    step = 1, 
+    index=0,
+    thumbSize = '16px', 
+    backgroundColor, 
+    savedData=0, 
+    onChange, 
+    className,
+  }) => {
+  return (
+    <SliderContainer width={width} className={["Slider", className].join(' ')}>
+      <SliderWrapper>
+        <SliderTrack hideTrack={hideTrack} backgroundColor={backgroundColor} />
+
+        <SliderInput
+          type='range'
+          trackClickable={trackClickable}
+          min={min}
+          max={max}
+          step={step}
+          thumbSize={thumbSize}
+          value={savedData}
+          onChange={(event) => onChange(event.target.value, index)}
+        />
+
+      </SliderWrapper>
+    </SliderContainer>
+  );
+};

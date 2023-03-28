@@ -69,6 +69,13 @@ import { CounterExample } from './components/Counter/CounterExample';
 
 //ToggleSwitch
 import { ToggleSwitchExample } from './components/ToggleSwitch/ToggleSwitchExample';
+
+//Slider
+import { SliderExample } from './components/Slider/SliderExample';
+
+//SliderMultiRange
+import { SliderMultiRangeExample } from './components/SliderMultiRange/SliderMultiRangeExample';
+
 //-----------------------------------------------------------------------------------
 
 
@@ -81,7 +88,7 @@ import { ToggleSwitchExample } from './components/ToggleSwitch/ToggleSwitchExamp
 // import { ListExample } from './components/List';
 // import { CardExample, CardWithDropshadowExample } from './components/Card';
 // import { TableExample } from './components/Table';
-// import { SliderExample, MultiRangeSliderExample } from './components/Slider';
+// 
 // import { UseHoverExample, UseFocusExample } from './customhooks';
 
 const App = () => {
@@ -278,6 +285,21 @@ const App = () => {
           <ToggleSwitchExample />
         </Layout>
 
+        {/* Slider */}
+        <Layout variation="section">
+          <Heading variation='h4'>Slider</Heading>
+
+          <Layout variation="block">
+            <Heading variation="h5">Slider</Heading>
+            <SliderExample />
+          </Layout>
+
+          <Layout variation="block">
+            <Heading variation="h5">SliderMultiRange</Heading>
+            <SliderMultiRangeExample />
+          </Layout>
+        </Layout>
+      
       </div>
     </ThemeProvider>
   );
@@ -290,26 +312,12 @@ export default App;
         //     <UseHoverExample />
         //     <UseFocusExample />
         //   </Layout>
-
-       
-
-
    
 
         
 
         
 
-        //   <Layout>
-        //     <Heading variation='h4'>13. Slider</Heading>
-        //     <SliderExample />
-        //   </Layout>
-
-        //   <Layout>
-        //     <Heading variation='h4'>14. Multi-range slider</Heading>
-        //     <MultiRangeSliderExample />
-        //   </Layout>
-          
         //   <Layout>
         //     <Heading variation='h4'>16. List</Heading>
         //     <ListExample />

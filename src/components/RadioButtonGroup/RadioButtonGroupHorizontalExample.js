@@ -24,14 +24,14 @@ export const RadioButtonGroupHorizontalExample = () => {
       {options.map((each, index) => {
         return (
           <LabelSomething
-            key={'RadioButtonGroup_Radio' + index}
+            key={'RadioButtonGroup' + index}
             label={each.label}
             labelPosition='bottom'
             gap='10px'
             something={
               <RadioButton
                 checked={savedData[index]}
-                name='Radio_ABC'
+                name='Radio'
                 iconSize='30px'
                 onChange={() => onChange(index, !savedData[index])}
               />
