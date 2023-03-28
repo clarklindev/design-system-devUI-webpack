@@ -3,28 +3,27 @@ import styled from 'styled-components';
 import { Slider } from '../Slider';
 
 const SliderMultiRangeContainer = styled.div`
-  width: ${({width})=> width}
-  box-sizing:border-box;
-  height: 30px;
+  height: 30px;  
 `;
 
 const SliderWrapper = styled.div`
-  box-sizing:border-box;
-  width: 100%;
   height: 15px;
-  display: flex;
   position: relative;
+`;
+
+const Sliders = styled.div`
+  width: ${({offset})=> `calc(100% - ${offset})`};
+  position: absolute;
 `;
 
 //this is the background track for all the scrollbars - you want to show this instead of sliders' own track
 const SliderTrack = styled.div`
-  box-sizing:border-box;
-  height: 5px;
-  width: 100%;
+  height: 4px;
   border-radius: 2px;
   background: lightGray;
-  display: flex;
-  align-self: center;
+  width: 100%;
+  position: absolute;
+  top: ${({thumbSize})=> `calc(${thumbSize} * .3)`};
 `;
 
 export const SliderMultiRange = ({ 
@@ -77,27 +76,32 @@ export const SliderMultiRange = ({
 
   //----------------------------------------------------------------------------------
   return (
-    <SliderMultiRangeContainer className="SliderMultiRange" width={width}>
-      <SliderWrapper>
-        <SliderTrack backgroundColor="blue"/>
-        {(sliderValues || []).map((sliderValue, index) => { 
-            return <Slider
-              className='absolute' //you want to leave this absolute for multirange input so they stack ontop of each other, for testing remove 'absolute class' 
-              key={index}
-              savedData={sliderValue}
-              step={step}
-              index={index}
-              onChange={onChangeHandler}
-              min={min}
-              max={max}
-              //x position to place the <Slider/> you cant see this of each individual slider if <Slider className="absolute">. only when className = "" and hideTrack="false"
-              trackClickable={false} //you want to leave this FALSE for multirange input
-              hideTrack={true} //you want to leave this as TRUE for multirange input - <SliderTrack /> replaces this
-              thumbSize={thumbSize}
-              backgroundColor="rgba(0,255,0,.5)"
-            /> 
-        })}
-   
+    <SliderMultiRangeContainer className="SliderMultiRange">
+      <SliderWrapper className="SliderWrapper">
+        <SliderTrack backgroundColor="blue" className="SliderTrack" thumbSize={thumbSize}/>
+        <Sliders className="Sliders" offset={parseInt(thumbSize) * (sliderValues.length-1) + 'px'}>
+          {(sliderValues || []).map((sliderValue, index) => { 
+            //cater for the width of scrollbar thumbSize
+
+              return <Slider
+                className=''
+                key={index}
+                savedData={sliderValue}
+                step={step}
+                index={index}
+                onChange={onChangeHandler}
+                min={min}
+                max={max}
+                width={width}
+                offset={parseInt(thumbSize) * index + 'px'}
+                //x position to place the <Slider/> you cant see this of each individual slider if <Slider className="absolute">. only when className = "" and hideTrack="false"
+                trackClickable={false} //you want to leave this FALSE for multirange input
+                hideTrack={true} //you want to leave this as TRUE for multirange input - <SliderTrack /> replaces this
+                thumbSize={thumbSize}
+                backgroundColor="rgba(0,255,0,.5)"
+              /> 
+          })}
+        </Sliders>
       </SliderWrapper> 
     </SliderMultiRangeContainer>
   );

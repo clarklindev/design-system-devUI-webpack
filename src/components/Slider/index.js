@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const SliderContainer = styled.div`
   box-sizing: border-box;
-  width: calc(${({width}) => width});
+  width: ${({width}) => width};
+  margin-left: ${({offset})=> offset};
 `;
 
 const SliderWrapper = styled.div`
@@ -81,11 +82,13 @@ export const Slider = ({
     thumbSize = '16px', 
     backgroundColor, 
     savedData=0, 
+    offset=0,
     onChange, 
     className,
   }) => {
+
   return (
-    <SliderContainer width={width} className={["Slider", className].join(' ')}>
+    <SliderContainer width={width} offset={offset} className={["Slider", className].join(' ')}>
       <SliderWrapper>
         <SliderTrack hideTrack={hideTrack} backgroundColor={backgroundColor} />
 
