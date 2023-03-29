@@ -6,7 +6,7 @@ export const CheckboxExample = () => {
 
   return (
     <Checkbox
-      checked={savedData} 
+      checked={savedData}
       name='checkbox'
       label='label'
       onChange={(event) => {

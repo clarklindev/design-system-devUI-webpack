@@ -3,7 +3,7 @@ import { Button } from './index';
 
 export const ButtonModifiersExample = () => {
   return (
-    <div className="flex flex-row space-x-10">
+    <div className='flex flex-row space-x-10'>
       <Button
         size='small'
         label='small'

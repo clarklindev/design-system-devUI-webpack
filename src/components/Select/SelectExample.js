@@ -13,7 +13,10 @@ export const SelectExample = () => {
 
   return (
     <div>
-      <Select savedData={savedData} onChange={(event) => setSavedData(event.target.value)}>
+      <Select
+        savedData={savedData}
+        onChange={(event) => setSavedData(event.target.value)}
+      >
         {data.map((each, index) => (
           <option key={index} value={each.value}>
             {each.text}

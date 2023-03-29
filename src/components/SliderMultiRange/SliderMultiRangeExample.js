@@ -6,6 +6,11 @@ export const SliderMultiRangeExample = () => {
   const [sliderValues, setSliderValues] = useState([20, 50]); //holds positions of sliders
 
   return (
-    <SliderMultiRange sliderValues={sliderValues} min={0} max={100} onChange={setSliderValues}/>
+    <SliderMultiRange
+      sliderValues={sliderValues}
+      min={0}
+      max={100}
+      onChange={setSliderValues}
+    />
   );
 };

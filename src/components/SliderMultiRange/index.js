@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Slider } from '../Slider';
 
 const SliderMultiRangeContainer = styled.div`
-  height: 30px;  
+  height: 30px;
 `;
 
 const SliderWrapper = styled.div`
@@ -12,7 +12,7 @@ const SliderWrapper = styled.div`
 `;
 
 const Sliders = styled.div`
-  width: ${({offset})=> `calc(100% - ${offset})`};
+  width: ${({ offset }) => `calc(100% - ${offset})`};
   position: absolute;
 `;
 
@@ -23,49 +23,48 @@ const SliderTrack = styled.div`
   background: lightGray;
   width: 100%;
   position: absolute;
-  top: ${({thumbSize})=> `calc(${thumbSize} * .3)`};
+  top: ${({ thumbSize }) => `calc(${thumbSize} * .3)`};
 `;
 
-export const SliderMultiRange = ({ 
-  sliderValues, 
+export const SliderMultiRange = ({
+  sliderValues,
   onChange,
   step = 1,
-  min=0,
-  max=0,
+  min = 0,
+  max = 0,
   thumbSize = '16px',
   backgroundColor = 'red',
   width = '100%',
 }) => {
-
   const restrictBoundaries = (index, value) => {
     //min
     let min;
     if (sliderValues.length === 1 || index === 0) {
       min = min;
     } else {
-      min = sliderValues[index - 1] ;
+      min = sliderValues[index - 1];
     }
 
     let max;
     //check if single element in sliderValues || if last element in sliderValues
-    if (sliderValues.length === 1 || index === (sliderValues.length - 1) ) {
+    if (sliderValues.length === 1 || index === sliderValues.length - 1) {
       max = max;
     } else {
-      max = sliderValues[index + 1] ;
+      max = sliderValues[index + 1];
     }
 
     if (value <= min) {
-      value= min;
+      value = min;
     }
     if (value >= max) {
-      value=max;
+      value = max;
     }
-    console.log("value: ", value);
+    console.log('value: ', value);
     return value;
   };
 
   //function that gets called everytime one of the sliders value changes
-  const onChangeHandler = (value, index=0) => {
+  const onChangeHandler = (value, index = 0) => {
     const restricted = restrictBoundaries(index, parseInt(value));
 
     let updatedValues = sliderValues.slice();
@@ -76,14 +75,22 @@ export const SliderMultiRange = ({
 
   //----------------------------------------------------------------------------------
   return (
-    <SliderMultiRangeContainer className="SliderMultiRange">
-      <SliderWrapper className="SliderWrapper">
-        <SliderTrack backgroundColor="blue" className="SliderTrack" thumbSize={thumbSize}/>
-        <Sliders className="Sliders" offset={parseInt(thumbSize) * (sliderValues.length-1) + 'px'}>
-          {(sliderValues || []).map((sliderValue, index) => { 
+    <SliderMultiRangeContainer className='SliderMultiRange'>
+      <SliderWrapper className='SliderWrapper'>
+        <SliderTrack
+          backgroundColor='blue'
+          className='SliderTrack'
+          thumbSize={thumbSize}
+        />
+        <Sliders
+          className='Sliders'
+          offset={parseInt(thumbSize) * (sliderValues.length - 1) + 'px'}
+        >
+          {(sliderValues || []).map((sliderValue, index) => {
             //cater for the width of scrollbar thumbSize
 
-              return <Slider
+            return (
+              <Slider
                 className=''
                 key={index}
                 savedData={sliderValue}
@@ -98,11 +105,12 @@ export const SliderMultiRange = ({
                 trackClickable={false} //you want to leave this FALSE for multirange input
                 hideTrack={true} //you want to leave this as TRUE for multirange input - <SliderTrack /> replaces this
                 thumbSize={thumbSize}
-                backgroundColor="rgba(0,255,0,.5)"
-              /> 
+                backgroundColor='rgba(0,255,0,.5)'
+              />
+            );
           })}
         </Sliders>
-      </SliderWrapper> 
+      </SliderWrapper>
     </SliderMultiRangeContainer>
   );
 };

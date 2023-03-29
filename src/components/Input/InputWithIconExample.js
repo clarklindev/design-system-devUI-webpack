@@ -9,11 +9,11 @@ export const InputWithIconExample = () => {
   return (
     <InputWrapper>
       <Icon iconSize='30px'>
-        <SpeechIcon/>
+        <SpeechIcon />
       </Icon>
       <Input
         savedData={savedData}
-        modifiers={ ['noborder', 'noborderleftradius']}
+        modifiers={['noborder', 'noborderleftradius']}
         placeholder='placeholder'
         onChange={(event) => {
           setSavedData(event.target.value);

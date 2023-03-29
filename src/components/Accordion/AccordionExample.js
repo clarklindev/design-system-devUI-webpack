@@ -1,8 +1,7 @@
 import React from 'react';
-import { Accordion} from './index';
+import { Accordion } from './index';
 
 export const AccordionExample = () => {
-  
   const data = [
     {
       title: 'helloworld',
@@ -16,18 +15,24 @@ export const AccordionExample = () => {
       title: 'sun',
       body: 'the sun is amazing',
     },
-  ]; 
+  ];
 
   return (
     <Accordion
       multiOpen={true}
       // renderprop
-      renderItem={({handleClick, indexes, AccordionItem, Separator})=>{
-        return data.map((each, index)=>{
-          return <React.Fragment key={index}>
-            <AccordionItem data={each} onClick={ ()=>handleClick(index)} isOpen={indexes.includes(index)} />
-            { (index < data.length-1) && <Separator/>}
-          </React.Fragment>
+      renderItem={({ handleClick, indexes, AccordionItem, Separator }) => {
+        return data.map((each, index) => {
+          return (
+            <React.Fragment key={index}>
+              <AccordionItem
+                data={each}
+                onClick={() => handleClick(index)}
+                isOpen={indexes.includes(index)}
+              />
+              {index < data.length - 1 && <Separator />}
+            </React.Fragment>
+          );
         });
       }}
     />

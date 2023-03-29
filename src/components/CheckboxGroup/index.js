@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 const CheckboxGroupContainer = styled.div`
   display: inline-flex;
-  flex-direction: ${({direction})=> direction};
+  flex-direction: ${({ direction }) => direction};
 
   > *:not(:last-child) {
     margin-bottom: ${(props) =>
@@ -14,8 +14,11 @@ const CheckboxGroupContainer = styled.div`
   }
 `;
 
-export const CheckboxGroup = ({ direction = 'column', spacing = '0px', children }) => {
-
+export const CheckboxGroup = ({
+  direction = 'column',
+  spacing = '0px',
+  children,
+}) => {
   return (
     <CheckboxGroupContainer
       className={`RadioButtonGroup`}

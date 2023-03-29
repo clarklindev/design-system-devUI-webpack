@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const SliderContainer = styled.div`
   box-sizing: border-box;
-  width: ${({width}) => width};
-  margin-left: ${({offset})=> offset};
+  width: ${({ width }) => width};
+  margin-left: ${({ offset }) => offset};
 `;
 
 const SliderWrapper = styled.div`
@@ -20,11 +20,14 @@ const SliderTrack = styled.div`
   width: 100%;
   top: 6px;
   position: absolute;
-  display: ${({hideTrack})=> hideTrack ? 'none' : 'block'};
-  background-color: ${ ({theme, backgroundColor})=> backgroundColor? backgroundColor : theme?.Slider?.formElementBackground || 'var()'};
+  display: ${({ hideTrack }) => (hideTrack ? 'none' : 'block')};
+  background-color: ${({ theme, backgroundColor }) =>
+    backgroundColor
+      ? backgroundColor
+      : theme?.Slider?.formElementBackground || 'var()'};
 `;
 
-const SliderInput = styled.input.attrs(({index}) => ({
+const SliderInput = styled.input.attrs(({ index }) => ({
   index: index,
   type: 'range',
 }))`
@@ -32,7 +35,7 @@ const SliderInput = styled.input.attrs(({index}) => ({
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  pointer-events: ${({trackClickable}) => (trackClickable ? 'auto' : 'none')};
+  pointer-events: ${({ trackClickable }) => (trackClickable ? 'auto' : 'none')};
   position: absolute;
   top: 0;
   width: 100%;
@@ -44,8 +47,8 @@ const SliderInput = styled.input.attrs(({index}) => ({
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: ${({thumbSize}) => thumbSize};
-    height: ${({thumbSize}) => thumbSize};
+    width: ${({ thumbSize }) => thumbSize};
+    height: ${({ thumbSize }) => thumbSize};
     background: #666;
     border-radius: 50%;
     cursor: pointer;
@@ -53,8 +56,8 @@ const SliderInput = styled.input.attrs(({index}) => ({
   }
   &::-moz-range-thumb {
     -webkit-appearance: none;
-    width: ${({thumbSize}) => thumbSize};
-    height: ${({thumbSize}) => thumbSize};
+    width: ${({ thumbSize }) => thumbSize};
+    height: ${({ thumbSize }) => thumbSize};
     cursor: pointer;
     border-radius: 50%;
     background-color: #3264fe;
@@ -62,8 +65,8 @@ const SliderInput = styled.input.attrs(({index}) => ({
   }
   &::-ms-thumb {
     appearance: none;
-    width: ${({thumbSize}) => thumbSize};
-    height: ${({thumbSize}) => thumbSize};
+    width: ${({ thumbSize }) => thumbSize};
+    height: ${({ thumbSize }) => thumbSize};
     cursor: pointer;
     border-radius: 50%;
     background-color: #3264fe;
@@ -71,24 +74,27 @@ const SliderInput = styled.input.attrs(({index}) => ({
   }
 `;
 
-export const Slider = ({ 
-    width = "100%", 
-    hideTrack = false, 
-    trackClickable = true, 
-    min = 0, 
-    max = 100, 
-    step = 1, 
-    index=0,
-    thumbSize = '16px', 
-    backgroundColor, 
-    savedData=0, 
-    offset=0,
-    onChange, 
-    className,
-  }) => {
-
+export const Slider = ({
+  width = '100%',
+  hideTrack = false,
+  trackClickable = true,
+  min = 0,
+  max = 100,
+  step = 1,
+  index = 0,
+  thumbSize = '16px',
+  backgroundColor,
+  savedData = 0,
+  offset = 0,
+  onChange,
+  className,
+}) => {
   return (
-    <SliderContainer width={width} offset={offset} className={["Slider", className].join(' ')}>
+    <SliderContainer
+      width={width}
+      offset={offset}
+      className={['Slider', className].join(' ')}
+    >
       <SliderWrapper>
         <SliderTrack hideTrack={hideTrack} backgroundColor={backgroundColor} />
 
@@ -102,7 +108,6 @@ export const Slider = ({
           value={savedData}
           onChange={(event) => onChange(event.target.value, index)}
         />
-
       </SliderWrapper>
     </SliderContainer>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ChevronUpIcon} from '../../icons/ChevronUpIcon';
-import {ChevronDownIcon} from '../../icons/ChevronDownIcon';
+import { ChevronUpIcon } from '../../icons/ChevronUpIcon';
+import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
 import { Icon } from '../Icon';
 
 //by using theme here you dont need to pass props
@@ -19,22 +19,25 @@ const AccordionItemTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 500;
 
-  color:${({theme, titleColor})=> titleColor? titleColor : theme?.Accordion?.title?.color || 'var()'};
-  
+  color: ${({ theme, titleColor }) =>
+    titleColor ? titleColor : theme?.Accordion?.title?.color || 'var()'};
+
   .Icon {
     width: 30px;
     height: 30px;
 
     > svg {
-      stroke: ${({theme})=> theme?.Accordion?.componentIcons?.stroke || 'var()'};
-      fill: ${({theme})=> theme?.Accordion?.componentIcons?.fill || 'var()'};
+      stroke: ${({ theme }) =>
+        theme?.Accordion?.componentIcons?.stroke || 'var()'};
+      fill: ${({ theme }) => theme?.Accordion?.componentIcons?.fill || 'var()'};
     }
   }
 `;
 
 const AccordionItemContent = styled.div`
-  color: ${({theme, color})=> color ? color : theme?.Accordion?.content?.color || 'var()'};
-  
+  color: ${({ theme, color }) =>
+    color ? color : theme?.Accordion?.content?.color || 'var()'};
+
   &.show {
     display: block;
     margin-bottom: 1rem;
@@ -46,24 +49,26 @@ const AccordionItemContent = styled.div`
 
 //AccordionItem doesnt know about anything happening on the outside (self contained)
 export const AccordionItem = (props) => {
-  const { data, isOpen, onClick, showIcon=true} = props;
+  const { data, isOpen, onClick, showIcon = true } = props;
 
   return (
-    <div className="AccordionItem">
+    <div className='AccordionItem'>
       <AccordionItemTitle
         onClick={(index) => onClick(index)}
-        className="AccordionItemTitle"
+        className='AccordionItemTitle'
       >
         {data.title}
 
-        {showIcon && <Icon>{isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}</Icon>}
-
+        {showIcon && (
+          <Icon>{isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}</Icon>
+        )}
       </AccordionItemTitle>
 
-      <AccordionItemContent className={["AccordionItemContent", isOpen ? "show":"hide"].join(' ')}>
+      <AccordionItemContent
+        className={['AccordionItemContent', isOpen ? 'show' : 'hide'].join(' ')}
+      >
         {data.body}
       </AccordionItemContent>
     </div>
   );
 };
-

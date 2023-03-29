@@ -10,7 +10,9 @@ export const ToggleSwitchExample = () => {
     <ToggleSwitch
       savedData={savedData}
       color='grey'
-      onChange={(event) => { setSavedData(event.target.checked)}}
+      onChange={(event) => {
+        setSavedData(event.target.checked);
+      }}
     />
   );
 };

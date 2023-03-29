@@ -11,7 +11,9 @@ export const RadioButtonGroupHorizontalExample = () => {
     { label: 'd', value: 'D' },
   ];
 
-  const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
+  const [savedData, updateSavedData] = useState(
+    Array(options.length).fill(false)
+  );
 
   const onChange = (index, newValue) => {
     let newValues = [...savedData].fill(false);

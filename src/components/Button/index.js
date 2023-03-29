@@ -12,27 +12,39 @@ const BaseButton = styled.button`
   justify-content: center;
   height: auto;
   cursor: pointer;
-  border: ${({theme}) => theme?.Button?.base?.border || 'var()'};
-  background-color: ${({theme}) => theme?.Button?.base?.backgroundColor || 'var()'}; 
-  color: ${({theme}) => theme?.Button?.base?.color || 'var()'};
-  padding: ${({theme}) => theme?.Button?.base?.padding || 'var()'};
-  border-radius: ${({theme}) => theme?.Button?.base?.borderRadius || 'var()'};
+  border: ${({ theme }) => theme?.Button?.base?.border || 'var()'};
+  background-color: ${({ theme }) =>
+    theme?.Button?.base?.backgroundColor || 'var()'};
+  color: ${({ theme }) => theme?.Button?.base?.color || 'var()'};
+  padding: ${({ theme }) => theme?.Button?.base?.padding || 'var()'};
+  border-radius: ${({ theme }) => theme?.Button?.base?.borderRadius || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const ContainedButton = styled(BaseButton)`
   border: none;
-  background-color: ${({theme, backgroundColor}) => backgroundColor ? backgroundColor : theme?.Button?.contained?.backgroundColor || 'var()'};
-  color: ${({theme, color}) => color ? color : theme?.Button?.contained?.color || 'var()'};
+  background-color: ${({ theme, backgroundColor }) =>
+    backgroundColor
+      ? backgroundColor
+      : theme?.Button?.contained?.backgroundColor || 'var()'};
+  color: ${({ theme, color }) =>
+    color ? color : theme?.Button?.contained?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const OutlinedButton = styled(BaseButton)`
-  background-color: ${({theme, borderColor}) => borderColor ? borderColor : theme?.Button?.outlined?.backgroundColor || 'var()'};
-  border: ${({theme, borderColor}) => borderColor ? borderColor : theme?.Button?.outlined?.borderColor || 'var()'};
-  color: ${({theme, color}) => color ? color : theme?.Button?.outlined?.color || 'var()'};
+  background-color: ${({ theme, borderColor }) =>
+    borderColor
+      ? borderColor
+      : theme?.Button?.outlined?.backgroundColor || 'var()'};
+  border: ${({ theme, borderColor }) =>
+    borderColor
+      ? borderColor
+      : theme?.Button?.outlined?.borderColor || 'var()'};
+  color: ${({ theme, color }) =>
+    color ? color : theme?.Button?.outlined?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
@@ -41,7 +53,8 @@ const TextButton = styled(BaseButton)`
   border: none;
   background: none;
   padding: 0px;
-  color: ${({theme, color}) => color ? color : theme?.Button?.text?.color || 'var()'};
+  color: ${({ theme, color }) =>
+    color ? color : theme?.Button?.text?.color || 'var()'};
 
   ${applyStyleModifiers(MODIFIERS)};
 `;
@@ -86,17 +99,23 @@ export const Button = ({
     contained: ContainedButton,
     outlined: OutlinedButton,
     text: TextButton,
-    icon: IconButton
+    icon: IconButton,
   };
 
   const Component = buttonMap[variation];
   if (Component) {
     return (
-      <Component className={["Button", labelClasses].join(' ')} color={color} backgroundColor={backgroundColor} borderColor={borderColor} modifiers={[...modifiers, size]} {...rest}>
+      <Component
+        className={['Button', labelClasses].join(' ')}
+        color={color}
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+        modifiers={[...modifiers, size]}
+        {...rest}
+      >
         {label ? label : children}
       </Component>
     );
   }
-  return <BaseButton className="Button">{label ? label : children}</BaseButton>;
+  return <BaseButton className='Button'>{label ? label : children}</BaseButton>;
 };
-

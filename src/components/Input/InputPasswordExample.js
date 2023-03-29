@@ -17,8 +17,8 @@ export const InputPasswordExample = () => {
         savedData={savedData}
         modifiers={['noborder', 'noborderrightradius', 'noleftpadding']}
         placeholder={'placeholder'}
-        type={ passwordVisible ? 'text' : 'password'}
-        onChange={ (event) => {
+        type={passwordVisible ? 'text' : 'password'}
+        onChange={(event) => {
           setSavedData(event.target.value);
         }}
       />
@@ -27,7 +27,7 @@ export const InputPasswordExample = () => {
         onClick={() => setPasswordVisible(!passwordVisible)}
         label={
           <Icon iconSize='30px'>
-            {passwordVisible ? <HideIcon/> : <ShowIcon/>}
+            {passwordVisible ? <HideIcon /> : <ShowIcon />}
           </Icon>
         }
       />

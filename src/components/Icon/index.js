@@ -6,12 +6,14 @@ const IconContainer = styled.div`
   width: ${(props) => props.size};
   height: ${(props) => props.size};
   display: flex;
-  > svg{
+  > svg {
     width: 100%;
     height: 100%;
-    stroke: ${({theme, stroke})=> stroke ? stroke : theme?.Icon?.stroke || 'var()'};
-    fill: ${({theme, fill})=> fill ? fill : theme?.Icon?.fill || 'var()'};
-    fill-opacity: ${({theme, fillOpacity})=> fillOpacity ? fillOpacity : theme?.Icon?.fillOpacity || 'var()'};
+    stroke: ${({ theme, stroke }) =>
+      stroke ? stroke : theme?.Icon?.stroke || 'var()'};
+    fill: ${({ theme, fill }) => (fill ? fill : theme?.Icon?.fill || 'var()')};
+    fill-opacity: ${({ theme, fillOpacity }) =>
+      fillOpacity ? fillOpacity : theme?.Icon?.fillOpacity || 'var()'};
   }
 `;
 
@@ -22,9 +24,14 @@ export const Icon = ({
   fillOpacity,
   children,
 }) => {
-
   return (
-    <IconContainer className="Icon" size={size} stroke={stroke} fill={fill} fillOpacity={fillOpacity}>
+    <IconContainer
+      className='Icon'
+      size={size}
+      stroke={stroke}
+      fill={fill}
+      fillOpacity={fillOpacity}
+    >
       {children}
     </IconContainer>
   );

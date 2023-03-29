@@ -5,6 +5,12 @@ export const InputReadOnlyExample = () => {
   const [savedData, setSavedData] = useState('this is readonly');
 
   return (
-    <Input savedData={savedData} modifiers={['readonly']} onChange={ (event) => { setSavedData(event.target.value) }}/>
+    <Input
+      savedData={savedData}
+      modifiers={['readonly']}
+      onChange={(event) => {
+        setSavedData(event.target.value);
+      }}
+    />
   );
 };

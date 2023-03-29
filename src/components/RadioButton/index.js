@@ -32,20 +32,22 @@ const StyledRadioButton = styled.div`
   cursor: pointer;
 `;
 
-export const RadioButton = ({ checked, name, label, onChange, iconSize}) => {
-
+export const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
   return (
-    <RadioButtonContainer className="RadioButton">
+    <RadioButtonContainer className='RadioButton'>
       <HiddenRadioButton checked={checked} onChange={onChange} name={name} />
       <StyledRadioButton checked={checked}>
-        <Icon 
-          iconSize={iconSize} 
-          fill={checked ? '#8e8e8e': 'lightGray'}
-          fillOpacity={checked ? '.9': '1'}
-          stroke={checked ? 'transparent' : 'lightGray'}>
-          {checked === true
-            ? <RadioButtonSelectedIcon/>
-            : <RadioButtonUnselectedIcon/>}
+        <Icon
+          iconSize={iconSize}
+          fill={checked ? '#8e8e8e' : 'lightGray'}
+          fillOpacity={checked ? '.9' : '1'}
+          stroke={checked ? 'transparent' : 'lightGray'}
+        >
+          {checked === true ? (
+            <RadioButtonSelectedIcon />
+          ) : (
+            <RadioButtonUnselectedIcon />
+          )}
         </Icon>
       </StyledRadioButton>
       {label}

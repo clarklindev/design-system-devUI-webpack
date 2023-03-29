@@ -25,7 +25,7 @@ export const SnackbarExample = () => {
         variation='icon'
         label={
           <Icon iconSize='30px'>
-            <CopyIcon/>
+            <CopyIcon />
           </Icon>
         }
       />

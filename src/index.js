@@ -5,8 +5,8 @@ import App from './App';
 //dev mode
 if (process.env.NODE_ENV === 'development') {
   const container = document.getElementById('root');
-  const root = createRoot(container); 
-  root.render(<App/>);
+  const root = createRoot(container);
+  root.render(<App />);
 }
 //Accordion
 // export {Accordion} from './components/Accordion';
@@ -33,7 +33,6 @@ if (process.env.NODE_ENV === 'development') {
 // //CheckboxIcon
 // export {CheckboxIcon} from './components/CheckboxIcon';
 // export {CheckboxIconExample} from './components/CheckboxIcon/CheckboxIconExample';
-
 
 // export {Counter, CounterExample} from './components/Counter';
 // export {Datepicker} from './components/Datepicker';//add example

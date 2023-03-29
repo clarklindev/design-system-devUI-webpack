@@ -5,6 +5,9 @@ export const CounterExample = () => {
   const [savedData, setSavedData] = useState('0');
 
   return (
-    <Counter savedData={savedData} onChange={(newValue)=>setSavedData(newValue)} />  
+    <Counter
+      savedData={savedData}
+      onChange={(newValue) => setSavedData(newValue)}
+    />
   );
 };

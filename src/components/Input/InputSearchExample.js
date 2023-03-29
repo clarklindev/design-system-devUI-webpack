@@ -16,7 +16,7 @@ export const InputSearchExample = () => {
   return (
     <InputWrapper>
       <Icon iconSize='30px'>
-        <SearchIcon/>
+        <SearchIcon />
       </Icon>
       <Input
         className='px-25'
@@ -33,18 +33,18 @@ export const InputSearchExample = () => {
       />
 
       {/* WRONG WAY {savedData.length && rightIcon} - 0 is a falsy value, so when it is evaluated by &&, it returns 0 */}
-      { savedData.length > 0 && 
+      {savedData.length > 0 && (
         <Button
           variation='icon'
           modifiers={['noborderrightradius']}
           onClick={clearHandler}
           label={
             <Icon iconSize='30px'>
-              <ClearIcon/>
+              <ClearIcon />
             </Icon>
           }
         />
-      }
+      )}
     </InputWrapper>
   );
 };

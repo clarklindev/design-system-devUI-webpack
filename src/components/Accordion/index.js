@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Separator } from '../Separator';
-import { AccordionItem} from './AccordionItem';
+import { AccordionItem } from './AccordionItem';
 
-export const Accordion = ({
-  multiOpen,
-  renderItem,
-}) => {
-
+export const Accordion = ({ multiOpen, renderItem }) => {
   const [indexes, setIndexes] = useState([]);
 
   //@index - filter-out/add or toggle
-  const activeIndexesCheck = (index)=>{
+  const activeIndexesCheck = (index) => {
     const found = indexes.includes(index);
 
     if (multiOpen) {
@@ -35,15 +31,15 @@ export const Accordion = ({
         setIndexes([index]);
       }
     }
-  }
+  };
 
   const handleClick = (index) => {
     activeIndexesCheck(index);
   };
-  
+
   return (
     <div className='Accordion'>
-      {renderItem({handleClick, indexes, AccordionItem, Separator})}
+      {renderItem({ handleClick, indexes, AccordionItem, Separator })}
     </div>
-  )
+  );
 };

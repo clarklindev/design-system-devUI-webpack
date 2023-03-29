@@ -7,14 +7,19 @@ export const CheckboxIconExample = () => {
   const [savedData, setSavedData] = useState(false);
 
   return (
-    <CheckboxIcon checked={savedData} onChange={(event) => { setSavedData(event.target.checked)}}>
+    <CheckboxIcon
+      checked={savedData}
+      onChange={(event) => {
+        setSavedData(event.target.checked);
+      }}
+    >
       <Icon
         iconSize='30px'
-        fill={savedData ? 'red': 'black'}
-        fillOpacity={savedData ? '1': '0'}
+        fill={savedData ? 'red' : 'black'}
+        fillOpacity={savedData ? '1' : '0'}
         stroke={savedData ? 'transparent' : 'black'}
       >
-        <HeartIcon/>
+        <HeartIcon />
       </Icon>
     </CheckboxIcon>
   );

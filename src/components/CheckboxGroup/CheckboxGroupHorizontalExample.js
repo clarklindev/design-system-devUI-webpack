@@ -5,14 +5,15 @@ import { Checkbox } from '../Checkbox';
 import { LabelSomething } from '../LabelSomething';
 
 export const CheckboxGroupHorizontalExample = () => {
-
   const options = [
     { label: 'a', value: 'A' },
     { label: 'b', value: 'B' },
     { label: 'c', value: 'C' },
   ];
 
-  const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
+  const [savedData, updateSavedData] = useState(
+    Array(options.length).fill(false)
+  );
 
   const onChange = (index, newValue) => {
     const newValues = [...savedData];

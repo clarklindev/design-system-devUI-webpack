@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { CheckIcon } from '../../icons/CheckIcon';
 import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
 import { Icon } from '../Icon';
-
 
 const CheckboxContainer = styled.label`
   display: flex;
@@ -31,25 +30,36 @@ const StyledCheckbox = styled.div`
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
-  border-radius: ${({theme}) => theme?.Checkbox?.borderRadius};
-  border: ${({theme}) => theme?.Checkbox?.border};
-  background-color: ${({theme}) => theme?.Checkbox?.backgroundColor};
+  border-radius: ${({ theme }) => theme?.Checkbox?.borderRadius};
+  border: ${({ theme }) => theme?.Checkbox?.border};
+  background-color: ${({ theme }) => theme?.Checkbox?.backgroundColor};
 `;
 
-export const Checkbox = ({ checked, name, label, onChange, iconSize, indeterminate = false }) => {
-  
+export const Checkbox = ({
+  checked,
+  name,
+  label,
+  onChange,
+  iconSize,
+  indeterminate = false,
+}) => {
   const inputRef = useRef(null);
 
-  useEffect(()=>{
+  useEffect(() => {
     inputRef.current.indeterminate = indeterminate;
-  }, [indeterminate])
+  }, [indeterminate]);
 
   return (
     <CheckboxContainer className='Checkbox'>
-      <HiddenCheckbox checked={checked} ref={inputRef} onChange={onChange} name={name} />
+      <HiddenCheckbox
+        checked={checked}
+        ref={inputRef}
+        onChange={onChange}
+        name={name}
+      />
       <StyledCheckbox checked={checked}>
         <Icon iconSize={iconSize}>
-          {indeterminate ? <MinusSmallIcon/> : checked ? <CheckIcon/>: null}
+          {indeterminate ? <MinusSmallIcon /> : checked ? <CheckIcon /> : null}
         </Icon>
       </StyledCheckbox>
       {label}

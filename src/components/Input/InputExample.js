@@ -6,6 +6,11 @@ export const InputExample = () => {
   const [savedData, setSavedData] = useState('');
 
   return (
-    <Input savedData={savedData} onChange={ (event) => { setSavedData(event.target.value)}} />
+    <Input
+      savedData={savedData}
+      onChange={(event) => {
+        setSavedData(event.target.value);
+      }}
+    />
   );
 };

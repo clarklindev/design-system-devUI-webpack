@@ -10,26 +10,24 @@ const CounterContainer = styled.div`
   display: flex;
   min-width: 130px;
   max-width: 150px;
-  max-height: ${({theme}) => theme?.Counter?.height};
+  max-height: ${({ theme }) => theme?.Counter?.height};
   height: auto;
-  color: ${({theme}) => theme?.Counter?.borderColor};
-  border: ${({theme}) => theme?.Counter?.border};
-  border-radius: ${({theme}) => theme?.Counter?.borderRadius};
-  
+  color: ${({ theme }) => theme?.Counter?.borderColor};
+  border: ${({ theme }) => theme?.Counter?.border};
+  border-radius: ${({ theme }) => theme?.Counter?.borderRadius};
+
   Button {
     border: 0px;
-    background: ${({theme}) => theme?.Counter?.backgroundColor};
+    background: ${({ theme }) => theme?.Counter?.backgroundColor};
   }
   Input {
     border-top: 0px;
     border-bottom: 0px;
-    border-left: ${({theme}) => theme?.Counter?.border};
-    border-right: ${({theme}) => theme?.Counter?.border};
-    background: ${({theme}) => theme?.Counter?.backgroundColor};
+    border-left: ${({ theme }) => theme?.Counter?.border};
+    border-right: ${({ theme }) => theme?.Counter?.border};
+    background: ${({ theme }) => theme?.Counter?.backgroundColor};
     height: auto;
   }
-
-
 `;
 
 export const Counter = ({ savedData, onChange }) => {
@@ -54,7 +52,9 @@ export const Counter = ({ savedData, onChange }) => {
         variation='outlined'
         modifiers={['noborderrightradius', 'noborder']}
       >
-        <Icon iconSize='20px' stroke="transparent"><MinusIcon/></Icon>
+        <Icon iconSize='20px' stroke='transparent'>
+          <MinusIcon />
+        </Icon>
       </Button>
 
       <Input
@@ -76,7 +76,9 @@ export const Counter = ({ savedData, onChange }) => {
         variation='outlined'
         modifiers={['noborderleftradius', 'noborder']}
       >
-        <Icon iconSize='20px' stroke="transparent"><PlusIcon/></Icon>
+        <Icon iconSize='20px' stroke='transparent'>
+          <PlusIcon />
+        </Icon>
       </Button>
     </CounterContainer>
   );

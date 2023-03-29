@@ -5,13 +5,15 @@ import { LabelSomething } from '../LabelSomething';
 
 export const RadioButtonGroupVerticalExample = () => {
   const options = [
-    { label: 'A', value: 'a', },
-    { label: 'B', value: 'b', },
-    { label: 'C', value: 'c', },
-    { label: 'D', value: 'd', },
+    { label: 'A', value: 'a' },
+    { label: 'B', value: 'b' },
+    { label: 'C', value: 'c' },
+    { label: 'D', value: 'd' },
   ];
 
-  const [savedData, updateSavedData] = useState(Array(options.length).fill(false));
+  const [savedData, updateSavedData] = useState(
+    Array(options.length).fill(false)
+  );
 
   const onChange = (index, newValue) => {
     let newValues = [...savedData].fill(false);
