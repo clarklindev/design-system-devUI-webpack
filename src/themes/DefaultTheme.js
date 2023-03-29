@@ -1,5 +1,5 @@
 export const colors = {
-  blue:{
+  blue: {
     100: '#99d6ff',
     200: '#5cbeff',
     300: '#0A9DFF',
@@ -7,27 +7,27 @@ export const colors = {
     500: '#00568F',
     600: '#000645',
   },
-  
-  green:{
+
+  green: {
     100: '#72afb0',
     200: '#00A949',
     300: '#008439',
     400: '#005424',
   },
-  
-  yellow:{
+
+  yellow: {
     100: '#E98A15',
     200: '#EA8F1F',
     300: '#CD7A13',
   },
-  
-  red:{
+
+  red: {
     100: '#D00000',
     200: '#A40000',
     300: '#5A0000',
   },
 
-  neutral:{
+  neutral: {
     100: '#FFFFFF',
     200: '#e4e4e4',
     300: '#d0d0d0',
@@ -40,7 +40,7 @@ export const colors = {
     1000: '#000000',
   },
 
-  dev:{
+  dev: {
     debug: 'pink',
     error: 'red',
   },
@@ -50,7 +50,7 @@ export const colors = {
     error: '#d32f2f',
     success: '#2e7d32',
     info: '#0288d1',
-  }
+  },
 };
 
 export const transparency = {
@@ -83,26 +83,26 @@ export const global = {
   backgroundColor: 'transparent',
   padding: '10px',
   margin: '1rem',
-  gap: '5px', 
+  gap: '5px',
 
   headingColor: colors.neutral[500],
-  headingFontFamily: "Arial, Helvetica, sans-serif",
+  headingFontFamily: 'Arial, Helvetica, sans-serif',
 
   border: `1px solid ${colors.neutral[500]}`,
   borderRadius: '5px',
 
   inputHeight: '40px',
   inputPadding: '0 10px',
-  
+
   separator: colors.neutral[200],
   componentIcons: colors.neutral[400],
 };
 
-// theme - styling for components 
+// theme - styling for components
 export const defaultTheme = {
   name: 'defaultTheme',
 
-  Heading:{
+  Heading: {
     fontFamily: global.headingFontFamily,
     color: global.headingColor,
 
@@ -118,43 +118,43 @@ export const defaultTheme = {
     margin: '0 0 1rem',
     lineHeight: '1.3',
     fontWeight: '400',
-    
   },
-  
-  Text:{
+
+  Text: {
     color: global.text,
-    marginBottom: global.padding
+    marginBottom: global.padding,
   },
 
   Accordion: {
-    title:{
+    title: {
       color: global.headingColor,
     },
-    content:{
+    content: {
       color: global.color,
     },
     componentIcons: {
       stroke: global.componentIcons,
-      fill: 'none'
-    }
-  },
-
-  Layout:{
-    section:{
-      padding: '50px',
-      borderColor: global.separator
+      fill: 'none',
     },
-    block:{
-      padding: '25px 0'
-    }
-  },
-  
-  LabelSomething: {
-    gap: global.gap
   },
 
-  Separator:{
-    borderColor: global.separator
+  Layout: {
+    section: {
+      padding: '50px',
+      borderColor: global.separator,
+    },
+    block: {
+      padding: '25px 0',
+    },
+  },
+
+  LabelSomething: {
+    gap: global.gap,
+  },
+
+  Separator: {
+    borderColor: global.separator,
+    margin: global.margin,
   },
 
   Input: {
@@ -175,12 +175,12 @@ export const defaultTheme = {
     borderRadius: global.borderRadius,
   },
 
-  Slider:{
-    formElementBackground: "lightGray",
+  Slider: {
+    formElementBackground: 'lightGray',
   },
 
   Icon: {
-    fill: "",
+    fill: '',
     stroke: colors.neutral[500],
   },
 
@@ -203,7 +203,7 @@ export const defaultTheme = {
       border: `1px solid ${colors.neutral[400]}`,
       backgroundColor: colors.neutral[600],
       padding: `8px ${global.padding}`,
-      borderRadius: global.borderRadius
+      borderRadius: global.borderRadius,
     },
     contained: {
       color: colors.neutral[100],
@@ -212,7 +212,7 @@ export const defaultTheme = {
     },
     outlined: {
       color: colors.neutral[400],
-      backgroundColor: "transparent",
+      backgroundColor: 'transparent',
       border: `1px solid ${colors.neutral[400]}`,
     },
     text: {
