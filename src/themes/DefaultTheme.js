@@ -199,10 +199,10 @@ export const defaultTheme = {
 
   Button: {
     base: {
-      color: colors.neutral[400],
+      color: colors.neutral[100],
       border: `1px solid ${colors.neutral[400]}`,
       backgroundColor: colors.neutral[600],
-      padding: `8px ${global.padding}`,
+      padding: `5px ${global.padding}`,
       borderRadius: global.borderRadius,
     },
     contained: {

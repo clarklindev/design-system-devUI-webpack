@@ -8,23 +8,26 @@ import { Icon } from '../Icon';
 
 const CounterContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   min-width: 130px;
-  max-width: 150px;
-  max-height: ${({ theme }) => theme?.Counter?.height};
-  height: auto;
+  width: 130px;
   color: ${({ theme }) => theme?.Counter?.borderColor};
   border: ${({ theme }) => theme?.Counter?.border};
   border-radius: ${({ theme }) => theme?.Counter?.borderRadius};
-
+  height: ${({ theme }) => theme?.Counter?.height};
   Button {
     border: 0px;
     background: ${({ theme }) => theme?.Counter?.backgroundColor};
+    &.left {
+      border-right: ${({ theme }) => theme?.Counter?.border};
+    }
+    &.right {
+      border-left: ${({ theme }) => theme?.Counter?.border};
+    }
   }
   Input {
     border-top: 0px;
     border-bottom: 0px;
-    border-left: ${({ theme }) => theme?.Counter?.border};
-    border-right: ${({ theme }) => theme?.Counter?.border};
     background: ${({ theme }) => theme?.Counter?.backgroundColor};
     height: auto;
   }
@@ -48,11 +51,12 @@ export const Counter = ({ savedData, onChange }) => {
   return (
     <CounterContainer>
       <Button
+        className={['Button', 'left'].join(' ')}
         onClick={decrement}
         variation='outlined'
         modifiers={['noborderrightradius', 'noborder']}
       >
-        <Icon iconSize='20px' stroke='transparent'>
+        <Icon size='20px' stroke='transparent'>
           <MinusIcon />
         </Icon>
       </Button>
@@ -72,11 +76,12 @@ export const Counter = ({ savedData, onChange }) => {
       />
 
       <Button
+        className={['Button', 'right'].join(' ')}
         onClick={increment}
         variation='outlined'
         modifiers={['noborderleftradius', 'noborder']}
       >
-        <Icon iconSize='20px' stroke='transparent'>
+        <Icon size='20px' stroke='transparent'>
           <PlusIcon />
         </Icon>
       </Button>
