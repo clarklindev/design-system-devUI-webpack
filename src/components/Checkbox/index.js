@@ -40,7 +40,7 @@ export const Checkbox = ({
   name,
   label,
   onChange,
-  iconSize,
+  iconSize = '20px',
   indeterminate = false,
 }) => {
   const inputRef = useRef(null);
@@ -58,7 +58,7 @@ export const Checkbox = ({
         name={name}
       />
       <StyledCheckbox checked={checked}>
-        <Icon iconSize={iconSize}>
+        <Icon size={iconSize}>
           {indeterminate ? <MinusSmallIcon /> : checked ? <CheckIcon /> : null}
         </Icon>
       </StyledCheckbox>

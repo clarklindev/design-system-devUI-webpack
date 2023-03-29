@@ -31,6 +31,7 @@ export const CheckboxGroupIndeterminateExample = () => {
         }
         name='checkbox'
         label='label'
+        iconSize='20px'
         onChange={(event) => {
           //update group
           updateSavedData(savedData.slice().fill(event.target.checked));
@@ -49,7 +50,7 @@ export const CheckboxGroupIndeterminateExample = () => {
                 <Checkbox
                   checked={savedData[index]}
                   name='Checkbox_ABC'
-                  iconSize='30px'
+                  iconSize='20px'
                   onChange={() => onChange(index, !savedData[index])}
                 />
               }

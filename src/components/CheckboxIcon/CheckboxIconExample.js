@@ -14,7 +14,7 @@ export const CheckboxIconExample = () => {
       }}
     >
       <Icon
-        iconSize='30px'
+        size='25px'
         fill={savedData ? 'red' : 'black'}
         fillOpacity={savedData ? '1' : '0'}
         stroke={savedData ? 'transparent' : 'black'}

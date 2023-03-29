@@ -34,7 +34,7 @@ export const CheckboxGroupVerticalExample = () => {
               <Checkbox
                 checked={savedData[index]}
                 name='Checkbox_ABC'
-                iconSize='30px'
+                iconSize='20px'
                 onChange={() => onChange(index, !savedData[index])}
               />
             }

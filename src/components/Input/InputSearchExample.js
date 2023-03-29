@@ -15,7 +15,7 @@ export const InputSearchExample = () => {
 
   return (
     <InputWrapper>
-      <Icon iconSize='30px'>
+      <Icon size='25px'>
         <SearchIcon />
       </Icon>
       <Input
@@ -39,7 +39,7 @@ export const InputSearchExample = () => {
           modifiers={['noborderrightradius']}
           onClick={clearHandler}
           label={
-            <Icon iconSize='30px'>
+            <Icon size='25px'>
               <ClearIcon />
             </Icon>
           }

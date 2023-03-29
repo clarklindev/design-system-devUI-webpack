@@ -26,7 +26,7 @@ export const InputPasswordExample = () => {
         variation='icon'
         onClick={() => setPasswordVisible(!passwordVisible)}
         label={
-          <Icon iconSize='30px'>
+          <Icon size='25px'>
             {passwordVisible ? <HideIcon /> : <ShowIcon />}
           </Icon>
         }

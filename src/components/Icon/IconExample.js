@@ -5,7 +5,7 @@ import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
 
 export const IconExample = () => {
   return (
-    <Icon size='30px' stroke='red' fill='red'>
+    <Icon size='25px' stroke='red' fill='red'>
       <ShoppingCartIcon />
     </Icon>
   );

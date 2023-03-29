@@ -13,7 +13,7 @@ export const LabelSomethingExample = () => {
         label='left'
         labelPosition='left'
         something={
-          <Icon iconSize='30px' stroke='black' fill='yellow'>
+          <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
           </Icon>
         }
@@ -24,7 +24,7 @@ export const LabelSomethingExample = () => {
         label='right'
         labelPosition='right'
         something={
-          <Icon iconSize='30px' stroke='black' fill='yellow'>
+          <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
           </Icon>
         }
@@ -34,7 +34,7 @@ export const LabelSomethingExample = () => {
         gap='5px'
         labelPosition='top'
         something={
-          <Icon iconSize='30px' stroke='black' fill='yellow'>
+          <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
           </Icon>
         }
@@ -44,7 +44,7 @@ export const LabelSomethingExample = () => {
         label='bottom'
         labelPosition='bottom'
         something={
-          <Icon iconSize='30px' stroke='black' fill='yellow'>
+          <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
           </Icon>
         }

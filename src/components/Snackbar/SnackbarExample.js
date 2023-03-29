@@ -24,7 +24,7 @@ export const SnackbarExample = () => {
         onClick={onClickHandler}
         variation='icon'
         label={
-          <Icon iconSize='30px'>
+          <Icon size='25px'>
             <CopyIcon />
           </Icon>
         }
