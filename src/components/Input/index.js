@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
@@ -45,14 +45,16 @@ export const InputWrapper = ({ modifiers, children }) => {
   return <WrapperContainer modifiers={modifiers}>{children}</WrapperContainer>;
 };
 
-export const Input = ({
-  type = 'text',
-  onChange,
-  modifiers = [],
-  placeholder,
-  className,
-  savedData,
-}) => {
+export const Input = forwardRef(function Input(props, ref) {
+  const {
+    type = 'text',
+    onChange,
+    modifiers = [],
+    placeholder,
+    className,
+    savedData,
+  } = props;
+
   return (
     <InputElement
       onChange={onChange}
@@ -62,6 +64,7 @@ export const Input = ({
       modifiers={modifiers}
       readOnly={modifiers.includes('readonly')}
       className={className}
+      ref={ref}
     />
   );
-};
+});

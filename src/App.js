@@ -42,6 +42,7 @@ import { InputWithIconExample } from './components/Input/InputWithIconExample';
 import { InputNoBorderExample } from './components/Input/InputNoBorderExample';
 import { InputPasswordExample } from './components/Input/InputPasswordExample';
 import { InputSearchExample } from './components/Input/InputSearchExample';
+import { InputSearchWithButtonExample } from './components/Input/InputSearchWithButtonExample';
 
 //Select
 import { SelectExample } from './components/Select/SelectExample';
@@ -216,6 +217,11 @@ const App = () => {
           <Layout variation='block'>
             <Heading variation='h5'>Input Search</Heading>
             <InputSearchExample />
+          </Layout>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>Input Search (with Button)</Heading>
+            <InputSearchWithButtonExample />
           </Layout>
         </Layout>
 
