@@ -53,6 +53,7 @@ export const Input = forwardRef(function Input(props, ref) {
     placeholder,
     className,
     savedData,
+    ...rest
   } = props;
 
   return (
@@ -65,6 +66,7 @@ export const Input = forwardRef(function Input(props, ref) {
       readOnly={modifiers.includes('readonly')}
       className={className}
       ref={ref}
+      {...rest}
     />
   );
 });

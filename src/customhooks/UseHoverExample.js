@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useHover } from './useHover';
+import { Input } from '../components/Input';
 
 export const UseHoverExample = () => {
   const [hovering, attrs] = useHover();
+  const [savedData, setSavedData] = useState('');
 
   return (
     <div style={{ position: 'relative' }}>
-      <button {...attrs}>useHover() - see UseHoverExample</button>
-      {hovering && (
-        <div style={{ position: 'absolute', top: 0, right: 0 }}>hello</div>
-      )}
+      <Input
+        {...attrs}
+        savedData={savedData}
+        onChange={(event) => {
+          setSavedData(event.target.value);
+        }}
+      />
+      {hovering && <div className='absolute'>hello world</div>}
     </div>
   );
 };

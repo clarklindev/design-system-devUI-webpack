@@ -91,11 +91,10 @@ import { SeparatorHorizontalExample } from './components/Separator/SeparatorHori
 import { SeparatorHorizontalLabelledExample } from './components/Separator/SeparatorHorizontalLabelledExample';
 import { SeparatorVerticalExample } from './components/Separator/SeparatorVerticalExample';
 
-//-----------------------------------------------------------------------------------
+// Hooks
+import { UseHoverExample, UseFocusExample } from './customhooks';
 
-//
-//
-// import { UseHoverExample, UseFocusExample } from './customhooks';
+//-----------------------------------------------------------------------------------
 
 const App = () => {
   const [theme, setTheme] = useState({});
@@ -326,6 +325,7 @@ const App = () => {
           <CardExample />
         </Layout>
 
+        {/* Separator */}
         <Layout variation='section'>
           <Heading variation='h4'>Separator</Heading>
           <Layout variation='block'>
@@ -341,18 +341,27 @@ const App = () => {
             <SeparatorVerticalExample />
           </Layout>
         </Layout>
+
+        {/* Hooks */}
+        <Layout variation='section'>
+          <Heading variation='h4'>Hooks</Heading>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>useHover</Heading>
+            <UseHoverExample />
+          </Layout>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>useFocus</Heading>
+            <UseFocusExample />
+          </Layout>
+        </Layout>
       </div>
     </ThemeProvider>
   );
 };
 
 export default App;
-
-//   <Layout>
-//     <Heading variation='h4'>03. Helper hooks</Heading>
-//     <UseHoverExample />
-//     <UseFocusExample />
-//   </Layout>
 
 //
 //   <Layout>
