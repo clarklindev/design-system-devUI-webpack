@@ -6,9 +6,9 @@ import { LabelSomething } from '../LabelSomething';
 
 export const CheckboxGroupVerticalExample = () => {
   const options = [
-    { label: 'a', value: 'A' },
-    { label: 'b', value: 'B' },
-    { label: 'c', value: 'C' },
+    { label: 'A', value: 'a' },
+    { label: 'B', value: 'b' },
+    { label: 'C', value: 'c' },
   ];
 
   const [savedData, updateSavedData] = useState(

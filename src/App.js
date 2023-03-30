@@ -41,8 +41,8 @@ import { InputReadOnlyExample } from './components/Input/InputReadOnlyExample';
 import { InputWithIconExample } from './components/Input/InputWithIconExample';
 import { InputNoBorderExample } from './components/Input/InputNoBorderExample';
 import { InputPasswordExample } from './components/Input/InputPasswordExample';
+import { InputFilterExample } from './components/Input/InputFilterExample';
 import { InputSearchExample } from './components/Input/InputSearchExample';
-import { InputSearchWithButtonExample } from './components/Input/InputSearchWithButtonExample';
 
 //Select
 import { SelectExample } from './components/Select/SelectExample';
@@ -215,13 +215,13 @@ const App = () => {
           </Layout>
 
           <Layout variation='block'>
-            <Heading variation='h5'>Input Search</Heading>
-            <InputSearchExample />
+            <Heading variation='h5'>Input Filter</Heading>
+            <InputFilterExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading variation='h5'>Input Search (with Button)</Heading>
-            <InputSearchWithButtonExample />
+            <Heading variation='h5'>Input Search</Heading>
+            <InputSearchExample />
           </Layout>
         </Layout>
 

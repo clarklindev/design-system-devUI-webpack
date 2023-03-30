@@ -5,10 +5,10 @@ import { LabelSomething } from '../LabelSomething';
 
 export const RadioButtonGroupHorizontalExample = () => {
   const options = [
-    { label: 'a', value: 'A' },
-    { label: 'b', value: 'B' },
-    { label: 'c', value: 'C' },
-    { label: 'd', value: 'D' },
+    { label: 'A', value: 'a' },
+    { label: 'B', value: 'b' },
+    { label: 'C', value: 'c' },
+    { label: 'D', value: 'd' },
   ];
 
   const [savedData, updateSavedData] = useState(
