@@ -15,16 +15,13 @@ const SliderWrapper = styled.div`
 
 //you want to show teh SliderTrack if there is only one slider
 const SliderTrack = styled.div`
-  border-radius: 2px;
-  height: 4px;
+  border-radius: 0px;
+  height: 2px;
   width: 100%;
   top: 6px;
   position: absolute;
   display: ${({ hideTrack }) => (hideTrack ? 'none' : 'block')};
-  background-color: ${({ theme, backgroundColor }) =>
-    backgroundColor
-      ? backgroundColor
-      : theme?.Slider?.formElementBackground || 'var()'};
+  background-color: rgba(0, 0, 0, 0.2);
 `;
 
 const SliderInput = styled.input.attrs(({ index }) => ({

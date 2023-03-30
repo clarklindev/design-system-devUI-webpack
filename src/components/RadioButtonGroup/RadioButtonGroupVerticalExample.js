@@ -34,7 +34,7 @@ export const RadioButtonGroupVerticalExample = () => {
               <RadioButton
                 checked={savedData[index]}
                 name='Radio'
-                iconSize='30px'
+                iconSize='20px'
                 onChange={() => onChange(index, !savedData[index])}
               />
             }

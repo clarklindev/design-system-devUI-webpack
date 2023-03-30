@@ -9,6 +9,7 @@ export const RadioButtonExample = () => {
       checked={savedData}
       name='radio'
       label='label'
+      iconSize='20px'
       onChange={(event) => {
         setSavedData(event.target.checked);
       }}

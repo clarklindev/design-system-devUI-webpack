@@ -17,7 +17,7 @@ export const ButtonWithLabelSomethingExample = () => {
           label='right'
           labelPosition='right'
           something={
-            <Icon size='25px' stroke='black'>
+            <Icon size='25px' stroke='white'>
               <ThumbsUpIcon />
             </Icon>
           }

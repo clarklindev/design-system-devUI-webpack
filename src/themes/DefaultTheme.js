@@ -176,15 +176,21 @@ export const defaultTheme = {
   },
 
   Slider: {
-    formElementBackground: 'lightGray',
+    formElementBackground: '#000000',
   },
 
   Icon: {
     fill: '',
-    stroke: colors.neutral[500],
+    stroke: 'black',
   },
 
   Checkbox: {
+    borderRadius: global.borderRadius,
+    border: global.border,
+    backgroundColor: global.backgroundColor,
+  },
+
+  RadioButton: {
     borderRadius: global.borderRadius,
     border: global.border,
     backgroundColor: global.backgroundColor,

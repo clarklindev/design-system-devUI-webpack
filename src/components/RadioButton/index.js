@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RadioButtonUnselectedIcon } from '../../icons/RadioButtonUnselectedIcon';
-import { RadioButtonSelectedIcon } from '../../icons/RadioButtonSelectedIcon';
+import { RadioButtonIcon } from '../../icons/RadioButtonIcon';
 import { Icon } from '../Icon';
 
 const RadioButtonContainer = styled.label`
@@ -27,9 +26,15 @@ const HiddenRadioButton = styled.input.attrs({ type: 'radio' })`
 `;
 
 const StyledRadioButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  border-radius: 50%;
+  border: ${({ theme }) => theme?.RadioButton?.border};
+  background-color: ${({ theme }) => theme?.RadioButton?.backgroundColor};
 `;
 
 export const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
@@ -37,18 +42,7 @@ export const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
     <RadioButtonContainer className='RadioButton'>
       <HiddenRadioButton checked={checked} onChange={onChange} name={name} />
       <StyledRadioButton checked={checked}>
-        <Icon
-          iconSize={iconSize}
-          fill={checked ? '#8e8e8e' : 'lightGray'}
-          fillOpacity={checked ? '.9' : '1'}
-          stroke={checked ? 'transparent' : 'lightGray'}
-        >
-          {checked === true ? (
-            <RadioButtonSelectedIcon />
-          ) : (
-            <RadioButtonUnselectedIcon />
-          )}
-        </Icon>
+        <Icon size={iconSize}>{checked && <RadioButtonIcon />}</Icon>
       </StyledRadioButton>
       {label}
     </RadioButtonContainer>

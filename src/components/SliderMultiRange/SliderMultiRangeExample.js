@@ -10,6 +10,7 @@ export const SliderMultiRangeExample = () => {
       sliderValues={sliderValues}
       min={0}
       max={100}
+      width='300px'
       onChange={setSliderValues}
     />
   );

@@ -4,6 +4,7 @@ import { Slider } from '../Slider';
 
 const SliderMultiRangeContainer = styled.div`
   height: 30px;
+  width: ${({ width }) => width};
 `;
 
 const SliderWrapper = styled.div`
@@ -18,12 +19,13 @@ const Sliders = styled.div`
 
 //this is the background track for all the scrollbars - you want to show this instead of sliders' own track
 const SliderTrack = styled.div`
-  height: 4px;
-  border-radius: 2px;
-  background: lightGray;
+  height: 2px;
+  border: 0px;
+  border-radius: 0px;
   width: 100%;
   position: absolute;
-  top: ${({ thumbSize }) => `calc(${thumbSize} * .3)`};
+  top: ${({ thumbSize }) => `calc(${thumbSize} * .3333)`};
+  background-color: rgba(0, 0, 0, 0.2);
 `;
 
 export const SliderMultiRange = ({
@@ -75,13 +77,9 @@ export const SliderMultiRange = ({
 
   //----------------------------------------------------------------------------------
   return (
-    <SliderMultiRangeContainer className='SliderMultiRange'>
+    <SliderMultiRangeContainer className='SliderMultiRange' width={width}>
       <SliderWrapper className='SliderWrapper'>
-        <SliderTrack
-          backgroundColor='blue'
-          className='SliderTrack'
-          thumbSize={thumbSize}
-        />
+        <SliderTrack className='SliderTrack' thumbSize={thumbSize} />
         <Sliders
           className='Sliders'
           offset={parseInt(thumbSize) * (sliderValues.length - 1) + 'px'}
@@ -99,13 +97,11 @@ export const SliderMultiRange = ({
                 onChange={onChangeHandler}
                 min={min}
                 max={max}
-                width={width}
                 offset={parseInt(thumbSize) * index + 'px'}
                 //x position to place the <Slider/> you cant see this of each individual slider if <Slider className="absolute">. only when className = "" and hideTrack="false"
                 trackClickable={false} //you want to leave this FALSE for multirange input
                 hideTrack={true} //you want to leave this as TRUE for multirange input - <SliderTrack /> replaces this
                 thumbSize={thumbSize}
-                backgroundColor='rgba(0,255,0,.5)'
               />
             );
           })}

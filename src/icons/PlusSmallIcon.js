@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MinusIcon = () => {
+export const PlusSmallIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -10,7 +10,7 @@ export const MinusIcon = () => {
       stroke='currentColor'
       className='w-6 h-6'
     >
-      <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 12h-15' />
+      <path strokeLinecap='round' strokeLinejoin='round' d='M12 6v12m6-6H6' />
     </svg>
   );
 };
