@@ -18,7 +18,7 @@ const SliderTrack = styled.div`
   border-radius: 0px;
   height: 2px;
   width: 100%;
-  top: 6px;
+  top: 8px;
   position: absolute;
   display: ${({ hideTrack }) => (hideTrack ? 'none' : 'block')};
   background-color: rgba(0, 0, 0, 0.2);

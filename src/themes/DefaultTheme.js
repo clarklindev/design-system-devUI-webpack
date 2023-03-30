@@ -94,7 +94,7 @@ export const global = {
   inputHeight: '40px',
   inputPadding: '0 10px',
 
-  separator: colors.neutral[200],
+  separator: colors.neutral[300],
   componentIcons: colors.neutral[400],
 };
 
@@ -153,7 +153,9 @@ export const defaultTheme = {
   },
 
   Separator: {
+    color: global.separator,
     borderColor: global.separator,
+    backgroundColor: global.separator,
     margin: global.margin,
   },
 

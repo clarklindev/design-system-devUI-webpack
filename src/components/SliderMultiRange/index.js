@@ -24,7 +24,7 @@ const SliderTrack = styled.div`
   border-radius: 0px;
   width: 100%;
   position: absolute;
-  top: ${({ thumbSize }) => `calc(${thumbSize} * .3333)`};
+  top: 7px;
   background-color: rgba(0, 0, 0, 0.2);
 `;
 

@@ -3,36 +3,86 @@ import styled from 'styled-components';
 
 const SeparatorContainer = styled.div`
   box-sizing: border-box;
+  display: flex;
+`;
 
-  &.horizontal {
-    width: ${({ width }) => width};
-    border-bottom: 1px solid
-      ${({ theme }) => theme?.Separator?.borderColor || 'var()'};
-    margin: ${({ theme, margin }) =>
-      margin ? margin : theme?.Separator?.margin || 'var()'};
+const SeparatorHorizontal = styled(SeparatorContainer)`
+  display: flex;
+  width: 100%;
+  height: 1px;
+  margin: ${({ margin }) => margin};
+  background: ${({ theme }) => theme?.Separator?.backgroundColor};
+`;
+
+const SeparatorVertical = styled(SeparatorContainer)`
+  height: ${({ height }) => height};
+  width: 1px;
+  background: ${({ theme }) => theme?.Separator?.backgroundColor};
+  margin: ${({ margin }) => margin};
+`;
+
+const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
+  span {
+    color: ${({ theme }) => theme?.Separator?.color};
+    margin: ${({ margin }) => margin};
   }
 
-  &.vertical {
-    height: ${({ height }) => height};
-    border-right: 1px solid
-      ${({ theme }) => theme?.Separator?.borderColor || 'var()'};
-    margin: ${({ theme, margin }) =>
-      margin ? margin : theme?.Separator?.margin || 'var()'};
+  &::before {
+    display: flex;
+    align-self: center;
+    content: '';
+    height: 1px;
+    background: ${({ theme }) => theme?.Separator?.backgroundColor};
+    width: 100%;
+  }
+  &::after {
+    display: flex;
+    align-self: center;
+    content: '';
+    height: 1px;
+    background: ${({ theme }) => theme?.Separator?.backgroundColor};
+    width: 100%;
   }
 `;
 
 export const Separator = ({
-  direction = 'horizontal',
-  margin = '0px 0px',
+  variation = 'horizontal',
+  margin = '0px',
   height = 'inherit',
   width = 'inherit',
+  label = undefined,
 }) => {
-  return (
-    <SeparatorContainer
-      margin={margin}
-      width={width}
-      height={height}
-      className={['Separator', direction].join(' ')}
-    />
-  );
+  switch (variation) {
+    case 'horizontal':
+      return (
+        <SeparatorHorizontal
+          data-component='Separator'
+          height={height}
+          width={width}
+          margin={margin}
+        />
+      );
+
+    case 'vertical':
+      return (
+        <SeparatorVertical
+          data-component='Separator'
+          height={height}
+          width={width}
+          margin={margin}
+        />
+      );
+
+    case 'horizontal-labelled':
+      return (
+        <SeparatorHorizontalLabelled
+          data-component='Separator'
+          height={height}
+          width={width}
+          margin={margin}
+        >
+          <span>{label}</span>
+        </SeparatorHorizontalLabelled>
+      );
+  }
 };

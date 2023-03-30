@@ -87,6 +87,7 @@ import { CardExample } from './components/Card/CardExample';
 
 //Separator
 import { SeparatorHorizontalExample } from './components/Separator/SeparatorHorizontalExample';
+import { SeparatorHorizontalLabelledExample } from './components/Separator/SeparatorHorizontalLabelledExample';
 import { SeparatorVerticalExample } from './components/Separator/SeparatorVerticalExample';
 
 //-----------------------------------------------------------------------------------
@@ -324,6 +325,10 @@ const App = () => {
           <Layout variation='block'>
             <Heading variation='h5'>Separator (horizontal)</Heading>
             <SeparatorHorizontalExample />
+          </Layout>
+          <Layout variation='block'>
+            <Heading variation='h5'>Separator labelled (horizontal)</Heading>
+            <SeparatorHorizontalLabelledExample />
           </Layout>
           <Layout variation='block'>
             <Heading variation='h5'>Separator (vertical)</Heading>
