@@ -38,11 +38,12 @@ const AccordionSectionPanel = styled.div`
   color: ${({ theme, color }) =>
     color ? color : theme?.Accordion?.content?.color || 'var()'};
 
-  &.show {
+  &[data-expanded='true'] {
     display: block;
     margin-bottom: 1rem;
   }
-  &.hide {
+
+  &[data-expanded='false'] {
     display: none;
   }
 `;
@@ -75,8 +76,11 @@ export const AccordionSection = (props) => {
           onClick={(index) => onClick(index)}
           onKeyDown={(e) => {
             console.log(e.key);
-            if (e.key === 'Enter') {
-              onClick(index);
+            switch (e.key) {
+              case 'Enter':
+              case ' ':
+                onClick(index);
+                break;
             }
           }}
         >
@@ -91,9 +95,8 @@ export const AccordionSection = (props) => {
         role='region'
         aria-labelledby={`AccordionSectionTitle_${index}`}
         id={`AccordionSectionPanel_${index}`}
-        className={['AccordionSectionPanel', isOpen ? 'show' : 'hide'].join(
-          ' '
-        )}
+        className='AccordionSectionPanel'
+        data-expanded={isOpen ? 'true' : 'false'}
       >
         {data.body}
       </AccordionSectionPanel>
