@@ -92,7 +92,11 @@ import { SeparatorHorizontalLabelledExample } from './components/Separator/Separ
 import { SeparatorVerticalExample } from './components/Separator/SeparatorVerticalExample';
 
 // Hooks
-import { UseHoverExample, UseFocusExample } from './customhooks';
+import {
+  UseHoverExample,
+  UseFocusExample,
+  UseHoverFocusExample,
+} from './customhooks';
 
 //-----------------------------------------------------------------------------------
 
@@ -354,6 +358,11 @@ const App = () => {
           <Layout variation='block'>
             <Heading variation='h5'>useFocus</Heading>
             <UseFocusExample />
+          </Layout>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>useHoverFocus</Heading>
+            <UseHoverFocusExample />
           </Layout>
         </Layout>
       </div>

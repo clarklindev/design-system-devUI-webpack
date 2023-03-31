@@ -1,22 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useFocus } from './useFocus';
-import { Input } from '../components/Input';
+import { Button } from '../components/Button';
 
 export const UseFocusExample = () => {
   const [isFocused, attrs] = useFocus();
-  const [savedData, setSavedData] = useState('');
 
   return (
     <>
-      <Input
-        {...attrs}
-        savedData={savedData}
-        onChange={(event) => {
-          setSavedData(event.target.value);
-        }}
-      />
-
+      <Button label='click' {...attrs} />
       {isFocused && <div className='absolute'>hello world</div>}
     </>
   );

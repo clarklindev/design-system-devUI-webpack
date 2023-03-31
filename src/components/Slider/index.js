@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const SliderContainer = styled.div`
@@ -22,6 +22,15 @@ const SliderTrack = styled.div`
   position: absolute;
   display: ${({ hideTrack }) => (hideTrack ? 'none' : 'block')};
   background-color: rgba(0, 0, 0, 0.2);
+`;
+
+const SliderColor = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  > div {
+    background-color: pink;
+  }
 `;
 
 const SliderInput = styled.input.attrs(({ index }) => ({
@@ -86,6 +95,16 @@ export const Slider = ({
   onChange,
   className,
 }) => {
+  const [sliderValue, setSliderValue] = useState();
+  useEffect(() => {
+    setSliderValue(savedData);
+  }, []);
+
+  const onChangeHandler = (value, index) => {
+    onChange(value, index);
+    setSliderValue(value);
+  };
+
   return (
     <SliderContainer
       width={width}
@@ -94,7 +113,10 @@ export const Slider = ({
     >
       <SliderWrapper>
         <SliderTrack hideTrack={hideTrack} backgroundColor={backgroundColor} />
-
+        <SliderColor color='red' splitPosition={sliderValue}>
+          <div />
+          <div />
+        </SliderColor>
         <SliderInput
           type='range'
           trackClickable={trackClickable}
@@ -103,7 +125,7 @@ export const Slider = ({
           step={step}
           thumbSize={thumbSize}
           value={savedData}
-          onChange={(event) => onChange(event.target.value, index)}
+          onChange={(event) => onChangeHandler(event.target.value, index)}
         />
       </SliderWrapper>
     </SliderContainer>

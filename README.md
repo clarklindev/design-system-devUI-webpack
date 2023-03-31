@@ -1,9 +1,16 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
-## build
-- no create-react-app  
+## WAI-ARIA Roles, States, and Properties:
 
------------------------------------------------------------------------------------------------
+### Accordion
+
+- https://www.w3.org/WAI/ARIA/apg/patterns/accordion/
+
+## build
+
+- no create-react-app
+
+---
 
 Initialize a new Node.js project:
 
@@ -14,12 +21,14 @@ npm init -y
 ```shell
 npm i react react-dom
 npm i --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
-npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react 
+npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react
 npm i --save-dev html-webpack-plugin
 ```
 
 ### webpack.config.js
+
 - this is a basic webpack config
+
 ```js
 //webpack.config.js
 const path = require('path');
@@ -79,10 +88,12 @@ root.render(<InputExample />);
 ```
 
 ## index.production.js
+
 ```js
 //src/index.production.js
 export * from './components/Input';
 ```
+
 ### html
 
 <!-- dist/index.html -->
@@ -104,12 +115,12 @@ Run: npm run build to build your application. The bundled file will be in the di
 Create an HTML file where you want to use your react application and include the bundled file.
 Finally, you can start writing your react code in the index.js file and the rest of the application in the src directory.
 
-
-------------------------------------------------------------------------
+---
 
 ## publishing to NPM
 
 ### npm login
+
 ```shell
 npm login
 ```
@@ -126,7 +137,6 @@ to publish as public
 ```shell
 npm publish --access=public
 ```
-
 
 # Getting Started with Create React App and Redux
 
@@ -360,14 +370,14 @@ you may get confused with what to change and where to change theme colors
 - removed default Counter redux code
 - themes moved to utils/themes
 
---------------------------------------------------------------------------------------------------
+---
 
 # Tailwind
 
 - to expand full css file: `npx tailwind init tailwind-full.config.js --full`
 - to customize tailwind, do it inside "extend":
 - strip unused css with purgecss (use only in production)
-  - invoke as function, pass an object, 
+  - invoke as function, pass an object,
   - content: tells it where css are [tell where are our templates] and also include html
   - uses regex to match
 
@@ -388,8 +398,8 @@ npm i @fullhuman/postcss-purgecss
 module.exports = {
   plugins: [
     require('tailwindcss'),
-    require('autoprefixer'),  
-    
+    require('autoprefixer'),
+
     process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
       content:[
         './src/**/*.js',
@@ -403,6 +413,7 @@ module.exports = {
 ```
 
 ## css variables
+
 - in the example, it tries to use the theme and uses the css variables as a fallback
 
 ```css

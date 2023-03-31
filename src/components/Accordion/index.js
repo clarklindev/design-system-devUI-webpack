@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
 import { Separator } from '../Separator';
-import { AccordionItem } from './AccordionItem';
+import { AccordionSection } from './AccordionSection';
 
 export const Accordion = ({ multiOpen, renderItem }) => {
   const [indexes, setIndexes] = useState([]);
+  console.log('ACCORDION');
+
+  useEffect(() => {
+    console.log('indexes: ', indexes);
+  }, [indexes]);
 
   //@index - filter-out/add or toggle
   const activeIndexesCheck = (index) => {
@@ -12,13 +16,15 @@ export const Accordion = ({ multiOpen, renderItem }) => {
 
     if (multiOpen) {
       if (found) {
+        console.log('found');
         // filter-out
         //if index is in the activeIndexes array... remove it
         setIndexes(indexes.filter((item) => item !== index));
       } else {
+        console.log('NOT found');
         //or add
-        //add to activeIndexes
-        setIndexes([...indexes, index]);
+        //add to activeIndexes = Set is unique values
+        setIndexes([...new Set([...indexes, index])]);
       }
     } else {
       //toggle
@@ -34,12 +40,13 @@ export const Accordion = ({ multiOpen, renderItem }) => {
   };
 
   const handleClick = (index) => {
+    console.log('handleClick: ', index);
     activeIndexesCheck(index);
   };
 
   return (
-    <div className='Accordion'>
-      {renderItem({ handleClick, indexes, AccordionItem, Separator })}
+    <div className='Accordion' role='tablist'>
+      {renderItem({ handleClick, indexes, AccordionSection, Separator })}
     </div>
   );
 };

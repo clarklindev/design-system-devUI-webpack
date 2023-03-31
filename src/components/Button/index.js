@@ -117,5 +117,9 @@ export const Button = ({
       </Component>
     );
   }
-  return <BaseButton className='Button'>{label ? label : children}</BaseButton>;
+  return (
+    <BaseButton className='Button' {...rest}>
+      {label ? label : children}
+    </BaseButton>
+  );
 };

@@ -8,6 +8,7 @@ const LayoutSection = styled.section`
 `;
 
 const LayoutBlock = styled.div`
+  position: relative;
   padding: ${({ theme }) => theme?.Layout?.block?.padding || 'var()'};
 `;
 

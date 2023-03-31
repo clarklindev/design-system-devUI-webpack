@@ -21,14 +21,15 @@ export const AccordionExample = () => {
     <Accordion
       multiOpen={true}
       // renderprop
-      renderItem={({ handleClick, indexes, AccordionItem, Separator }) => {
+      renderItem={({ handleClick, indexes, AccordionSection, Separator }) => {
         return data.map((each, index) => {
           return (
             <React.Fragment key={index}>
-              <AccordionItem
+              <AccordionSection
                 data={each}
                 onClick={() => handleClick(index)}
                 isOpen={indexes.includes(index)}
+                index={index}
               />
               {index < data.length - 1 && <Separator />}
             </React.Fragment>
