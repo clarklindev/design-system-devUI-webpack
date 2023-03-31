@@ -30,7 +30,9 @@ import { ButtonWithLabelSomethingExample } from './components/Button/ButtonWithL
 import { ButtonModifiersExample } from './components/Button/ButtonModifiersExample';
 
 //Accordion
-import { AccordionExample } from './components/Accordion/AccordionExample';
+import { AccordionChevronExample } from './components/Accordion/AccordionChevronExample';
+import { AccordionPlusMinusExample } from './components/Accordion/AccordionPlusMinusExample';
+import { AccordionMinimalExample } from './components/Accordion/AccordionMinimalExample';
 
 //Snackbar
 import { SnackbarExample } from './components/Snackbar/SnackbarExample';
@@ -179,7 +181,21 @@ const App = () => {
         {/* Accordion */}
         <Layout variation='section'>
           <Heading variation='h4'>Accordion</Heading>
-          <AccordionExample />
+
+          <Layout variation='block'>
+            <Heading variation='h5'>Accordion (chevron)</Heading>
+            <AccordionChevronExample />
+          </Layout>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>Accordion (plus/minus)</Heading>
+            <AccordionPlusMinusExample />
+          </Layout>
+
+          <Layout variation='block'>
+            <Heading variation='h5'>Accordion (minimal)</Heading>
+            <AccordionMinimalExample />
+          </Layout>
         </Layout>
 
         {/* Snackbar */}
