@@ -48,6 +48,7 @@ const SliderInput = styled.input.attrs(({ index }) => ({
   border-radius: 2px;
   outline: none;
   background: transparent; //the actual clickable part of scrolltrack
+  background: pink;
   display: flex;
 
   &::-webkit-slider-thumb {

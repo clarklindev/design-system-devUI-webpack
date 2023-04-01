@@ -4,7 +4,7 @@ import { ChevronUpIcon } from '../../icons/ChevronUpIcon';
 import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
 import { PlusSmallIcon } from '../../icons/PlusSmallIcon';
 import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
-
+import { Separator } from '../Separator';
 import { Icon } from '../Icon';
 
 export const Accordion = ({
@@ -59,6 +59,7 @@ export const Accordion = ({
               iconType={iconType}
               showSeparator={showSeparator}
             />
+            {showSeparator && <Separator />}
           </React.Fragment>
         );
       })}
@@ -73,14 +74,12 @@ export const Accordion = ({
 const AccordionSectionHeader = styled.div`
   box-sizing: border-box;
   cursor: pointer;
-  margin-bottom: ${({ showSeparator }) => (showSeparator ? '10px' : '5px')};
-  padding-bottom: ${({ showSeparator }) => (showSeparator ? '15px' : '0px')};
-  border-bottom: ${({ theme, showSeparator }) =>
-    showSeparator && theme?.Separator?.border};
   font-size: 1.2rem;
   font-weight: 500;
   color: ${({ theme, titleColor }) =>
     titleColor ? titleColor : theme?.Accordion?.title?.color || 'var()'};
+  margin-bottom: ${({ showSeparator }) => (showSeparator ? '15px' : '0px')};
+  margin-top: ${({ showSeparator }) => (showSeparator ? '15px' : '0px')};
 `;
 
 const AccordionSectionTitle = styled.div`
@@ -100,9 +99,9 @@ const AccordionSectionTitle = styled.div`
 `;
 
 const AccordionSectionPanel = styled.div`
+  overflow: hidden;
   color: ${({ theme, color }) =>
     color ? color : theme?.Accordion?.content?.color || 'var()'};
-  overflow: hidden;
 
   &[data-expanded='false'] {
     max-height: 0px;
@@ -110,10 +109,13 @@ const AccordionSectionPanel = styled.div`
   }
 
   &[data-expanded='true'] {
-    margin-bottom: 1rem;
     max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
     transition: all 0.2s ease-in;
   }
+`;
+
+const AccordionSectionPanelContent = styled.div`
+  padding: ${({ showSeparator }) => (showSeparator ? '0 0 20px 0' : '20px 0')};
 `;
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
@@ -126,8 +128,6 @@ const AccordionSection = (props) => {
     plusminus: { open: <MinusSmallIcon />, closed: <PlusSmallIcon /> },
     hidden: {},
   };
-
-  console.log('show separator: ', showSeparator);
 
   return (
     <div className='AccordionSection'>
@@ -173,7 +173,9 @@ const AccordionSection = (props) => {
         ref={panelRef}
         scrollHeight={panelRef?.current?.scrollHeight}
       >
-        {data.body}
+        <AccordionSectionPanelContent showSeparator={showSeparator}>
+          {data.body}
+        </AccordionSectionPanelContent>
       </AccordionSectionPanel>
     </div>
   );
