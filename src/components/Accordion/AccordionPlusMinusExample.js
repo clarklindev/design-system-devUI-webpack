@@ -17,11 +17,12 @@ export const AccordionPlusMinusExample = () => {
     },
   ];
 
-  return (
-    <Accordion
-      multiOpen={true}
-      data={data}
-      icon={{ type: 'plusminus', stroke: 'black' }}
-    />
-  );
+  const config = {
+    multiOpen: true,
+    data,
+    icon: { type: 'plusminus', stroke: 'black' },
+    showSeparator: true,
+  };
+
+  return <Accordion config={config} />;
 };

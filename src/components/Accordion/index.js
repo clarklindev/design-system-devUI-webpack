@@ -1,24 +1,27 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+
 import { ChevronUpIcon } from '../../icons/ChevronUpIcon';
 import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
 import { PlusSmallIcon } from '../../icons/PlusSmallIcon';
 import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
+
 import { Separator } from '../Separator';
 import { Icon } from '../Icon';
 
-export const Accordion = ({
-  multiOpen,
-  data,
-  icon = {
-    type: 'plusminus',
-    size: '30px',
-    fill,
-    stroke,
-  },
+export const Accordion = (props) => {
+  const {
+    multiOpen,
+    data,
+    icon = {
+      type: 'plusminus',
+      size: '30px',
+      fill,
+      stroke,
+    },
+    showSeparator = true,
+  } = props.config;
 
-  showSeparator = true,
-}) => {
   const [indexes, setIndexes] = useState([]);
 
   //@index - filter-out/add or toggle
@@ -54,17 +57,19 @@ export const Accordion = ({
   return (
     <div className='Accordion' role='tablist'>
       {data.map((each, index) => {
+        const config = {
+          data: each,
+          index,
+          icon,
+          showSeparator,
+
+          onClick: () => handleClick(index),
+          isOpen: indexes.includes(index),
+        };
+
         return (
-          <React.Fragment key={`${index}`}>
-            <AccordionSection
-              key={index}
-              data={each}
-              index={index}
-              onClick={() => handleClick(index)}
-              isOpen={indexes.includes(index)}
-              icon={icon}
-              showSeparator={showSeparator}
-            />
+          <React.Fragment key={index}>
+            <AccordionSection config={config} />
             {showSeparator && <Separator />}
           </React.Fragment>
         );
@@ -131,7 +136,15 @@ const AccordionSectionPanelContent = styled.div`
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
 const AccordionSection = (props) => {
-  const { data, isOpen, onClick, index = 0, icon, showSeparator } = props;
+  const {
+    data,
+    isOpen,
+    onClick,
+    index = 0,
+    icon,
+    showSeparator,
+  } = props.config;
+
   const panelRef = useRef(null);
 
   const iconMap = {
