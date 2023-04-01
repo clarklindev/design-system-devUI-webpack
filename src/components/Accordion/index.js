@@ -104,13 +104,15 @@ const AccordionSectionPanel = styled.div`
     color ? color : theme?.Accordion?.content?.color || 'var()'};
 
   &[data-expanded='false'] {
+    visibility: hidden;
     max-height: 0px;
-    transition: all 0.2s ease-in;
+    transition: max-height 0.2s ease-in;
   }
 
   &[data-expanded='true'] {
+    visibility: visible;
     max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
-    transition: all 0.2s ease-in;
+    transition: max-height 0.2s ease-in;
   }
 `;
 
