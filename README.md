@@ -1,5 +1,7 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
+- initially wanted to use a config={} prop for consistency and this would help with versioning as its always the 'config' prop passed into the component
+- but this is infact not true because even if this is solved at the passing-in-prop stage, the component itself would not work if the underlying architecture changed and the props become mismatched
 - the problem with using a config={} prop is when you dont pass in a config prop and the component that is receivining the config prop
 
 ```js
@@ -12,6 +14,17 @@ const <Component config={ color:'red'}/>
 const Component = ({config={}})=>{
   const {color='blue', border} = config;
 }
+```
+
+- then i thought about using named destructuring, but this becomes a problem if config object is not passed-in
+- config:{} does not declare an initial empty object, it is saying there it is trying to destruct nothing...which is not allowed
+
+```jsx
+<Heading config={{ variation: 'h1' }}>H1 heading</Heading>
+```
+
+```jsx
+export const Heading = ({ config: { variation }, children, ...rest }) => {};
 ```
 
 ## WAI-ARIA Roles, States, and Properties:
