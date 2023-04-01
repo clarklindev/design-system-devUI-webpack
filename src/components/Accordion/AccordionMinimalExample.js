@@ -21,7 +21,7 @@ export const AccordionMinimalExample = () => {
     <Accordion
       multiOpen={true}
       data={data}
-      iconType='hidden'
+      icon={{ type: 'hidden' }}
       showSeparator={false}
     />
   );

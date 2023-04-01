@@ -17,5 +17,14 @@ export const AccordionChevronExample = () => {
     },
   ];
 
-  return <Accordion multiOpen={true} data={data} iconType='chevron' />;
+  return (
+    <Accordion
+      multiOpen={true}
+      data={data}
+      icon={{
+        type: 'chevron',
+        fill: 'transparent',
+      }}
+    />
+  );
 };

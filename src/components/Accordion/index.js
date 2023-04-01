@@ -10,7 +10,13 @@ import { Icon } from '../Icon';
 export const Accordion = ({
   multiOpen,
   data,
-  iconType = 'plusminus',
+  icon = {
+    type: 'plusminus',
+    size: '30px',
+    fill,
+    stroke,
+  },
+
   showSeparator = true,
 }) => {
   const [indexes, setIndexes] = useState([]);
@@ -56,7 +62,7 @@ export const Accordion = ({
               index={index}
               onClick={() => handleClick(index)}
               isOpen={indexes.includes(index)}
-              iconType={iconType}
+              icon={icon}
               showSeparator={showSeparator}
             />
             {showSeparator && <Separator />}
@@ -91,9 +97,10 @@ const AccordionSectionTitle = styled.div`
     width: 30px;
     height: 30px;
     > svg {
-      stroke: ${({ theme }) =>
-        theme?.Accordion?.componentIcons?.stroke || 'var()'};
-      fill: ${({ theme }) => theme?.Accordion?.componentIcons?.fill || 'var()'};
+      stroke: ${({ stroke, theme }) =>
+        stroke ? stroke : theme?.Accordion?.componentIcons?.stroke || 'var()'};
+      fill: ${({ fill, theme }) =>
+        fill ? fill : theme?.Accordion?.componentIcons?.fill || 'var()'};
     }
   }
 `;
@@ -107,14 +114,14 @@ const AccordionSectionPanel = styled.div`
     visibility: hidden;
     opacity: 0;
     max-height: 0px;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in-out;
   }
 
   &[data-expanded='true'] {
     visibility: visible;
     opacity: 1;
     max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in-out;
   }
 `;
 
@@ -124,7 +131,7 @@ const AccordionSectionPanelContent = styled.div`
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
 const AccordionSection = (props) => {
-  const { data, isOpen, onClick, index = 0, iconType, showSeparator } = props;
+  const { data, isOpen, onClick, index = 0, icon, showSeparator } = props;
   const panelRef = useRef(null);
 
   const iconMap = {
@@ -148,6 +155,8 @@ const AccordionSection = (props) => {
           aria-disabled={false}
           id={`AccordionSectionTitle_${index}`}
           tabIndex={0}
+          stroke={icon.stroke}
+          fill={icon.fill}
           onClick={(index) => onClick(index)}
           onKeyDown={(e) => {
             console.log(e.key);
@@ -160,9 +169,9 @@ const AccordionSection = (props) => {
           }}
         >
           {data.title}
-          {iconType !== 'hidden' && (
+          {icon.type !== 'hidden' && (
             <Icon>
-              {isOpen ? iconMap[iconType].open : iconMap[iconType].closed}
+              {isOpen ? iconMap[icon.type].open : iconMap[icon.type].closed}
             </Icon>
           )}
         </AccordionSectionTitle>
