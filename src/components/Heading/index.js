@@ -29,7 +29,10 @@ const Heading6 = styled(HeadingBase)`
   font-size: ${({ theme }) => theme?.Heading?.fontSize?.h6 || 'var()'};
 `;
 
-export const Heading = ({ variation, children, ...rest }) => {
+export const Heading = (props) => {
+  const { config, children, ...rest } = props;
+  const { variation } = config;
+
   const headingMap = {
     h1: Heading1,
     h2: Heading2,
