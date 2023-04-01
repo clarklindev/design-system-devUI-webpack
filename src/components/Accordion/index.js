@@ -9,19 +9,17 @@ import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
 import { Separator } from '../Separator';
 import { Icon } from '../Icon';
 
-export const Accordion = (props) => {
-  const {
-    multiOpen,
-    data,
-    icon = {
-      type: 'plusminus',
-      size: '30px',
-      fill,
-      stroke,
-    },
-    showSeparator = true,
-  } = props.config;
-
+export const Accordion = ({
+  multiOpen,
+  data,
+  icon = {
+    type: 'plusminus',
+    size: '30px',
+    fill,
+    stroke,
+  },
+  showSeparator = true,
+}) => {
   const [indexes, setIndexes] = useState([]);
 
   //@index - filter-out/add or toggle
@@ -57,19 +55,16 @@ export const Accordion = (props) => {
   return (
     <div className='Accordion' role='tablist'>
       {data.map((each, index) => {
-        const config = {
-          data: each,
-          index,
-          icon,
-          showSeparator,
-
-          onClick: () => handleClick(index),
-          isOpen: indexes.includes(index),
-        };
-
         return (
           <React.Fragment key={index}>
-            <AccordionSection config={config} />
+            <AccordionSection
+              data={each}
+              index={index}
+              icon={icon}
+              showSeparator={showSeparator}
+              onClick={() => handleClick(index)}
+              isOpen={indexes.includes(index)}
+            />
             {showSeparator && <Separator />}
           </React.Fragment>
         );
@@ -135,16 +130,14 @@ const AccordionSectionPanelContent = styled.div`
 `;
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
-const AccordionSection = (props) => {
-  const {
-    data,
-    isOpen,
-    onClick,
-    index = 0,
-    icon,
-    showSeparator,
-  } = props.config;
-
+const AccordionSection = ({
+  data,
+  isOpen,
+  onClick,
+  index = 0,
+  icon,
+  showSeparator,
+}) => {
   const panelRef = useRef(null);
 
   const iconMap = {

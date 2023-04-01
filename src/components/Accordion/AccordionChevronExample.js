@@ -19,13 +19,11 @@ export const AccordionChevronExample = () => {
 
   return (
     <Accordion
-      config={{
-        multiOpen: true,
-        data,
-        icon: {
-          type: 'chevron',
-          fill: 'transparent',
-        },
+      data={data}
+      multiOpen={true}
+      icon={{
+        type: 'chevron',
+        fill: 'transparent',
       }}
     />
   );

@@ -1,5 +1,19 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
+- the problem with using a config={} prop is when you dont pass in a config prop and the component that is receivining the config prop
+
+```js
+const <Component config={ color:'red'}/>
+
+// then later...
+- you are destructing props and expecting a config object but it might not be there...
+- so lets say you pre-empt this, and initialize it to an empty object to prevent an error if its not passed in,
+- later you destruct the props from config as if it exists...BUT... it could possibly not even exist...
+const Component = ({config={}})=>{
+  const {color='blue', border} = config;
+}
+```
+
 ## WAI-ARIA Roles, States, and Properties:
 
 ### Accordion

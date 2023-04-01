@@ -19,12 +19,12 @@ export const AccordionMinimalExample = () => {
 
   return (
     <Accordion
-      config={{
-        multiOpen: true,
-        data,
-        icon: { type: 'hidden' },
-        showSeparator: false,
+      data={data}
+      multiOpen={true}
+      icon={{
+        type: 'hidden',
       }}
+      showSeparator={false}
     />
   );
 };

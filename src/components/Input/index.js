@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
 
-const WrapperContainer = styled.div.attrs((props) => ({
-  type: props.type,
-}))`
+const WrapperContainer = styled.div`
+  type: ${({ type }) => type};
   overflow: hidden;
   box-sizing: border-box;
   height: auto;
@@ -45,8 +44,8 @@ export const InputWrapper = ({ modifiers, children }) => {
   return <WrapperContainer modifiers={modifiers}>{children}</WrapperContainer>;
 };
 
-export const Input = forwardRef(function Input(props, ref) {
-  const {
+export const Input = forwardRef(function Input(
+  {
     type = 'text',
     onChange,
     modifiers = [],
@@ -54,8 +53,9 @@ export const Input = forwardRef(function Input(props, ref) {
     className,
     savedData,
     ...rest
-  } = props;
-
+  },
+  ref
+) {
   return (
     <InputElement
       onChange={onChange}

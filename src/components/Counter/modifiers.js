@@ -12,34 +12,34 @@ export const MODIFIERS = {
     border-right: none;
   `,
 
-  readonly: (props) => css`
+  readonly: () => css`
     cursor: default;
   `,
-  nonselectable: (props) => css`
+  nonselectable: () => css`
     pointer-events: none;
   `,
-  noborderradius: (props) => css`
+  noborderradius: () => css`
     border-radius: 0;
   `,
-  noborderleftradius: (props) => css`
+  noborderleftradius: () => css`
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   `,
-  noborderrightradius: (props) => css`
+  noborderrightradius: () => css`
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   `,
-  nopadding: (props) => css`
+  nopadding: () => css`
     padding: 0;
   `,
-  noleftpadding: (props) => css`
+  noleftpadding: () => css`
     padding-left: 0;
   `,
-  norightpadding: (props) => css`
+  norightpadding: () => css`
     padding-right: 0;
   `,
 
-  textcenter: (props) => css`
+  textcenter: () => css`
     text-align: center;
   `,
 };

@@ -41,14 +41,14 @@ export const MODIFIERS = {
     padding-bottom: 0;
   `,
 
-  noborderradius: (props) => css`
+  noborderradius: () => css`
     border-radius: 0;
   `,
-  noborderleftradius: (props) => css`
+  noborderleftradius: () => css`
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   `,
-  noborderrightradius: (props) => css`
+  noborderrightradius: () => css`
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   `,

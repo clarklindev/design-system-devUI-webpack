@@ -18,7 +18,6 @@ export const LabelSomethingExample = () => {
           </Icon>
         }
       />
-
       <LabelSomething
         gap='5px'
         label='right'
@@ -30,8 +29,8 @@ export const LabelSomethingExample = () => {
         }
       />
       <LabelSomething
-        label='top'
         gap='5px'
+        label='top'
         labelPosition='top'
         something={
           <Icon size='25px' stroke='black' fill='yellow'>

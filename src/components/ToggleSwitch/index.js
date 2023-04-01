@@ -40,12 +40,12 @@ const Slider = styled.span`
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  &.${(props) => props.className} {
+  &.${({ className }) => className} {
     input[type='checkbox']:checked + & {
-    background-color: ${(props) => props.color};
+    background-color: ${({ color }) => color};
   }
 
-  &.${(props) => props.className} {
+  &.${({ className }) => className} {
     input[type='checkbox']:checked + &:before {
     -webkit-transform: translateX(30px);
     -ms-transform: translateX(30px);

@@ -5,12 +5,10 @@ const CheckboxGroupContainer = styled.div`
   flex-direction: ${({ direction }) => direction};
 
   > *:not(:last-child) {
-    margin-bottom: ${(props) =>
-      (props.direction === 'column' || props.direction === 'column-reverse') &&
-      props.spacing};
-    margin-right: ${(props) =>
-      (props.direction === 'row' || props.direction === 'row-reverse') &&
-      props.spacing};
+    margin-bottom: ${({ direction, spacing }) =>
+      (direction === 'column' || direction === 'column-reverse') && spacing};
+    margin-right: ${({ direction, spacing }) =>
+      (direction === 'row' || direction === 'row-reverse') && spacing};
   }
 `;
 

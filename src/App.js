@@ -20,7 +20,10 @@ import { TextExample } from './components/Text/TextExample';
 //LabelSomething
 import { LabelSomethingExample } from './components/LabelSomething/LabelSomethingExample';
 
-//Buttons
+//Icon
+import { IconExample } from './components/Icon/IconExample';
+
+// //Buttons
 import { ButtonExample } from './components/Button/ButtonExample';
 import { ButtonContainedExample } from './components/Button/ButtonContainedExample';
 import { ButtonOutlinedExample } from './components/Button/ButtonOutlinedExample';
@@ -29,15 +32,15 @@ import { ButtonIconExample } from './components/Button/ButtonIconExample';
 import { ButtonWithLabelSomethingExample } from './components/Button/ButtonWithLabelSomethingExample';
 import { ButtonModifiersExample } from './components/Button/ButtonModifiersExample';
 
-//Accordion
+// //Accordion
 import { AccordionChevronExample } from './components/Accordion/AccordionChevronExample';
 import { AccordionPlusMinusExample } from './components/Accordion/AccordionPlusMinusExample';
 import { AccordionMinimalExample } from './components/Accordion/AccordionMinimalExample';
 
-//Snackbar
+// //Snackbar
 import { SnackbarExample } from './components/Snackbar/SnackbarExample';
 
-//Input
+// //Input
 import { InputExample } from './components/Input/InputExample';
 import { InputReadOnlyExample } from './components/Input/InputReadOnlyExample';
 import { InputWithIconExample } from './components/Input/InputWithIconExample';
@@ -46,54 +49,54 @@ import { InputPasswordExample } from './components/Input/InputPasswordExample';
 import { InputFilterExample } from './components/Input/InputFilterExample';
 import { InputSearchExample } from './components/Input/InputSearchExample';
 
-//Select
+// //Select
 import { SelectExample } from './components/Select/SelectExample';
 
-//RadioButton
+// //RadioButton
 import { RadioButtonExample } from './components/RadioButton/RadioButtonExample';
 
-//RadioButtonGroup
+// //RadioButtonGroup
 import { RadioButtonGroupVerticalExample } from './components/RadioButtonGroup/RadioButtonGroupVerticalExample';
 import { RadioButtonGroupHorizontalExample } from './components/RadioButtonGroup/RadioButtonGroupHorizontalExample';
 
-//Checkbox
+// //Checkbox
 import { CheckboxExample } from './components/Checkbox/CheckboxExample';
 
-// //CheckboxGroup
+// // //CheckboxGroup
 import { CheckboxGroupHorizontalExample } from './components/CheckboxGroup/CheckboxGroupHorizontalExample';
 import { CheckboxGroupVerticalExample } from './components/CheckboxGroup/CheckboxGroupVerticalExample';
 import { CheckboxGroupIndeterminateExample } from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
 
-//CheckboxIcon
+// //CheckboxIcon
 import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
 
-//Counter
+// //Counter
 import { CounterExample } from './components/Counter/CounterExample';
 
-//ToggleSwitch
+// //ToggleSwitch
 import { ToggleSwitchExample } from './components/ToggleSwitch/ToggleSwitchExample';
 
-//Slider
+// //Slider
 import { SliderExample } from './components/Slider/SliderExample';
 
-//SliderMultiRange
+// //SliderMultiRange
 import { SliderMultiRangeExample } from './components/SliderMultiRange/SliderMultiRangeExample';
 
-//List
+// //List
 import { ListExample } from './components/List/ListExample';
 
-//Table
+// //Table
 import { TableExample } from './components/Table/TableExample';
 
-//Card
+// //Card
 import { CardExample } from './components/Card/CardExample';
 
-//Separator
+// //Separator
 import { SeparatorHorizontalExample } from './components/Separator/SeparatorHorizontalExample';
 import { SeparatorHorizontalLabelledExample } from './components/Separator/SeparatorHorizontalLabelledExample';
 import { SeparatorVerticalExample } from './components/Separator/SeparatorVerticalExample';
 
-// Hooks
+// // Hooks
 import {
   UseHoverExample,
   UseFocusExample,
@@ -114,7 +117,7 @@ const App = () => {
       <div className='App'>
         {/* theme */}
         {/* <Layout variation="section">
-          <Heading config={{variation:'h4'}}>01. Theme</Heading> 
+          <Heading variation='h4'>01. Theme</Heading> 
           <div className='flex flex-col items-start gap-2'>
           <button onClick={() => setTheme(lightTheme)}>light theme</button>
           <button onClick={() => setTheme(darkTheme)}>dark theme</button>
@@ -123,279 +126,267 @@ const App = () => {
 
         {/* Typography */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Headings</Heading>
+          <Heading variation='h4'>Headings</Heading>
           <HeadingExample />
         </Layout>
 
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Text</Heading>
+          <Heading variation='h4'>Text</Heading>
           <TextExample />
+        </Layout>
+
+        {/* Icon */}
+        <Layout variation='section'>
+          <Heading variation='h4'>Icon</Heading>
+          <IconExample />
         </Layout>
 
         {/* Labelsomething */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>LabelSomething</Heading>
+          <Heading variation='h4'>LabelSomething</Heading>
           <LabelSomethingExample />
         </Layout>
 
         {/* Buttons */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Buttons</Heading>
+          <Heading variation='h4'>Buttons</Heading>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Basic button</Heading>
+            <Heading variation='h5'>Basic button</Heading>
             <ButtonExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Contained button</Heading>
+            <Heading variation='h5'>Contained button</Heading>
             <ButtonContainedExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Outlined button</Heading>
+            <Heading variation='h5'>Outlined button</Heading>
             <ButtonOutlinedExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Text button</Heading>
+            <Heading variation='h5'>Text button</Heading>
             <ButtonTextExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Icon button</Heading>
+            <Heading variation='h5'>Icon button</Heading>
             <ButtonIconExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Button+LabelSomething button
-            </Heading>
+            <Heading variation='h5'>Button+LabelSomething button</Heading>
             <ButtonWithLabelSomethingExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Button modifiers</Heading>
+            <Heading variation='h5'>Button modifiers</Heading>
             <ButtonModifiersExample />
           </Layout>
         </Layout>
 
         {/* Accordion */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Accordion</Heading>
+          <Heading variation='h4'>Accordion</Heading>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Accordion (chevron)</Heading>
+            <Heading variation='h5'>Accordion (chevron)</Heading>
             <AccordionChevronExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Accordion (plus/minus)
-            </Heading>
+            <Heading variation='h5'>Accordion (plus/minus)</Heading>
             <AccordionPlusMinusExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Accordion (minimal)</Heading>
+            <Heading variation='h5'>Accordion (minimal)</Heading>
             <AccordionMinimalExample />
           </Layout>
         </Layout>
 
-        {/* Snackbar */}
+        {/* Snackbar*/}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Snackbar</Heading>
+          <Heading variation='h4'>Snackbar</Heading>
           <SnackbarExample />
         </Layout>
 
         {/* Input */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Input</Heading>
+          <Heading variation='h4'>Input</Heading>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input (no-border)</Heading>
+            <Heading variation='h5'>Input (no-border)</Heading>
             <InputNoBorderExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Basic input</Heading>
+            <Heading variation='h5'>Basic input</Heading>
             <InputExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input (readonly)</Heading>
+            <Heading variation='h5'>Input (readonly)</Heading>
             <InputReadOnlyExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input + Icon</Heading>
+            <Heading variation='h5'>Input + Icon</Heading>
             <InputWithIconExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input Password</Heading>
+            <Heading variation='h5'>Input Password</Heading>
             <InputPasswordExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input Filter</Heading>
+            <Heading variation='h5'>Input Filter</Heading>
             <InputFilterExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Input Search</Heading>
+            <Heading variation='h5'>Input Search</Heading>
             <InputSearchExample />
           </Layout>
         </Layout>
 
         {/* Select */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Select</Heading>
+          <Heading variation='h4'>Select</Heading>
           <SelectExample />
         </Layout>
 
         {/* RadioButton */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>RadioButton</Heading>
+          <Heading variation='h4'>RadioButton</Heading>
           <RadioButtonExample />
         </Layout>
 
         {/* RadioButtonGroup */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>RadioButton Group</Heading>
+          <Heading variation='h4'>RadioButton Group</Heading>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              RadioButton Group (horizontal)
-            </Heading>
+            <Heading variation='h5'>RadioButton Group (horizontal)</Heading>
             <RadioButtonGroupHorizontalExample />
           </Layout>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              RadioButton Group (vertical)
-            </Heading>
+            <Heading variation='h5'>RadioButton Group (vertical)</Heading>
             <RadioButtonGroupVerticalExample />
           </Layout>
         </Layout>
 
         {/* Checkbox */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Checkbox</Heading>
+          <Heading variation='h4'>Checkbox</Heading>
           <CheckboxExample />
         </Layout>
 
         {/* CheckboxGroup */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Checkbox Group</Heading>
+          <Heading variation='h4'>Checkbox Group</Heading>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Checkbox Group (horizontal)
-            </Heading>
+            <Heading variation='h5'>Checkbox Group (horizontal)</Heading>
             <CheckboxGroupHorizontalExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Checkbox Group (vertical)
-            </Heading>
+            <Heading variation='h5'>Checkbox Group (vertical)</Heading>
             <CheckboxGroupVerticalExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Checkbox Group (indeterminate)
-            </Heading>
+            <Heading variation='h5'>Checkbox Group (indeterminate)</Heading>
             <CheckboxGroupIndeterminateExample />
           </Layout>
         </Layout>
 
         {/* CheckboxIcon */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Checkbox Icon</Heading>
+          <Heading variation='h4'>Checkbox Icon</Heading>
           <CheckboxIconExample />
         </Layout>
 
         {/* Counter */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Counter</Heading>
+          <Heading variation='h4'>Counter</Heading>
           <CounterExample />
         </Layout>
 
         {/* ToggleSwitch */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>ToggleSwitch</Heading>
+          <Heading variation='h4'>ToggleSwitch</Heading>
           <ToggleSwitchExample />
         </Layout>
 
         {/* Slider */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Slider</Heading>
+          <Heading variation='h4'>Slider</Heading>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Slider</Heading>
+            <Heading variation='h5'>Slider</Heading>
             <SliderExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>SliderMultiRange</Heading>
+            <Heading variation='h5'>SliderMultiRange</Heading>
             <SliderMultiRangeExample />
           </Layout>
         </Layout>
 
         {/* List */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>List</Heading>
+          <Heading variation='h4'>List</Heading>
           <ListExample />
         </Layout>
 
         {/* Table */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Table</Heading>
+          <Heading variation='h4'>Table</Heading>
           <TableExample />
         </Layout>
 
         {/* Card */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Card</Heading>
+          <Heading variation='h4'>Card</Heading>
           <CardExample />
         </Layout>
 
         {/* Separator */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Separator</Heading>
+          <Heading variation='h4'>Separator</Heading>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Separator (horizontal)
-            </Heading>
+            <Heading variation='h5'>Separator (horizontal)</Heading>
             <SeparatorHorizontalExample />
           </Layout>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>
-              Separator labelled (horizontal)
-            </Heading>
+            <Heading variation='h5'>Separator labelled (horizontal)</Heading>
             <SeparatorHorizontalLabelledExample />
           </Layout>
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>Separator (vertical)</Heading>
+            <Heading variation='h5'>Separator (vertical)</Heading>
             <SeparatorVerticalExample />
           </Layout>
         </Layout>
 
         {/* Hooks */}
         <Layout variation='section'>
-          <Heading config={{ variation: 'h4' }}>Hooks</Heading>
+          <Heading variation='h4'>Hooks</Heading>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>useHover</Heading>
+            <Heading variation='h5'>useHover</Heading>
             <UseHoverExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>useFocus</Heading>
+            <Heading variation='h5'>useFocus</Heading>
             <UseFocusExample />
           </Layout>
 
           <Layout variation='block'>
-            <Heading config={{ variation: 'h5' }}>useHoverFocus</Heading>
+            <Heading variation='h5'>useHoverFocus</Heading>
             <UseHoverFocusExample />
           </Layout>
         </Layout>
@@ -408,46 +399,46 @@ export default App;
 
 //
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>20. Navbar</Heading>
+//     <Heading variation='h4'>20. Navbar</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>21. Link</Heading>
+//     <Heading variation='h4'>21. Link</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>22. Breadcrumbs</Heading>
+//     <Heading variation='h4'>22. Breadcrumbs</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>23. Dialog (aka Modal)</Heading>
+//     <Heading variation='h4'>23. Dialog (aka Modal)</Heading>
 //   </Layout>
 //  <Layout>
-//     <Heading config={{variation:'h4'}}>24. Progress</Heading>
+//     <Heading variation='h4'>24. Progress</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>25. Loading Button</Heading>
+//     <Heading variation='h4'>25. Loading Button</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>26. Timeline</Heading>
+//     <Heading variation='h4'>26. Timeline</Heading>
 //   </Layout>
 
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>27. Multi-input</Heading>
+//     <Heading variation='h4'>27. Multi-input</Heading>
 //     <div className='flex flex-col'></div>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>28. Multi-input Objects</Heading>
+//     <Heading variation='h4'>28. Multi-input Objects</Heading>
 //     <div className='flex flex-col'></div>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>29. Multi-select with input</Heading>
+//     <Heading variation='h4'>29. Multi-select with input</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>30. Upload</Heading>
+//     <Heading variation='h4'>30. Upload</Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>
+//     <Heading variation='h4'>
 //      31. DatePicker, TimePicker, DateTimePicker
 //     </Heading>
 //   </Layout>
 //   <Layout>
-//     <Heading config={{variation:'h4'}}>32. DateRangePicker</Heading>
+//     <Heading variation='h4'>32. DateRangePicker</Heading>
 //   </Layout>

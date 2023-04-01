@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const IconContainer = styled.div`
-  width: ${(props) => props.size};
-  height: ${(props) => props.size};
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   display: flex;
   > svg {
     width: 100%;
@@ -17,12 +17,14 @@ const IconContainer = styled.div`
   }
 `;
 
+//the problem is if you dont have a config object passed through,
 export const Icon = ({
   size = '25px',
   stroke,
   fill,
   fillOpacity,
   children,
+  ...rest
 }) => {
   return (
     <IconContainer
@@ -31,6 +33,7 @@ export const Icon = ({
       stroke={stroke}
       fill={fill}
       fillOpacity={fillOpacity}
+      {...rest}
     >
       {children}
     </IconContainer>

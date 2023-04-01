@@ -6,8 +6,8 @@ const Generic = styled.div`
   display: inline-flex;
   align-items: center;
   justify-items: center;
-  flex-direction: ${(props) => props.labelPosition};
-  gap: ${(props) => props.gap};
+  flex-direction: ${({ labelPosition }) => labelPosition};
+  gap: ${({ gap }) => gap};
 `;
 
 export const LabelSomething = ({

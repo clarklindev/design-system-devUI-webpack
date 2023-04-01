@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
 const CardContainer = styled.div`
-  border: ${(props) =>
-    props.borderColor
-      ? `1px solid ${props.borderColor}`
-      : `1px solid ${props.theme.borderColor}`};
-  background-color: ${(props) => props.color};
-  border-radius: ${(props) => props.borderRadius};
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  border: ${({ borderColor, theme }) =>
+    borderColor
+      ? `1px solid ${borderColor}`
+      : `1px solid ${theme.borderColor}`};
+  background-color: ${({ color }) => color};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   padding: 15px;
+
   ${applyStyleModifiers(MODIFIERS)};
 `;
 

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styled from 'styled-components';
-
 export const Table = ({ headers, data, configure }) => {
   return (
     <table className='border'>
