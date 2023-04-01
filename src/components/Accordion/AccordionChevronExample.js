@@ -17,14 +17,16 @@ export const AccordionChevronExample = () => {
     },
   ];
 
-  const config = {
-    multiOpen: true,
-    data,
-    icon: {
-      type: 'chevron',
-      fill: 'transparent',
-    },
-  };
-
-  return <Accordion config={config} />;
+  return (
+    <Accordion
+      config={{
+        multiOpen: true,
+        data,
+        icon: {
+          type: 'chevron',
+          fill: 'transparent',
+        },
+      }}
+    />
+  );
 };

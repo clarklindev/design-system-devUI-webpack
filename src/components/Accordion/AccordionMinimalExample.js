@@ -17,12 +17,14 @@ export const AccordionMinimalExample = () => {
     },
   ];
 
-  const config = {
-    multiOpen: true,
-    data,
-    icon: { type: 'hidden' },
-    showSeparator: false,
-  };
-
-  return <Accordion config={config} />;
+  return (
+    <Accordion
+      config={{
+        multiOpen: true,
+        data,
+        icon: { type: 'hidden' },
+        showSeparator: false,
+      }}
+    />
+  );
 };
