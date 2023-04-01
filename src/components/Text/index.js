@@ -6,6 +6,7 @@ const TextContainer = styled.p`
   margin-bottom: ${({ theme }) => theme?.Text?.marginBottom || 'var()'};
 `;
 
-export const Text = ({ children }) => {
-  return <TextContainer>{children}</TextContainer>;
+export const Text = (props) => {
+  const { children, ...rest } = props;
+  return <TextContainer {...rest}>{children}</TextContainer>;
 };
