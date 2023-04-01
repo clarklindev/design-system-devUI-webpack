@@ -105,14 +105,16 @@ const AccordionSectionPanel = styled.div`
 
   &[data-expanded='false'] {
     visibility: hidden;
+    opacity: 0;
     max-height: 0px;
-    transition: max-height 0.2s ease-in;
+    transition: all 0.2s ease-in;
   }
 
   &[data-expanded='true'] {
     visibility: visible;
+    opacity: 1;
     max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
-    transition: max-height 0.2s ease-in;
+    transition: all 0.2s ease-in;
   }
 `;
 
