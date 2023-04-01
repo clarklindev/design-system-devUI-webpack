@@ -9,7 +9,7 @@ const SeparatorContainer = styled.div`
 const SeparatorHorizontal = styled(SeparatorContainer)`
   display: flex;
   width: 100%;
-  height: 1px;
+  border-bottom: ${({ theme }) => theme?.Separator?.border};
   margin: ${({ margin }) => margin};
   background: ${({ theme }) => theme?.Separator?.backgroundColor};
 `;
@@ -31,7 +31,7 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
     display: flex;
     align-self: center;
     content: '';
-    height: 1px;
+    border-bottom: ${({ theme }) => theme?.Separator?.border};
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
   }
@@ -39,7 +39,7 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
     display: flex;
     align-self: center;
     content: '';
-    height: 1px;
+    border-bottom: ${({ theme }) => theme?.Separator?.border};
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
   }

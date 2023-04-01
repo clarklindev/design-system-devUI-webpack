@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
-import { Separator } from '../Separator';
 import { ChevronUpIcon } from '../../icons/ChevronUpIcon';
 import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
 import { PlusSmallIcon } from '../../icons/PlusSmallIcon';
@@ -58,8 +57,8 @@ export const Accordion = ({
               onClick={() => handleClick(index)}
               isOpen={indexes.includes(index)}
               iconType={iconType}
+              showSeparator={showSeparator}
             />
-            {index < data.length - 1 && showSeparator && <Separator />}
           </React.Fragment>
         );
       })}
@@ -74,8 +73,10 @@ export const Accordion = ({
 const AccordionSectionHeader = styled.div`
   box-sizing: border-box;
   cursor: pointer;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: ${({ showSeparator }) => (showSeparator ? '10px' : '5px')};
+  padding-bottom: ${({ showSeparator }) => (showSeparator ? '15px' : '0px')};
+  border-bottom: ${({ theme, showSeparator }) =>
+    showSeparator && theme?.Separator?.border};
   font-size: 1.2rem;
   font-weight: 500;
   color: ${({ theme, titleColor }) =>
@@ -90,7 +91,6 @@ const AccordionSectionTitle = styled.div`
   .Icon {
     width: 30px;
     height: 30px;
-
     > svg {
       stroke: ${({ theme }) =>
         theme?.Accordion?.componentIcons?.stroke || 'var()'};
@@ -102,20 +102,24 @@ const AccordionSectionTitle = styled.div`
 const AccordionSectionPanel = styled.div`
   color: ${({ theme, color }) =>
     color ? color : theme?.Accordion?.content?.color || 'var()'};
-
-  &[data-expanded='true'] {
-    display: block;
-    margin-bottom: 1rem;
-  }
+  overflow: hidden;
 
   &[data-expanded='false'] {
-    display: none;
+    max-height: 0px;
+    transition: all 0.2s ease-in;
+  }
+
+  &[data-expanded='true'] {
+    margin-bottom: 1rem;
+    max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
+    transition: all 0.2s ease-in;
   }
 `;
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
-export const AccordionSection = (props) => {
-  const { data, isOpen, onClick, index = 0, iconType } = props;
+const AccordionSection = (props) => {
+  const { data, isOpen, onClick, index = 0, iconType, showSeparator } = props;
+  const panelRef = useRef(null);
 
   const iconMap = {
     chevron: { open: <ChevronUpIcon />, closed: <ChevronDownIcon /> },
@@ -123,12 +127,15 @@ export const AccordionSection = (props) => {
     hidden: {},
   };
 
+  console.log('show separator: ', showSeparator);
+
   return (
     <div className='AccordionSection'>
       <AccordionSectionHeader
         className={['AccordionSectionHeader'].join(' ')}
         role='heading'
         aria-level='3'
+        showSeparator={showSeparator}
       >
         <AccordionSectionTitle
           role='button'
@@ -163,6 +170,8 @@ export const AccordionSection = (props) => {
         id={`AccordionSectionPanel_${index}`}
         className='AccordionSectionPanel'
         data-expanded={isOpen ? 'true' : 'false'}
+        ref={panelRef}
+        scrollHeight={panelRef?.current?.scrollHeight}
       >
         {data.body}
       </AccordionSectionPanel>

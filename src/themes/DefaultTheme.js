@@ -88,13 +88,14 @@ export const global = {
   headingColor: colors.neutral[500],
   headingFontFamily: 'Arial, Helvetica, sans-serif',
 
+  borderWidth: '1px',
   border: `1px solid ${colors.neutral[500]}`,
   borderRadius: '5px',
 
   inputHeight: '40px',
   inputPadding: '0 10px',
 
-  separator: colors.neutral[300],
+  separator: colors.neutral[200],
   componentIcons: colors.neutral[400],
 };
 
@@ -157,6 +158,7 @@ export const defaultTheme = {
     borderColor: global.separator,
     backgroundColor: global.separator,
     margin: global.margin,
+    border: `${global.borderWidth} solid ${global.separator}`,
   },
 
   Input: {

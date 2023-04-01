@@ -5,7 +5,7 @@ export const AccordionChevronExample = () => {
   const data = [
     {
       title: 'helloworld',
-      body: 'this is my first answer',
+      body: ' this is my first answer',
     },
     {
       title: 'rainbow',
