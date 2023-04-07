@@ -35,6 +35,7 @@ module.exports = (env, argv) => {
     devServer: {
       static: path.resolve(__dirname, 'dist'),
       port: 3000,
+      historyApiFallback: true,
     },
     plugins: [
       new CleanWebpackPlugin(),
