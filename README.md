@@ -1,5 +1,12 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
+## Tree
+
+- when to use a tree: its more for menus that can have depth
+- its similar to Accordion, difference is with an Accordion you can have any content for each item.
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
+
 - initially wanted to use a config={} prop for consistency and this would help with versioning as its always the 'config' prop passed into the component
 - but this is infact not true because even if this is solved at the passing-in-prop stage, the component itself would not work if the underlying architecture changed and the props become mismatched
 - the problem with using a config={} prop is when you dont pass in a config prop and the component that is receivining the config prop
@@ -446,3 +453,49 @@ module.exports = {
 ```css
 border-top: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-border)' };
 ```
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+# Design system
+
+- this README documents my design system journey
+
+## React components (swagfinger-ui-ts)
+
+- [https://github.com/swagfinger/swagfinger-ui-ts.git](https://github.com/swagfinger/swagfinger-ui-ts.git)
+- adapted from: React components (swagfinger-ui-js)
+- uses React hooks
+- typescript components
+- styled-components
+- tailwindcss
+- webpack config
+
+## React components (swagfinger-ui-js)
+
+- [https://github.com/swagfinger/swagfinger-ui-js.git](https://github.com/swagfinger/swagfinger-ui-js.git)
+- uses React hooks
+- javascript components
+- styled-components
+- tailwindcss
+- webpack config
+- if prop values use that -> otherwise check theme values -> fallback to css variables
+- tweaks and code optimization
+- does not use create-react-app
+- adapted from: React components (functionbased) - DEPRECATED
+
+## React components (functionbased) - DEPRECATED
+
+- [https://github.com/swagfinger/swagfinger-portfolio-react-components-functionbased](https://github.com/swagfinger/swagfinger-portfolio-react-components-functionbased)
+- uses hooks
+- complete rewrite of components based off: React components (classbased) - DEPRECATED
+- uses create-react-app
+
+## React components (classbased) - DEPRECATED
+
+- [https://github.com/swagfinger/swagfinger-portfolio-react-components-classbased.git](https://github.com/swagfinger/swagfinger-portfolio-react-components-classbased.git)
+- this was my first design system for components
+- written using react (class components)
+- no hooks
+- code was not documented
+- components used context / redux
+- create-react-app
