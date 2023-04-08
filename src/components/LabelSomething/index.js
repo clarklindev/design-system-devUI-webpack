@@ -10,7 +10,7 @@ const Generic = styled.div`
   gap: ${({ gap }) => gap};
 `;
 
-export const LabelSomething = ({
+const LabelSomething = ({
   label,
   something,
   labelPosition = 'right',
@@ -36,3 +36,5 @@ export const LabelSomething = ({
     </Generic>
   );
 };
+
+export default LabelSomething;

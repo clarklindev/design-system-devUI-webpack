@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Heading } from './index';
+import Heading from './index';
 
-export const HeadingExample = () => {
+const HeadingExample = () => {
   return (
     <>
       <Heading variation='h1'>H1 heading</Heading>
@@ -14,3 +14,4 @@ export const HeadingExample = () => {
     </>
   );
 };
+export default HeadingExample;

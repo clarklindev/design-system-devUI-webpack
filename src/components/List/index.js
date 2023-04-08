@@ -1,5 +1,7 @@
 import React from 'react';
 
-export const List = ({ children }) => {
+const List = ({ children }) => {
   return <ul>{children}</ul>;
 };
+
+export default List;

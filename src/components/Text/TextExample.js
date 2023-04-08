@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text } from './index';
+import Text from './index';
 
-export const TextExample = () => {
+const TextExample = () => {
   return (
     <>
       <Text>
@@ -29,3 +29,5 @@ export const TextExample = () => {
     </>
   );
 };
+
+export default TextExample;

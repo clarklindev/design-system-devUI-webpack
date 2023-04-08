@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { Snackbar } from './index';
-import { Button } from '../Button';
-import { Icon } from '../Icon';
-import { CopyIcon } from '../../icons/CopyIcon';
+import Snackbar from './index';
+import Button from '../Button';
+import Icon from '../Icon';
+import CopyIcon from '../../icons/CopyIcon';
 
-export const SnackbarExample = () => {
+const SnackbarExample = () => {
   const [showSnackbar, setShowSnackbar] = useState(false);
 
   const onClickHandler = () => {
@@ -32,3 +32,5 @@ export const SnackbarExample = () => {
     </div>
   );
 };
+
+export default SnackbarExample;

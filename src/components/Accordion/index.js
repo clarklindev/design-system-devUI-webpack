@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Separator } from '../Separator';
-import { AccordionSection } from './AccordionSection';
+import Separator from '../Separator';
+import AccordionSection from './AccordionSection';
 
-export const Accordion = ({
+const Accordion = ({
   multiOpen,
   data,
   icon = {
@@ -65,3 +65,5 @@ export const Accordion = ({
     </div>
   );
 };
+
+export default Accordion;

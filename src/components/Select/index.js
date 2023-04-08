@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { Icon } from '../Icon';
-import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
+import Icon from '../Icon';
+import ChevronDownIcon from '../../icons/ChevronDownIcon';
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -34,7 +34,7 @@ const SelectContainer = styled.select`
   
 }`;
 
-export const Select = ({ savedData, onChange, children }) => {
+const Select = ({ savedData, onChange, children }) => {
   const onChangeHandler = (event) => {
     onChange(event);
   };
@@ -54,3 +54,5 @@ export const Select = ({ savedData, onChange, children }) => {
     </SelectWrapper>
   );
 };
+
+export default Select;

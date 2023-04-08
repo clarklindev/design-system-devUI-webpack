@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Slider } from '../Slider';
+import Slider from '../Slider';
 
 const SliderMultiRangeContainer = styled.div`
   height: 30px;
@@ -28,7 +28,7 @@ const SliderTrack = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
-export const SliderMultiRange = ({
+const SliderMultiRange = ({
   sliderValues,
   onChange,
   step = 1,
@@ -110,3 +110,5 @@ export const SliderMultiRange = ({
     </SliderMultiRangeContainer>
   );
 };
+
+export default SliderMultiRange;

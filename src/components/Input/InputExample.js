@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Input } from './index';
+import Input from './index';
 
 //normal input
-export const InputExample = () => {
+const InputExample = () => {
   const [savedData, setSavedData] = useState('');
 
   return (
@@ -14,3 +14,5 @@ export const InputExample = () => {
     />
   );
 };
+
+export default InputExample;

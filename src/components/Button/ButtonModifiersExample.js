@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from './index';
+import Button from './index';
 
-export const ButtonModifiersExample = () => {
+const ButtonModifiersExample = () => {
   return (
     <div className='flex flex-row space-x-10'>
       <Button
@@ -20,3 +20,5 @@ export const ButtonModifiersExample = () => {
     </div>
   );
 };
+
+export default ButtonModifiersExample;

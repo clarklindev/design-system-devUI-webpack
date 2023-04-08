@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { List } from './index';
-import { ListItem } from './ListItem';
+import List from './index';
+import ListItem from './ListItem';
 
-export const ListExample = () => {
+const ListExample = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -51,3 +51,5 @@ export const ListExample = () => {
     </>
   );
 };
+
+export default ListExample;

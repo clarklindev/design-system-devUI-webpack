@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { SliderMultiRange } from './index';
+import SliderMultiRange from './index';
 
 //NOTE: track is non clickable... so use <Slider> if only single slider
-export const SliderMultiRangeExample = () => {
+const SliderMultiRangeExample = () => {
   const [sliderValues, setSliderValues] = useState([20, 50]); //holds positions of sliders
 
   return (
@@ -15,3 +15,5 @@ export const SliderMultiRangeExample = () => {
     />
   );
 };
+
+export default SliderMultiRangeExample;

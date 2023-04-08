@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Tree } from './index';
+import Tree from './index';
 
-export const TreeExample = () => {
+const TreeExample = () => {
   const data = [
     {
       item: 'Percy',
@@ -30,3 +30,5 @@ export const TreeExample = () => {
   // requires data to be structured with "item" and "children" properties
   return <Tree data={data} />;
 };
+
+export default TreeExample;

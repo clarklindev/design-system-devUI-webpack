@@ -1,10 +1,12 @@
 import React from 'react';
-import { Separator } from './index';
+import Separator from './index';
 
-export const SeparatorVerticalExample = () => {
+const SeparatorVerticalExample = () => {
   return (
     <div className='flex flex-row items-center h-50'>
       <Separator variation='vertical' height='30px' margin='0px' />
     </div>
   );
 };
+
+export default SeparatorVerticalExample;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MinusIcon = () => {
+const MinusIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -14,3 +14,5 @@ export const MinusIcon = () => {
     </svg>
   );
 };
+
+export default MinusIcon;

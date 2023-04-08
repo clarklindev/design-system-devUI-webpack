@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Node } from './Node';
+import Node from './Node';
 
 // recursive function - destruct off props
-export const Tree = ({ data, depth = 0 }) => {
+const Tree = ({ data, depth = 0 }) => {
   return data.map((each, index) => {
     return (
       <Node
@@ -15,3 +15,5 @@ export const Tree = ({ data, depth = 0 }) => {
     );
   });
 };
+
+export default Tree;

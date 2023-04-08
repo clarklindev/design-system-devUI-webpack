@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useFocus } from './useFocus';
-import { Button } from '../components/Button';
+import Button from '../components/Button';
 
-export const UseFocusExample = () => {
+const UseFocusExample = () => {
   const [isFocused, attrs] = useFocus();
 
   return (
@@ -13,3 +13,5 @@ export const UseFocusExample = () => {
     </>
   );
 };
+
+export default UseFocusExample;

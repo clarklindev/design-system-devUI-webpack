@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Input } from './index';
+import Input from './index';
 
-export const InputNoBorderExample = () => {
+const InputNoBorderExample = () => {
   const [savedData, setSavedData] = useState('');
 
   return (
@@ -15,3 +15,5 @@ export const InputNoBorderExample = () => {
     />
   );
 };
+
+export default InputNoBorderExample;

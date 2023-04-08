@@ -66,7 +66,7 @@ const IconButton = styled(BaseButton)`
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
-export const Button = ({
+const Button = ({
   variation,
   label,
   labelDirection = 'right',
@@ -123,3 +123,5 @@ export const Button = ({
     </BaseButton>
   );
 };
+
+export default Button;

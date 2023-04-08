@@ -18,7 +18,7 @@ const IconContainer = styled.div`
 `;
 
 //the problem is if you dont have a config object passed through,
-export const Icon = ({
+const Icon = ({
   size = '25px',
   stroke,
   fill,
@@ -39,3 +39,5 @@ export const Icon = ({
     </IconContainer>
   );
 };
+
+export default Icon;

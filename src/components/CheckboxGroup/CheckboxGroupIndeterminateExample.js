@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { CheckboxGroup } from './index';
-import { Checkbox } from '../Checkbox';
+import React, { useState } from 'react';
+import CheckboxGroup from './index';
+import Checkbox from '../Checkbox';
 
-import { LabelSomething } from '../LabelSomething';
+import LabelSomething from '../LabelSomething';
 
-export const CheckboxGroupIndeterminateExample = () => {
+const CheckboxGroupIndeterminateExample = () => {
   const options = [
     { label: 'A', value: 'a' },
     { label: 'B', value: 'b' },
@@ -61,3 +61,5 @@ export const CheckboxGroupIndeterminateExample = () => {
     </div>
   );
 };
+
+export default CheckboxGroupIndeterminateExample;

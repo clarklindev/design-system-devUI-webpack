@@ -1,9 +1,10 @@
 import React from 'react';
-import { LabelSomething } from './index';
-import { Icon } from '../Icon';
-import { SmileyIcon } from '../../icons/SmileyIcon';
 
-export const LabelSomethingExample = () => {
+import LabelSomething from './index';
+import Icon from '../Icon';
+import SmileyIcon from '../../icons/SmileyIcon';
+
+const LabelSomethingExample = () => {
   const icon = <SmileyIcon />;
 
   return (
@@ -51,3 +52,5 @@ export const LabelSomethingExample = () => {
     </div>
   );
 };
+
+export default LabelSomethingExample;

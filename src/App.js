@@ -8,100 +8,98 @@ import './default.css';
 import { defaultTheme } from './themes/DefaultTheme';
 
 //Layout
-import { Layout } from './components/Layout';
+import Layout from './components/Layout';
 
 //Heading
-import { Heading } from './components/Heading';
-import { HeadingExample } from './components/Heading/HeadingExample';
+import Heading from './components/Heading';
+import HeadingExample from './components/Heading/HeadingExample';
 
 //Text
-import { TextExample } from './components/Text/TextExample';
+import TextExample from './components/Text/TextExample';
 
 //LabelSomething
-import { LabelSomethingExample } from './components/LabelSomething/LabelSomethingExample';
+import LabelSomethingExample from './components/LabelSomething/LabelSomethingExample';
 
 //Icon
-import { IconExample } from './components/Icon/IconExample';
+import IconExample from './components/Icon/IconExample';
 
 // //Buttons
-import { ButtonExample } from './components/Button/ButtonExample';
-import { ButtonContainedExample } from './components/Button/ButtonContainedExample';
-import { ButtonOutlinedExample } from './components/Button/ButtonOutlinedExample';
-import { ButtonTextExample } from './components/Button/ButtonTextExample';
-import { ButtonIconExample } from './components/Button/ButtonIconExample';
-import { ButtonWithLabelSomethingExample } from './components/Button/ButtonWithLabelSomethingExample';
-import { ButtonModifiersExample } from './components/Button/ButtonModifiersExample';
+import ButtonExample from './components/Button/ButtonExample';
+import ButtonContainedExample from './components/Button/ButtonContainedExample';
+import ButtonOutlinedExample from './components/Button/ButtonOutlinedExample';
+import ButtonTextExample from './components/Button/ButtonTextExample';
+import ButtonIconExample from './components/Button/ButtonIconExample';
+import ButtonWithLabelSomethingExample from './components/Button/ButtonWithLabelSomethingExample';
+import ButtonModifiersExample from './components/Button/ButtonModifiersExample';
 
 // //Accordion
-import { AccordionChevronExample } from './components/Accordion/AccordionChevronExample';
-import { AccordionPlusMinusExample } from './components/Accordion/AccordionPlusMinusExample';
-import { AccordionMinimalExample } from './components/Accordion/AccordionMinimalExample';
+import AccordionChevronExample from './components/Accordion/AccordionChevronExample';
+import AccordionPlusMinusExample from './components/Accordion/AccordionPlusMinusExample';
+import AccordionMinimalExample from './components/Accordion/AccordionMinimalExample';
 
 // //Snackbar
-import { SnackbarExample } from './components/Snackbar/SnackbarExample';
+import SnackbarExample from './components/Snackbar/SnackbarExample';
 
 // //Input
-import { InputExample } from './components/Input/InputExample';
-import { InputReadOnlyExample } from './components/Input/InputReadOnlyExample';
-import { InputWithIconExample } from './components/Input/InputWithIconExample';
-import { InputNoBorderExample } from './components/Input/InputNoBorderExample';
-import { InputPasswordExample } from './components/Input/InputPasswordExample';
-import { InputFilterExample } from './components/Input/InputFilterExample';
-import { InputSearchExample } from './components/Input/InputSearchExample';
+import InputExample from './components/Input/InputExample';
+import InputReadOnlyExample from './components/Input/InputReadOnlyExample';
+import InputWithIconExample from './components/Input/InputWithIconExample';
+import InputNoBorderExample from './components/Input/InputNoBorderExample';
+import InputPasswordExample from './components/Input/InputPasswordExample';
+import InputFilterExample from './components/Input/InputFilterExample';
+import InputSearchExample from './components/Input/InputSearchExample';
 
 // //Select
-import { SelectExample } from './components/Select/SelectExample';
+import SelectExample from './components/Select/SelectExample';
 
 // //RadioButton
-import { RadioButtonExample } from './components/RadioButton/RadioButtonExample';
+import RadioButtonExample from './components/RadioButton/RadioButtonExample';
 
 // //RadioButtonGroup
-import { RadioButtonGroupVerticalExample } from './components/RadioButtonGroup/RadioButtonGroupVerticalExample';
-import { RadioButtonGroupHorizontalExample } from './components/RadioButtonGroup/RadioButtonGroupHorizontalExample';
+import RadioButtonGroupVerticalExample from './components/RadioButtonGroup/RadioButtonGroupVerticalExample';
+import RadioButtonGroupHorizontalExample from './components/RadioButtonGroup/RadioButtonGroupHorizontalExample';
 
 // //Checkbox
-import { CheckboxExample } from './components/Checkbox/CheckboxExample';
+import CheckboxExample from './components/Checkbox/CheckboxExample';
 
 // // //CheckboxGroup
-import { CheckboxGroupHorizontalExample } from './components/CheckboxGroup/CheckboxGroupHorizontalExample';
-import { CheckboxGroupVerticalExample } from './components/CheckboxGroup/CheckboxGroupVerticalExample';
-import { CheckboxGroupIndeterminateExample } from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
+import CheckboxGroupHorizontalExample from './components/CheckboxGroup/CheckboxGroupHorizontalExample';
+import CheckboxGroupVerticalExample from './components/CheckboxGroup/CheckboxGroupVerticalExample';
+import CheckboxGroupIndeterminateExample from './components/CheckboxGroup/CheckboxGroupIndeterminateExample';
 
 // //CheckboxIcon
-import { CheckboxIconExample } from './components/CheckboxIcon/CheckboxIconExample';
+import CheckboxIconExample from './components/CheckboxIcon/CheckboxIconExample';
 
 // //Counter
-import { CounterExample } from './components/Counter/CounterExample';
+import CounterExample from './components/Counter/CounterExample';
 
 // //ToggleSwitch
-import { ToggleSwitchExample } from './components/ToggleSwitch/ToggleSwitchExample';
+import ToggleSwitchExample from './components/ToggleSwitch/ToggleSwitchExample';
 
 // //Slider
-import { SliderExample } from './components/Slider/SliderExample';
+import SliderExample from './components/Slider/SliderExample';
 
 // //SliderMultiRange
-import { SliderMultiRangeExample } from './components/SliderMultiRange/SliderMultiRangeExample';
+import SliderMultiRangeExample from './components/SliderMultiRange/SliderMultiRangeExample';
 
 // //List
-import { ListExample } from './components/List/ListExample';
+import ListExample from './components/List/ListExample';
 
 // //Table
-import { TableExample } from './components/Table/TableExample';
+import TableExample from './components/Table/TableExample';
 
 // //Card
-import { CardExample } from './components/Card/CardExample';
+import CardExample from './components/Card/CardExample';
 
 // //Separator
-import { SeparatorHorizontalExample } from './components/Separator/SeparatorHorizontalExample';
-import { SeparatorHorizontalLabelledExample } from './components/Separator/SeparatorHorizontalLabelledExample';
-import { SeparatorVerticalExample } from './components/Separator/SeparatorVerticalExample';
+import SeparatorHorizontalExample from './components/Separator/SeparatorHorizontalExample';
+import SeparatorHorizontalLabelledExample from './components/Separator/SeparatorHorizontalLabelledExample';
+import SeparatorVerticalExample from './components/Separator/SeparatorVerticalExample';
 
 // // Hooks
-import {
-  UseHoverExample,
-  UseFocusExample,
-  UseHoverFocusExample,
-} from './customhooks';
+import UseHoverExample from './customhooks/UseHoverExample';
+import UseFocusExample from './customhooks/UseFocusExample';
+import UseHoverFocusExample from './customhooks/UseHoverFocusExample';
 
 //-----------------------------------------------------------------------------------
 

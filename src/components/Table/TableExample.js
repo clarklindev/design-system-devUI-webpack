@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Table } from './index';
+import Table from './index';
 
-export const TableExample = () => {
+const TableExample = () => {
   const configure = {
     padding: 'p-5',
   };
@@ -60,3 +60,5 @@ export const TableExample = () => {
 
   return <Table headers={HEADERS} data={DATA} configure={configure}></Table>;
 };
+
+export default TableExample;

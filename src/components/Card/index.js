@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
+
 const CardContainer = styled.div`
   border: ${({ borderColor, theme }) =>
     borderColor
@@ -16,7 +17,7 @@ const CardContainer = styled.div`
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
-export const Card = ({
+const Card = ({
   color = 'white',
   borderColor = 'black',
   borderRadius = '10px',
@@ -38,3 +39,5 @@ export const Card = ({
     </CardContainer>
   );
 };
+
+export default Card;

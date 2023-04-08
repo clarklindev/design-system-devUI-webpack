@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Button } from './index';
+import Button from './index';
 
-export const ButtonExample = () => {
+const ButtonExample = () => {
   return <Button label='label' />;
 };
+
+export default ButtonExample;

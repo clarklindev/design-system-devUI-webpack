@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HideIcon = () => {
+const HideIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -18,3 +18,5 @@ export const HideIcon = () => {
     </svg>
   );
 };
+
+export default HideIcon;

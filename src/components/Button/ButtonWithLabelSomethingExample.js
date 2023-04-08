@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Button } from './index';
-import { LabelSomething } from '../LabelSomething';
-import { Icon } from '../Icon';
-import { ThumbsUpIcon } from '../../icons/ThumbsUpIcon';
+import Button from './index';
+import LabelSomething from '../LabelSomething';
+import Icon from '../Icon';
+import ThumbsUpIcon from '../../icons/ThumbsUpIcon';
 
-export const ButtonWithLabelSomethingExample = () => {
+const ButtonWithLabelSomethingExample = () => {
   return (
     <Button
       variation='contained'
@@ -26,3 +26,5 @@ export const ButtonWithLabelSomethingExample = () => {
     />
   );
 };
+
+export default ButtonWithLabelSomethingExample;

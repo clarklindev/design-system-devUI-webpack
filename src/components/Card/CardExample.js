@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Card } from './index';
+import Card from './index';
 
-export const CardExample = () => {
+const CardExample = () => {
   return (
     <Card
       color='white'
@@ -14,3 +14,5 @@ export const CardExample = () => {
     ></Card>
   );
 };
+
+export default CardExample;

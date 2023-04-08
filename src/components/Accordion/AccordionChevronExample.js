@@ -1,7 +1,7 @@
 import React from 'react';
-import { Accordion } from './index';
+import Accordion from './index';
 
-export const AccordionChevronExample = () => {
+const AccordionChevronExample = () => {
   const data = [
     {
       title: 'helloworld',
@@ -28,3 +28,5 @@ export const AccordionChevronExample = () => {
     />
   );
 };
+
+export default AccordionChevronExample;

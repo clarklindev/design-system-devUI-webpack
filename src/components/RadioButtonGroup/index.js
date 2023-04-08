@@ -13,7 +13,7 @@ const RadioButtonGroupContainer = styled.div`
   }
 `;
 
-export const RadioButtonGroup = ({
+const RadioButtonGroup = ({
   direction = 'column',
   spacing = '0px',
   children,
@@ -28,3 +28,5 @@ export const RadioButtonGroup = ({
     </RadioButtonGroupContainer>
   );
 };
+
+export default RadioButtonGroup;

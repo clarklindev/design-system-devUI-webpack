@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ThumbsUpIcon = () => {
+const ThumbsUpIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -18,3 +18,5 @@ export const ThumbsUpIcon = () => {
     </svg>
   );
 };
+
+export default ThumbsUpIcon;

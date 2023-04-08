@@ -1,6 +1,8 @@
 import React from 'react';
-import { Separator } from './index';
+import Separator from './index';
 
-export const SeparatorHorizontalExample = () => {
+const SeparatorHorizontalExample = () => {
   return <Separator variation='horizontal' />;
 };
+
+export default SeparatorHorizontalExample;

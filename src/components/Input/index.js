@@ -44,7 +44,7 @@ export const InputWrapper = ({ modifiers, children }) => {
   return <WrapperContainer modifiers={modifiers}>{children}</WrapperContainer>;
 };
 
-export const Input = forwardRef(function Input(
+const Input = forwardRef(function Input(
   {
     type = 'text',
     onChange,
@@ -70,3 +70,5 @@ export const Input = forwardRef(function Input(
     />
   );
 });
+
+export default Input;

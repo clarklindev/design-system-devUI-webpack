@@ -53,7 +53,7 @@ const Slider = styled.span`
   }
 `;
 
-export const ToggleSwitch = React.memo(
+const ToggleSwitch = React.memo(
   ({ color, onChange, savedData }) => {
     const uniqueClassName = useUID('ToggleSwitch');
 
@@ -73,3 +73,5 @@ export const ToggleSwitch = React.memo(
     return prev.savedData === next.savedData && prev.color === next.color;
   }
 );
+
+export default ToggleSwitch;

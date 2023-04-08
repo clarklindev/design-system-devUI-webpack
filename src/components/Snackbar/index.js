@@ -67,7 +67,7 @@ const SnackbarContainer = styled.div`
   }
 `;
 
-export const Snackbar = ({ setShowSnackbar, children }) => {
+const Snackbar = ({ setShowSnackbar, children }) => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   useEffect(() => {
@@ -89,3 +89,5 @@ export const Snackbar = ({ setShowSnackbar, children }) => {
     </SnackbarContainer>
   );
 };
+
+export default Snackbar;

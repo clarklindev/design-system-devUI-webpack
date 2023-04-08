@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Input } from '../Input';
-import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
-import { PlusSmallIcon } from '../../icons/PlusSmallIcon';
-import { Button } from '../Button';
-import { Icon } from '../Icon';
+
+import Input from '../Input';
+import MinusSmallIcon from '../../icons/MinusSmallIcon';
+import PlusSmallIcon from '../../icons/PlusSmallIcon';
+import Button from '../Button';
+import Icon from '../Icon';
 
 const CounterContainer = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ const CounterContainer = styled.div`
   }
 `;
 
-export const Counter = ({ savedData, onChange }) => {
+const Counter = ({ savedData, onChange }) => {
   const decrement = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -72,3 +73,5 @@ export const Counter = ({ savedData, onChange }) => {
     </CounterContainer>
   );
 };
+
+export default Counter;

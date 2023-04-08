@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HeartIcon = () => {
+const HeartIcon = () => {
   return (
     <svg
       viewBox='0 0 24 24'
@@ -18,3 +18,5 @@ export const HeartIcon = () => {
     </svg>
   );
 };
+
+export default HeartIcon;

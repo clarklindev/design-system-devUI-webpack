@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { CheckboxGroup } from './index';
-import { Checkbox } from '../Checkbox';
+import CheckboxGroup from './index';
+import Checkbox from '../Checkbox';
 
-import { LabelSomething } from '../LabelSomething';
+import LabelSomething from '../LabelSomething';
 
-export const CheckboxGroupVerticalExample = () => {
+const CheckboxGroupVerticalExample = () => {
   const options = [
     { label: 'A', value: 'a' },
     { label: 'B', value: 'b' },
@@ -44,3 +44,5 @@ export const CheckboxGroupVerticalExample = () => {
     </CheckboxGroup>
   );
 };
+
+export default CheckboxGroupVerticalExample;

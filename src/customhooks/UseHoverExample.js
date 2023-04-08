@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useHover } from './useHover';
-import { Button } from '../components/Button';
+import Button from '../components/Button';
 
-export const UseHoverExample = () => {
+const UseHoverExample = () => {
   const [hovering, attrs] = useHover();
 
   return (
@@ -13,3 +13,5 @@ export const UseHoverExample = () => {
     </div>
   );
 };
+
+export default UseHoverExample;

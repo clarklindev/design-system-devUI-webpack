@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from './index';
-import { Icon } from '../Icon';
-import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
+import Button from './index';
+import Icon from '../Icon';
+import ShoppingCartIcon from '../../icons/ShoppingCartIcon';
 
-export const ButtonIconExample = () => {
+const ButtonIconExample = () => {
   return (
     <Button
       variation='icon'
@@ -15,3 +15,5 @@ export const ButtonIconExample = () => {
     />
   );
 };
+
+export default ButtonIconExample;

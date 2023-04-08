@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Input, InputWrapper } from './index';
-import { SpeechIcon } from '../../icons/SpeechIcon';
-import { Icon } from '../Icon';
+import Input, { InputWrapper } from './index';
+import SpeechIcon from '../../icons/SpeechIcon';
+import Icon from '../Icon';
 
-export const InputWithIconExample = () => {
+const InputWithIconExample = () => {
   const [savedData, setSavedData] = useState('');
 
   return (
@@ -22,3 +22,5 @@ export const InputWithIconExample = () => {
     </InputWrapper>
   );
 };
+
+export default InputWithIconExample;

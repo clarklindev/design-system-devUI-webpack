@@ -23,7 +23,7 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   width: 1px;
 `;
 
-export const CheckboxIcon = ({ checked, onChange, icon, children }) => {
+const CheckboxIcon = ({ checked, onChange, icon, children }) => {
   return (
     <CheckboxIconContainer className='CheckboxIcon'>
       <label>
@@ -33,3 +33,5 @@ export const CheckboxIcon = ({ checked, onChange, icon, children }) => {
     </CheckboxIconContainer>
   );
 };
+
+export default CheckboxIcon;

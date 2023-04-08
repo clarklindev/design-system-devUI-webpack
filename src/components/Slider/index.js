@@ -80,7 +80,7 @@ const SliderInput = styled.input.attrs(({ index }) => ({
   }
 `;
 
-export const Slider = ({
+const Slider = ({
   width = '100%',
   hideTrack = false,
   trackClickable = true,
@@ -131,3 +131,5 @@ export const Slider = ({
     </SliderContainer>
   );
 };
+
+export default Slider;

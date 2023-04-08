@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Counter } from './index';
+import Counter from './index';
 
-export const CounterExample = () => {
+const CounterExample = () => {
   const [savedData, setSavedData] = useState('0');
 
   return (
@@ -11,3 +11,5 @@ export const CounterExample = () => {
     />
   );
 };
+
+export default CounterExample;

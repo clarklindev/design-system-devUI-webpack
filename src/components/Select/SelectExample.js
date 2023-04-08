@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Select } from './index';
+import React, { useState } from 'react';
+import Select from './index';
 
-export const SelectExample = () => {
+const SelectExample = () => {
   const [savedData, setSavedData] = useState();
 
   const data = [
@@ -26,3 +26,5 @@ export const SelectExample = () => {
     </div>
   );
 };
+
+export default SelectExample;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ToggleSwitch } from './index';
+import ToggleSwitch from './index';
 
-export const ToggleSwitchExample = () => {
+const ToggleSwitchExample = () => {
   const [savedData, setSavedData] = useState(false);
 
   // ----------------------------------------------------------------
@@ -16,3 +16,5 @@ export const ToggleSwitchExample = () => {
     />
   );
 };
+
+export default ToggleSwitchExample;

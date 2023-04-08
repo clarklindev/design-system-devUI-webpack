@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Table = ({ headers, data, configure }) => {
+const Table = ({ headers, data, configure }) => {
   return (
     <table className='border'>
       <thead>
@@ -41,3 +41,5 @@ export const Table = ({ headers, data, configure }) => {
     </table>
   );
 };
+
+export default Table;

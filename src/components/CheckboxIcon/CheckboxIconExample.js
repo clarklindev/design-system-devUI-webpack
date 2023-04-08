@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { CheckboxIcon } from './index';
-import { HeartIcon } from '../../icons/HeartIcon';
-import { Icon } from '../Icon';
+import CheckboxIcon from './index';
+import HeartIcon from '../../icons/HeartIcon';
+import Icon from '../Icon';
 
-export const CheckboxIconExample = () => {
+const CheckboxIconExample = () => {
   const [savedData, setSavedData] = useState(false);
 
   return (
@@ -24,3 +24,5 @@ export const CheckboxIconExample = () => {
     </CheckboxIcon>
   );
 };
+
+export default CheckboxIconExample;

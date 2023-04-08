@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { RadioButtonGroup } from './index';
-import { RadioButton } from '../RadioButton';
-import { LabelSomething } from '../LabelSomething';
+import RadioButtonGroup from './index';
+import RadioButton from '../RadioButton';
+import LabelSomething from '../LabelSomething';
 
-export const RadioButtonGroupHorizontalExample = () => {
+const RadioButtonGroupHorizontalExample = () => {
   const options = [
     { label: 'A', value: 'a' },
     { label: 'B', value: 'b' },
@@ -44,3 +44,5 @@ export const RadioButtonGroupHorizontalExample = () => {
     </RadioButtonGroup>
   );
 };
+
+export default RadioButtonGroupHorizontalExample;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Checkbox } from './index';
+import Checkbox from './index';
 
-export const CheckboxExample = () => {
+const CheckboxExample = () => {
   const [savedData, setSavedData] = useState(false);
 
   return (
@@ -15,3 +15,5 @@ export const CheckboxExample = () => {
     />
   );
 };
+
+export default CheckboxExample;

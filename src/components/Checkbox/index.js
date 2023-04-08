@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { CheckIcon } from '../../icons/CheckIcon';
-import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
-import { Icon } from '../Icon';
+import CheckIcon from '../../icons/CheckIcon';
+import MinusSmallIcon from '../../icons/MinusSmallIcon';
+import Icon from '../Icon';
 
 const CheckboxContainer = styled.label`
   display: flex;
@@ -35,7 +35,7 @@ const StyledCheckbox = styled.div`
   background-color: ${({ theme }) => theme?.Checkbox?.backgroundColor};
 `;
 
-export const Checkbox = ({
+const Checkbox = ({
   checked,
   name,
   label,
@@ -66,3 +66,5 @@ export const Checkbox = ({
     </CheckboxContainer>
   );
 };
+
+export default Checkbox;

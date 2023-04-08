@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Tree } from '.';
-export const Node = ({ node, depth, children }) => {
+import Tree from './index';
+
+const Node = ({ node, depth, children }) => {
   return (
     <div
       style={{ display: 'inline-flex', flexDirection: 'column' }}
@@ -21,3 +22,5 @@ export const Node = ({ node, depth, children }) => {
     </div>
   );
 };
+
+export default Node;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const CheckboxGroupContainer = styled.div`
   display: inline-flex;
   flex-direction: ${({ direction }) => direction};
@@ -12,14 +13,10 @@ const CheckboxGroupContainer = styled.div`
   }
 `;
 
-export const CheckboxGroup = ({
-  direction = 'column',
-  spacing = '0px',
-  children,
-}) => {
+const CheckboxGroup = ({ direction = 'column', spacing = '0px', children }) => {
   return (
     <CheckboxGroupContainer
-      className={`RadioButtonGroup`}
+      className={`CheckboxGroup`}
       direction={direction}
       spacing={spacing}
     >
@@ -27,3 +24,5 @@ export const CheckboxGroup = ({
     </CheckboxGroupContainer>
   );
 };
+
+export default CheckboxGroup;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Input, InputWrapper } from './index';
+import Input, { InputWrapper } from './index';
 
-import { Button } from '../Button';
-import { Icon } from '../Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 
-import { ShowIcon } from '../../icons/ShowIcon';
-import { HideIcon } from '../../icons/HideIcon';
+import ShowIcon from '../../icons/ShowIcon';
+import HideIcon from '../../icons/HideIcon';
 
-export const InputPasswordExample = () => {
+const InputPasswordExample = () => {
   const [savedData, setSavedData] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -34,3 +34,5 @@ export const InputPasswordExample = () => {
     </InputWrapper>
   );
 };
+
+export default InputPasswordExample;

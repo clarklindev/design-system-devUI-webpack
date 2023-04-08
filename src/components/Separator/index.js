@@ -45,7 +45,7 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
   }
 `;
 
-export const Separator = ({
+const Separator = ({
   variation = 'horizontal',
   margin = '0px',
   height = 'inherit',
@@ -86,3 +86,5 @@ export const Separator = ({
       );
   }
 };
+
+export default Separator;

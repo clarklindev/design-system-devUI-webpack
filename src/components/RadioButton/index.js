@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RadioButtonIcon } from '../../icons/RadioButtonIcon';
-import { Icon } from '../Icon';
+import RadioButtonIcon from '../../icons/RadioButtonIcon';
+import Icon from '../Icon';
 
 const RadioButtonContainer = styled.label`
   display: flex;
@@ -37,7 +37,7 @@ const StyledRadioButton = styled.div`
   background-color: ${({ theme }) => theme?.RadioButton?.backgroundColor};
 `;
 
-export const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
+const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
   return (
     <RadioButtonContainer className='RadioButton'>
       <HiddenRadioButton checked={checked} onChange={onChange} name={name} />
@@ -48,3 +48,5 @@ export const RadioButton = ({ checked, name, label, onChange, iconSize }) => {
     </RadioButtonContainer>
   );
 };
+
+export default RadioButton;

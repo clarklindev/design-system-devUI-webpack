@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SpeechIcon = () => {
+const SpeechIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -18,3 +18,5 @@ export const SpeechIcon = () => {
     </svg>
   );
 };
+
+export default SpeechIcon;

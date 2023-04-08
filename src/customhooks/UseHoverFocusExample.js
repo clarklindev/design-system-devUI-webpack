@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-export const UseHoverFocusExample = () => {
+const UseHoverFocusExample = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
@@ -45,3 +45,5 @@ export const UseHoverFocusExample = () => {
     </div>
   );
 };
+
+export default UseHoverFocusExample;

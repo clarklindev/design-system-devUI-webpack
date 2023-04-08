@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Input, InputWrapper } from './index';
+import Input, { InputWrapper } from './index';
 
-import { Button } from '../Button';
-import { Icon } from '../Icon';
-import { SearchIcon } from '../../icons/SearchIcon';
-import { ClearIcon } from '../../icons/ClearIcon';
+import Button from '../Button';
+import Icon from '../Icon';
+import SearchIcon from '../../icons/SearchIcon';
+import ClearIcon from '../../icons/ClearIcon';
 
-export const InputFilterExample = () => {
+const InputFilterExample = () => {
   const [savedData, setSavedData] = useState('');
 
   const clearHandler = () => {
@@ -48,3 +48,5 @@ export const InputFilterExample = () => {
     </InputWrapper>
   );
 };
+
+export default InputFilterExample;

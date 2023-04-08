@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 
-import { ChevronUpIcon } from '../../icons/ChevronUpIcon';
-import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
-import { PlusSmallIcon } from '../../icons/PlusSmallIcon';
-import { MinusSmallIcon } from '../../icons/MinusSmallIcon';
+import ChevronUpIcon from '../../icons/ChevronUpIcon';
+import ChevronDownIcon from '../../icons/ChevronDownIcon';
+import PlusSmallIcon from '../../icons/PlusSmallIcon';
+import MinusSmallIcon from '../../icons/MinusSmallIcon';
 import styled from 'styled-components';
-import { Icon } from '../Icon';
+import Icon from '../Icon';
 
 //by using theme here you dont need to pass props
 //but this way you also only reading from theme.. what if you want to read from props
@@ -62,7 +62,7 @@ const AccordionSectionPanelContent = styled.div`
 `;
 
 //AccordionSection doesnt know about anything happening on the outside (self contained)
-export const AccordionSection = ({
+const AccordionSection = ({
   data,
   isOpen,
   onClick,
@@ -131,3 +131,5 @@ export const AccordionSection = ({
     </div>
   );
 };
+
+export default AccordionSection;

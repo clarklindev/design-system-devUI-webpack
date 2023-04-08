@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { useState } from 'react';
-import { Slider } from './index';
+import Slider from './index';
 
-export const SliderExample = () => {
+const SliderExample = () => {
   const [savedData, setSavedData] = useState(0);
 
   return (
@@ -16,3 +15,5 @@ export const SliderExample = () => {
     />
   );
 };
+
+export default SliderExample;

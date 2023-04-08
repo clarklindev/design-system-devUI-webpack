@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { RadioButton } from './index';
+import RadioButton from './index';
 
-export const RadioButtonExample = () => {
+const RadioButtonExample = () => {
   const [savedData, setSavedData] = useState(false);
 
   return (
@@ -16,3 +16,5 @@ export const RadioButtonExample = () => {
     />
   );
 };
+
+export default RadioButtonExample;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BookmarkIcon = () => {
+const BookmarkIcon = () => {
   return (
     <svg
       viewBox='0 0 24 24'
@@ -18,3 +18,5 @@ export const BookmarkIcon = () => {
     </svg>
   );
 };
+
+export default BookmarkIcon;

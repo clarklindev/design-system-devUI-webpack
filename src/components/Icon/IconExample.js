@@ -1,12 +1,14 @@
 import React from 'react';
-import { Icon } from './index';
+import Icon from './index';
 
-import { ShoppingCartIcon } from '../../icons/ShoppingCartIcon';
+import ShoppingCartIcon from '../../icons/ShoppingCartIcon';
 
-export const IconExample = () => {
+const IconExample = () => {
   return (
     <Icon size='25px' stroke='black' fill=''>
       <ShoppingCartIcon />
     </Icon>
   );
 };
+
+export default IconExample;
