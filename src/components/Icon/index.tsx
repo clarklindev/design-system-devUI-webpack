@@ -2,6 +2,14 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+export type IconType = {
+  size: string;
+  fill: string;
+  stroke: string;
+  fillOpacity: string;
+  children: React.ElementType;
+};
+
 const IconContainer = styled.div`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
@@ -25,7 +33,7 @@ const Icon = ({
   fillOpacity,
   children,
   ...rest
-}) => {
+}: IconType) => {
   return (
     <IconContainer
       className='Icon'

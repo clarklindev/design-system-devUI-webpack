@@ -1,7 +1,7 @@
 import React from 'react';
 import Accordion from './index';
 
-const AccordionChevronExample = () => {
+const AccordionChevronExample: React.FC = () => {
   const data = [
     {
       title: 'helloworld',
@@ -21,8 +21,8 @@ const AccordionChevronExample = () => {
     <Accordion
       data={data}
       multiOpen={true}
+      iconType='chevron'
       icon={{
-        type: 'chevron',
         fill: 'transparent',
       }}
     />

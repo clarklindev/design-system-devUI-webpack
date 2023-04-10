@@ -2,21 +2,36 @@ import React, { useState } from 'react';
 import Separator from '../Separator';
 import AccordionSection from './AccordionSection';
 
-const Accordion = ({
-  multiOpen,
-  data,
+import { IconType } from '../Icon';
+
+type AccordionData = {
+  title: string;
+  body: string;
+};
+
+export type AccordionIconType = 'plusminus' | 'hidden' | 'chevron';
+
+type AccordionProps = {
+  iconType?: AccordionIconType;
+  multiOpen?: boolean;
+  data: AccordionData[];
+  icon?: IconType;
+  showSeparator?: boolean;
+};
+
+const Accordion: React.FC<AccordionProps> = ({
+  multiOpen = 'true',
+  iconType = 'plusminus',
   icon = {
-    type: 'plusminus',
     size: '30px',
-    fill,
-    stroke,
   },
   showSeparator = true,
+  data,
 }) => {
-  const [indexes, setIndexes] = useState([]);
+  const [indexes, setIndexes] = useState<number[]>([]);
 
   //@index - filter-out/add or toggle
-  const activeIndexesCheck = (index) => {
+  const activeIndexesCheck = (index: number) => {
     const found = indexes.includes(index);
     if (multiOpen) {
       if (found) {
@@ -41,19 +56,20 @@ const Accordion = ({
     }
   };
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     activeIndexesCheck(index);
   };
 
   return (
     <div className='Accordion' role='tablist'>
-      {data.map((each, index) => {
+      {data.map((each: AccordionData, index: number) => {
         return (
           <React.Fragment key={index}>
             <AccordionSection
               data={each}
               index={index}
               icon={icon}
+              iconType={iconType}
               showSeparator={showSeparator}
               onClick={() => handleClick(index)}
               isOpen={indexes.includes(index)}

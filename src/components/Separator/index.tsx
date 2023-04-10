@@ -1,27 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
 
+enum SeparatorVariation {
+  horizontal = 'horizontal',
+  vertical = 'vertical',
+  horizontalLabelled = 'horizontal-labelled',
+}
+
+type SeparatorProps = {
+  variation?: SeparatorVariation;
+  width?: string;
+  height?: string;
+  margin?: string;
+  label?: string;
+};
+
 const SeparatorContainer = styled.div`
   box-sizing: border-box;
   display: flex;
 `;
 
-const SeparatorHorizontal = styled(SeparatorContainer)`
+const SeparatorHorizontal = styled(SeparatorContainer)<{
+  height: string;
+  width: string;
+  margin: string;
+}>`
   display: flex;
   width: 100%;
+  height: ${({ height }) => height};
   border-bottom: ${({ theme }) => theme?.Separator?.border};
   margin: ${({ margin }) => margin};
   background: ${({ theme }) => theme?.Separator?.backgroundColor};
 `;
 
-const SeparatorVertical = styled(SeparatorContainer)`
+const SeparatorVertical = styled(SeparatorContainer)<{
+  height: string;
+  width: string;
+  margin: string;
+}>`
   height: ${({ height }) => height};
   width: 1px;
   background: ${({ theme }) => theme?.Separator?.backgroundColor};
   margin: ${({ margin }) => margin};
 `;
 
-const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
+const SeparatorHorizontalLabelled = styled(SeparatorContainer)<{
+  margin: string;
+  height: string;
+  width: string;
+}>`
   span {
     color: ${({ theme }) => theme?.Separator?.color};
     margin: ${({ margin }) => margin};
@@ -34,6 +61,8 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
     border-bottom: ${({ theme }) => theme?.Separator?.border};
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
+    height: 1px;
+    margin: ${({ margin }) => margin};
   }
   &::after {
     display: flex;
@@ -42,21 +71,23 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)`
     border-bottom: ${({ theme }) => theme?.Separator?.border};
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
+    height: 1px;
+    margin: ${({ margin }) => margin};
   }
 `;
 
-const Separator = ({
-  variation = 'horizontal',
+const Separator: React.FC<SeparatorProps> = ({
+  variation = SeparatorVariation.horizontal,
   margin = '0px',
   height = 'inherit',
   width = 'inherit',
   label = undefined,
-}) => {
+}: SeparatorProps) => {
   switch (variation) {
     case 'horizontal':
       return (
         <SeparatorHorizontal
-          data-component='Separator'
+          className='Separator'
           height={height}
           width={width}
           margin={margin}
@@ -66,7 +97,7 @@ const Separator = ({
     case 'vertical':
       return (
         <SeparatorVertical
-          data-component='Separator'
+          className='Separator'
           height={height}
           width={width}
           margin={margin}
@@ -76,7 +107,7 @@ const Separator = ({
     case 'horizontal-labelled':
       return (
         <SeparatorHorizontalLabelled
-          data-component='Separator'
+          className='Separator'
           height={height}
           width={width}
           margin={margin}
@@ -84,6 +115,9 @@ const Separator = ({
           <span>{label}</span>
         </SeparatorHorizontalLabelled>
       );
+
+    default:
+      return null;
   }
 };
 

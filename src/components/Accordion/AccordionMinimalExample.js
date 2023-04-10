@@ -20,10 +20,8 @@ const AccordionMinimalExample = () => {
   return (
     <Accordion
       data={data}
+      type='hidden'
       multiOpen={true}
-      icon={{
-        type: 'hidden',
-      }}
       showSeparator={false}
     />
   );

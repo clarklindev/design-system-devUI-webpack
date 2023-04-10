@@ -67,6 +67,7 @@ const AccordionSection = ({
   isOpen,
   onClick,
   index = 0,
+  iconType,
   icon,
   showSeparator,
 }) => {
@@ -107,9 +108,9 @@ const AccordionSection = ({
           }}
         >
           {data.title}
-          {icon.type !== 'hidden' && (
+          {iconType !== 'hidden' && (
             <Icon>
-              {isOpen ? iconMap[icon.type].open : iconMap[icon.type].closed}
+              {isOpen ? iconMap[iconType].open : iconMap[iconType].closed}
             </Icon>
           )}
         </AccordionSectionTitle>
