@@ -3,14 +3,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 export type IconType = {
-  size: string;
-  fill: string;
-  stroke: string;
-  fillOpacity: string;
-  children: React.ElementType;
+  size?: string;
+  fill?: string;
+  stroke?: string;
+  fillOpacity?: string;
+  children?: React.ReactNode;
 };
 
-const IconContainer = styled.div`
+const IconContainer = styled.div<{
+  size: string;
+  stroke?: string;
+  fill?: string;
+  fillOpacity?: string;
+}>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   display: flex;
@@ -25,15 +30,14 @@ const IconContainer = styled.div`
   }
 `;
 
-//the problem is if you dont have a config object passed through,
-const Icon = ({
+const Icon: React.FC<IconType> = ({
   size = '25px',
   stroke,
-  fill,
+  fill = undefined,
   fillOpacity,
   children,
   ...rest
-}: IconType) => {
+}) => {
   return (
     <IconContainer
       className='Icon'

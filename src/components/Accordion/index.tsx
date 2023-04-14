@@ -1,32 +1,90 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
+import styled from 'styled-components';
+
+import Icon from '../Icon';
 import Separator from '../Separator';
-import AccordionSection from './AccordionSection';
 
-import { IconType } from '../Icon';
+import ChevronUpIcon from '../../icons/ChevronUpIcon';
+import ChevronDownIcon from '../../icons/ChevronDownIcon';
+import PlusSmallIcon from '../../icons/PlusSmallIcon';
+import MinusSmallIcon from '../../icons/MinusSmallIcon';
 
-type AccordionData = {
+// AccordionSection
+
+const AccordionSectionHeader = styled.div<{ titleColor: string }>`
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: ${({ theme, titleColor }) =>
+    titleColor ? titleColor : theme?.Accordion?.title?.color || 'var()'};
+
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+  &[data-separator='true'] {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+`;
+
+const AccordionSectionTitle = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const AccordionSectionPanel = styled.div<{ scrollHeight: string }>`
+  overflow: hidden;
+  color: ${({ theme, color }) =>
+    color ? color : theme?.Accordion?.content?.color || 'var()'};
+
+  &[data-expanded='false'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    max-height: 0px;
+  }
+
+  &[data-expanded='true'] {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+    max-height: ${({ scrollHeight }) => scrollHeight + 'px'};
+  }
+`;
+
+const AccordionSectionPanelContent = styled.div`
+  padding: 20px 0;
+
+  &[data-separator='true'] {
+    padding: 0 0 20px 0;
+  }
+`;
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+export type AccordionDataType = {
   title: string;
   body: string;
 };
 
-export type AccordionIconType = 'plusminus' | 'hidden' | 'chevron';
+type AccordionIconType = 'plusminus' | 'hidden' | 'chevron';
 
 type AccordionProps = {
+  data: AccordionDataType[];
   iconType?: AccordionIconType;
   multiOpen?: boolean;
-  data: AccordionData[];
-  icon?: IconType;
   showSeparator?: boolean;
 };
 
 const Accordion: React.FC<AccordionProps> = ({
+  data,
   multiOpen = 'true',
   iconType = 'plusminus',
-  icon = {
-    size: '30px',
-  },
   showSeparator = true,
-  data,
 }) => {
   const [indexes, setIndexes] = useState<number[]>([]);
 
@@ -60,20 +118,72 @@ const Accordion: React.FC<AccordionProps> = ({
     activeIndexesCheck(index);
   };
 
+  const iconMap = {
+    chevron: { open: <ChevronUpIcon />, closed: <ChevronDownIcon /> },
+    plusminus: { open: <MinusSmallIcon />, closed: <PlusSmallIcon /> },
+    hidden: {},
+  };
+
   return (
     <div className='Accordion' role='tablist'>
-      {data.map((each: AccordionData, index: number) => {
+      {data.map((each: AccordionDataType, index: number) => {
+        const panelRef = useRef<HTMLDivElement>(null);
+
         return (
           <React.Fragment key={index}>
-            <AccordionSection
-              data={each}
-              index={index}
-              icon={icon}
-              iconType={iconType}
-              showSeparator={showSeparator}
-              onClick={() => handleClick(index)}
-              isOpen={indexes.includes(index)}
-            />
+            <div className='AccordionSection'>
+              <AccordionSectionHeader
+                className={['AccordionSectionHeader'].join(' ')}
+                role='heading'
+                aria-level={3}
+                data-separator={showSeparator ? 'true' : 'false'}
+                titleColor='black'
+              >
+                <AccordionSectionTitle
+                  role='button'
+                  aria-expanded={indexes.includes(index) ? true : false}
+                  aria-controls={`AccordionSectionPanel_${index}`}
+                  aria-disabled={false}
+                  id={`AccordionSectionTitle_${index}`}
+                  tabIndex={0}
+                  onClick={() => handleClick(index)}
+                  onKeyDown={(e) => {
+                    console.log(e.key);
+                    switch (e.key) {
+                      case 'Enter':
+                      case ' ':
+                        handleClick(index);
+                        break;
+                    }
+                  }}
+                >
+                  {each.title}
+                  {iconType !== 'hidden' && (
+                    <Icon size='30px'>
+                      {indexes.includes(index)
+                        ? iconMap[iconType].open
+                        : iconMap[iconType].closed}
+                    </Icon>
+                  )}
+                </AccordionSectionTitle>
+              </AccordionSectionHeader>
+
+              <AccordionSectionPanel
+                role='region'
+                aria-labelledby={`AccordionSectionTitle_${index}`}
+                className='AccordionSectionPanel'
+                id={`AccordionSectionPanel_${index}`}
+                ref={panelRef}
+                data-expanded={indexes.includes(index) ? 'true' : 'false'}
+                scrollHeight={String(panelRef?.current?.scrollHeight)}
+              >
+                <AccordionSectionPanelContent
+                  data-separator={showSeparator ? 'true' : 'false'}
+                >
+                  {each.body}
+                </AccordionSectionPanelContent>
+              </AccordionSectionPanel>
+            </div>
             {showSeparator && <Separator />}
           </React.Fragment>
         );

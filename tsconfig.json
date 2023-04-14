@@ -4,6 +4,7 @@
     "target": "es6",
     "allowJs": true,
     "module": "es2020",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "react",
     "esModuleInterop": true,

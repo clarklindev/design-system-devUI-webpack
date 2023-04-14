@@ -17,16 +17,7 @@ const AccordionChevronExample: React.FC = () => {
     },
   ];
 
-  return (
-    <Accordion
-      data={data}
-      multiOpen={true}
-      iconType='chevron'
-      icon={{
-        fill: 'transparent',
-      }}
-    />
-  );
+  return <Accordion data={data} multiOpen={true} iconType='chevron' />;
 };
 
 export default AccordionChevronExample;

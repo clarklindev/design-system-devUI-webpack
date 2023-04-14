@@ -1,7 +1,7 @@
 import React from 'react';
 import Accordion from './index';
 
-const AccordionPlusMinusExample = () => {
+const AccordionPlusMinusExample: React.FC = () => {
   const data = [
     {
       title: 'helloworld',
@@ -21,10 +21,7 @@ const AccordionPlusMinusExample = () => {
     <Accordion
       data={data}
       multiOpen={true}
-      icon={{
-        type: 'plusminus',
-        stroke: 'black',
-      }}
+      iconType='plusminus'
       showSeparator={true}
     />
   );

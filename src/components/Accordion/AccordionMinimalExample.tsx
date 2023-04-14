@@ -1,7 +1,7 @@
 import React from 'react';
 import Accordion from './index';
 
-const AccordionMinimalExample = () => {
+const AccordionMinimalExample: React.FC = () => {
   const data = [
     {
       title: 'helloworld',
@@ -20,8 +20,8 @@ const AccordionMinimalExample = () => {
   return (
     <Accordion
       data={data}
-      type='hidden'
       multiOpen={true}
+      iconType='hidden'
       showSeparator={false}
     />
   );
