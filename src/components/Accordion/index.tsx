@@ -12,13 +12,12 @@ import MinusSmallIcon from '../../icons/MinusSmallIcon';
 
 // AccordionSection
 
-const AccordionSectionHeader = styled.div<{ titleColor: string }>`
+const AccordionSectionHeader = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 500;
-  color: ${({ theme, titleColor }) =>
-    titleColor ? titleColor : theme?.Accordion?.title?.color || 'var()'};
+  color: ${({ theme }) => (theme && theme?.Accordion?.title?.color) || 'var()'};
 
   margin-bottom: 0px;
   margin-top: 0px;
@@ -36,10 +35,12 @@ const AccordionSectionTitle = styled.div`
   align-items: center;
 `;
 
-const AccordionSectionPanel = styled.div<{ scrollHeight: string }>`
+const AccordionSectionPanel = styled.div<{
+  scrollHeight: string;
+}>`
   overflow: hidden;
-  color: ${({ theme, color }) =>
-    color ? color : theme?.Accordion?.content?.color || 'var()'};
+  color: ${({ theme }) =>
+    (theme && theme?.Accordion?.content?.color) || 'var()'};
 
   &[data-expanded='false'] {
     visibility: hidden;
@@ -65,7 +66,6 @@ const AccordionSectionPanelContent = styled.div`
 `;
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
-
 export type AccordionDataType = {
   title: string;
   body: string;
@@ -74,15 +74,15 @@ export type AccordionDataType = {
 type AccordionIconType = 'plusminus' | 'hidden' | 'chevron';
 
 type AccordionProps = {
-  data: AccordionDataType[];
-  iconType?: AccordionIconType;
+  data: Array<AccordionDataType>;
   multiOpen?: boolean;
+  iconType?: AccordionIconType;
   showSeparator?: boolean;
 };
 
 const Accordion: React.FC<AccordionProps> = ({
   data,
-  multiOpen = 'true',
+  multiOpen = true,
   iconType = 'plusminus',
   showSeparator = true,
 }) => {
@@ -133,11 +133,10 @@ const Accordion: React.FC<AccordionProps> = ({
           <React.Fragment key={index}>
             <div className='AccordionSection'>
               <AccordionSectionHeader
-                className={['AccordionSectionHeader'].join(' ')}
+                className='AccordionSectionHeader'
                 role='heading'
                 aria-level={3}
                 data-separator={showSeparator ? 'true' : 'false'}
-                titleColor='black'
               >
                 <AccordionSectionTitle
                   role='button'
@@ -169,9 +168,9 @@ const Accordion: React.FC<AccordionProps> = ({
               </AccordionSectionHeader>
 
               <AccordionSectionPanel
+                className='AccordionSectionPanel'
                 role='region'
                 aria-labelledby={`AccordionSectionTitle_${index}`}
-                className='AccordionSectionPanel'
                 id={`AccordionSectionPanel_${index}`}
                 ref={panelRef}
                 data-expanded={indexes.includes(index) ? 'true' : 'false'}

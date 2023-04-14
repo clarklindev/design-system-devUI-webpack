@@ -66,7 +66,7 @@ const IconButton = styled(BaseButton)`
   ${applyStyleModifiers(MODIFIERS)};
 `;
 
-const Button = ({
+const Button: React.FC = ({
   variation,
   label,
   labelDirection = 'right',

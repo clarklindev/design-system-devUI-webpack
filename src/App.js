@@ -33,9 +33,9 @@ import ButtonWithLabelSomethingExample from './components/Button/ButtonWithLabel
 import ButtonModifiersExample from './components/Button/ButtonModifiersExample';
 
 // //Accordion
-import AccordionChevronExample from './components/Accordion/AccordionChevronExample';
-import AccordionPlusMinusExample from './components/Accordion/AccordionPlusMinusExample';
-import AccordionMinimalExample from './components/Accordion/AccordionMinimalExample';
+import AccordionChevronExample from './components/Accordion/example/AccordionChevronExample';
+import AccordionPlusMinusExample from './components/Accordion/example/AccordionPlusMinusExample';
+import AccordionMinimalExample from './components/Accordion/example/AccordionMinimalExample';
 
 // //Snackbar
 import SnackbarExample from './components/Snackbar/SnackbarExample';
