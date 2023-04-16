@@ -22,7 +22,8 @@
     "react-is": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "styled-components": "^5.3.9",
-    "styled-components-modifiers": "^1.2.5"
+    "styled-components-modifiers": "^1.2.5",
+    "tw-tailwind": "^1.0.21"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",

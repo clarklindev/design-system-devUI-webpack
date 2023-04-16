@@ -1,25 +1,20 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import tw from 'tw-tailwind';
 
-const BaseButton = styled.button`
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  cursor: pointer;
-`;
+const BaseButton = tw.button(() => ['border border-blue-500']);
 
-const ContainedButton = styled(BaseButton)``;
+const CustomButton = tw(BaseButton)``;
 
-const OutlinedButton = styled(BaseButton)``;
+const ContainedButton = tw(BaseButton)``;
 
-const TextButton = styled(BaseButton)``;
+const OutlinedButton = tw(BaseButton)``;
 
-const IconButton = styled(BaseButton)``;
+const TextButton = tw(BaseButton)``;
 
-type ButtonVariation = 'contained' | 'outlined' | 'text' | 'icon';
+const IconButton = tw(BaseButton)``;
+
+type ButtonVariation = 'contained' | 'outlined' | 'text' | 'icon' | 'custom';
 type LabelType = string | number | React.ReactNode;
 
 interface ButtonProps {
@@ -34,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({ variation, label, children }) => {
     outlined: OutlinedButton,
     text: TextButton,
     icon: IconButton,
+    custom: CustomButton,
   };
 
   const Component = buttonMap[variation];
