@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { DefaultTheme } from '../../themes/DefaultTheme';
+import { ThemeType } from '../../themes/DefaultTheme';
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-type LayoutSectionProps = { theme: DefaultTheme };
+type LayoutSectionProps = { theme: ThemeType };
 const LayoutSection = styled.section<{ theme?: LayoutSectionProps }>`
   padding: ${({ theme }) => theme?.Layout?.section?.padding};
   box-sizing: border-box;
   border-bottom: 1px solid ${({ theme }) => theme?.Layout?.section?.borderColor};
 `;
 
-type LayoutBlockProps = { theme?: DefaultTheme };
+type LayoutBlockProps = { theme?: ThemeType };
 const LayoutBlock = styled.div<{ theme: LayoutBlockProps }>`
   position: relative;
   padding: ${({ theme }) => theme?.Layout?.block?.padding || 'var()'};
