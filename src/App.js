@@ -24,12 +24,12 @@ import LabelSomethingExample from './components/LabelSomething/LabelSomethingExa
 import IconExample from './components/Icon/IconExample';
 
 // //Buttons
-import ButtonContainedExample from './components/Button/ButtonContainedExample';
-import ButtonOutlinedExample from './components/Button/ButtonOutlinedExample';
-import ButtonTextExample from './components/Button/ButtonTextExample';
-import ButtonIconExample from './components/Button/ButtonIconExample';
-import ButtonWithLabelSomethingExample from './components/Button/ButtonWithLabelSomethingExample';
-import ButtonModifiersExample from './components/Button/ButtonModifiersExample';
+import ButtonContainedExample from './components/Button/example/ButtonContainedExample';
+import ButtonOutlinedExample from './components/Button/example/ButtonOutlinedExample';
+import ButtonTextExample from './components/Button/example/ButtonTextExample';
+import ButtonIconExample from './components/Button/example/ButtonIconExample';
+import ButtonWithLabelSomethingExample from './components/Button/example/ButtonWithLabelSomethingExample';
+import ButtonModifiersExample from './components/Button/example/ButtonModifiersExample';
 
 // //Accordion
 import AccordionChevronExample from './components/Accordion/example/AccordionChevronExample';

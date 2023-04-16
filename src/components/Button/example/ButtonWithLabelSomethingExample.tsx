@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Button from './index';
-import LabelSomething from '../LabelSomething';
-import Icon from '../Icon';
-import ThumbsUpIcon from '../../icons/ThumbsUpIcon';
+import Button from '../index';
+import LabelSomething from '../../LabelSomething';
+import Icon from '../../Icon';
+import ThumbsUpIcon from '../../../icons/ThumbsUpIcon';
 
 const ButtonWithLabelSomethingExample = () => {
   return (
