@@ -9,8 +9,6 @@ const ButtonWithLabelSomethingExample = () => {
   return (
     <Button
       variation='contained'
-      backgroundColor='red'
-      color='white'
       label={
         <LabelSomething
           gap='10px'

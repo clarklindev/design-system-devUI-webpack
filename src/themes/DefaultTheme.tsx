@@ -99,6 +99,8 @@ export const global = {
   componentIcons: colors.neutral[400],
 };
 
+export type DefaultTheme = typeof defaultTheme;
+
 // theme - styling for components
 export const defaultTheme = {
   name: 'defaultTheme',
