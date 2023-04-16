@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { DefaultTheme } from '../../themes/DefaultTheme';
+
+// ---------------------------------------------------------------------------------------------------------------------
 
 type LayoutSectionProps = { theme: DefaultTheme };
 const LayoutSection = styled.section<{ theme?: LayoutSectionProps }>`
@@ -19,6 +22,8 @@ enum LayoutVariation {
   section = 'section',
   block = 'block',
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
 
 type LayoutVariationType = keyof typeof LayoutVariation;
 type LayoutStyledComponentType = typeof LayoutSection | typeof LayoutBlock;

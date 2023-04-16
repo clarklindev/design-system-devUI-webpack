@@ -1,5 +1,7 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
+---
+
 ## Tree
 
 - when to use a tree: its more for menus that can have depth
