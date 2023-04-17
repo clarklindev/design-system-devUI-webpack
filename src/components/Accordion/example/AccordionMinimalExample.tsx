@@ -3,7 +3,7 @@ import Accordion from '../index';
 
 import { data } from './data';
 
-const AccordionMinimalExample: React.FC = () => {
+const AccordionMinimalExample = () => {
   return (
     <Accordion
       data={data}

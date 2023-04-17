@@ -1,6 +1,4 @@
-import { AccordionDataType } from '../index';
-
-export const data: Array<AccordionDataType> = [
+export const data = [
   {
     title: 'helloworld',
     body: ' this is my first answer',

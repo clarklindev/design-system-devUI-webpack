@@ -10,8 +10,12 @@ import ChevronDownIcon from '../../icons/ChevronDownIcon';
 import PlusSmallIcon from '../../icons/PlusSmallIcon';
 import MinusSmallIcon from '../../icons/MinusSmallIcon';
 
-// AccordionSection
+export type AccordionDataType = {
+  title: string;
+  body: React.ReactElement | string;
+};
 
+// AccordionSection
 const AccordionSectionHeader = styled.div`
   box-sizing: border-box;
   cursor: pointer;
@@ -66,10 +70,6 @@ const AccordionSectionPanelContent = styled.div`
 `;
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
-export type AccordionDataType = {
-  title: string;
-  body: string;
-};
 
 type AccordionIconType = 'plusminus' | 'hidden' | 'chevron';
 

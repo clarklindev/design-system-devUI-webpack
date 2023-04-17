@@ -7,15 +7,15 @@ import { ThemeType } from '../../themes/DefaultTheme';
 
 type LayoutSectionProps = { theme: ThemeType };
 const LayoutSection = styled.section<{ theme?: LayoutSectionProps }>`
-  padding: ${({ theme }) => theme?.Layout?.section?.padding};
   box-sizing: border-box;
-  border-bottom: 1px solid ${({ theme }) => theme?.Layout?.section?.borderColor};
+  padding: ${({ theme }) => theme.Layout?.section?.padding};
+  border-bottom: ${({ theme }) => theme.Layout?.section?.borderBottom};
 `;
 
 type LayoutBlockProps = { theme?: ThemeType };
 const LayoutBlock = styled.div<{ theme: LayoutBlockProps }>`
   position: relative;
-  padding: ${({ theme }) => theme?.Layout?.block?.padding || 'var()'};
+  padding: ${({ theme }) => theme.Layout?.block?.padding};
 `;
 
 enum LayoutVariation {

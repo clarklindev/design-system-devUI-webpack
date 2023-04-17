@@ -1,9 +1,17 @@
 https://github.com/swagfinger/swagfinger-ui.git
 
+## CSS
+
+- flex-box / css-grid
+
 ## Components
 
-- Layout
-- Heading
+- Layout (typescript / styledcomponents)
+- Heading (typescript / styledcomponents)
+- Button (typescript / styledcomponents)
+- Icon
+- LabelSomething
+- Accordion (typescript / styledcomponents/ accessibility)
 
 ---
 

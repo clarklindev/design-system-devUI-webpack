@@ -3,7 +3,7 @@ import Accordion from '../index';
 
 import { data } from './data';
 
-const AccordionPlusMinusExample: React.FC = () => {
+const AccordionPlusMinusExample = () => {
   return (
     <Accordion
       data={data}

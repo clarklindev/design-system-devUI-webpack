@@ -1,40 +1,87 @@
 import React from 'react';
 
-import tw from 'tw-tailwind';
+import styled from 'styled-components';
+import { ThemeType } from '../../themes/DefaultTheme';
 
-const BaseButton = tw.button(() => ['border border-blue-500']);
+type Props = {
+  theme?: ThemeType;
+};
 
-const CustomButton = tw(BaseButton)``;
+const BaseButton = styled.button<Props>`
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  cursor: pointer;
 
-const ContainedButton = tw(BaseButton)``;
+  padding: ${({ theme }) => theme?.Button?.base?.padding};
+  border-radius: ${({ theme }) => theme?.Button?.base?.borderRadius};
+`;
 
-const OutlinedButton = tw(BaseButton)``;
+const ContainedButton = styled(BaseButton)<Props>`
+  background: ${({ theme }) => theme?.Button?.contained?.background};
+  color: ${({ theme }) => theme?.Button?.contained?.color};
+  border: ${({ theme }) => theme?.Button?.contained?.border};
+`;
 
-const TextButton = tw(BaseButton)``;
+const OutlinedButton = styled(BaseButton)<Props>`
+  background: ${({ theme }) => theme?.Button?.outlined?.background};
+  color: ${({ theme }) => theme?.Button?.outlined?.color};
+  border: ${({ theme }) => theme?.Button?.outlined?.border};
+`;
 
-const IconButton = tw(BaseButton)``;
+const TextButton = styled(BaseButton)<Props>`
+  background: none;
+  border: none;
+  padding: 0px;
+  color: ${({ theme }) => theme?.Button?.text?.color};
+`;
 
-type ButtonVariation = 'contained' | 'outlined' | 'text' | 'icon' | 'custom';
+const IconButton = styled(BaseButton)<Props>`
+  border: none;
+  color: none;
+  background: none;
+  padding: 0px;
+`;
+
+type ButtonVariation = 'contained' | 'outlined' | 'text' | 'icon';
+type ButtonVariationComponent =
+  | typeof ContainedButton
+  | typeof OutlinedButton
+  | typeof TextButton
+  | typeof IconButton;
 type LabelType = string | number | React.ReactNode;
 
-interface ButtonProps {
+interface ButtonProps extends Omit<JSX.IntrinsicElements['button'], 'ref'> {
   variation: ButtonVariation;
   label?: LabelType;
   children?: LabelType;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({ variation, label, children }) => {
-  const buttonMap = {
+const Button: React.FC<ButtonProps> = ({
+  variation = 'contained',
+  className,
+  label,
+  children,
+  onClick,
+}) => {
+  const buttonMap: Record<ButtonVariation, ButtonVariationComponent> = {
     contained: ContainedButton,
     outlined: OutlinedButton,
     text: TextButton,
     icon: IconButton,
-    custom: CustomButton,
   };
 
   const Component = buttonMap[variation];
 
-  return <Component>{label ? label : children}</Component>;
+  return (
+    <Component className={className} onClick={onClick}>
+      {label ? label : children}
+    </Component>
+  );
 };
 
 export default Button;

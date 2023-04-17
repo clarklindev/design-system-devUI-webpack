@@ -29,7 +29,6 @@ import ButtonOutlinedExample from './components/Button/example/ButtonOutlinedExa
 import ButtonTextExample from './components/Button/example/ButtonTextExample';
 import ButtonIconExample from './components/Button/example/ButtonIconExample';
 import ButtonWithLabelSomethingExample from './components/Button/example/ButtonWithLabelSomethingExample';
-import ButtonModifiersExample from './components/Button/example/ButtonModifiersExample';
 
 // //Accordion
 import AccordionChevronExample from './components/Accordion/example/AccordionChevronExample';
@@ -171,11 +170,6 @@ const App = () => {
           <Layout variation='block'>
             <Heading variation='h5'>Button+LabelSomething button</Heading>
             <ButtonWithLabelSomethingExample />
-          </Layout>
-
-          <Layout variation='block'>
-            <Heading variation='h5'>Button modifiers</Heading>
-            <ButtonModifiersExample />
           </Layout>
         </Layout>
 

@@ -3,7 +3,7 @@ import Accordion from '../index';
 
 import { data } from './data';
 
-const AccordionChevronExample: React.FC = () => {
+const AccordionChevronExample = () => {
   return <Accordion data={data} multiOpen={true} iconType='chevron' />;
 };
 

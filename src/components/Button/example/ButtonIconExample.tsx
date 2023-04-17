@@ -12,6 +12,9 @@ const ButtonIconExample = () => {
           <ShoppingCartIcon />
         </Icon>
       }
+      onClick={() => {
+        console.log('hello world');
+      }}
     />
   );
 };

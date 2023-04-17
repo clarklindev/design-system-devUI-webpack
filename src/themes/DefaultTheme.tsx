@@ -67,15 +67,6 @@ export const transparency = {
   0: '00',
 };
 
-export const typography = {
-  h1: '3.209rem',
-  h2: '2.757rem',
-  h3: '2.069rem',
-  h4: '1.677rem',
-  h5: '1.333rem',
-  h6: '1.1rem',
-};
-
 // components dont point to globals directly - only from theme
 export const global = {
   fontFamily: "'Roboto', 'sans-serif'",
@@ -95,7 +86,7 @@ export const global = {
   inputHeight: '40px',
   inputPadding: '0 10px',
 
-  separator: colors.neutral[200],
+  dividerColor: colors.neutral[200],
   componentIcons: colors.neutral[400],
 };
 
@@ -105,26 +96,63 @@ export type ThemeType = typeof defaultTheme;
 export const defaultTheme = {
   name: 'defaultTheme',
 
-  Heading: {
-    fontFamily: global.headingFontFamily,
-    color: global.headingColor,
-
-    fontSize: {
-      h1: typography.h1,
-      h2: typography.h2,
-      h3: typography.h3,
-      h4: typography.h4,
-      h5: typography.h5,
-      h6: typography.h6,
+  Layout: {
+    section: {
+      padding: '50px',
+      borderBottom: `1px solid ${global.dividerColor}`,
     },
+    block: {
+      padding: '25px 0',
+    },
+  },
 
+  Heading: {
+    color: global.headingColor,
     margin: '0 0 1rem',
     lineHeight: '1.3',
     fontWeight: '400',
+    fontFamily: global.headingFontFamily,
+
+    fontSize: {
+      h1: '3.209rem',
+      h2: '2.757rem',
+      h3: '2.069rem',
+      h4: '1.677rem',
+      h5: '1.333rem',
+      h6: '1.1rem',
+    },
+  },
+
+  Button: {
+    base: {
+      padding: `5px ${global.padding}`,
+      borderRadius: global.borderRadius,
+    },
+    contained: {
+      color: colors.neutral[100],
+      background: colors.neutral[400],
+      border: `1px solid ${colors.neutral[100]}`,
+    },
+    outlined: {
+      color: colors.neutral[400],
+      backgroundColor: 'transparent',
+      border: `1px solid ${colors.neutral[400]}`,
+    },
+    text: {
+      color: colors.neutral[500],
+    },
+  },
+
+  Input: {
+    color: global.color,
+    inputHeight: global.inputHeight,
+    backgroundColor: colors.neutral[100],
+    border: global.border,
+    borderRadius: global.borderRadius,
   },
 
   Text: {
-    color: global.text,
+    color: global.color,
     marginBottom: global.padding,
   },
 
@@ -141,34 +169,16 @@ export const defaultTheme = {
     },
   },
 
-  Layout: {
-    section: {
-      padding: '50px',
-      borderColor: global.separator,
-    },
-    block: {
-      padding: '25px 0',
-    },
-  },
-
   LabelSomething: {
     gap: global.gap,
   },
 
   Separator: {
-    color: global.separator,
-    borderColor: global.separator,
-    backgroundColor: global.separator,
+    color: global.dividerColor,
+    borderColor: global.dividerColor,
+    backgroundColor: global.dividerColor,
     margin: global.margin,
-    border: `${global.borderWidth} solid ${global.separator}`,
-  },
-
-  Input: {
-    color: global.color,
-    inputHeight: global.inputHeight,
-    backgroundColor: colors.neutral[100],
-    border: global.border,
-    borderRadius: global.borderRadius,
+    border: `${global.borderWidth} solid ${global.dividerColor}`,
   },
 
   Select: {
@@ -207,28 +217,5 @@ export const defaultTheme = {
     border: global.border,
     borderRadius: global.borderRadius,
     backgroundColor: global.backgroundColor,
-  },
-
-  Button: {
-    base: {
-      color: colors.neutral[100],
-      border: `1px solid ${colors.neutral[400]}`,
-      backgroundColor: colors.neutral[600],
-      padding: `5px ${global.padding}`,
-      borderRadius: global.borderRadius,
-    },
-    contained: {
-      color: colors.neutral[100],
-      backgroundColor: colors.neutral[400],
-      borderColor: colors.neutral[100],
-    },
-    outlined: {
-      color: colors.neutral[400],
-      backgroundColor: 'transparent',
-      border: `1px solid ${colors.neutral[400]}`,
-    },
-    text: {
-      color: colors.neutral[500],
-    },
   },
 };
