@@ -9,9 +9,29 @@ https://github.com/swagfinger/swagfinger-ui.git
 - Layout (typescript / styledcomponents)
 - Heading (typescript / styledcomponents)
 - Button (typescript / styledcomponents)
-- Icon
-- LabelSomething
+- Icon (typescript / styledcomponents)
+- LabelSomething (typescript / styledcomponents)
 - Accordion (typescript / styledcomponents/ accessibility)
+
+- Card
+- Checkbox
+- CheckboxGroup
+- CheckboxIcon
+- Counter
+- Input
+- List
+- RadioButton
+- RadioButtonGroup
+- Select
+- Separator
+- Slider
+- SliderMultiRange
+- Snackbar
+- Spinner
+- Table
+- Text
+- ToggleSwitch
+- Tree
 
 ---
 
