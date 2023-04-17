@@ -143,6 +143,12 @@ export const defaultTheme = {
     },
   },
 
+  Icon: {
+    stroke: 'black',
+    fill: '',
+    fillOpacity: 0,
+  },
+
   Input: {
     color: global.color,
     inputHeight: global.inputHeight,
@@ -193,11 +199,6 @@ export const defaultTheme = {
 
   Slider: {
     formElementBackground: '#000000',
-  },
-
-  Icon: {
-    fill: '',
-    stroke: 'black',
   },
 
   Checkbox: {

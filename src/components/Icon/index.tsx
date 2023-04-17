@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-export type IconType = {
+export type IconProps = {
   size?: string;
   fill?: string;
   stroke?: string;
@@ -10,32 +10,37 @@ export type IconType = {
   children?: React.ReactNode;
 };
 
-const IconContainer = styled.div<{
-  size: string;
-  stroke?: string;
-  fill?: string;
-  fillOpacity?: string;
-}>`
+const IconContainer = styled.div<
+  Omit<IconProps, 'children'> & {
+    size: string;
+    stroke?: string;
+    fill?: string;
+    fillOpacity?: string;
+  }
+>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   display: flex;
-  > svg {
+  > {
     width: 100%;
     height: 100%;
-    stroke: ${({ theme, stroke }) =>
-      stroke ? stroke : theme?.Icon?.stroke || 'var()'};
-    fill: ${({ theme, fill }) => (fill ? fill : theme?.Icon?.fill || 'var()')};
-    fill-opacity: ${({ theme, fillOpacity }) =>
-      fillOpacity ? fillOpacity : theme?.Icon?.fillOpacity || 'var()'};
+    svg {
+      stroke: ${({ theme, stroke }) =>
+        stroke ? stroke : theme?.Icon?.stroke || 'var()'};
+      fill: ${({ theme, fill }) =>
+        fill ? fill : theme?.Icon?.fill || 'var()'};
+      fill-opacity: ${({ theme, fillOpacity }) =>
+        fillOpacity ? fillOpacity : theme?.Icon?.fillOpacity || 'var()'};
+    }
   }
 `;
 
-const Icon: React.FC<IconType> = ({
-  size = '25px',
+const Icon: React.FC<IconProps> = ({
   stroke,
+  children,
+  size = '25px',
   fill = undefined,
   fillOpacity,
-  children,
   ...rest
 }) => {
   return (

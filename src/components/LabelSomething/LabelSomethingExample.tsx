@@ -12,7 +12,7 @@ const LabelSomethingExample = () => {
       <LabelSomething
         gap='5px'
         label='left'
-        labelPosition='left'
+        labelDirection='left'
         something={
           <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
@@ -22,7 +22,7 @@ const LabelSomethingExample = () => {
       <LabelSomething
         gap='5px'
         label='right'
-        labelPosition='right'
+        labelDirection='right'
         something={
           <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
@@ -32,7 +32,7 @@ const LabelSomethingExample = () => {
       <LabelSomething
         gap='5px'
         label='top'
-        labelPosition='top'
+        labelDirection='top'
         something={
           <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
@@ -42,7 +42,7 @@ const LabelSomethingExample = () => {
       <LabelSomething
         gap='5px'
         label='bottom'
-        labelPosition='bottom'
+        labelDirection='bottom'
         something={
           <Icon size='25px' stroke='black' fill='yellow'>
             {icon}
