@@ -16,7 +16,7 @@ const ButtonWithLabelSomethingExample = () => {
         <LabelSomething
           gap='10px'
           label='right'
-          labelPosition='right'
+          labelDirection='right'
           something={
             <Icon size='25px' stroke='white'>
               <ThumbsUpIcon />
