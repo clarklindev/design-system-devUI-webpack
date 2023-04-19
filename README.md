@@ -13,25 +13,25 @@ https://github.com/swagfinger/swagfinger-ui.git
 - LabelSomething (typescript / styledcomponents)
 - Accordion (typescript / styledcomponents/ accessibility)
 
-- Card
-- Checkbox
-- CheckboxGroup
-- CheckboxIcon
-- Counter
-- Input
-- List
-- RadioButton
-- RadioButtonGroup
-- Select
-- Separator
-- Slider
-- SliderMultiRange
-- Snackbar
-- Spinner
-- Table
-- Text
-- ToggleSwitch
-- Tree
+- Card (styledcomponents)
+- Checkbox (styledcomponents)
+- CheckboxGroup (styledcomponents)
+- CheckboxIcon (styledcomponents)
+- Counter (styledcomponents)
+- Input (styledcomponents)
+- List (styledcomponents)
+- RadioButton (styledcomponents)
+- RadioButtonGroup (styledcomponents)
+- Select (styledcomponents)
+- Separator (styledcomponents)
+- Slider (styledcomponents)
+- SliderMultiRange (styledcomponents)
+- Snackbar (styledcomponents)
+- Spinner (styledcomponents)
+- Table (styledcomponents)
+- Text (styledcomponents)
+- ToggleSwitch (styledcomponents)
+- Tree (styledcomponents)
 
 ---
 
