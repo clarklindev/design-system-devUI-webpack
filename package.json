@@ -14,16 +14,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@heroicons/react": "^2.0.16",
-    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "styled-components": "^5.3.9",
-    "styled-components-modifiers": "^1.2.5",
-    "tw-tailwind": "^1.0.21"
+    "styled-components-modifiers": "^1.2.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
