@@ -59,6 +59,7 @@ interface ButtonProps extends Omit<JSX.IntrinsicElements['button'], 'ref'> {
   children?: LabelType;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  [key: string]: unknown;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -67,6 +68,7 @@ const Button: React.FC<ButtonProps> = ({
   label,
   children,
   onClick,
+  ...rest
 }) => {
   const buttonMap: Record<ButtonVariation, ButtonVariationComponent> = {
     contained: ContainedButton,
@@ -78,7 +80,7 @@ const Button: React.FC<ButtonProps> = ({
   const Component = buttonMap[variation];
 
   return (
-    <Component className={className} onClick={onClick}>
+    <Component className={className} onClick={onClick} {...rest}>
       {label ? label : children}
     </Component>
   );

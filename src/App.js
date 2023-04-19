@@ -126,10 +126,10 @@ const App = () => {
           <HeadingExample />
         </Layout>
 
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Text</Heading>
           <TextExample />
-        </Layout> */}
+        </Layout>
 
         {/* Icon */}
         <Layout variation='section'>
@@ -194,13 +194,13 @@ const App = () => {
         </Layout>
 
         {/* Snackbar*/}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Snackbar</Heading>
           <SnackbarExample />
-        </Layout> */}
+        </Layout>
 
         {/* Input */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Input</Heading>
 
           <Layout variation='block'>
@@ -237,22 +237,22 @@ const App = () => {
             <Heading variation='h5'>Input Search</Heading>
             <InputSearchExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
         {/* Select */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Select</Heading>
           <SelectExample />
-        </Layout> */}
+        </Layout>
 
         {/* RadioButton */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>RadioButton</Heading>
           <RadioButtonExample />
-        </Layout> */}
+        </Layout>
 
         {/* RadioButtonGroup */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>RadioButton Group</Heading>
           <Layout variation='block'>
             <Heading variation='h5'>RadioButton Group (horizontal)</Heading>
@@ -262,16 +262,16 @@ const App = () => {
             <Heading variation='h5'>RadioButton Group (vertical)</Heading>
             <RadioButtonGroupVerticalExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
         {/* Checkbox */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Checkbox</Heading>
           <CheckboxExample />
-        </Layout> */}
+        </Layout>
 
         {/* CheckboxGroup */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Checkbox Group</Heading>
           <Layout variation='block'>
             <Heading variation='h5'>Checkbox Group (horizontal)</Heading>
@@ -287,28 +287,28 @@ const App = () => {
             <Heading variation='h5'>Checkbox Group (indeterminate)</Heading>
             <CheckboxGroupIndeterminateExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
         {/* CheckboxIcon */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Checkbox Icon</Heading>
           <CheckboxIconExample />
-        </Layout> */}
+        </Layout>
 
         {/* Counter */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Counter</Heading>
           <CounterExample />
-        </Layout> */}
+        </Layout>
 
         {/* ToggleSwitch */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>ToggleSwitch</Heading>
           <ToggleSwitchExample />
-        </Layout> */}
+        </Layout>
 
         {/* Slider */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Slider</Heading>
 
           <Layout variation='block'>
@@ -320,28 +320,28 @@ const App = () => {
             <Heading variation='h5'>SliderMultiRange</Heading>
             <SliderMultiRangeExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
         {/* List */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>List</Heading>
           <ListExample />
-        </Layout> */}
+        </Layout>
 
         {/* Table */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Table</Heading>
           <TableExample />
-        </Layout> */}
+        </Layout>
 
         {/* Card */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Card</Heading>
           <CardExample />
-        </Layout> */}
+        </Layout>
 
         {/* Separator */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Separator</Heading>
           <Layout variation='block'>
             <Heading variation='h5'>Separator (horizontal)</Heading>
@@ -355,10 +355,10 @@ const App = () => {
             <Heading variation='h5'>Separator (vertical)</Heading>
             <SeparatorVerticalExample />
           </Layout>
-        </Layout> */}
+        </Layout>
 
         {/* Hooks */}
-        {/* <Layout variation='section'>
+        <Layout variation='section'>
           <Heading variation='h4'>Hooks</Heading>
 
           <Layout variation='block'>
@@ -375,7 +375,7 @@ const App = () => {
             <Heading variation='h5'>useHoverFocus</Heading>
             <UseHoverFocusExample />
           </Layout>
-        </Layout> */}
+        </Layout>
       </div>
     </ThemeProvider>
   );

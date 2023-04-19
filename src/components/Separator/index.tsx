@@ -62,7 +62,6 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)<{
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
     height: 1px;
-    margin: ${({ margin }) => margin};
   }
   &::after {
     display: flex;
@@ -72,7 +71,6 @@ const SeparatorHorizontalLabelled = styled(SeparatorContainer)<{
     background: ${({ theme }) => theme?.Separator?.backgroundColor};
     width: 100%;
     height: 1px;
-    margin: ${({ margin }) => margin};
   }
 `;
 
