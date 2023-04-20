@@ -7,7 +7,7 @@ const InputNoBorderExample = () => {
   return (
     <Input
       savedData={savedData}
-      modifiers={['noborder']}
+      modifiers={['noborder', 'noleftpadding']}
       placeholder='placeholder'
       onChange={(event) => {
         setSavedData(event.target.value);

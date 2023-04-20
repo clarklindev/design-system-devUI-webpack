@@ -7,7 +7,7 @@ const RadioButtonIcon = () => {
       fill='currentColor'
       viewBox='0 0 24 24'
     >
-      <circle cx='11.61' cy='11.61' r='4.89' fill='black'></circle>
+      <circle cx='12' cy='12' r='9' fill='black'></circle>
     </svg>
   );
 };
