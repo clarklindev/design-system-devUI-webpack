@@ -17,7 +17,7 @@ const InputSearchExample = () => {
       <Input
         className='px-25'
         ref={ref}
-        modifiers={['noborder', 'noborderleftradius']}
+        modifiers={['noborder', 'noborderleftradius', 'noleftpadding']}
         placeholder='placeholder'
       />
 
