@@ -18,6 +18,18 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
       {
+        test: /\.(jpg|png|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
+        ]
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         resolve: {

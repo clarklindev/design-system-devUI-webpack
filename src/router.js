@@ -38,6 +38,7 @@ import SeparatorExample from './components/Separator/example';
 import ListExample from './components/List/example';
 import TableExample from './components/Table/example';
 import CardExample from './components/Card/example';
+import TreeExample from './components/Tree/example';
 import HooksExample from './customhooks/example';
 
 export const router = createBrowserRouter(
@@ -70,6 +71,7 @@ export const router = createBrowserRouter(
       <Route path='list' element={<ListExample />} />
       <Route path='table' element={<TableExample />} />
       <Route path='card' element={<CardExample />} />
+      <Route path='tree' element={<TreeExample />} />
       <Route path='hooks' element={<HooksExample />} />
       {/* <Route path='*' element={<NotFound />} /> */}
     </Route>

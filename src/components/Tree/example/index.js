@@ -1,26 +1,23 @@
 import React from 'react';
 
-import Tree from './index';
+import Tree from '../index';
 
 const TreeExample = () => {
   const data = [
     {
       item: 'Percy',
-      link: '',
       children: [
         { item: 'Jack', link: '' },
         { item: 'Ben', link: '' },
         {
           item: 'John',
-          link: '',
           children: [
             { item: 'Alex', link: '' },
-            { item: 'Sam', link: '', children: [{ item: 'Pam', link: '' }] },
+            { item: 'Sam', children: [{ item: 'Pam', link: '' }] },
           ],
         },
         {
           item: 'Beth',
-          link: '',
           children: [{ item: 'Ned', link: '' }],
         },
       ],
