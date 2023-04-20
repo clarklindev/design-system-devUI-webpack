@@ -102,7 +102,7 @@ export const defaultTheme = {
       borderBottom: `1px solid ${global.dividerColor}`,
     },
     block: {
-      padding: '25px 0',
+      padding: '0 0 50px',
     },
   },
 

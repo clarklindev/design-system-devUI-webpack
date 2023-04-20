@@ -37,6 +37,22 @@ https://github.com/swagfinger/swagfinger-ui.git
 - ToggleSwitch (JS / styled-components)
 - Tree (JS / styled-components)
 
+## Todo
+
+- Navbar
+- Link
+- Breadcrumbs
+- Dialog (Modal)
+- Progress
+- Loading Button
+- Timeline
+- MultiInput
+- MultiInput Objects
+- MultiSelect with Input
+- Upload
+- DatePicker, TimePicker, DateTimePicker
+- DateRangePicker
+
 ---
 
 ## Tree
