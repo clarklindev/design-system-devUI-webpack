@@ -24,8 +24,8 @@ const Slider = styled.span`
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   border-radius: 30px;
 
   &:before {
@@ -37,8 +37,8 @@ const Slider = styled.span`
     left: 5px;
     bottom: 5px;
     background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
   &.${({ className }) => className} {
     input[type='checkbox']:checked + & {
