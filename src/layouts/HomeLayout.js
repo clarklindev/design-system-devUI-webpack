@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from '../assets/logo.jpg'
+import GithubIcon from '../icons/GithubIcon'
+import Icon from '../components/Icon'
 
 const HomeLayoutContainer = styled.div`
   display: grid;
@@ -20,8 +22,10 @@ const HomeLayoutContainer = styled.div`
     position: fixed;
     border-bottom: 1px solid lightgray;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     z-index: 1;
+    padding: 20px;
   }
 
   .logo {
@@ -96,7 +100,13 @@ export const HomeLayout = () => {
 
   return (
     <HomeLayoutContainer>
-      <header></header>
+      <header>
+        <Link to="https://github.com/swagfinger/swagfinger-ui" target="_blank">
+          <Icon size="25px" fill="black" stroke="black" fillOpacity="1">
+            <GithubIcon />
+          </Icon>
+        </Link>
+      </header>
       <aside>
         <div className="spacing" style={{ height: `${headerMarginTop}px` }}>
           <div className="logo">
@@ -137,7 +147,6 @@ export const HomeLayout = () => {
       </aside>
 
       <main style={{ marginTop: `${headerMarginTop}px` }}>
-        <h1 class="bg-red-400">tailwind</h1>
         <Outlet />
       </main>
     </HomeLayoutContainer>

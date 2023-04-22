@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export type IconProps = {
-  size?: string;
-  fill?: string;
-  stroke?: string;
-  fillOpacity?: string;
-  children?: React.ReactNode;
-};
+  size?: string
+  fill?: string
+  stroke?: string
+  fillOpacity?: string
+  children?: React.ReactNode
+}
 
 const IconContainer = styled.div<
   Omit<IconProps, 'children'> & {
-    size: string;
-    stroke?: string;
-    fill?: string;
-    fillOpacity?: string;
+    size: string
+    stroke?: string
+    fill?: string
+    fillOpacity?: string
   }
 >`
   width: ${({ size }) => size};
@@ -25,15 +25,16 @@ const IconContainer = styled.div<
     width: 100%;
     height: 100%;
   }
-
   > svg {
+    width: 100%;
+    height: 100%;
     stroke: ${({ theme, stroke }) =>
       stroke ? stroke : theme?.Icon?.stroke || 'var()'};
     fill: ${({ theme, fill }) => (fill ? fill : theme?.Icon?.fill || 'var()')};
     fill-opacity: ${({ theme, fillOpacity }) =>
       fillOpacity ? fillOpacity : theme?.Icon?.fillOpacity || 'var()'};
   }
-`;
+`
 
 const Icon: React.FC<IconProps> = ({
   stroke,
@@ -45,7 +46,7 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   return (
     <IconContainer
-      className='Icon'
+      className="Icon"
       size={size}
       stroke={stroke}
       fill={fill}
@@ -54,7 +55,7 @@ const Icon: React.FC<IconProps> = ({
     >
       {children}
     </IconContainer>
-  );
-};
+  )
+}
 
-export default Icon;
+export default Icon

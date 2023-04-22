@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Tree from '../index';
+import Tree from '../index'
+import Heading from '../../Heading'
 
 const TreeExample = () => {
   const data = [
@@ -22,10 +23,15 @@ const TreeExample = () => {
         },
       ],
     },
-  ];
+  ]
 
   // requires data to be structured with "item" and "children" properties
-  return <Tree data={data} />;
-};
+  return (
+    <>
+      <Heading variation="h4">Tree</Heading>
+      <Tree data={data} />
+    </>
+  )
+}
 
-export default TreeExample;
+export default TreeExample

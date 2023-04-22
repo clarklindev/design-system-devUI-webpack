@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import List from '../index';
-import ListItem from '../ListItem';
+import React, { useEffect, useState } from 'react'
+import List from '../index'
+import ListItem from '../ListItem'
+import Heading from '../../Heading'
 
 const ListExample = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState()
 
   useEffect(() => {
     const DATA = [
@@ -25,12 +26,14 @@ const ListExample = () => {
         last_name: 'Martinson',
         email: 'dmartinson2@creativecommons.org',
       },
-    ];
-    setData(DATA);
-  }, []);
+    ]
+    setData(DATA)
+  }, [])
 
   return (
     <>
+      <Heading variation="h4">List</Heading>
+
       {data && (
         <List>
           {data.map(({ id, first_name, last_name, email }, index) => {
@@ -44,12 +47,12 @@ const ListExample = () => {
                   email,
                 }}
               />
-            );
+            )
           })}
         </List>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ListExample;
+export default ListExample

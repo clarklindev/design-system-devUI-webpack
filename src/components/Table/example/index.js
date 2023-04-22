@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import Table from '../index';
+import Table from '../index'
+import Heading from '../../Heading'
 
 const TableExample = () => {
   const configure = {
     padding: 'p-5',
-  };
+  }
   const HEADERS = [
     {
       title: 'year',
@@ -35,7 +36,7 @@ const TableExample = () => {
       alignHeader: 'right',
       alignContent: 'right',
     },
-  ];
+  ]
 
   const DATA = [
     {
@@ -56,9 +57,14 @@ const TableExample = () => {
       song: 'Organic directional projection',
       amount: '30',
     },
-  ];
+  ]
 
-  return <Table headers={HEADERS} data={DATA} configure={configure}></Table>;
-};
+  return (
+    <>
+      <Heading variation="h4">Table</Heading>
+      <Table headers={HEADERS} data={DATA} configure={configure} />
+    </>
+  )
+}
 
-export default TableExample;
+export default TableExample
