@@ -86,7 +86,7 @@ const Component = ({config={}})=>{
 ```
 
 ```jsx
-export const Heading = ({ config: { variation }, children, ...rest }) => {};
+export const Heading = ({ config: { variation }, children, ...rest }) => {}
 ```
 
 ## WAI-ARIA Roles, States, and Properties:
@@ -120,7 +120,7 @@ npm i --save-dev html-webpack-plugin
 
 ```js
 //webpack.config.js
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   entry: './src/index.js',
@@ -140,7 +140,7 @@ module.exports = {
       },
     ],
   },
-};
+}
 ```
 
 ```json
@@ -156,31 +156,31 @@ module.exports = {
 ```js
 //src/index.development.js
 
-import React, { useState } from 'react';
-import { createRoot } from 'react-dom/client';
-import { Input } from './components/Input';
+import React, { useState } from 'react'
+import { createRoot } from 'react-dom/client'
+import { Input } from './components/Input'
 
-const container = document.getElementById('root');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const container = document.getElementById('root')
+const root = createRoot(container) // createRoot(container!) if you use TypeScript
 
 const InputExample = () => {
-  const [value, setValue] = useState('');
-  const onChangeHandler = (e) => {
-    console.log(e.target.value);
-    setValue(e.target.value);
-  };
+  const [value, setValue] = useState('')
+  const onChangeHandler = e => {
+    console.log(e.target.value)
+    setValue(e.target.value)
+  }
 
-  return <Input value={value} onChange={onChangeHandler} />;
-};
+  return <Input value={value} onChange={onChangeHandler} />
+}
 
-root.render(<InputExample />);
+root.render(<InputExample />)
 ```
 
 ## index.production.js
 
 ```js
 //src/index.production.js
-export * from './components/Input';
+export * from './components/Input'
 ```
 
 ### html
@@ -243,11 +243,11 @@ https://swagfinger-portfolio-react-components-functionbased.vercel.app/
 - simplified components (built by developer for developers)
 
 ```js
-import { createApi } from '@reduxjs/toolkit/query';
+import { createApi } from '@reduxjs/toolkit/query'
 
 /* React-specific entry point that automatically generates
    hooks corresponding to the defined endpoints */
-import { createApi } from '@reduxjs/toolkit/query/react';
+import { createApi } from '@reduxjs/toolkit/query/react'
 ```
 
 ## Redux Fundamentals, Part 8: Modern Redux with Redux Toolkit

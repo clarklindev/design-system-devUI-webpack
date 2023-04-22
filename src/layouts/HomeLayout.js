@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import styled from 'styled-components';
-import logo from '../assets/logo.jpg';
+import React, { useState, useEffect } from 'react'
+import { NavLink, Outlet } from 'react-router-dom'
+import styled from 'styled-components'
+import logo from '../assets/logo.jpg'
 
 const HomeLayoutContainer = styled.div`
   display: grid;
@@ -84,61 +84,62 @@ const HomeLayoutContainer = styled.div`
     grid-area: main;
     padding: 25px;
   }
-`;
+`
 
 export const HomeLayout = () => {
-  const [headerMarginTop, setHeaderMarginTop] = useState(0);
+  const [headerMarginTop, setHeaderMarginTop] = useState(0)
 
   useEffect(() => {
-    const headerHeight = document.querySelector('header').offsetHeight;
-    setHeaderMarginTop(headerHeight);
-  }, []);
+    const headerHeight = document.querySelector('header').offsetHeight
+    setHeaderMarginTop(headerHeight)
+  }, [])
 
   return (
     <HomeLayoutContainer>
       <header></header>
       <aside>
-        <div className='spacing' style={{ height: `${headerMarginTop}px` }}>
-          <div className='logo'>
-            <img src={logo} alt='Logo' />
+        <div className="spacing" style={{ height: `${headerMarginTop}px` }}>
+          <div className="logo">
+            <img src={logo} alt="Logo" />
             <span>SWAGFINGER-UI</span>
           </div>
         </div>
         <nav>
-          <NavLink to='routing'>Routing</NavLink>
-          <NavLink to='layout'>Layout</NavLink>
-          <NavLink to='themes'>Themes</NavLink>
-          <NavLink to='styling'>Styling</NavLink>
-          <NavLink to='heading'>Heading</NavLink>
-          <NavLink to='text'>Text</NavLink>
-          <NavLink to='icon'>Icon</NavLink>
-          <NavLink to='labelsomething'>LabelSomething</NavLink>
-          <NavLink to='button'>Button</NavLink>
-          <NavLink to='input'>Input</NavLink>
-          <NavLink to='select'>Select</NavLink>
-          <NavLink to='accordion'>Accordion</NavLink>
-          <NavLink to='radiobutton'>RadioButton</NavLink>
-          <NavLink to='radiobuttongroup'>RadioButton Group</NavLink>
-          <NavLink to='checkbox'>Checkbox</NavLink>
-          <NavLink to='checkboxgroup'>Checkbox Group</NavLink>
-          <NavLink to='counter'>Counter</NavLink>
-          <NavLink to='togglebutton'>Toggle Button</NavLink>
-          <NavLink to='toggleswitch'>Toggle Switch</NavLink>
-          <NavLink to='snackbar'>Snackbar</NavLink>
-          <NavLink to='slider'>Slider</NavLink>
-          <NavLink to='slidermultirange'>Slider (Multirange)</NavLink>
-          <NavLink to='separator'>Separator</NavLink>
-          <NavLink to='list'>List</NavLink>
-          <NavLink to='table'>Table</NavLink>
-          <NavLink to='card'>Card</NavLink>
-          <NavLink to='tree'>Tree</NavLink>
-          <NavLink to='hooks'>Hooks</NavLink>
+          <NavLink to="routing">Routing</NavLink>
+          <NavLink to="layout">Layout</NavLink>
+          <NavLink to="themes">Themes</NavLink>
+          <NavLink to="styling">Styling</NavLink>
+          <NavLink to="heading">Heading</NavLink>
+          <NavLink to="text">Text</NavLink>
+          <NavLink to="icon">Icon</NavLink>
+          <NavLink to="labelsomething">LabelSomething</NavLink>
+          <NavLink to="button">Button</NavLink>
+          <NavLink to="input">Input</NavLink>
+          <NavLink to="select">Select</NavLink>
+          <NavLink to="accordion">Accordion</NavLink>
+          <NavLink to="radiobutton">RadioButton</NavLink>
+          <NavLink to="radiobuttongroup">RadioButton Group</NavLink>
+          <NavLink to="checkbox">Checkbox</NavLink>
+          <NavLink to="checkboxgroup">Checkbox Group</NavLink>
+          <NavLink to="counter">Counter</NavLink>
+          <NavLink to="togglebutton">Toggle Button</NavLink>
+          <NavLink to="toggleswitch">Toggle Switch</NavLink>
+          <NavLink to="snackbar">Snackbar</NavLink>
+          <NavLink to="slider">Slider</NavLink>
+          <NavLink to="slidermultirange">Slider (Multirange)</NavLink>
+          <NavLink to="separator">Separator</NavLink>
+          <NavLink to="list">List</NavLink>
+          <NavLink to="table">Table</NavLink>
+          <NavLink to="card">Card</NavLink>
+          <NavLink to="tree">Tree</NavLink>
+          <NavLink to="hooks">Hooks</NavLink>
         </nav>
       </aside>
 
       <main style={{ marginTop: `${headerMarginTop}px` }}>
+        <h1 class="bg-red-400">tailwind</h1>
         <Outlet />
       </main>
     </HomeLayoutContainer>
-  );
-};
+  )
+}
