@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = ({ env, args }) => {
   return {
-    entry: path.join(__dirname, 'src/index.js'),
+    entry: './src/index.js',
+
     output: {
       filename: 'main.js',
-      path: path.join(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist'),
+      clean: true,
     },
     resolve: { extensions: ['.tsx', '.jsx', '.ts', '.js'] },
     module: {
@@ -42,14 +44,14 @@ module.exports = ({ env, args }) => {
     },
 
     devServer: {
-      static: path.resolve(__dirname, 'dist'),
+      static: './dist',
       port: 3000,
       historyApiFallback: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
-        filename: path.resolve(__dirname, 'dist', 'index.html'),
-        template: path.resolve(__dirname, 'src', 'template.html'),
+        filename: 'index.html',
+        template: 'src/template.html',
       }),
     ],
   }

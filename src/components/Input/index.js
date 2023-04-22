@@ -1,6 +1,5 @@
-import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import { MODIFIERS } from './modifiers';
+import React, { forwardRef } from 'react'
+import styled from 'styled-components'
 
 const WrapperContainer = styled.div`
   type: ${({ type }) => type};
@@ -18,7 +17,7 @@ const WrapperContainer = styled.div`
   max-height: ${({ theme }) => theme?.Input?.inputHeight || 'var()'};
   color: ${({ theme }) => theme?.Input?.color || 'var()'};
   background-color: ${({ theme }) => theme?.Input?.backgroundColor || 'var()'};
-`;
+`
 
 const InputElement = styled.input`
   box-sizing: border-box;
@@ -33,23 +32,23 @@ const InputElement = styled.input`
   background-color: ${({ theme }) => theme?.Input?.backgroundColor || 'var()'};
 
   border: ${({ theme }) => theme?.Input?.border || 'var()'};
-`;
+`
 
-export const InputWrapper = ({ modifiers, children }) => {
-  return <WrapperContainer modifiers={modifiers}>{children}</WrapperContainer>;
-};
+export const InputWrapper = ({ children }) => {
+  return <WrapperContainer>{children}</WrapperContainer>
+}
 
 const Input = forwardRef(function Input(
   {
     type = 'text',
     onChange,
-    modifiers = [],
     placeholder,
     className,
     savedData,
+    readonly,
     ...rest
   },
-  ref
+  ref,
 ) {
   return (
     <InputElement
@@ -57,13 +56,12 @@ const Input = forwardRef(function Input(
       value={savedData}
       placeholder={placeholder}
       type={type}
-      modifiers={modifiers}
-      readOnly={modifiers.includes('readonly')}
       className={className}
+      readOnly={readonly}
       ref={ref}
       {...rest}
     />
-  );
-});
+  )
+})
 
-export default Input;
+export default Input

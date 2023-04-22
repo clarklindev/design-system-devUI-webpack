@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Input from '../index';
+import React, { useState } from 'react'
+import Input from '../index'
 
 const InputReadOnlyExample = () => {
-  const [savedData, setSavedData] = useState('this is readonly');
+  const [savedData, setSavedData] = useState('this is readonly')
 
   return (
     <Input
       savedData={savedData}
-      modifiers={['readonly']}
-      onChange={(event) => {
-        setSavedData(event.target.value);
+      readonly
+      onChange={event => {
+        setSavedData(event.target.value)
       }}
     />
-  );
-};
+  )
+}
 
-export default InputReadOnlyExample;
+export default InputReadOnlyExample
