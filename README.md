@@ -463,21 +463,12 @@ border-top: 1px solid ${({theme})=>theme?.global?.borderColor || 'var(--color-bo
 
 - this README documents my design system journey
 
-## React components (swagfinger-ui-ts)
+## React components (swagfinger-ui)
 
-- [https://github.com/swagfinger/swagfinger-ui-ts.git](https://github.com/swagfinger/swagfinger-ui-ts.git)
+- [https://github.com/swagfinger/swagfinger-ui.git](https://github.com/swagfinger/swagfinger-ui.git)
 - adapted from: React components (swagfinger-ui-js)
 - uses React hooks
 - typescript components
-- styled-components
-- tailwindcss
-- webpack config
-
-## React components (swagfinger-ui-js)
-
-- [https://github.com/swagfinger/swagfinger-ui-js.git](https://github.com/swagfinger/swagfinger-ui-js.git)
-- uses React hooks
-- javascript components
 - styled-components
 - tailwindcss
 - webpack config

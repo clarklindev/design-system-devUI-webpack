@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
 
 const WrapperContainer = styled.div`
@@ -19,8 +18,6 @@ const WrapperContainer = styled.div`
   max-height: ${({ theme }) => theme?.Input?.inputHeight || 'var()'};
   color: ${({ theme }) => theme?.Input?.color || 'var()'};
   background-color: ${({ theme }) => theme?.Input?.backgroundColor || 'var()'};
-
-  ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const InputElement = styled.input`
@@ -36,8 +33,6 @@ const InputElement = styled.input`
   background-color: ${({ theme }) => theme?.Input?.backgroundColor || 'var()'};
 
   border: ${({ theme }) => theme?.Input?.border || 'var()'};
-
-  ${applyStyleModifiers(MODIFIERS)};
 `;
 
 export const InputWrapper = ({ modifiers, children }) => {

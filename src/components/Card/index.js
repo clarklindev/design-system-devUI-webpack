@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { applyStyleModifiers } from 'styled-components-modifiers';
 import { MODIFIERS } from './modifiers';
 
 const CardContainer = styled.div`
@@ -13,8 +12,6 @@ const CardContainer = styled.div`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   padding: 15px;
-
-  ${applyStyleModifiers(MODIFIERS)};
 `;
 
 const Card = ({
