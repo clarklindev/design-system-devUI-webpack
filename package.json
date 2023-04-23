@@ -5,7 +5,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "babelMacros": {
     "twin": {
       "preset": "styled-components",
@@ -13,13 +12,13 @@
     }
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
-
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.7.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
@@ -45,7 +44,6 @@
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.7",
     "babel-plugin-twin": "^1.1.0",
-    "twin.macro": "^3.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
@@ -58,6 +56,7 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
+    "twin.macro": "^3.1.0",
     "typescript": "^5.0.4",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1",
