@@ -1,3 +1,8 @@
+### STATUS
+
+- status - on hold... (see https://github.com/swagfinger/swagfinger-ui) conversion to Vite.
+- reason - having problems with webpack on vercel with production build
+
 https://github.com/swagfinger/swagfinger-ui.git
 
 ## CSS
