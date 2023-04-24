@@ -1,6 +1,7 @@
 const path = require('path')
 const html = require('html-webpack-plugin')
-const css = require('mini-css-extract-plugin')
+// const css = require('mini-css-extract-plugin')
+// const cssMinimizer = require('css-minimizer-webpack-plugin')
 
 module.exports = {
   // if you use context - all relative paths are relative to it.
@@ -20,6 +21,7 @@ module.exports = {
       minSize: 2000,
       chunks: 'async', //async, all, initial
     },
+    // minimizer: ['...', new cssMinimizer()],
   },
 
   output: {
@@ -30,6 +32,7 @@ module.exports = {
     iife: false,
     clean: true,
     path: path.resolve(__dirname, 'dist'),
+    //publicPath
   },
 
   watchOptions: {
@@ -42,20 +45,7 @@ module.exports = {
     static: './dist',
     historyApiFallback: true,
   },
-  plugins: [
-    new css({
-      filename: '[name].css',
-      //chunkFilenames
-    }),
-    new html({
-      filename: 'index.html',
-      minify: false, //true under prod
-      inject: 'body', //defaults to head
-      title: 'swagfinger-ui',
-      template: './template.html',
-      favicon: './assets/favicon.ico',
-    }),
-  ],
+
   // -----------------------------------------------------------------------------------------------------------------
 
   resolve: { extensions: ['.tsx', '.jsx', '.ts', '.js'] },
@@ -83,12 +73,16 @@ module.exports = {
           },
         },
       },
+      // {
+      //   test: /\.scss$/i,
+      //   use: [css.loader, 'css-loader', 'sass-loader'],
+      // },
       {
         test: /\.css$/i,
         // style loader must be before css-loader, loaders are applied backwards
         //so css-loader is applied before style-loader
-        // use: ['style-loader', 'css-loader', 'postcss-loader'],
-        use: [css.loader, 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        // use: [css.loader, 'css-loader'],
       },
       {
         test: /\.[jt]sx?$/,
@@ -99,4 +93,19 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    // new css({
+    //   filename: '[name].css', //named after bundle that applies the mini-css-extract-plugin
+    //   chunkFilename: '[name].chunk_css.css',
+    // }),
+    new html({
+      filename: 'index.html',
+      minify: false, //true under prod
+      inject: 'body', //defaults to head
+      title: 'swagfinger-ui',
+      template: './template.html',
+      favicon: './assets/favicon.ico',
+      //publicPath
+    }),
+  ],
 }
