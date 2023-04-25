@@ -4,7 +4,7 @@ module.exports = {
   // if you use context - all relative paths are relative to it.
   context: path.resolve(__dirname, 'src'),
   devtool: 'source-map',
-  entry: './index.js', //relative to context
+  entry: './index.jsx', //relative to context
   output: {
     clean: true,
     filename: '[name].ini.js',
