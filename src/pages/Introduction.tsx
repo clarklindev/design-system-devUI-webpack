@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Introduction = () => {
-  return <div>intro</div>;
-};
+  return <div>Swagfinger-UI</div>
+}
 
-export default Introduction;
+export default Introduction
