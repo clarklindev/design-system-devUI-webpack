@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
+    "module": "CommonJS",
+    "target": "ES6",
     "moduleResolution": "node",
     "jsx": "preserve",
     "allowJs": true,
@@ -10,7 +10,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "noEmit": true,
+    "noEmit": false,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "noUnusedParameters": true,

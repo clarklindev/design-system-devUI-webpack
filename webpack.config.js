@@ -46,12 +46,16 @@ module.exports = (env, argv) => {
           },
         },
         {
-          test: /\.[jt]sx?$/,
+          test: /\.(ts|tsx|js|jsx)$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
+              presets: [
+                '@babel/preset-env', // Transpile modern JavaScript to target environments
+                '@babel/preset-react', // Transpile JSX and React
+                '@babel/preset-typescript', // Transpile TypeScript
+              ],
             },
           },
         },
