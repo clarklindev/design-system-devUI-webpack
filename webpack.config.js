@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
       chunkFilename: isDevelopment ? '[id].chunk.js' : '[id].[contenthash].js',
       assetModuleFilename: 'assets/[name].[contenthash][ext]',
       path: path.resolve(__dirname, 'build'),
-      publicPath: '/',
+      publicPath: '',
     },
     devtool: isDevelopment ? 'source-map' : false,
     devServer: {
