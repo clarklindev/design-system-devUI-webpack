@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { NavLink, Outlet, Link } from 'react-router-dom'
-import styled from 'styled-components'
-import logo from '../assets/logo.jpg'
-import GithubIcon from '../icons/GithubIcon'
-import Icon from '../components/Icon'
+import React, { useState, useEffect } from 'react';
+import { NavLink, Outlet, Link } from 'react-router-dom';
+import styled from 'styled-components';
+import logo from '../assets/logo.jpg';
+import GithubIcon from '../icons/GithubIcon';
+import Icon from '../components/Icon';
 
 const HomeLayoutContainer = styled.div`
   display: grid;
@@ -88,15 +88,15 @@ const HomeLayoutContainer = styled.div`
     grid-area: main;
     padding: 25px;
   }
-`
+`;
 
 export const HomeLayout = () => {
-  const [headerMarginTop, setHeaderMarginTop] = useState(0)
+  const [headerMarginTop, setHeaderMarginTop] = useState(0);
 
   useEffect(() => {
-    const headerHeight = document.querySelector('header').offsetHeight
-    setHeaderMarginTop(headerHeight)
-  }, [])
+    const headerHeight = document.querySelector('header').offsetHeight;
+    setHeaderMarginTop(headerHeight);
+  }, []);
 
   return (
     <HomeLayoutContainer>
@@ -150,5 +150,5 @@ export const HomeLayout = () => {
         <Outlet />
       </main>
     </HomeLayoutContainer>
-  )
-}
+  );
+};

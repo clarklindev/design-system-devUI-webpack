@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "description": "component library",
   "keywords": [],
-  "author": "",
+  "author": "clarklindev",
   "license": "ISC",
   "babelMacros": {
     "twin": {
@@ -11,10 +11,9 @@
       "hasLogColors": false
     }
   },
-  "homepage": ".",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
