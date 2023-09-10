@@ -1,9 +1,9 @@
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
-const path = require('path')
-const cssMinimizer = require('css-minimizer-webpack-plugin')
-const css = require('mini-css-extract-plugin')
-const html = require('html-webpack-plugin')
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+const path = require('path');
+const cssMinimizer = require('css-minimizer-webpack-plugin');
+const css = require('mini-css-extract-plugin');
+const html = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -46,7 +46,7 @@ module.exports = merge(common, {
   plugins: [
     new html({
       filename: 'index.html',
-      template: './template.html',
+      template: './template.html', // This points to your HTML template in the 'src' folder
       title: 'swagfinger-ui',
       minify: false, //true under prod
       favicon: './assets/favicon.ico',
@@ -56,4 +56,4 @@ module.exports = merge(common, {
       chunkFilename: '[name].chunk_css.css',
     }),
   ],
-})
+});
