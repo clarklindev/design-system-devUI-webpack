@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = (env, argv) => {
   const isDevelopment = argv.mode === 'development';
 
-  return {
+  const config = {
     mode: isDevelopment ? 'development' : 'production',
     context: path.resolve(__dirname, 'src'),
     entry: './index.jsx',
@@ -16,15 +16,20 @@ module.exports = (env, argv) => {
       chunkFilename: isDevelopment ? '[id].chunk.js' : '[id].[contenthash].js',
       assetModuleFilename: 'assets/[name].[contenthash][ext]',
       path: path.resolve(__dirname, 'dist'),
+      publicPath: '/',
     },
-    devtool: isDevelopment ? 'inline-source-map' : false,
+    devtool: isDevelopment ? 'source-map' : false,
     devServer: {
+      static: {
+        directory: path.join(__dirname, 'dist'),
+      },
       port: 8080,
       hot: isDevelopment,
-      static: './dist',
       historyApiFallback: true,
     },
-    resolve: { extensions: ['.tsx', '.jsx', '.ts', '.js'] },
+    resolve: {
+      extensions: ['.tsx', '.jsx', '.ts', '.js'],
+    },
     module: {
       rules: [
         {
@@ -94,4 +99,6 @@ module.exports = (env, argv) => {
       }),
     ],
   };
+
+  return config;
 };
