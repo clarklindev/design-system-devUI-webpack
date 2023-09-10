@@ -15,13 +15,13 @@ module.exports = (env, argv) => {
       filename: isDevelopment ? '[name].ini.js' : '[name].[contenthash].js',
       chunkFilename: isDevelopment ? '[id].chunk.js' : '[id].[contenthash].js',
       assetModuleFilename: 'assets/[name].[contenthash][ext]',
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, 'public'),
       publicPath: '',
     },
     devtool: isDevelopment ? 'source-map' : false,
     devServer: {
       static: {
-        directory: path.join(__dirname, 'build'),
+        directory: path.resolve(__dirname, 'public'),
       },
       port: 8080,
       hot: isDevelopment,
