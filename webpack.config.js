@@ -18,7 +18,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
     },
-    devtool: 'source-map',
+    devtool: isDevelopment ? 'source-map' : false,
     devServer: {
       static: {
         directory: path.join(__dirname, 'dist'),
