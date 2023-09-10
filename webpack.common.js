@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   // if you use context - all relative paths are relative to it.
@@ -53,4 +53,4 @@ module.exports = {
       },
     ],
   },
-}
+};
