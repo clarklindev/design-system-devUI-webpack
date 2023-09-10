@@ -1,4 +1,9 @@
 {
+  "presets": [
+    "@babel/preset-env", // Transpile modern JavaScript to target environments
+    "@babel/preset-react", // Transpile JSX and React
+    "@babel/preset-typescript" // Transpile TypeScript
+  ],
   "plugins": [
     "babel-plugin-twin",
     "babel-plugin-macros",
