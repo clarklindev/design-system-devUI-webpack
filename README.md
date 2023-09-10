@@ -3,6 +3,16 @@
 - status - behind in comparison to SWAGFINGERUI-VITE BUILD (see https://github.com/clarklindev/swagfingerUI-vite
   ) conversion to Vite.
 
+- had a hard time deploying to vercel.
+- the last few changes was the vercel.json to redirect all request to /index.html
+- to use the build's public/ folder (default on vercel)
+- vercel project setup (everything on default)
+- tsconfig:
+  "module": "CommonJS",
+  "target": "ES6",
+- the .babelrc is for transpiling, the webpack.config.js is for bundling AND it can fineturn babel-loader
+- check out tsconfig.json settings on how the typescript will be transpiled
+
 ## note regarding routes (tsconfig.json):
 
 "baseUrl": "./src"
